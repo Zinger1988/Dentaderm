@@ -1,0 +1,150 @@
+.doctor-info {
+  max-width: 60rem;
+  margin: 0 auto;
+  border-bottom: 1px solid $gray200;
+
+  @include media(">=md") {
+    max-width: none;
+    padding-bottom: 0;
+  }
+
+  &__inner {
+    padding: 4rem 0 5rem;
+
+    @include media(">=md") {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      grid-template-rows: auto auto 1fr;
+      gap: 0 5rem;
+      position: relative;
+      padding: 4rem 0 8rem;
+      grid-template-areas:
+        "crumbs crumbs"
+        "name name"
+        "content img";
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: calc(100% / 9 * 5);
+        top: 13.2rem;
+        bottom: 0;
+        border-left: 1px solid $gray200;
+      }
+    }
+
+    @include media(">=xl") {
+      grid-template-areas:
+        "crumbs img"
+        "name img"
+        "content img";
+
+      &::after {
+        top: 0;
+      }
+    }
+
+    @include media(">=3xl") {
+      padding: 6rem 0 8rem;
+    }
+  }
+
+  &__crumbs {
+    margin: 0 0 2rem;
+
+    @include media(">=md") {
+      grid-area: crumbs;
+    }
+
+    @include media(">=xl") {
+      margin: 0 0 3rem;
+    }
+  }
+
+  &__name {
+    font-size: 2rem;
+    margin: 0 0 2rem;
+    padding: 0 0 2rem;
+    border-bottom: 1px solid $gray200;
+
+    @include media(">=md") {
+      font-size: 2.4rem;
+      padding: 0 0 2.4rem;
+      margin: 0;
+      grid-area: name;
+    }
+
+    @include media(">=xl") {
+      margin: 0 0 1em;
+      padding: 0;
+      border: none;
+    }
+
+    @include media(">=2xl") {
+      font-size: 2.8rem;
+      margin: 0 0 1.2em;
+    }
+
+    @include media(">=3xl") {
+      font-size: 3rem;
+    }
+  }
+
+  &__img {
+    margin: 0 auto 3rem;
+    position: relative;
+    padding: 60% 0;
+
+    @include media(">=md") {
+      grid-area: img;
+      position: relative;
+      margin: 2rem 0 0;
+      align-self: start;
+      max-width: 33.3rem;
+      padding: min(20rem, 60%) 0;
+      width: 100%;
+      justify-self: center;
+    }
+
+    @include media(">=lg") {
+      margin: 3rem 0 0;
+    }
+
+    @include media(">=xl") {
+      margin: 0;
+    }
+
+    @include media(">=2xl") {
+      max-width: 40rem;
+      padding: min(24rem, 60%) 0;
+    }
+
+    @include media(">=3xl") {
+      max-width: 46rem;
+      padding: min(27.6rem, 60%) 0;
+    }
+  }
+
+  &__img-item {
+    @include positionLeftTop();
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    @include clearMarginY("&");
+    @include media(">=md") {
+      grid-area: content;
+      margin: 2rem 0 0;
+    }
+
+    @include media(">=lg") {
+      margin: 3rem 0 0;
+    }
+
+    @include media(">=xl") {
+      margin: 0;
+    }
+  }
+}

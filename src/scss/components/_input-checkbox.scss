@@ -1,0 +1,87 @@
+.input-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.8rem;
+  cursor: pointer;
+
+  $this: &;
+
+  &__input {
+    display: none;
+
+    &:checked {
+      ~ #{$this}__toggle {
+        background-color: $black;
+        border-color: $black;
+
+        #{$this}__icon {
+          top: 50%;
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    @include sizeRatio(1.8rem);
+    position: relative;
+    top: 0.4rem;
+    border: 1px solid $gray500;
+    flex: 0 0 auto;
+    overflow: hidden;
+    @include animate(all);
+  }
+
+  &__icon {
+    @include positionCenter();
+    @include sizeRatio(2rem);
+    @include animate(top, 0.2s);
+    fill: $white;
+    top: 150%;
+  }
+
+  &__title {
+    @include fs("body2");
+    flex: 1 1 calc(100% - 3.6rem);
+  }
+
+  &--white {
+    #{$this}__input {
+      display: none;
+
+      &:checked {
+        ~ #{$this}__toggle {
+          background-color: $white;
+          border-color: $white;
+        }
+      }
+    }
+
+    #{$this}__icon {
+      fill: $black;
+    }
+  }
+
+  &--error {
+    #{$this}__input:checked ~ #{$this}__toggle,
+    #{$this}__toggle,
+    #{$this}__toggle:hover,
+    #{$this}__toggle:focus {
+      border-color: $danger;
+    }
+
+    #{$this}__input:checked ~ #{$this}__toggle {
+      background-color: $danger;
+    }
+  }
+
+  .validator__errors {
+    flex: 1 0 auto;
+    margin-left: 3.6rem;
+    order: 999999;
+  }
+
+  .validator__tooltips {
+    display: none;
+  }
+}

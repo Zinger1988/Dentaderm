@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content page__content">
+        <div class="page__crumbs">
+          <div class="container">
+            <ul class="crumbs">
+              <li class="crumbs__item">
+                <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
+              </li>
+              <li class="crumbs__item">
+                <span class="crumbs__endpoint">Статті</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- #region blog -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <header class="block__header">
+              <h1 class="block__title h2">Статті</h1>
+            </header>
+
+            <div class="cards-grid block__cards-grid">
+              <div class="row cards-grid__row">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/blog-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/blog-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/blog-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/blog-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/blog-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/blog-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/blog-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/blog-card.html-->
+                </div>
+              </div>
+            </div>
+            <!-- #region pagination -->
+            <div class="pagination pagination--narrow">
+              <button class="pagination__btn pagination__btn--prev">
+                <svg class="icon pagination__icon">
+                  <use href="/assets/icons.svg#arrow-left" />
+                </svg>
+              </button>
+              <div class="pagination__list">
+                <a
+                  href="#"
+                  class="pagination__bullet pagination__bullet--active"
+                  aria-label="Сторінка 1"
+                >
+                  Сторінка 1
+                </a>
+                <a href="#" class="pagination__bullet" aria-label="Сторінка 2">
+                  Сторінка 2
+                </a>
+                <a href="#" class="pagination__bullet" aria-label="Сторінка 3">
+                  Сторінка 2
+                </a>
+                <a href="#" class="pagination__bullet" aria-label="Сторінка 4">
+                  Сторінка 2
+                </a>
+              </div>
+              <button class="pagination__btn pagination__btn--next">
+                <svg class="icon pagination__icon">
+                  <use href="/assets/icons.svg#arrow-right" />
+                </svg>
+              </button>
+            </div>
+            <!-- #endregion pagination -->
+          </div>
+        </section>
+        <!-- #endregion blog -->
+
+        <!-- #region ceo text -->
+        <section class="block content__block">
+          <div class="container">
+            <!--@import partials/components/ceo-text.html-->
+          </div>
+        </section>
+        <!-- #endregion ceo text -->
+
+        <!-- #region banner -->
+        <section class="block content__block content__block--mb-0">
+          <!--@import partials/components/banner-bottom-2.html-->
+        </section>
+        <!-- #endregion banner -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+
+      <!--@import partials/layout/scripts.html-->
+    </div>
+  </body>
+</html>

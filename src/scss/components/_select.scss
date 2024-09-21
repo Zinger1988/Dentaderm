@@ -1,0 +1,85 @@
+.select {
+  float: none;
+  border: none;
+  border-bottom: 1px solid $gray500;
+  border-radius: 0;
+  @include fs("body2");
+  font-weight: 500;
+  padding: 0.6rem 0;
+  height: auto;
+  @include animate(border, 0.2s);
+  background: transparent;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $black;
+  }
+
+  .nice-select-dropdown {
+    border-radius: 0;
+    background: $white;
+    color: $textColor;
+    box-shadow: none;
+    box-shadow: 0 1rem 2rem rgba($black, 0.075);
+    z-index: 20;
+  }
+
+  .list {
+    margin: 0;
+    padding: 1rem 0;
+    border-radius: 0;
+    font-weight: 300;
+
+    .disabled:first-child {
+      font-style: italic;
+      font-weight: 300;
+      color: $gray800;
+    }
+  }
+
+  .option {
+    height: auto;
+    line-height: inherit;
+    padding: 0.8rem 1.8rem;
+    color: $black;
+
+    &.selected.focus {
+      font-weight: 600;
+    }
+
+    &:hover:not(.disabled) {
+      background: $gray100;
+    }
+  }
+
+  &::after {
+    border-bottom: 2px solid $black;
+    border-right: 2px solid $black;
+    content: "";
+    display: block;
+    height: 0.7rem;
+    width: 0.7rem;
+    margin-top: -0.4rem;
+    pointer-events: none;
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform-origin: 66% 66%;
+    transform: rotate(45deg);
+    @include animate(all, "0.15s");
+  }
+
+  &--white {
+    border-bottom-color: $gray600;
+
+    &::after {
+      border-bottom: 2px solid $white;
+      border-right: 2px solid $white;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $white;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.rating {
+  display: flex;
+  gap: 1.2rem;
+
+  &__star {
+    @include sizeRatio(1.3rem);
+  }
+}

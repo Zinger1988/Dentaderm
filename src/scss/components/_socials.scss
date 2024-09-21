@@ -1,0 +1,47 @@
+.socials {
+  $this: &;
+
+  &__list {
+    @extend %listReset;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    &--narrow {
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+    @extend %listReset;
+  }
+
+  &__link {
+    display: block;
+    line-height: 1;
+  }
+
+  &__icon {
+    fill: $black;
+    @include animate(fill);
+    @include sizeRatio(1.8rem, 1);
+  }
+
+  &--vertical {
+    #{$this}__list {
+      flex-direction: column;
+    }
+  }
+
+  &--white {
+    #{$this}__icon {
+      fill: $gray500;
+
+      @include mediaHover() {
+        &:hover {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content content--pt-0 page__content">
+        <!-- #region about -->
+        <div class="block content__block content__block--mb-0">
+          <!--@import partials/components/about-section.html-->
+        </div>
+        <!-- #endregion about -->
+
+        <!-- #region about carousel -->
+        <div class="block content__block">
+          <!--@import partials/components/about-carousel.html-->
+        </div>
+        <!-- #endregion about carousel -->
+
+        <!-- #region advantages -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Чому ми</h2>
+            </header>
+            <!--@import partials/components/advantages-slider.html-->
+          </div>
+        </section>
+        <!-- #endregion advantages -->
+
+        <!-- #region doctors -->
+        <section class="block content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Наші фахівці</h2>
+              <a href="#" class="btn btn--default block__header-btn">Всі фахівці</a>
+            </header>
+            <!--@import partials/components/doctors-carousel.html-->
+          </div>
+        </section>
+        <!-- #endregion doctors -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region banner -->
+      <section class="block content__block content__block--mb-0">
+        <!--@import partials/components/banner-bottom-1.html-->
+      </section>
+      <!-- #endregion banner -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+
+      <!--@import partials/layout/scripts.html-->
+    </div>
+  </body>
+</html>

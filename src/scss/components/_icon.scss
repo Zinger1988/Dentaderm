@@ -1,0 +1,5 @@
+.icon {
+  display: inline-block;
+  fill: $black;
+  @include sizeRatio(2rem, 1);
+}

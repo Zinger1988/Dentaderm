@@ -1,0 +1,50 @@
+.fluid-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 1.4rem;
+
+  $this: &;
+
+  @include media(">=3xl") {
+    padding-top: 1.6rem;
+  }
+
+  &__title {
+    @include fs("body2");
+    position: absolute;
+    color: $gray600;
+    left: 0;
+    top: 2rem;
+    transform-origin: left top;
+    z-index: 10;
+    @include animate(top transform, 0.15s);
+
+    @include media(">=3xl") {
+      top: 2.2rem;
+    }
+  }
+
+  &--active {
+    #{$this}__title {
+      top: 0;
+      transform: scale(0.85);
+    }
+  }
+
+  &--white {
+    #{$this}__title {
+      color: $gray200;
+    }
+  }
+
+  .validator__errors {
+    flex: 1 0 100%;
+    order: 999999;
+  }
+
+  .validator__tooltips {
+    display: none;
+  }
+}

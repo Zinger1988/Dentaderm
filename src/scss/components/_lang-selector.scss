@@ -1,0 +1,58 @@
+.lang-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  @extend %listReset;
+
+  $this: &;
+
+  &__item {
+    @extend %listReset;
+    @extend %linkReset;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 400;
+    padding: 0.8rem;
+    border: 1px solid transparent;
+    color: $gray700;
+    border-bottom: 1px solid $gray300;
+
+    @include media(">=md") {
+      font-size: 1.1rem;
+    }
+
+    @include media(">=3xl") {
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--active {
+      color: $black;
+      font-weight: 700;
+    }
+  }
+
+  &__link {
+    @extend %linkReset;
+    text-transform: uppercase;
+    color: inherit;
+  }
+
+  &--hor {
+    flex-direction: row;
+
+    #{$this}__item {
+      border-bottom: none;
+      border-right: 1px solid $gray300;
+      padding: 0.8rem 1.2rem;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

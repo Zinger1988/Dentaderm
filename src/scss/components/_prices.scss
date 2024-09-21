@@ -1,0 +1,61 @@
+.prices {
+  @extend %listReset;
+
+  $this: &;
+
+  &__item {
+    @extend %listReset;
+
+    &--sub {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    position: relative;
+    padding: 1.4rem 4rem 1.4rem 0;
+    border-bottom: 1px solid $gray200;
+    font-size: 1.5rem;
+    @include animate(border-color);
+
+    @include media(">=3xl") {
+      padding: 1.8rem 4rem 1.8rem 0;
+      font-size: 1.8rem;
+    }
+
+    &.label-active {
+      border-bottom: 1px solid $gray800;
+
+      #{$this}__arrow {
+        transform: translate(0, -50%) rotate(180deg);
+      }
+    }
+
+    &--sub {
+      padding: 1rem 0;
+      border-bottom: 1px dotted $gray800;
+    }
+  }
+
+  &__arrow {
+    @include positionRightCenter();
+    @include animate(transform);
+  }
+
+  &__link {
+    @include fs("body2");
+    @include decorationHidden(inherit);
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: baseline;
+  }
+
+  &--sub {
+    margin: 0.4rem 0 3rem;
+    padding: 0.5rem 0 0;
+    border-top: 1px solid $gray800;
+  }
+}

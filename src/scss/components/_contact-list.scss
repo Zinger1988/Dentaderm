@@ -1,0 +1,50 @@
+.contact-list {
+  @extend %listReset;
+  display: flex;
+  gap: 3rem;
+
+  @include media(">=2xl") {
+    gap: 5rem;
+  }
+
+  &__item {
+    @extend %listReset;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    position: relative;
+    padding-left: 1.8rem;
+    color: $gray400;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+      border: 1px solid $gray400;
+
+      @include media(">=2xl") {
+        top: 0.8rem;
+      }
+    }
+  }
+
+  &__address,
+  &__phone {
+    color: inherit;
+    @include fs("body2");
+    @include decorationHidden($white);
+    @include animate(color text-decoration);
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__phone {
+    font-weight: 600;
+  }
+}

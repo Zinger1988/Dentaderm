@@ -1,0 +1,20 @@
+html {
+  font-size: $remBase;
+}
+
+body {
+  font: 400 1.4rem / 1.7 $baseFontFamily;
+  color: $textColor;
+  overflow-x: hidden;
+  min-width: 36rem;
+
+  @include media(">=3xl") {
+    font-size: 1.6rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

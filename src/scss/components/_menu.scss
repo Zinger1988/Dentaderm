@@ -1,0 +1,212 @@
+.menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 7.6rem;
+  height: calc(100dvh - 7.6rem);
+  z-index: 900;
+  background-color: $white;
+  min-width: 36rem;
+  overflow: auto;
+  display: flex;
+  transform: translateX(-150%);
+  @include animate(transform, 0.5s, ease-in-out);
+
+  $this: &;
+
+  @include media(">=md") {
+    top: 8.3rem;
+    height: calc(100dvh - 8.3rem);
+  }
+
+  @include media(">=xl") {
+    top: 9.8rem;
+    min-height: calc(100dvh - 9.8rem);
+    left: 9rem;
+  }
+
+  @include media(">=3xl") {
+    top: 12.4rem;
+    height: calc(100dvh - 12.4rem);
+    left: 13rem;
+  }
+
+  &--active {
+    transform: translateX(0);
+
+    #{$this}__holder {
+      opacity: 1;
+    }
+  }
+
+  &__holder {
+    padding: 3rem 2rem;
+    max-width: 120rem;
+    width: 100%;
+    opacity: 0;
+    display: grid;
+    grid-template-areas:
+      "header"
+      "contacts"
+      "nav";
+    grid-template-rows: auto auto 1fr;
+    gap: 2rem;
+    @include animate(opacity, 0.3s, linear, 0.5s);
+
+    @include media(">=md") {
+      height: 100%;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      grid-template-columns: 3fr 2fr;
+      gap: 0 6rem;
+      grid-template-areas:
+        "header header"
+        "nav contacts";
+    }
+
+    @include media(">=lg") {
+      padding: 4rem 5rem 2rem;
+    }
+
+    @include media(">=xl") {
+      padding: 0 5rem;
+    }
+
+    @include media(">=3xl") {
+      padding: 0 8rem;
+    }
+  }
+
+  &__header {
+    padding: 0 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray200;
+    grid-area: header;
+
+    @include media(">=md") {
+      margin: 0;
+    }
+
+    @include media(">=xl") {
+      display: none;
+    }
+  }
+
+  &__nav {
+    grid-area: nav;
+    padding: 0 0 4rem;
+
+    @include media(">=md") {
+      padding: 2rem 0;
+      border-right: 1px solid $gray200;
+    }
+
+    @include media(">=xl") {
+      padding: 5rem 0;
+    }
+  }
+
+  &__list {
+    @extend %listReset;
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--secondary {
+      display: grid;
+      gap: 0.5rem 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    @extend %listReset;
+    border-bottom: 1px solid $gray200;
+
+    &--secondary {
+      border: none;
+    }
+  }
+
+  &__link {
+    @include fs("supertab");
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1rem 5.5rem 1rem 0;
+    font-weight: 400;
+    position: relative;
+    @include animate(padding, 0.2s);
+
+    &::after {
+      content: "";
+      position: absolute;
+      @include sizeRatio(2.2rem, 0.375);
+      top: 50%;
+      right: 0;
+      opacity: 0;
+      transform: translateY(-50%);
+      background: url(/assets/images/arrow_black_right.svg) center / contain;
+      @include animate(right opacity, 0.2s);
+    }
+
+    @include media(">=3xl") {
+      padding: 1.4rem 5.5rem 1.4rem 0;
+    }
+
+    @include mediaHover() {
+      &:hover {
+        padding-left: 1rem;
+
+        &::after {
+          opacity: 1;
+          right: 2rem;
+        }
+      }
+    }
+
+    &--secondary {
+      text-decoration: underline;
+      @include fs("body2");
+      @include decorationHidden(inherit);
+      display: inline;
+      text-transform: none;
+      padding: 0;
+
+      &::after {
+        display: none;
+      }
+
+      @include mediaHover() {
+        &:hover {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &__location-tabs {
+    grid-area: contacts;
+    padding: 0 0 2rem;
+    border-bottom: 1px solid $gray200;
+
+    @include media(">=md") {
+      padding: 3rem 0 2rem;
+    }
+
+    @include media(">=xl") {
+      padding: 5rem 0;
+    }
+
+    @include media(">=3xl") {
+      padding: 6rem 0;
+    }
+  }
+}

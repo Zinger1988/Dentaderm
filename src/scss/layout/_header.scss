@@ -1,0 +1,96 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba($black, 0.8);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  z-index: 999;
+  padding: 1.5rem 0;
+
+  @include media(">=xl") {
+    left: 9rem;
+    width: calc(100% - 9rem);
+    padding: 2rem 0;
+  }
+
+  @include media(">=3xl") {
+    left: 13rem;
+    width: calc(100% - 13rem);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: none;
+
+    @include media(">=md") {
+      width: 100%;
+    }
+
+    @include media(">=lg") {
+      width: 100%;
+    }
+
+    @include media(">=xl") {
+      max-width: none;
+    }
+
+    @include media(">=2xl") {
+      max-width: none;
+    }
+  }
+
+  &__logo {
+    padding: 0 1.5rem 0 0;
+    border-right: 1px solid $gray800;
+
+    @include media(">=xl") {
+      border-right: none;
+      padding: 0;
+    }
+  }
+
+  &__logo-img {
+    display: block;
+    width: 6rem;
+
+    @include media(">=md") {
+      width: 7rem;
+    }
+
+    @include media(">=xl") {
+      width: 7.6rem;
+    }
+
+    @include media(">=3xl") {
+      width: 11rem;
+    }
+  }
+
+  &__menu-btn {
+    width: 3.4rem;
+    height: 3.4rem;
+    @include media(">=xl") {
+      display: none;
+    }
+  }
+
+  &__contact-list {
+    display: none;
+
+    @include media(">=xl") {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  &__appointment {
+    margin-left: auto;
+
+    @include media(">=xl") {
+      margin: 0;
+    }
+  }
+}

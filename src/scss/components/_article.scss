@@ -1,0 +1,93 @@
+.article {
+  &__header {
+    margin: 0 auto 3rem;
+    display: grid;
+    justify-items: start;
+    gap: 1.6rem 0;
+
+    grid-template-areas:
+      "backward"
+      "author"
+      "title"
+      "date"
+      "img";
+
+    @include media(">=sm") {
+      margin-bottom: 4rem;
+    }
+
+    @include media(">=md") {
+      gap: 1.8rem 8rem;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "author ."
+        "title backward"
+        "date ."
+        "img img";
+    }
+
+    @include media(">=3xl") {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__author {
+    grid-area: author;
+  }
+
+  &__date {
+    font-size: 1.2rem;
+    line-height: 1;
+    grid-area: date;
+
+    @include media(">=xl") {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__backward {
+    grid-area: backward;
+    margin-bottom: 0.5rem;
+
+    @include media(">=md") {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include v-rythm("h1", 0.8);
+    margin: 0;
+    grid-area: title;
+
+    @include media(">=md") {
+      @include v-rythm("h1", 0.9);
+      margin: 0;
+    }
+
+    @include media(">=3xl") {
+      margin: 0 0 1rem;
+    }
+  }
+
+  &__img {
+    grid-area: img;
+  }
+
+  &__img-item {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  &__section {
+    margin-bottom: 5rem;
+
+    @include media(">=3xl") {
+      margin-bottom: 6rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content page__content">
+        <div class="page__crumbs">
+          <div class="container">
+            <ul class="crumbs">
+              <li class="crumbs__item">
+                <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
+              </li>
+              <li class="crumbs__item">
+                <span class="crumbs__endpoint">Наші фахівці</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- #region doctors -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <header class="block__header">
+              <h1 class="block__title h2">Наші фахівці</h1>
+            </header>
+
+            <div class="cards-grid">
+              <div class="row cards-grid__row">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/doctor-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/doctor-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/doctor-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/doctor-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/doctor-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/doctor-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/doctor-card.html-->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 cards-grid">
+                  <!--@import partials/components/doctor-card.html-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- #endregion doctors -->
+
+        <!-- #region ceo text -->
+        <section class="block content__block">
+          <div class="container">
+            <!--@import partials/components/ceo-text.html-->
+          </div>
+        </section>
+        <!-- #endregion ceo text -->
+
+        <!-- #region banner -->
+        <section class="block content__block content__block--mb-0">
+          <!--@import partials/components/banner-bottom-1.html-->
+        </section>
+        <!-- #endregion banner -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+
+      <!--@import partials/layout/scripts.html-->
+    </div>
+  </body>
+</html>

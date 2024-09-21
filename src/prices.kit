@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content page__content">
+        <div class="page__crumbs">
+          <div class="container container--screen-xl">
+            <ul class="crumbs">
+              <li class="crumbs__item">
+                <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
+              </li>
+              <li class="crumbs__item">
+                <span class="crumbs__endpoint">Ціни</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- #region doctors -->
+        <section class="block content__block">
+          <div class="container container--screen-xl">
+            <header class="block__header">
+              <h1 class="block__title h2">Ціни</h1>
+            </header>
+
+            <!--@import partials/components/price-accordion.html-->
+          </div>
+        </section>
+        <!-- #endregion doctors -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+
+      <!--@import partials/layout/scripts.html-->
+    </div>
+  </body>
+</html>

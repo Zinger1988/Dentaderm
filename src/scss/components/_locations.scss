@@ -1,0 +1,11 @@
+.locations {
+  @extend %listReset;
+  display: flex;
+  gap: 3rem;
+
+  &__item {
+    @extend %listReset;
+    display: flex;
+    flex-direction: column;
+  }
+}

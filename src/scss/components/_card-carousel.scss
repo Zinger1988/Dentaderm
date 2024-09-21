@@ -1,0 +1,59 @@
+.card-carousel {
+  position: relative;
+  padding: 0 0 5rem;
+
+  $this: &;
+
+  @include media(">=md") {
+    padding: 0 6rem;
+  }
+
+  .swiper-slide {
+    height: 100%;
+  }
+
+  &__nav {
+    @extend %buttonReset;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+
+    &--next {
+      left: calc(50% + 4rem);
+    }
+
+    &--prev {
+      right: calc(50% + 4rem);
+    }
+
+    @include mediaHover() {
+      &:hover {
+        #{$this}__nav-icon {
+          transform: scale(1.4);
+        }
+      }
+    }
+
+    @include media(">=md") {
+      display: block;
+      padding: 1rem;
+
+      &--next {
+        @include positionRightCenter();
+        left: auto;
+        right: -1rem;
+      }
+
+      &--prev {
+        @include positionLeftCenter();
+        right: auto;
+        left: -1rem;
+      }
+    }
+  }
+
+  &__nav-icon {
+    @include sizeRatio(2.4rem, 1);
+    @include animate(transform, 0.15s);
+  }
+}

@@ -1,0 +1,9 @@
+.validator {
+  &__error-item {
+    margin: 0;
+    padding: 0.3rem 0;
+    color: $danger300;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,58 @@
+.downloads-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @extend %listReset;
+
+  $this: &;
+
+  &__item {
+    @extend %listReset;
+  }
+
+  &__link {
+    @extend %linkReset;
+    font-weight: 300;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.2rem 1rem 1.2rem 2rem;
+    border: 1px solid $black;
+    @include animate(background-color color);
+
+    @include mediaHover() {
+      &:hover {
+        background-color: $black;
+        color: $white;
+
+        #{$this}__icon {
+          fill: $white;
+        }
+      }
+    }
+
+    @include media(">=3xl") {
+      padding: 1.6rem 1.4rem 1.6rem 2.4rem;
+      font-size: 1.8rem;
+      gap: 4rem;
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+  }
+
+  &__icon {
+    @include sizeRatio(2.4rem);
+    @include animate(fill);
+    flex-shrink: 0;
+
+    @include media(">=md") {
+      @include sizeRatio(2.8rem);
+    }
+
+    @include media(">=xl") {
+      @include sizeRatio(3.2rem);
+    }
+  }
+}

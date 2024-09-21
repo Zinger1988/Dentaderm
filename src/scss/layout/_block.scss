@@ -1,0 +1,69 @@
+.block {
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    @include media(">=md") {
+      margin-bottom: 4rem;
+    }
+
+    @include media(">=xl") {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__header-btn {
+    flex: 0 0 auto;
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    margin: 0;
+  }
+
+  &__btn {
+    flex: 0 0 auto;
+  }
+
+  &__downloads-list {
+    min-height: 20rem;
+
+    @include media(">=lg") {
+      min-height: 30rem;
+    }
+  }
+
+  &__cards-grid {
+    margin: 0 0 5rem;
+  }
+
+  &--separated {
+    &-b {
+      padding-bottom: 5rem;
+      border-bottom: 1px solid $gray200;
+
+      @include media(">=md") {
+        padding-bottom: 8rem;
+      }
+
+      @include media(">=2xl") {
+        padding-bottom: 9rem;
+      }
+    }
+
+    &-t {
+      padding-top: 5rem;
+      border-bottom: 1px solid $gray200;
+
+      @include media(">=md") {
+        padding-top: 8rem;
+      }
+
+      @include media(">=2xl") {
+        padding-top: 9rem;
+      }
+    }
+  }
+}

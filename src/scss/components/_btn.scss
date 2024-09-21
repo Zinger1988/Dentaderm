@@ -1,0 +1,214 @@
+.btn {
+  @extend %buttonReset;
+  @include fs("button", 0.9);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $black;
+  position: relative;
+
+  $this: &;
+
+  &:disabled,
+  &--disabled {
+    color: $gray700;
+    cursor: default;
+  }
+
+  @include media(">=3xl") {
+    @include fs("button");
+  }
+
+  &--fluid {
+    display: block;
+    width: 100%;
+  }
+
+  &--white {
+    color: $white;
+
+    &#{$this}--backward {
+      &::before {
+        background-image: url(/assets/images/arrow_white_left.svg);
+      }
+
+      &::after {
+        border: 1px solid $white;
+      }
+    }
+
+    &#{$this}--default {
+      &::after {
+        border: 1px solid $white;
+      }
+
+      &::before {
+        background-image: url(/assets/images/dentaderm_logo_stroke_white_outline.svg);
+      }
+    }
+
+    &#{$this}--square {
+      color: black;
+      background: $gray200;
+
+      &::after {
+        border-right: 1px solid $gray200;
+        border-bottom: 1px solid $gray200;
+      }
+
+      &:hover {
+        background: $white;
+
+        &::after {
+          border-right: 1px solid $white;
+          border-bottom: 1px solid $white;
+        }
+      }
+    }
+  }
+
+  &--lightblue {
+    &#{$this}--square {
+      color: black;
+      background: #afdfff;
+
+      &::after {
+        border-right: 1px solid #afdfff;
+        border-bottom: 1px solid #afdfff;
+      }
+    }
+  }
+
+  &--square {
+    padding: 1.6rem 2.4rem;
+    background: $gray900;
+    color: $white;
+    @include animate(transform background-color, 0.1s);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      transform: translate(0.5rem, 0.5rem);
+      border-right: 1px solid $gray900;
+      border-bottom: 1px solid $gray900;
+      @include animate(transform, 0.1s);
+    }
+
+    &:active {
+      transform: translate(0.5rem, 0.5rem);
+
+      &::after {
+        transform: translate(0, 0);
+      }
+    }
+
+    &:hover {
+      background: $black;
+
+      &::after {
+        border-right: 1px solid $black;
+        border-bottom: 1px solid $black;
+      }
+    }
+  }
+
+  &--backward {
+    padding: 0 0 0 3.8rem;
+
+    &::after {
+      @include positionLeftCenter();
+      @include animate(left width height, 0.2s);
+      content: "";
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 100%;
+      border: 1px solid $black;
+    }
+
+    &:disabled,
+    &#{$this}--disabled {
+      &::after {
+        border: 1px solid $gray700;
+      }
+    }
+
+    @include mediaHover() {
+      &:hover:not(:disabled):not(#{$this}--disabled)::after {
+        left: 1.3rem;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    &::before {
+      @include positionLeftCenter();
+      content: "";
+      left: 0.6rem;
+      width: 1.8rem;
+      height: 0.9rem;
+      background: url(/assets/images/arrow_black_left.svg) center / contain no-repeat;
+    }
+  }
+
+  &--default {
+    padding: 0 1.8rem 0 0;
+
+    &::after {
+      @include positionRightCenter();
+      @include animate(right opacity transform);
+      content: "";
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 100%;
+      border: 1px solid $black;
+    }
+
+    &:disabled,
+    &#{$this}--disabled {
+      &::after {
+        border: 1px solid $gray700;
+      }
+    }
+
+    @include mediaHover() {
+      &:hover:not(:disabled):not(#{$this}--disabled)::after {
+        right: 2rem;
+        opacity: 0;
+        transform: translateY(-50%) scale(0);
+      }
+    }
+
+    &::before {
+      @include positionCenterY();
+      @include animate(right opacity transform);
+      content: "";
+      transform: translateY(-50%) scale(0);
+      transform-origin: center;
+      opacity: 0;
+      right: -0.8rem;
+      width: 5.2rem;
+      height: 4rem;
+      background: url(/assets/images/dentaderm_logo_stroke_gray_outline.svg) center /
+        contain no-repeat;
+    }
+
+    @include mediaHover() {
+      &:hover:not(:disabled):not(#{$this}--disabled)::before {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    @include media(">=3xl") {
+      padding: 0 2.3rem 0 0;
+
+      &::before {
+        right: -0.2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.author {
+  color: inherit;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 1.4rem;
+  @include decorationHidden($gray600);
+  grid-template-areas:
+    "img name"
+    "img position";
+
+  @include media(">=lg") {
+    gap: 0 1.8rem;
+  }
+
+  &__img {
+    grid-area: img;
+  }
+
+  &__img-item {
+    display: block;
+    border-radius: 50%;
+    width: 4.8rem;
+    height: 4.8rem;
+
+    @include media(">=lg") {
+      width: 5.4rem;
+      height: 5.4rem;
+    }
+  }
+
+  &__name {
+    grid-area: name;
+    font-size: 1.2rem;
+    align-self: end;
+    font-weight: 500;
+    color: $black;
+
+    @include media(">=lg") {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__position {
+    grid-area: position;
+    font-size: 1rem;
+    align-self: start;
+    color: $gray600;
+
+    @include media(">=lg") {
+      font-size: 1.3rem;
+    }
+  }
+}

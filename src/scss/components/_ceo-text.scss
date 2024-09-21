@@ -1,0 +1,41 @@
+.ceo-text {
+  @include fs("body2");
+
+  // prettier-ignore
+  h1, .h1 {
+    @include v-rythm("h1", 0.7);
+  }
+
+  // prettier-ignore
+  h2, .h2 {
+    @include v-rythm("h2", 0.7);
+  }
+
+  // prettier-ignore
+  h3, .h3 {
+    @include v-rythm("h3", 0.7);
+  }
+
+  // prettier-ignore
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    @include v-rythm("h4", 0.7);
+  }
+
+  &__heading {
+    margin-bottom: 3rem;
+  }
+
+  &__content {
+    @include media(">=lg") {
+      column-count: 2;
+      column-gap: 4rem;
+      break-inside: avoid;
+    }
+
+    @include media(">=2xl") {
+      column-gap: 8rem;
+    }
+  }
+}

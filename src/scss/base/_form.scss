@@ -1,0 +1,44 @@
+@mixin baseTextInputAppearance() {
+  @include fs("body2");
+  font-weight: 500;
+  padding: 0.6rem 0;
+  color: inherit;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $gray500;
+  background: transparent;
+  @include animate(border, 0.2s);
+  @extend %textEllipsis;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::placeholder {
+    color: $gray400;
+    opacity: 1;
+    @include animate(opacity);
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $black;
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &--error {
+    &,
+    &:hover,
+    &:focus {
+      border-bottom-color: $danger;
+    }
+  }
+}

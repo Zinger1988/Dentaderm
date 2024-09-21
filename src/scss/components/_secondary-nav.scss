@@ -1,0 +1,18 @@
+.secondary-nav {
+  &__list {
+    @extend %listReset;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  &__item {
+    @extend %listReset;
+    @include fs("tab2");
+  }
+
+  &__link {
+    @include decorationHidden($white);
+    color: $white;
+  }
+}

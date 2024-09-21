@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content content--pt-0 page__content">
+        <!-- #region doctor info -->
+        <section class="doctor-info content__doctor-info">
+          <div class="container">
+            <div class="doctor-info__inner">
+              <!-- #region crumbs -->
+              <ul class="crumbs doctor-info__crumbs">
+                <li class="crumbs__item">
+                  <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
+                </li>
+                <li class="crumbs__item">
+                  <a class="crumbs__endpoint crumbs__endpoint--link" href="#">
+                    Наші фахівці
+                  </a>
+                </li>
+                <li class="crumbs__item">
+                  <span class="crumbs__endpoint">
+                    Стороженко Олександр Володимирович
+                  </span>
+                </li>
+              </ul>
+              <!-- #endregion crumbs -->
+
+              <h1 class="doctor-info__name">Стороженко Олександр Володимирович</h1>
+
+              <!-- #region doctor img -->
+              <div class="doctor-info__img">
+                <img
+                  class="doctor-info__img-item"
+                  src="/assets/images/doctors/storozhenko.jpg"
+                  alt="Стороженко Олександр Володимирович"
+                />
+              </div>
+              <!-- #endregion doctor img -->
+
+              <!-- #region doctor content -->
+              <div class="doctor-info__content">
+                <h3>Спеціалізація</h3>
+                <p>Лікар вищої категорії, Стоматолог-хірург, ортопед</p>
+
+                <h3>Робочі дні</h3>
+                <p>Пн-Ср, Пт-Сб</p>
+
+                <h3>Освіта</h3>
+                <ul>
+                  <li>Національний медичний Університет ім. О.О.Богомольця 2004</li>
+                  <li>Сертифікація за спеціальністю ортопедична стоматологія 2013</li>
+                  <li>
+                    Вища кваліфікаційна категорія за спеціальністю хірургічна стоматологія
+                    2013
+                  </li>
+                </ul>
+              </div>
+              <!-- #endregion doctor content -->
+            </div>
+          </div>
+        </section>
+        <!-- #endregion doctor-info -->
+
+        <!-- #region blog -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Сертифікати та відзнаки</h2>
+            </header>
+            <!--@import partials/components/awards-carousel.html-->
+          </div>
+        </section>
+        <!-- #endregion blog -->
+
+        <!-- #region services -->
+        <section class="block content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Послуги, що надаються</h2>
+            </header>
+            <!--@import partials/components/service-grid.html-->
+          </div>
+        </section>
+        <!-- #endregion services -->
+
+        <!-- #region blog -->
+        <section class="block content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Статті лікаря</h2>
+              <a href="#" class="btn btn--default block__header-btn">Всі статті</a>
+            </header>
+            <!--@import partials/components/blog-carousel.html-->
+          </div>
+        </section>
+        <!-- #endregion blog -->
+
+        <!-- #region banner -->
+        <section class="block content__block content__block--mb-0">
+          <!--@import partials/components/banner-bottom-3.html-->
+        </section>
+        <!-- #endregion banner -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+
+      <!--@import partials/layout/scripts.html-->
+    </div>
+  </body>
+</html>

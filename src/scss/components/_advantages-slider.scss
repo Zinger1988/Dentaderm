@@ -1,0 +1,46 @@
+.adv-slider {
+  max-width: 50rem;
+  padding: 0 5rem 0 0;
+
+  @include media(">=md") {
+    padding: 0;
+  }
+
+  .slider-wrapper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    @include animate(transform opacity filter padding);
+    transform-origin: top center;
+  }
+
+  .advantage-card__header,
+  .advantage-card__description {
+    @include animate(opacity);
+  }
+
+  .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.8;
+    filter: grayscale(100%);
+    padding: 0 0 0 2rem;
+
+    @include media(">=md") {
+      padding: 0 0 0 4rem;
+    }
+
+    &.swiper-slide-prev {
+      padding: 0 2rem 0 0;
+
+      @include media(">=md") {
+        padding: 0 4rem 0 0;
+      }
+    }
+
+    .advantage-card__header,
+    .advantage-card__description {
+      opacity: 0;
+      padding: 0;
+    }
+  }
+}

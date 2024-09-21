@@ -1,0 +1,64 @@
+.sidebar {
+  cursor: pointer;
+  display: block;
+  width: 9rem;
+  display: flex;
+  background-color: $white;
+  z-index: 1000;
+  border-right: 1px solid $gray200;
+  cursor: pointer;
+  position: relative;
+  @include animate(background-color);
+
+  &:hover {
+    background: $gray100;
+  }
+
+  @include media(">=3xl") {
+    width: 13rem;
+  }
+
+  &__lang-selector {
+    position: absolute;
+    @include positionTopCenter();
+    top: 1.6rem;
+    z-index: 20;
+
+    @include media(">=3xl") {
+      top: 2rem;
+    }
+  }
+
+  &__menu-btn {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__socials {
+    position: absolute;
+    @include positionBottomCenter();
+    bottom: 3rem;
+    z-index: 20;
+
+    @include media(">=3xl") {
+      bottom: 4rem;
+    }
+
+    .socials__list {
+      gap: 2rem;
+
+      @include media(">=3xl") {
+        gap: 2.4rem;
+      }
+    }
+
+    .socials__icon {
+      fill: $black;
+      @include sizeRatio(1.8rem);
+    }
+  }
+}

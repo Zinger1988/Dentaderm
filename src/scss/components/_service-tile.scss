@@ -1,0 +1,115 @@
+.service-tile {
+  min-height: 14rem;
+  display: flex;
+  border: 1px solid $gray200;
+  color: inherit;
+  text-decoration: none;
+
+  @include media(">=md") {
+    min-height: 18rem;
+  }
+
+  @include media(">=3xl") {
+    min-height: 22rem;
+  }
+
+  $this: &;
+
+  &__inner {
+    @include animate(transform background-color color box-shadow);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 3rem 0;
+
+    @include media(">=md") {
+      padding: 3rem;
+      border-radius: 0 0 4rem 0;
+    }
+
+    @include media(">=3xl") {
+      padding: 4rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    flex: 1 0 auto;
+    margin-bottom: 5rem;
+
+    @include media(">=md") {
+      font-size: 1.6rem;
+    }
+
+    @include media(">=xl") {
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+
+    @include media(">=3xl") {
+      font-size: 2rem;
+    }
+  }
+
+  &__price {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    font-weight: 600;
+    @include animate(opacity);
+
+    @include media(">=md") {
+      left: 3rem;
+      bottom: 3rem;
+    }
+
+    @include media(">=xl") {
+      font-size: 1.6rem;
+    }
+
+    @include media(">=3xl") {
+      left: 4rem;
+      bottom: 4rem;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    opacity: 0;
+    @include animate(opacity);
+
+    @include media(">=md") {
+      left: 3rem;
+      bottom: 3rem;
+    }
+
+    @include media(">=3xl") {
+      left: 4rem;
+      bottom: 4rem;
+    }
+  }
+
+  @include mediaHover() {
+    &:hover {
+      #{$this}__inner {
+        background-color: $black;
+        color: $white;
+        transform: translate(1rem, -1rem);
+        box-shadow: 2rem 2rem 3rem rgba($black, 0.3);
+      }
+
+      #{$this}__btn {
+        opacity: 1;
+      }
+
+      #{$this}__price {
+        opacity: 0;
+      }
+    }
+  }
+}

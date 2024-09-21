@@ -1,0 +1,258 @@
+$v-rythm-sizes-lg: (
+  "h1": (
+    3.8rem,
+    1.42,
+  ),
+  "h2": (
+    2.8rem,
+    1.6,
+  ),
+  "h3": (
+    2.1rem,
+    1.6,
+  ),
+  "h4": (
+    1.6rem,
+    1.6,
+  ),
+  "p": (
+    inherit,
+    inherit,
+  ),
+  "list": (
+    inherit,
+    inherit,
+  ),
+  "listItem": (
+    inherit,
+    inherit,
+  ),
+);
+
+$v-rythm-sizes-sm: (
+  "h1": (
+    3rem,
+    1.42,
+  ),
+  "h2": (
+    2.2rem,
+    1.6,
+  ),
+  "h3": (
+    1.7rem,
+    1.6,
+  ),
+  "h4": (
+    1.4rem,
+    1.7,
+  ),
+  "p": (
+    inherit,
+    inherit,
+  ),
+  "list": (
+    inherit,
+    inherit,
+  ),
+  "listItem": (
+    inherit,
+    inherit,
+  ),
+);
+
+$v-rythm-margins: (
+  "h1": (
+    0.263em,
+    0.6em,
+  ),
+  "h2": (
+    0.5em,
+    0.5em,
+  ),
+  "h3": (
+    0.19em,
+    1em,
+  ),
+  "h4": (
+    0.375em,
+    1.31em,
+  ),
+  "p": (
+    0.375em,
+    1.31em,
+  ),
+  "list": (
+    0.375em,
+    1.31em,
+  ),
+  "listItem": (
+    0.375em,
+    0.375em,
+  ),
+);
+
+@mixin v-rythm($level, $scale: 1) {
+  $sizes: map-get($v-rythm-sizes-sm, $level);
+  $margins: map-get($v-rythm-margins, $level);
+
+  @if nth($sizes, 1) != inherit {
+    font-size: nth($sizes, 1) * $scale;
+  } @else {
+    font-size: nth($sizes, 1);
+  }
+
+  line-height: nth($sizes, 2);
+  margin-top: nth($margins, 1);
+  margin-bottom: nth($margins, 2);
+
+  @include media(">=3xl") {
+    $sizes: map-get($v-rythm-sizes-lg, $level);
+    $margins: map-get($v-rythm-margins, $level);
+
+    @if nth($sizes, 1) != inherit {
+      font-size: nth($sizes, 1) * $scale;
+    } @else {
+      font-size: nth($sizes, 1);
+    }
+    line-height: nth($sizes, 2);
+    margin-top: nth($margins, 1);
+    margin-bottom: nth($margins, 2);
+  }
+}
+
+$font-leadings: (
+  "tab": 1.3,
+  "tab2": 1.5,
+  "supertab": 1.7,
+  "button": 1.4rem,
+  "body": 1.7,
+  "body2": 1.7,
+);
+
+$font-weights: (
+  "tab": 400,
+  "tab2": 300,
+  "supertab": 300,
+  "button": 700,
+  "body": 300,
+  "body2": 400,
+);
+
+$fonts: (
+  "360": (
+    "tab": 1.1rem,
+    "tab2": 1rem,
+    "supertab": 1.4rem,
+    "button": 1.1rem,
+    "body": 1.4rem,
+    "body2": 1.2rem,
+  ),
+  "768": (
+    "tab": 1.1rem,
+    "tab2": 1.2rem,
+    "supertab": 1.4rem,
+    "button": 1.2rem,
+    "body": 1.4rem,
+    "body2": 1.2rem,
+  ),
+  "1920": (
+    "tab": 1.4rem,
+    "tab2": 1.3rem,
+    "supertab": 1.6rem,
+    "button": 1.3rem,
+    "body": 1.6rem,
+    "body2": 1.4rem,
+  ),
+);
+
+@mixin fs($type, $scale: 1) {
+  $selected: map-get($fonts, "360");
+  font-size: map-get($selected, $type) * $scale;
+  line-height: map-get($font-leadings, $type);
+  font-weight: map-get($font-weights, $type);
+
+  @include media(">=md") {
+    $selected: map-get($fonts, "768");
+    font-size: map-get($selected, $type) * $scale;
+  }
+
+  @include media(">=3xl") {
+    $selected: map-get($fonts, "1920");
+    font-size: map-get($selected, $type) * $scale;
+  }
+}
+
+// prettier-ignore
+h1, .h1 {
+  @include v-rythm("h1");
+  font-weight: 600;
+}
+
+// prettier-ignore
+h2, .h2 {
+  @include v-rythm("h2");
+  font-weight: 600;
+}
+
+// prettier-ignore
+h3, .h3 {
+  @include v-rythm("h3");
+  font-weight: 600;
+}
+
+// prettier-ignore
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  @include v-rythm("h4");
+  font-weight: 600;
+}
+
+// prettier-ignore
+p, .p {
+  @include v-rythm("p");
+}
+
+// prettier-ignore
+ul, .ul {
+  list-style: circle;
+  padding-left: 2rem;
+  @include v-rythm("list");
+}
+
+// prettier-ignore
+ol, .ol {
+  padding-left: 2rem;
+  @include v-rythm("list");
+
+  li::marker {
+    font-weight: 600;
+  }
+}
+
+// prettier-ignore
+li, .li {
+  @include v-rythm("listItem");
+  padding-left: 0.5rem;
+
+  &::marker {
+    color: $black;
+  }
+}
+
+// prettier-ignore
+b, strong {
+  font-weight: 600;
+}
+
+a {
+  color: $gray500;
+  text-underline-offset: 0.2em;
+  @include animate(text-decoration-color);
+
+  @include mediaHover() {
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.advantage-card {
+  &__img {
+    position: relative;
+    padding: 29% 0;
+    margin: 0 0 2rem;
+  }
+
+  &__img-item {
+    position: absolute;
+    @include positionTopLeft();
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__description {
+    @include clearMarginY("&");
+    @include fs("body2");
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 0 1.6rem;
+
+    @include media(">=3xl") {
+      margin: 0 0 2.4rem;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    margin: 0;
+  }
+
+  &__nav {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__nav-btn {
+    @extend %buttonReset;
+    @include animate(transform, 0.15s);
+    cursor: pointer;
+
+    @include mediaHover() {
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+}

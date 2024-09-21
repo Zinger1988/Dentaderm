@@ -1,0 +1,14 @@
+.form {
+  &__body {
+    @include clearMarginY("&");
+    margin: 0 0 3rem;
+  }
+
+  &__row {
+    margin-bottom: 1.2rem;
+
+    @include media(">=3xl") {
+      margin-bottom: 1.6rem;
+    }
+  }
+}

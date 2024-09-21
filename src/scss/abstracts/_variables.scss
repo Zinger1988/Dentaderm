@@ -1,0 +1,43 @@
+// colors
+$black: #000000;
+$white: #fff;
+
+$gray950: #2c2b2b;
+$gray900: #383535;
+$gray800: #565555;
+$gray700: #6d6d6d;
+$gray600: #808080;
+$gray500: #9a9a9a;
+$gray400: #aaaaaa;
+$gray300: #d5d5d5;
+$gray200: #eaeaea;
+$gray100: #f4f4f4;
+
+$beige300: #fbf8f1;
+$beige400: #e3ded0;
+
+$danger: #e21515;
+$danger300: #ff6363;
+
+$warning: #ffe9ac;
+$success: #52c271;
+
+// font size of html-element that equals to 16px * 0.625 = 10px
+// used as rem-base for nested elements font-size properties
+$remBase: 62.5%;
+$leadingBase: 1.5;
+
+// override for inclide-media mixin breakpoints
+$breakpoints: (
+  "xs": 320px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1280px,
+  "2xl": 1400px,
+  "3xl": 1900px,
+);
+
+// fonts
+$baseFontFamily: "montserrat";
+$textColor: $gray950;

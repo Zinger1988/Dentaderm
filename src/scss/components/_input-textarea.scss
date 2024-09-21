@@ -1,0 +1,7 @@
+.input-textarea {
+  @include baseTextInputAppearance();
+  display: block;
+  width: 100%;
+  min-height: 7rem;
+  resize: vertical;
+}

@@ -1,0 +1,39 @@
+.crumbs {
+  @extend %listReset;
+  display: flex;
+  gap: 0.7rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+
+  &__item {
+    @extend %listReset;
+    padding: 0 1rem 0 0;
+    margin: 0 1rem 0 0;
+    flex: 0 1 auto;
+    min-width: 0;
+    border-right: 1px solid $gray300;
+    font-size: 1.1rem;
+    line-height: 1.3;
+
+    &:last-child {
+      margin: 0;
+      padding: 0;
+      border-right: none;
+    }
+
+    @include media(">=3xl") {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__endpoint {
+    display: block;
+    color: $gray600;
+    width: 100%;
+    @include textEllipsis();
+
+    &--link {
+      @include decorationHidden($gray600);
+    }
+  }
+}

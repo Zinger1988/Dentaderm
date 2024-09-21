@@ -1,0 +1,74 @@
+.location-tabs {
+  $this: &;
+
+  &__head {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    @extend %buttonReset;
+    @include fs("tab");
+    @include animate(color, text-decoration);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $gray400;
+
+    &.active {
+      color: $black;
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+    }
+  }
+
+  &__content-item {
+    display: none;
+    font-weight: 300;
+
+    &.active {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+
+  &__address {
+    @include clearMarginY("&");
+    flex: 1 0 auto;
+  }
+
+  &__address-row {
+    margin-bottom: 0.5em;
+    color: $black;
+
+    a {
+      @include decorationHidden($black);
+      color: $black;
+    }
+
+    &--sm {
+      @include fs("body2");
+      font-weight: 300;
+    }
+  }
+
+  &--white {
+    #{$this}__btn {
+      color: $gray500;
+
+      &.active {
+        color: $white;
+      }
+    }
+
+    #{$this}__address-row {
+      color: $white;
+
+      a {
+        color: $white;
+        @include decorationHidden($white);
+      }
+    }
+  }
+}

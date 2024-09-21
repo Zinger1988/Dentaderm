@@ -1,0 +1,18 @@
+.input-text {
+  @include baseTextInputAppearance();
+  display: block;
+  width: 100%;
+
+  &--white {
+    border-bottom-color: $gray600;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: $white;
+    }
+
+    &::placeholder {
+      color: $gray500;
+    }
+  }
+}

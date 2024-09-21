@@ -1,0 +1,191 @@
+.footer {
+  background-color: $black;
+  color: $white;
+
+  &__holder {
+    padding: 0;
+    max-width: 192rem;
+    margin: 0 auto;
+
+    @include media(">=md") {
+      display: grid;
+      grid-template-columns: 16rem 2fr 3fr;
+      grid-template-areas:
+        "logo locations map"
+        "logo nav nav"
+        "logo bottom bottom";
+    }
+
+    @include media(">=xl") {
+      display: grid;
+      grid-template-columns: 24rem 1fr 1.43fr;
+      grid-template-areas:
+        "logo locations nav"
+        "map map nav"
+        "map map nav"
+        "map map bottom";
+    }
+
+    @include media(">=3xl") {
+      grid-template-columns: 33.4rem 1fr 1.29fr;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    border-bottom: 1px solid $gray900;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      border-left: 1px solid $gray900;
+      height: 100%;
+      z-index: 5;
+    }
+
+    @include media(">=md") {
+      padding: 4rem 2rem;
+      padding: 0;
+      grid-area: logo;
+      align-items: start;
+    }
+  }
+
+  &__logo-link {
+    @include media(">=md") {
+      margin-top: 8rem;
+    }
+  }
+
+  &__logo-item {
+    width: 12rem;
+    position: relative;
+    z-index: 10;
+
+    @include media(">=3xl") {
+      width: 15.4rem;
+    }
+  }
+
+  &__locations {
+    @include clearMarginY("&");
+    border-bottom: 1px solid $gray900;
+    padding: 4rem;
+
+    @include media(">=md") {
+      padding: 4rem 2rem;
+      grid-area: locations;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 100%;
+        width: 100vw;
+        border-bottom: 1px solid $gray900;
+      }
+    }
+
+    @include media(">=xl") {
+      padding: 5.5rem 2rem;
+      border-right: 1px solid $gray900;
+      border-bottom: none;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__map {
+    @include media(">=md") {
+      grid-area: map;
+    }
+  }
+
+  &__map-item {
+    width: 100%;
+    height: 40rem;
+  }
+
+  &__nav {
+    padding: 4rem;
+    border-bottom: 1px solid $gray900;
+
+    @include media(">=md") {
+      grid-area: nav;
+      padding: 4rem 4rem 4rem 2rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 100%;
+        width: 100vw;
+        border-bottom: 1px solid $gray900;
+      }
+    }
+
+    @include media(">=xl") {
+      padding: 5.5rem 5rem;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__primary-nav {
+    margin-bottom: 4rem;
+
+    @include media(">=md") {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__bottom {
+    @include fs("body2");
+    padding: 3rem 4rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 7.2rem;
+    grid-template-areas:
+      "socials studio"
+      "copy copy";
+    gap: 2.6rem;
+
+    @include media(">=md") {
+      padding: 3rem 4rem 3rem 2rem;
+      grid-area: bottom;
+    }
+
+    @include media(">=xl") {
+      padding: 6.5rem 5rem;
+    }
+  }
+
+  &__socials {
+    grid-area: socials;
+  }
+
+  &__studio {
+    grid-area: studio;
+  }
+
+  &__copy {
+    grid-area: copy;
+    color: $gray700;
+
+    p {
+      margin: 0;
+    }
+  }
+}

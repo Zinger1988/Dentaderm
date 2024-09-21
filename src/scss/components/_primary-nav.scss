@@ -1,0 +1,32 @@
+.primary-nav {
+  &__list {
+    @extend %listReset;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include media(">=md") {
+      flex-direction: row;
+      gap: 3.4rem;
+    }
+
+    @include media(">=xl") {
+      gap: 3.9rem;
+    }
+
+    @include media(">=3xl") {
+      gap: 4.4rem;
+    }
+  }
+
+  &__item {
+    @extend %listReset;
+    @include fs("tab");
+    text-transform: uppercase;
+  }
+
+  &__link {
+    @include decorationHidden($white);
+    color: $white;
+  }
+}

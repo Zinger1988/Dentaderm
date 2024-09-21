@@ -1,0 +1,7 @@
+.accordion {
+  &__panel {
+    @include animate(max-height);
+    max-height: 0;
+    overflow: hidden;
+  }
+}
