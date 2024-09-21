@@ -53,6 +53,12 @@
   top: 0;
 }
 
+@mixin positionTopRight($position: absolute) {
+  position: $position;
+  right: 0;
+  top: 0;
+}
+
 @mixin positionBottomCenter($position: absolute) {
   position: $position;
   bottom: 0;

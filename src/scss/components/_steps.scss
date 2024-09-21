@@ -1,0 +1,180 @@
+.steps {
+  @extend %listReset;
+
+  $this: &;
+
+  @include media(">=md") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    @extend %listReset;
+    @include clearMarginY("&");
+    position: relative;
+    padding: 0 0 4rem 6rem;
+
+    @for $i from 1 through 15 {
+      &:nth-child(#{$i}) #{$this}__title,
+      &:nth-child(#{$i}) #{$this}__description {
+        animation: fadeIn 0.5s ease-in-out #{$i / 3}s forwards;
+      }
+    }
+
+    &::before {
+      content: "";
+      @include positionTopLeft();
+      left: 1.5rem;
+      top: 1rem;
+      height: 100%;
+      border-right: 1px dotted $black;
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in-out 0.5s forwards;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    @include media(">=md") {
+      padding: 0 0 16rem;
+
+      &:nth-child(odd) {
+        padding-right: 8rem;
+        text-align: right;
+
+        #{$this}__marker {
+          left: auto;
+          @include positionTopRight();
+          transform: translate(50%, 0);
+          z-index: 10;
+        }
+
+        &::before {
+          @include positionTopRight();
+          top: 1rem;
+          left: auto;
+        }
+      }
+
+      &:nth-child(even) {
+        padding-left: 8rem;
+        text-align: left;
+
+        #{$this}__marker {
+          @include positionTopLeft();
+          transform: translate(-50%, 0);
+          z-index: 10;
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+
+      @for $i from 1 through 15 {
+        &:nth-child(#{$i}) {
+          grid-row: #{$i} / span 2;
+        }
+      }
+
+      &:last-child {
+        grid-row-end: span 1;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-flex;
+    width: 3.2rem;
+    height: 3.2rem;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 3rem;
+      height: 1.6rem;
+      background-color: $gray900;
+      z-index: 1;
+    }
+
+    &::before {
+      top: 0;
+      border-radius: 1.6rem 1.6rem 0 0;
+      transform-origin: bottom center;
+      transform: rotate(-22deg) translateX(0) scale(0);
+      animation: stepMarkerTopZoomIn 1s ease-in-out forwards;
+    }
+
+    &::after {
+      top: 1.49rem;
+      border-radius: 0 0 1.6rem 1.6rem;
+      transform-origin: top center;
+      transform: rotate(-22deg) translateX(0) scale(0);
+      animation: stepMarkerBottomZoomIn 1s ease-in-out forwards;
+    }
+  }
+
+  &__marker-value {
+    position: relative;
+    z-index: 5;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out 1s forwards;
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+
+  &__title {
+    margin: 0 0 0.3em;
+    opacity: 0;
+  }
+
+  &__description {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes stepMarkerTopZoomIn {
+  0% {
+    transform: rotate(-22deg) translateX(0) scale(0);
+  }
+  50% {
+    transform: rotate(-22deg) translateX(0) scale(1);
+  }
+  100% {
+    transform: rotate(-22deg) translateX(-0.2rem) scale(1);
+  }
+}
+
+@keyframes stepMarkerBottomZoomIn {
+  0% {
+    transform: rotate(-22deg) translateX(0) scale(0);
+  }
+  50% {
+    transform: rotate(-22deg) translateX(0) scale(1);
+  }
+  100% {
+    transform: rotate(-22deg) translateX(0.2rem) scale(1);
+  }
+}
