@@ -168,6 +168,33 @@ const initCardCarousel = () => {
     },
   };
 
+  const demoCarouselOptions = {
+    slidesPerView: 3,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 28,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 28,
+      },
+      1280: {
+        slidesPerView: 3,
+        spaceBetween: 28,
+      },
+      1400: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+  };
+
+  new Swiper(".card-carousel--demo .card-carousel__swiper", {
+    ...baseOptions,
+    ...demoCarouselOptions,
+  });
+
   new Swiper(".card-carousel--awards .card-carousel__swiper", {
     ...baseOptions,
     ...awardsCarouselOptions,
@@ -435,8 +462,8 @@ const initConnectedCarousel = () => {
   updatePagination(customPagination, textSwiper);
 };
 
-const initAdvSlider = () => {
-  const sliderSelector = ".adv-slider";
+const initHeroSlider = () => {
+  const sliderSelector = ".hero-slider";
   const sliderContainer = document.querySelector(sliderSelector);
 
   if (!sliderContainer) {
@@ -448,16 +475,109 @@ const initAdvSlider = () => {
     slidesPerView: 1,
   });
 
-  const navButtons = swiper.el.querySelectorAll(".advantage-card__nav-btn");
+  const navButtons = swiper.el.querySelectorAll(".hero-card__nav-btn");
   const nextNavBtns = Array.from(navButtons).filter((item) =>
-    item.classList.contains("advantage-card__nav-btn--next")
+    item.classList.contains("hero-card__nav-btn--next")
   );
   const prevNavBtns = Array.from(navButtons).filter((item) =>
-    item.classList.contains("advantage-card__nav-btn--prev")
+    item.classList.contains("hero-card__nav-btn--prev")
   );
 
   nextNavBtns.forEach((btn) => btn.addEventListener("click", () => swiper.slideNext()));
   prevNavBtns.forEach((btn) => btn.addEventListener("click", () => swiper.slidePrev()));
+};
+
+const initYouTubeVideo = () => {
+  let YouTubeContainers = document.querySelectorAll(".video");
+
+  if (!YouTubeContainers.length) return;
+
+  // Iterate over every YouTube container you may have
+  for (let i = 0; i < YouTubeContainers.length; i++) {
+    let container = YouTubeContainers[i];
+    let imageSource =
+      "https://i.ytimg.com/vi/" + container.dataset.videoId + "/hqdefault.jpg";
+
+    // Load the Thumbnail Image asynchronously
+    let image = new Image();
+    image.src = imageSource;
+    image.classList.add("video__poster");
+    image.addEventListener("load", function () {
+      container.appendChild(image);
+    });
+
+    // When the user clicks on the container, load the embedded YouTube video
+    container.addEventListener("click", function () {
+      let iframe = document.createElement("iframe");
+
+      iframe.classList.add("video__item");
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute(
+        "allow",
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      );
+      // Important: add the autoplay GET parameter, otherwise the user would need to click over the YouTube video again to play it
+      iframe.setAttribute(
+        "src",
+        "https://www.youtube.com/embed/" +
+          this.dataset.videoId +
+          "?rel=0&showinfo=0&autoplay=1"
+      );
+
+      // Clear Thumbnail and load the YouTube iframe
+      this.innerHTML = "";
+      this.appendChild(iframe);
+    });
+  }
+};
+
+const stickyHeader = () => {
+  const headers = document.querySelectorAll(".sticky-header");
+
+  if (headers.length === 0) return;
+
+  headers.forEach((header) => {
+    const sticky = header.offsetTop + 150;
+
+    const toggleSticky = () => {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky-header--sticky");
+      } else {
+        header.classList.remove("sticky-header--sticky");
+      }
+    };
+
+    window.onscroll = function () {
+      toggleSticky();
+    };
+
+    toggleSticky();
+  });
+};
+
+const initSmoothScroll = () => {
+  const anchors = document.querySelectorAll('a[href^="#"]');
+
+  if (!anchors.length === 0) return;
+
+  const smoothScroll = (target) => {
+    const element = document.getElementById(target);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 120,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  anchors.forEach(function (anchor) {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const target = anchor.getAttribute("href").substring(1);
+      smoothScroll(target);
+    });
+  });
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -472,6 +592,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initAccordion();
   initFormValidator();
   initConnectedCarousel();
-  initAdvSlider();
+  initHeroSlider();
   toggleExpand();
+  initYouTubeVideo();
+  stickyHeader();
+  initSmoothScroll();
 });

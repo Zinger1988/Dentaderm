@@ -33,7 +33,7 @@
 
     @include media(">=md") {
       padding: 4rem 2rem;
-      max-width: 76.8rem;
+      max-width: 768px;
     }
 
     @include media(">=lg") {
@@ -52,11 +52,11 @@
     }
 
     @include media(">=2xl") {
-      padding: 6.5rem 0;
+      padding: 6rem 0;
     }
 
     @include media(">=3xl") {
-      padding: 8rem 0;
+      padding: 7rem 0;
     }
   }
 
@@ -66,7 +66,7 @@
     @include media(">=lg") {
       padding: 0 5rem 0 3.2rem;
       justify-self: end;
-      max-width: 49.6rem;
+      max-width: 496px;
       height: 100%;
       width: 100%;
       display: flex;
@@ -81,14 +81,14 @@
     @include media(">=xl") {
       padding: 0 6.6rem 0 4.6rem;
       width: 49.6rem;
-      min-width: 54rem;
-      max-width: 64rem;
+      min-width: 540px;
+      max-width: 640px;
     }
 
     @include media(">=2xl") {
       padding: 0 8rem 0 6rem;
       width: 100%;
-      max-width: 75rem;
+      max-width: 750px;
     }
 
     @include media(">=2xl") {
@@ -114,6 +114,10 @@
     position: relative;
     background-color: $black;
     grid-area: media;
+
+    &--no-bg {
+      background-color: transparent;
+    }
   }
 
   &__image-item {
@@ -192,5 +196,7 @@
   &--dark {
     background-color: $black;
     color: $white;
+    border-top: 1px solid $gray800;
+    border-bottom: 1px solid $gray800;
   }
 }

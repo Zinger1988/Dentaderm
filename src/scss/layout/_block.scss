@@ -1,4 +1,6 @@
 .block {
+  $this: &;
+
   &__header {
     display: flex;
     align-items: center;
@@ -45,11 +47,11 @@
       border-bottom: 1px solid $gray200;
 
       @include media(">=md") {
-        padding-bottom: 8rem;
+        padding-bottom: 6rem;
       }
 
       @include media(">=2xl") {
-        padding-bottom: 9rem;
+        padding-bottom: 7rem;
       }
     }
 
@@ -58,11 +60,31 @@
       border-bottom: 1px solid $gray200;
 
       @include media(">=md") {
-        padding-top: 8rem;
+        padding-top: 6rem;
       }
 
       @include media(">=2xl") {
-        padding-top: 9rem;
+        padding-top: 7rem;
+      }
+    }
+  }
+
+  &--dark {
+    background-color: $black;
+    color: $white;
+    padding: 5rem 0;
+
+    @include media(">=md") {
+      padding: 8rem 0;
+    }
+
+    &#{$this}--separated {
+      &-b {
+        border-bottom: 1px solid $gray800;
+      }
+
+      &-t {
+        border-bottom: 1px solid $gray800;
       }
     }
   }

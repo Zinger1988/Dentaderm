@@ -1,4 +1,4 @@
-.adv-slider {
+.hero-slider {
   max-width: 50rem;
   padding: 0 5rem 0 0;
 
@@ -15,8 +15,8 @@
     transform-origin: top center;
   }
 
-  .advantage-card__header,
-  .advantage-card__description {
+  .hero-card__header,
+  .hero-card__description {
     @include animate(opacity);
   }
 
@@ -37,8 +37,8 @@
       }
     }
 
-    .advantage-card__header,
-    .advantage-card__description {
+    .hero-card__header,
+    .hero-card__description {
       opacity: 0;
       padding: 0;
     }

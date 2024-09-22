@@ -45,7 +45,6 @@
 
       &:nth-child(odd) {
         padding-right: 8rem;
-        text-align: right;
 
         #{$this}__marker {
           left: auto;
@@ -136,6 +135,32 @@
     font-size: 1.4rem;
   }
 
+  &__media {
+    margin: 0 0 2rem;
+    max-width: 54rem;
+
+    @include media(">=md") {
+      margin: 0 0 3rem;
+    }
+  }
+
+  &__media-inner {
+    padding: 56.25% 0 0;
+    position: relative;
+  }
+
+  &__media-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &--image {
+      object-fit: cover;
+    }
+  }
+
   &__title {
     margin: 0 0 0.3em;
     opacity: 0;
@@ -143,6 +168,21 @@
 
   &__description {
     opacity: 0;
+  }
+
+  &--dark {
+    #{$this}__item::before {
+      border-color: $gray600;
+    }
+
+    #{$this}__marker {
+      color: $black;
+
+      &::before,
+      &::after {
+        background-color: $gray200;
+      }
+    }
   }
 }
 

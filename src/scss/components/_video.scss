@@ -1,0 +1,34 @@
+.video {
+  position: relative;
+  padding: 56.25% 0 0 0;
+
+  &__item,
+  &__poster {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+
+  &__poster {
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  &__play {
+    @include positionCenter();
+    width: 8rem;
+    height: 8rem;
+    z-index: 10;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba($white, 0.7) url(/assets/images/play.svg) center / 2.4rem auto
+      no-repeat;
+  }
+
+  &--4x3 {
+    padding: 75% 0 0 0;
+  }
+}

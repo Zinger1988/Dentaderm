@@ -1,11 +1,11 @@
-.advantage-card {
-  &__img {
+.hero-card {
+  &__media {
     position: relative;
-    padding: 29% 0;
+    padding: 56.25% 0 0;
     margin: 0 0 2rem;
   }
 
-  &__img-item {
+  &__media-item {
     position: absolute;
     @include positionTopLeft();
     width: 100%;

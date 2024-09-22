@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content page__content">
+        <div class="page__crumbs">
+          <div class="container">
+            <ul class="crumbs">
+              <li class="crumbs__item">
+                <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
+              </li>
+              <li class="crumbs__item">
+                <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Послуги</a>
+              </li>
+              <li class="crumbs__item">
+                <span class="crumbs__endpoint">Хірургічна стоматологія</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- #region blog -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <header class="block__header">
+              <h1 class="block__title h2">Хірургічна стоматологія</h1>
+              <a href="#" class="btn btn--backward">Всі послуги</a>
+            </header>
+            <!--@import partials/components/service-grid.html-->
+          </div>
+        </section>
+        <!-- #endregion blog -->
+
+        <!-- #region ceo text -->
+        <section class="block content__block">
+          <div class="container">
+            <!--@import partials/components/ceo-text.html-->
+          </div>
+        </section>
+        <!-- #endregion ceo text -->
+
+        <!-- #region banner -->
+        <section class="block content__block content__block--mb-0">
+          <!--@import partials/components/banner-bottom-2.html-->
+        </section>
+        <!-- #endregion banner -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+
+      <!--@import partials/layout/scripts.html-->
+    </div>
+  </body>
+</html>

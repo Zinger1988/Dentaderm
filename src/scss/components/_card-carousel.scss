@@ -56,4 +56,10 @@
     @include sizeRatio(2.4rem, 1);
     @include animate(transform, 0.15s);
   }
+
+  &--dark {
+    #{$this}__nav-icon {
+      fill: $white;
+    }
+  }
 }

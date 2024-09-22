@@ -13,21 +13,25 @@
     flex-direction: column;
     gap: 0.4rem;
     position: relative;
-    padding-left: 1.8rem;
+    padding-left: 2.4rem;
     color: $gray400;
+
+    @include media(">=3xl") {
+      padding-left: 3.2rem;
+    }
 
     &::before {
       content: "";
       position: absolute;
       left: 0;
-      top: 0.6rem;
-      width: 0.6rem;
-      height: 0.6rem;
-      border-radius: 50%;
-      border: 1px solid $gray400;
+      top: 0.2rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: url("/assets/images/marker-alt_white.svg") center / contain no-repeat;
 
-      @include media(">=2xl") {
-        top: 0.8rem;
+      @include media(">=3xl") {
+        width: 2rem;
+        height: 2rem;
       }
     }
   }

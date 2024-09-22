@@ -94,8 +94,14 @@
     }
   }
 
+  &--single {
+    #{$this}__btn {
+      display: none;
+    }
+  }
+
   @include mediaHover() {
-    &:hover {
+    &:hover:not(#{$this}--single) {
       #{$this}__inner {
         background-color: $black;
         color: $white;

@@ -1,9 +1,13 @@
 .article {
+  $this: &;
+  position: relative;
+
   &__header {
     margin: 0 auto 3rem;
     display: grid;
     justify-items: start;
     gap: 1.6rem 0;
+    position: relative;
 
     grid-template-areas:
       "backward"
@@ -79,6 +83,103 @@
     margin: 0 auto;
   }
 
+  &__nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba($white, 0.6);
+    backdrop-filter: blur(10px);
+
+    &.sticky-header--sticky {
+      position: fixed;
+      top: 7.6rem;
+      left: 0;
+      width: 100%;
+      bottom: auto;
+      border-top: none;
+      border-bottom: 1px solid $gray300;
+      z-index: 100;
+
+      @include media(">=md") {
+        top: 8.3rem;
+      }
+
+      @include media(">=xl") {
+        top: 9.8rem;
+        left: 9rem;
+        width: calc(100% - 9rem);
+      }
+
+      @include media(">=3xl") {
+        top: 12.4rem;
+        left: 13rem;
+        width: calc(100% - 13rem);
+      }
+
+      #{$this}__nav-list {
+        @extend .container;
+        @extend .container--screen-xl;
+      }
+    }
+  }
+
+  &__nav-list {
+    @extend %listReset;
+    display: flex;
+  }
+
+  &__nav-item {
+    @extend %listReset;
+    flex: 1 0 auto;
+
+    &:last-child #{$this}__nav-link {
+      border: none;
+    }
+  }
+
+  &__nav-link {
+    @extend %linkReset;
+    @include fs("body2");
+    @include animate(background-color);
+    color: $black;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-right: 1px solid $gray300;
+    padding: 1.2rem 2.2rem;
+
+    @include media(">=3xl") {
+      padding: 1.8rem 3.6rem;
+    }
+
+    @include mediaHover() {
+      &:hover {
+        #{$this}__nav-icon {
+          transform: translateX(0.5rem);
+
+          @include media(">=3xl") {
+            transform: translateX(1rem);
+          }
+        }
+      }
+    }
+  }
+
+  &__nav-icon {
+    @include sizeRatio(1.4rem);
+    @include animate(transform);
+    fill: $black;
+
+    @include media(">=3xl") {
+      @include sizeRatio(1.8rem);
+    }
+  }
+
   &__section {
     margin-bottom: 5rem;
 
@@ -88,6 +189,25 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &--service {
+    #{$this}__header {
+      grid-template-areas:
+        "backward"
+        "title"
+        "img";
+
+      @include media(">=md") {
+        grid-template-areas:
+          "title backward"
+          "img img";
+      }
+    }
+
+    #{$this}__body {
+      max-width: 900px;
     }
   }
 }
