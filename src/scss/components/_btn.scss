@@ -29,7 +29,7 @@
 
     &#{$this}--backward {
       &::before {
-        background-image: url(../../../assets/images/arrow_white_left.svg);
+        background-image: url(../assets/images/arrow_white_left.svg);
       }
 
       &::after {
@@ -43,7 +43,7 @@
       }
 
       &::before {
-        background-image: url(../../../assets/images/dentaderm_logo_stroke_white_outline.svg);
+        background-image: url(../assets/images/dentaderm_logo_stroke_white_outline.svg);
       }
     }
 
@@ -165,8 +165,7 @@
       left: 0.6rem;
       width: 1.8rem;
       height: 0.9rem;
-      background: url(../../../assets/images/arrow_black_left.svg) center / contain
-        no-repeat;
+      background: url(../assets/images/arrow_black_left.svg) center / contain no-repeat;
     }
   }
 
@@ -208,8 +207,8 @@
       right: -0.8rem;
       width: 5.2rem;
       height: 4rem;
-      background: url(../../../assets/images/dentaderm_logo_stroke_gray_outline.svg)
-        center / contain no-repeat;
+      background: url(../assets/images/dentaderm_logo_stroke_gray_outline.svg) center /
+        contain no-repeat;
     }
 
     @include mediaHover() {

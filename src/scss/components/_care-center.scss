@@ -2,7 +2,7 @@
   &__heading {
     color: $black;
     padding: 2rem;
-    background: #e1eff7 url(../../../assets/images/logo_puls_bg.svg) center / cover;
+    background: #e1eff7 url(../assets/images/logo_puls_bg.svg) center / cover;
 
     @include media(">=md") {
       padding: 5rem;
