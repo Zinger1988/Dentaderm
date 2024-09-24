@@ -27,7 +27,7 @@
       top: 0.2rem;
       width: 1.6rem;
       height: 1.6rem;
-      background: url("/assets/images/marker-alt_white.svg") center / contain no-repeat;
+      background: url("assets/images/marker-alt_white.svg") center / contain no-repeat;
 
       @include media(">=3xl") {
         width: 2rem;

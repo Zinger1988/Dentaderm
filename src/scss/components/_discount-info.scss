@@ -15,7 +15,7 @@
     color: $black;
     font-weight: 500;
     flex: 0 0 auto;
-    background: url(/assets/images/dentaderm_logo_solid_blank.svg) center / contain
+    background: url(assets/images/dentaderm_logo_solid_blank.svg) center / contain
       no-repeat;
 
     @include media(">=3xl") {
