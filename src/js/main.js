@@ -15,7 +15,7 @@ const initMap = () => {
 
   const el = document.createElement("div");
   el.className = "marker";
-  el.style.backgroundImage = "url(assets/images/marker.svg)";
+  el.style.backgroundImage = "url(./assets/images/marker.svg)";
   el.style.width = "36px";
   el.style.height = "36px";
 
