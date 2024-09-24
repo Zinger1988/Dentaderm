@@ -153,7 +153,7 @@
       right: 0;
       opacity: 0;
       transform: translateY(-50%);
-      background: url(assets/images/arrow_black_right.svg) center / contain;
+      background: url(../../../assets/images/arrow_black_right.svg) center / contain;
       @include animate(right opacity, 0.2s);
     }
 

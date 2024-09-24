@@ -15,8 +15,8 @@
     color: $black;
     font-weight: 500;
     flex: 0 0 auto;
-    background: url(assets/images/dentaderm_logo_solid_blank.svg) center / contain
-      no-repeat;
+    background: url(../../../assets/images/dentaderm_logo_solid_blank.svg) center /
+      contain no-repeat;
 
     @include media(">=3xl") {
       @include sizeRatio(8rem, 0.76);
