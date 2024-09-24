@@ -6,11 +6,18 @@
     </div>
     <div class="steps__media">
       <div class="steps__media-inner">
-        <img
-          class="steps__media-item steps__media-item--image"
-          src="/assets/images/service/ortho_diagnosis_step.jpg"
-          alt="Базова функціональна діагностика"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="/assets/images/service/ortho_diagnosis_step.webp"
+          />
+          <img
+            loading="lazy"
+            class="steps__media-item steps__media-item--image"
+            src="/assets/images/service/ortho_diagnosis_step.jpg"
+            alt="img"
+          />
+        </picture>
       </div>
     </div>
     <h3 class="steps__title">Мала функціональна діагностика</h3>

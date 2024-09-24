@@ -1,0 +1,32 @@
+.recommendations {
+  &__img {
+    display: block;
+    position: relative;
+    padding: min(125%, 50.2rem) 0 0;
+    max-width: 40rem;
+    margin: 0 auto 3rem;
+
+    @include media(">=lg") {
+      margin: 0;
+    }
+  }
+
+  &__img-item {
+    @include positionTopLeft();
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    @include clearMarginY("&");
+
+    @include media(">=lg") {
+      padding-left: 2rem;
+    }
+
+    @include media(">=2xl") {
+      padding-left: 3rem;
+    }
+  }
+}

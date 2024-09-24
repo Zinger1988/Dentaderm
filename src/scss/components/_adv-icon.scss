@@ -1,0 +1,44 @@
+.adv-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+
+  @include media(">=sm") {
+    gap: 2rem;
+  }
+
+  &__img {
+    width: 4rem;
+    flex: 0 0 auto;
+
+    @include media(">=sm") {
+      width: 4rem;
+    }
+
+    @include media(">=2xl") {
+      width: 5rem;
+    }
+
+    @include media(">=3xl") {
+      width: 6rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 600;
+    flex: 1 1 auto;
+    text-align: center;
+    color: $black;
+
+    @include media(">=sm") {
+      font-size: 1.2rem;
+    }
+
+    @include media(">=2xl") {
+      font-size: 1.3rem;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 .hero-card {
   &__media {
+    display: block;
     position: relative;
     padding: 56.25% 0 0;
     margin: 0 0 2rem;
@@ -13,9 +14,18 @@
     object-fit: cover;
   }
 
-  &__description {
-    @include clearMarginY("&");
+  &__description-panel {
     @include fs("body2");
+    @include clearMarginY("&");
+    max-height: 8.1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    @include media(">=3xl") {
+      max-height: 9.5rem;
+    }
   }
 
   &__header {

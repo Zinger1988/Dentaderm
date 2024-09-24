@@ -42,13 +42,18 @@
               <h1 class="doctor-info__name">Стороженко Олександр Володимирович</h1>
 
               <!-- #region doctor img -->
-              <div class="doctor-info__img">
+              <picture class="doctor-info__img">
+                <source
+                  type="image/webp"
+                  srcset="/assets/images/doctors/storozhenko.webp"
+                />
                 <img
+                  loading="lazy"
                   class="doctor-info__img-item"
                   src="/assets/images/doctors/storozhenko.jpg"
                   alt="Стороженко Олександр Володимирович"
                 />
-              </div>
+              </picture>
               <!-- #endregion doctor img -->
 
               <!-- #region doctor content -->
@@ -120,8 +125,10 @@
       <!-- #region footer -->
       <!--@import partials/layout/footer.html-->
       <!-- #endregion footer -->
-
-      <!--@import partials/layout/scripts.html-->
     </div>
+
+    <!--@import partials/components/modal-appointment.html-->
+    <!--@import partials/components/modal-success.html-->
+    <!--@import partials/layout/scripts.html-->
   </body>
 </html>

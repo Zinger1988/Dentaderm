@@ -1,0 +1,89 @@
+.discount-card {
+  $this: &;
+
+  @include media(">=md") {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @include media(">=xl") {
+    gap: 5rem;
+  }
+
+  @include media(">=3xl") {
+    grid-template-columns: 44% 1fr;
+    gap: 7rem;
+  }
+
+  &__img-link {
+    display: block;
+    position: relative;
+    margin: 0 0 2rem;
+
+    @include media(">=md") {
+      margin: 0;
+    }
+
+    @include mediaHover() {
+      &:hover {
+        #{$this}__img-item {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    padding: 66% 0 0 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__img-item {
+    @include animate(transform);
+    @include positionLeftTop();
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    @include clearMarginY("&");
+  }
+
+  &__discount-info {
+    margin: 0 0 1.8rem;
+  }
+
+  &__excerpt {
+    @include clearMarginX("&");
+    margin: 0 0 2rem;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(">=md") {
+      justify-content: flex-end;
+      gap: 4rem;
+    }
+
+    @include media(">=xl") {
+      gap: 6rem;
+    }
+
+    @include media(">=3xl") {
+      gap: 8rem;
+    }
+  }
+
+  &__excerpt {
+    @include fs("body2");
+  }
+}

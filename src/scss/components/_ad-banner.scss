@@ -1,0 +1,55 @@
+.ad-banner {
+  padding: 14rem 4rem 0 0;
+  position: relative;
+  background-color: $black;
+
+  @include media(">=md") {
+    padding: 0;
+    display: flex;
+    min-height: 50rem;
+  }
+
+  &__title {
+    color: $accent300;
+  }
+
+  &__content {
+    padding: 3rem;
+    background-color: rgba($black, 0.8);
+    backdrop-filter: blur(3px);
+    color: $white;
+    position: relative;
+    z-index: 10;
+    max-width: 48rem;
+
+    @include media(">=md") {
+      flex: 0 0 50%;
+      max-width: none;
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include media(">=xl") {
+      padding: 5rem;
+    }
+  }
+
+  &__text {
+    @include clearMarginY("&");
+  }
+
+  &__img {
+    @include positionTopLeft();
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img-item {
+    @include positionTopLeft();
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

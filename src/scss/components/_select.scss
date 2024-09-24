@@ -47,8 +47,10 @@
       font-weight: 600;
     }
 
-    &:hover:not(.disabled) {
-      background: $gray100;
+    @include mediaHover() {
+      &:hover:not(.disabled) {
+        background: $gray100;
+      }
     }
   }
 

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content page__content">
+        <div class="content__crumbs">
+          <div class="container container--screen-lg">
+            <ul class="crumbs">
+              <li class="crumbs__item">
+                <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
+              </li>
+              <li class="crumbs__item">
+                <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Акції</a>
+              </li>
+              <li class="crumbs__item">
+                <span class="crumbs__endpoint">
+                  Dental Check-Up за адресою Кловський узвіз, 7а
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- #region doctors -->
+        <div class="block content__block">
+          <div class="container container--screen-lg">
+            <article class="article article--discount content__article">
+              <header class="article__header">
+                <div class="discount-info article__discount-info">
+                  <div class="discount-info__percentage">-25%</div>
+                  <div class="discount-info__price">
+                    <div class="discount-info__price-item discount-info__price-item">
+                      3 000 грн
+                    </div>
+                    <div class="discount-info__price-item discount-info__price-item--old">
+                      4 025
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn--backward article__backward">Всі акції</button>
+                <h1 class="article__title">
+                  Dental Check-Up за адресою Кловський узвіз, 7а
+                </h1>
+                <picture class="article__img">
+                  <source
+                    type="image/webp"
+                    srcset="/assets/images/discount/discount_1.webp"
+                  />
+                  <img
+                    src="/assets/images/discount/discount_1.jpg"
+                    class="article__img-item"
+                    alt="Лікар що заповнює медичну картку пацієнта"
+                  />
+                </picture>
+              </header>
+
+              <div class="article__body">
+                <section class="article__section">
+                  <h2>
+                    Які послуги входять в Dental Check-Up за адресою Кловський узвіз, 7а?
+                  </h2>
+                  <ul>
+                    <li>Комплексна професійна гігієна системою AirFlow</li>
+                    <li>
+                      Комп’ютерна томографія обох щелеп + компʼютерна томографія суглобів
+                    </li>
+                    <li>Консультація лікаря-стоматолога</li>
+                  </ul>
+                  <p>
+                    <b>Акційна ціна Check-Up — 3 000 грн замість 4 025 грн</b><br />
+                    <b>Пропозиція дійсна за адресою м.Київ, Кловський узвіз, 7а</b>
+                  </p>
+                </section>
+                <section class="article__section">
+                  <h2>Як проходить?</h2>
+                  <p>
+                    На нашому Youtube-каналі ви можете переглянути
+                    <a href="https://www.youtube.com/watch?v=Xj_bJs868aY" target="_blank">
+                      як проходить Dental Check-Up </a
+                    >.
+                  </p>
+                </section>
+                <section class="article__section">
+                  <h2>Dental Check-Up поетапно</h2>
+                  <ol>
+                    <li>
+                      Перший етап процедури — професійна гігієна обох щелеп. Виконуємо
+                      чистку ультразвуком та за допомогою технології Air Flow.
+                    </li>
+                    <li>
+                      Після професійної гігієни робимо компʼютерну томографію двох щелеп,
+                      щоб побачити кількість каналів, структуру кісткової тканини,
+                      патологічні зміни при наявності тощо. Компʼютерна томографія
+                      скронево-нижньощелепного суглоба допомагає побачити всі складові
+                      суглобів щелепи, щоб запланувати максимальне точне і правильне
+                      лікування.
+                    </li>
+                    <li>
+                      Фінальний етап — консультація лікаря-стоматолога. Лікар інформує вас
+                      про стан зубів і ясен, узгоджує з вами план лікування.
+                    </li>
+                  </ol>
+                  <p>
+                    Щоб записатися на Dental Check-Up телефонуйте за номером 098-750-30-30
+                    або залишайте заявку на нашому сайті.
+                  </p>
+                  <p class="h3">Потурбуйтеся про красиву усмішку з DentaDerm!</p>
+                </section>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- #endregion doctors -->
+
+        <!-- #region banner -->
+        <section class="block content__block content__block--mb-0">
+          <!--@import partials/components/banner-bottom-2.html-->
+        </section>
+        <!-- #endregion banner -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+    </div>
+
+    <!--@import partials/components/modal-appointment.html-->
+    <!--@import partials/components/modal-success.html-->
+    <!--@import partials/layout/scripts.html-->
+  </body>
+</html>

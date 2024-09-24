@@ -1,0 +1,23 @@
+.adv-icons-list {
+  @extend %listReset;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 2rem;
+
+  @include media(">=lg") {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+
+  @include media(">=2xl") {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+
+  &__item {
+    @extend %listReset;
+    padding: 0 1.4rem;
+
+    @include media(">=md") {
+      padding: 0;
+    }
+  }
+}

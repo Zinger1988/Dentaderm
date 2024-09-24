@@ -6,6 +6,7 @@
   <title>Ξ Стоматологія в Києві • Стоматологічна клініка DentaDerm</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="/assets/images/favicon.png" />
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=block"
     rel="stylesheet"
@@ -60,7 +61,10 @@
         <a href="tel:+3800987503030" class="contact-list__phone">(098) 750-30-30</a>
       </li>
     </ul>
-    <button class="btn btn--default btn--white header__appointment">
+    <button
+      class="btn btn--default btn--white header__appointment"
+      data-modal-id="modal-appointment"
+    >
       Записатися на прийом
     </button>
   </div>
@@ -244,67 +248,66 @@
       </ul>
     </nav>
     <div class="menu__location-tabs">
-      <div class="tabs location-tabs">
-        <div class="tabs-head location-tabs__head">
-          <button
-            class="tabs-btn active location-tabs__btn location-tabs__btn--lg"
-            data-tab-target="kiyv"
-          >
-            Клініки в Києві
-          </button>
-          <button
-            class="tabs-btn location-tabs__btn location-tabs__btn--lg"
-            data-tab-target="irpin"
-          >
-            Клініки в Ірпіні
-          </button>
-        </div>
-        <div class="tabs-content location-tabs__content">
-          <div
-            class="tabs-content-item location-tabs__content-item active"
-            data-tab-content="kiyv"
-          >
-            <div class="location-tabs__address location-tabs__address--sm">
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                вул. Вишгородська, 56/2
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                Пн-Сб: 9.00 - 20.00
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                <a href="tel:+380676250862">(067) 625-08-62</a>
-              </p>
-            </div>
-            <div class="location-tabs__address location-tabs__address--sm">
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                вул. Кловський узвіз, 7а
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                Пн-Сб: 9.00 - 20.00
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                <a href="tel:+380987503030">(098) 750-30-30</a>
-              </p>
-            </div>
-          </div>
-          <div
-            class="tabs-content-item location-tabs__content-item"
-            data-tab-content="irpin"
-          >
-            <div class="location-tabs__address">
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                вул. Соборна, 107
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                Пн-Сб: 9.00 - 20.00
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                <a href="tel:+380631414491">(063) 141-44-91</a>
-              </p>
-            </div>
-          </div>
-        </div>
+<!-- #region location-tabs -->
+<div class="tabs location-tabs">
+  <div class="tabs-head location-tabs__head">
+    <button
+      class="tabs-btn active location-tabs__btn location-tabs__btn--lg"
+      data-tab-target="kiyv"
+    >
+      Київ
+    </button>
+    <button
+      class="tabs-btn location-tabs__btn location-tabs__btn--lg"
+      data-tab-target="irpin"
+    >
+      Ірпінь
+    </button>
+  </div>
+  <div class="tabs-content location-tabs__content">
+    <div
+      class="tabs-content-item location-tabs__content-item active"
+      data-tab-content="kiyv"
+    >
+      <div class="location-tabs__address location-tabs__address--sm">
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="#" target="_blank">вул. Вишгородська, 56/2</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          Пн-Сб: 9.00 - 20.00
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="tel:+380676250862">(067) 625-08-62</a>
+        </p>
       </div>
+      <div class="location-tabs__address location-tabs__address--sm">
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="#" target="_blank">вул. Кловський узвіз, 7а</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          Пн-Сб: 9.00 - 20.00
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="tel:+380987503030">(098) 750-30-30</a>
+        </p>
+      </div>
+    </div>
+    <div class="tabs-content-item location-tabs__content-item" data-tab-content="irpin">
+      <div class="location-tabs__address">
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="#" target="_blank">вул. Соборна, 107</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          Пн-Сб: 9.00 - 20.00
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="tel:+380631414491">(063) 141-44-91</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- #endregion location-tabs -->
     </div>
   </div>
 </section>
@@ -337,13 +340,18 @@
               <h1 class="doctor-info__name">Стороженко Олександр Володимирович</h1>
 
               <!-- #region doctor img -->
-              <div class="doctor-info__img">
+              <picture class="doctor-info__img">
+                <source
+                  type="image/webp"
+                  srcset="/assets/images/doctors/storozhenko.webp"
+                />
                 <img
+                  loading="lazy"
                   class="doctor-info__img-item"
                   src="/assets/images/doctors/storozhenko.jpg"
                   alt="Стороженко Олександр Володимирович"
                 />
-              </div>
+              </picture>
               <!-- #endregion doctor img -->
 
               <!-- #region doctor content -->
@@ -377,9 +385,9 @@
               <h2 class="block__title">Сертифікати та відзнаки</h2>
             </header>
 <div class="card-carousel card-carousel--awards">
-	<div class="card-carousel__swiper swiper">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide"><div class="gallery-card">
+  <div class="card-carousel__swiper swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><div class="gallery-card">
   <a
     href="/assets/images/awards/certificate_1.jpg"
     data-fancybox="awards"
@@ -393,6 +401,7 @@
       Cертифікат Saving teeh perio concept, Стороженко Олександр Володимирович
     </div>
     <img
+      loading="lazy"
       src="/assets/images/awards/certificate_1.jpg"
       alt="Cертифікат Saving teeh perio concept"
       class="gallery-card__thumb"
@@ -400,7 +409,7 @@
   </a>
 </div>
 </div>
-			<div class="swiper-slide"><div class="gallery-card">
+      <div class="swiper-slide"><div class="gallery-card">
   <a
     href="/assets/images/awards/certificate_1.jpg"
     data-fancybox="awards"
@@ -414,6 +423,7 @@
       Cертифікат Saving teeh perio concept, Стороженко Олександр Володимирович
     </div>
     <img
+      loading="lazy"
       src="/assets/images/awards/certificate_1.jpg"
       alt="Cертифікат Saving teeh perio concept"
       class="gallery-card__thumb"
@@ -421,7 +431,7 @@
   </a>
 </div>
 </div>
-			<div class="swiper-slide"><div class="gallery-card">
+      <div class="swiper-slide"><div class="gallery-card">
   <a
     href="/assets/images/awards/certificate_1.jpg"
     data-fancybox="awards"
@@ -435,6 +445,7 @@
       Cертифікат Saving teeh perio concept, Стороженко Олександр Володимирович
     </div>
     <img
+      loading="lazy"
       src="/assets/images/awards/certificate_1.jpg"
       alt="Cертифікат Saving teeh perio concept"
       class="gallery-card__thumb"
@@ -442,7 +453,7 @@
   </a>
 </div>
 </div>
-			<div class="swiper-slide"><div class="gallery-card">
+      <div class="swiper-slide"><div class="gallery-card">
   <a
     href="/assets/images/awards/certificate_1.jpg"
     data-fancybox="awards"
@@ -456,6 +467,7 @@
       Cертифікат Saving teeh perio concept, Стороженко Олександр Володимирович
     </div>
     <img
+      loading="lazy"
       src="/assets/images/awards/certificate_1.jpg"
       alt="Cертифікат Saving teeh perio concept"
       class="gallery-card__thumb"
@@ -463,7 +475,7 @@
   </a>
 </div>
 </div>
-			<div class="swiper-slide"><div class="gallery-card">
+      <div class="swiper-slide"><div class="gallery-card">
   <a
     href="/assets/images/awards/certificate_1.jpg"
     data-fancybox="awards"
@@ -477,6 +489,7 @@
       Cертифікат Saving teeh perio concept, Стороженко Олександр Володимирович
     </div>
     <img
+      loading="lazy"
       src="/assets/images/awards/certificate_1.jpg"
       alt="Cертифікат Saving teeh perio concept"
       class="gallery-card__thumb"
@@ -484,7 +497,7 @@
   </a>
 </div>
 </div>
-			<div class="swiper-slide"><div class="gallery-card">
+      <div class="swiper-slide"><div class="gallery-card">
   <a
     href="/assets/images/awards/certificate_1.jpg"
     data-fancybox="awards"
@@ -498,6 +511,7 @@
       Cертифікат Saving teeh perio concept, Стороженко Олександр Володимирович
     </div>
     <img
+      loading="lazy"
       src="/assets/images/awards/certificate_1.jpg"
       alt="Cертифікат Saving teeh perio concept"
       class="gallery-card__thumb"
@@ -505,7 +519,7 @@
   </a>
 </div>
 </div>
-			<div class="swiper-slide"><div class="gallery-card">
+      <div class="swiper-slide"><div class="gallery-card">
   <a
     href="/assets/images/awards/certificate_1.jpg"
     data-fancybox="awards"
@@ -519,6 +533,7 @@
       Cертифікат Saving teeh perio concept, Стороженко Олександр Володимирович
     </div>
     <img
+      loading="lazy"
       src="/assets/images/awards/certificate_1.jpg"
       alt="Cертифікат Saving teeh perio concept"
       class="gallery-card__thumb"
@@ -526,7 +541,7 @@
   </a>
 </div>
 </div>
-			<div class="swiper-slide"><div class="gallery-card">
+      <div class="swiper-slide"><div class="gallery-card">
   <a
     href="/assets/images/awards/certificate_1.jpg"
     data-fancybox="awards"
@@ -540,6 +555,7 @@
       Cертифікат Saving teeh perio concept, Стороженко Олександр Володимирович
     </div>
     <img
+      loading="lazy"
       src="/assets/images/awards/certificate_1.jpg"
       alt="Cертифікат Saving teeh perio concept"
       class="gallery-card__thumb"
@@ -547,18 +563,18 @@
   </a>
 </div>
 </div>
-		</div>
-	</div>
-	<button class="card-carousel__nav card-carousel__nav--next">
-		<svg class="icon card-carousel__nav-icon">
-			<use href="/assets/icons.svg#arrow-right">
-		</svg>
-	</button>
-	<button class="card-carousel__nav card-carousel__nav--prev">
-		<svg class="icon card-carousel__nav-icon">
-			<use href="/assets/icons.svg#arrow-left">
-		</svg>
-	</button>
+    </div>
+  </div>
+  <button class="card-carousel__nav card-carousel__nav--next">
+    <svg class="icon card-carousel__nav-icon">
+      <use href="/assets/icons.svg#arrow-right" />
+    </svg>
+  </button>
+  <button class="card-carousel__nav card-carousel__nav--prev">
+    <svg class="icon card-carousel__nav-icon">
+      <use href="/assets/icons.svg#arrow-left" />
+    </svg>
+  </button>
 </div>
           </div>
         </section>
@@ -633,15 +649,19 @@
               <a href="#" class="btn btn--default block__header-btn">Всі статті</a>
             </header>
 <div class="card-carousel card-carousel--blog">
-	<div class="card-carousel__swiper swiper">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide"><article class="blog-card">
-  <a href="#" class="blog-card__img">
-    <img
-      class="blog-card__img-item"
-      src="/assets/images/blog/article_img_thumb.jpg"
-      alt="Мезіальний прикус — причини розвитку, ознаки та лікування"
-    />
+  <div class="card-carousel__swiper swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="/assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="/assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
   </a>
   <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
   <h3 class="blog-card__title">
@@ -650,13 +670,17 @@
   <a href="#" class="btn btn--default blog-card__btn">Читати</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="blog-card">
-  <a href="#" class="blog-card__img">
-    <img
-      class="blog-card__img-item"
-      src="/assets/images/blog/article_img_thumb.jpg"
-      alt="Мезіальний прикус — причини розвитку, ознаки та лікування"
-    />
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="/assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="/assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
   </a>
   <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
   <h3 class="blog-card__title">
@@ -665,13 +689,17 @@
   <a href="#" class="btn btn--default blog-card__btn">Читати</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="blog-card">
-  <a href="#" class="blog-card__img">
-    <img
-      class="blog-card__img-item"
-      src="/assets/images/blog/article_img_thumb.jpg"
-      alt="Мезіальний прикус — причини розвитку, ознаки та лікування"
-    />
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="/assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="/assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
   </a>
   <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
   <h3 class="blog-card__title">
@@ -680,13 +708,17 @@
   <a href="#" class="btn btn--default blog-card__btn">Читати</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="blog-card">
-  <a href="#" class="blog-card__img">
-    <img
-      class="blog-card__img-item"
-      src="/assets/images/blog/article_img_thumb.jpg"
-      alt="Мезіальний прикус — причини розвитку, ознаки та лікування"
-    />
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="/assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="/assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
   </a>
   <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
   <h3 class="blog-card__title">
@@ -695,13 +727,17 @@
   <a href="#" class="btn btn--default blog-card__btn">Читати</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="blog-card">
-  <a href="#" class="blog-card__img">
-    <img
-      class="blog-card__img-item"
-      src="/assets/images/blog/article_img_thumb.jpg"
-      alt="Мезіальний прикус — причини розвитку, ознаки та лікування"
-    />
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="/assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="/assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
   </a>
   <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
   <h3 class="blog-card__title">
@@ -710,13 +746,17 @@
   <a href="#" class="btn btn--default blog-card__btn">Читати</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="blog-card">
-  <a href="#" class="blog-card__img">
-    <img
-      class="blog-card__img-item"
-      src="/assets/images/blog/article_img_thumb.jpg"
-      alt="Мезіальний прикус — причини розвитку, ознаки та лікування"
-    />
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="/assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="/assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
   </a>
   <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
   <h3 class="blog-card__title">
@@ -725,13 +765,17 @@
   <a href="#" class="btn btn--default blog-card__btn">Читати</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="blog-card">
-  <a href="#" class="blog-card__img">
-    <img
-      class="blog-card__img-item"
-      src="/assets/images/blog/article_img_thumb.jpg"
-      alt="Мезіальний прикус — причини розвитку, ознаки та лікування"
-    />
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="/assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="/assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
   </a>
   <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
   <h3 class="blog-card__title">
@@ -740,13 +784,17 @@
   <a href="#" class="btn btn--default blog-card__btn">Читати</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="blog-card">
-  <a href="#" class="blog-card__img">
-    <img
-      class="blog-card__img-item"
-      src="/assets/images/blog/article_img_thumb.jpg"
-      alt="Мезіальний прикус — причини розвитку, ознаки та лікування"
-    />
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="/assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="/assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
   </a>
   <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
   <h3 class="blog-card__title">
@@ -755,18 +803,18 @@
   <a href="#" class="btn btn--default blog-card__btn">Читати</a>
 </article>
 </div>
-		</div>
-	</div>
-	<button class="card-carousel__nav card-carousel__nav--next">
-		<svg class="icon card-carousel__nav-icon">
-			<use href="/assets/icons.svg#arrow-right">
-		</svg>
-	</button>
-	<button class="card-carousel__nav card-carousel__nav--prev">
-		<svg class="icon card-carousel__nav-icon">
-			<use href="/assets/icons.svg#arrow-left">
-		</svg>
-	</button>
+    </div>
+  </div>
+  <button class="card-carousel__nav card-carousel__nav--next">
+    <svg class="icon card-carousel__nav-icon">
+      <use href="/assets/icons.svg#arrow-right" />
+    </svg>
+  </button>
+  <button class="card-carousel__nav card-carousel__nav--prev">
+    <svg class="icon card-carousel__nav-icon">
+      <use href="/assets/icons.svg#arrow-left" />
+    </svg>
+  </button>
 </div>
           </div>
         </section>
@@ -776,11 +824,15 @@
         <section class="block content__block content__block--mb-0">
 <div class="banner banner--dark banner--reverse">
   <div class="container banner__container">
-    <img
-      class="banner__img"
-      src="/assets/images/banners/penal_room.jpg"
-      alt="Сучасний кабінет з медичним устаткування"
-    />
+    <picture class="banner__img">
+      <source type="image/webp" srcset="/assets/images/banners/penal_room.webp" />
+      <img
+        loading="lazy"
+        class="banner__img-item"
+        src="/assets/images/banners/penal_room.jpg"
+        alt="img"
+      />
+    </picture>
     <div class="banner__text banner__text--bottom">
       <!-- <img
         class="banner__logo"
@@ -802,7 +854,7 @@
         <select
           class="select select--white nice-select wide fluid-label__control"
           name="clinic"
-          data-validation="required"
+          data-validation="select"
         >
           <option value="" selected disabled>Оберіть клініку</option>
           <option value="klovsky">Київ, Кловський узвіз, 7а</option>
@@ -866,11 +918,12 @@
       <!-- #endregion content -->
 
       <!-- #region footer -->
-<footer class="footer wrapper__footer">
+<footer class="footer page__footer">
   <div class="footer__holder">
     <div class="footer__logo">
       <a class="footer__logo-link" href="/">
         <img
+          loading="lazy"
           class="logo footer__logo-item"
           src="/assets/images/dentyaderm_logo_white.svg"
           alt="Dentaderm logo"
@@ -1021,6 +1074,7 @@
       <div class="footer__studio branding-studio">
         <a class="branding-studio__link" href="#" target="_blank">
           <img
+            loading="lazy"
             class="branding-studio__logo"
             src="/assets/images/fancy-design-logo.svg"
             alt="fancy design logo"
@@ -1034,7 +1088,123 @@
   </div>
 </footer>
       <!-- #endregion footer -->
+    </div>
 
+<!-- #region modal appointment -->
+<div class="modal" id="modal-appointment">
+  <!-- #region modal title -->
+  <div class="modal__heading">
+    <h3 class="modal__title">Записатися на прийом</h3>
+    <button class="modal-close modal__close-btn">
+      <svg class="icon modal__close-icon">
+        <use href="/assets/icons.svg#cancel" />
+      </svg>
+    </button>
+  </div>
+  <!-- #endregion modal title -->
+
+  <!-- #region modal main -->
+  <div class="modal__main">
+    <!-- #region modal body -->
+    <div class="modal__body">
+      <!-- #region appointment form -->
+      <form class="form appointment-form">
+        <div class="form__body">
+          <div class="form__row">
+            <div class="fluid-label">
+              <span class="fluid-label__title">Клініка</span>
+              <select
+                class="select nice-select wide fluid-label__control"
+                name="clinic"
+                data-validation="select"
+              >
+                <option value="" selected disabled>Оберіть клініку</option>
+                <option value="klovsky">Київ, Кловський узвіз, 7а</option>
+                <option value="vishhorodska">Київ, Вишгородська, 56/2</option>
+                <option value="soborna">Ірпінь, Соборна, 107</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="fluid-label">
+              <span class="fluid-label__title">Ім'я</span>
+              <input
+                type="text"
+                name="name"
+                data-validation="required"
+                class="input-text fluid-label__control"
+              />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="fluid-label">
+              <span class="fluid-label__title">Телефон</span>
+              <input
+                type="tel"
+                name="tel"
+                class="input-text fluid-label__control"
+                data-validation="required"
+              />
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="input-checkbox">
+              <input
+                class="input-checkbox__input"
+                type="checkbox"
+                name="agreement"
+                data-validation="checked"
+              />
+              <span class="input-checkbox__toggle">
+                <svg class="icon input-checkbox__icon">
+                  <use href="/assets/icons.svg#check-sm" />
+                </svg>
+              </span>
+              <span class="input-checkbox__title">
+                Я погоджуюся на обробку моїх персональних даних на підставі
+                <a href="#">політики конфідентційності</a>
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="form__footer form__footer--center">
+          <button class="btn btn--square">Записатися на прийом</button>
+        </div>
+      </form>
+      <!-- #endregion appointment form -->
+    </div>
+    <!-- #endregion modal body -->
+  </div>
+  <!-- #endregion modal main -->
+</div>
+<!-- #endregion modal appointment -->
+<!-- #region modal success -->
+<div class="modal" id="modal-success">
+  <!-- #region modal title -->
+  <div class="modal__heading">
+    <h3 class="modal__title">Запит відправлено</h3>
+    <button class="modal-close modal__close-btn">
+      <svg class="icon modal__close-icon">
+        <use href="/assets/icons.svg#cancel" />
+      </svg>
+    </button>
+  </div>
+  <!-- #endregion modal title -->
+
+  <!-- #region modal main -->
+  <div class="modal__main">
+    <!-- #region modal body -->
+    <div class="modal__body">
+      <p>Наш співробітник зв'яжеться з вами, щоб уточнити деталі візиту</p>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn--square modal-close">Закрити</button>
+    </div>
+    <!-- #endregion modal body -->
+  </div>
+  <!-- #endregion modal main -->
+</div>
+<!-- #endregion modal success -->
 <script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.umd.min.js"></script>
 <link
   href="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.css"
@@ -1042,6 +1212,5 @@
 />
 <script src="/js/plugins.js"></script>
 <script src="/js/main.js"></script>
-    </div>
   </body>
 </html>

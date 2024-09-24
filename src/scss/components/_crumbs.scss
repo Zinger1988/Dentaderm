@@ -5,6 +5,8 @@
   width: 100%;
   flex-wrap: wrap;
 
+  $this: &;
+
   &__item {
     @extend %listReset;
     padding: 0 1rem 0 0;
@@ -34,6 +36,12 @@
 
     &--link {
       @include decorationHidden($gray600);
+    }
+  }
+
+  &--white {
+    #{$this}__endpoint {
+      color: $white;
     }
   }
 }

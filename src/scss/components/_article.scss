@@ -75,6 +75,7 @@
 
   &__img {
     grid-area: img;
+    display: block;
   }
 
   &__img-item {
@@ -189,6 +190,28 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__discount-info {
+    grid-area: discount;
+  }
+
+  &--discount {
+    #{$this}__header {
+      grid-template-areas:
+        "backward"
+        "discount"
+        "title"
+        "img";
+
+      @include media(">=md") {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "backward ."
+          "title discount"
+          "img img";
+      }
     }
   }
 

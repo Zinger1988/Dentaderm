@@ -6,7 +6,7 @@
         <div class="review-slider hero-section__slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide"><!--@import ./review-card.html--></div>
-            <div class="swiper-slide"><!--@import ./review-card.html--></div>
+            <div class="swiper-slide"><!--@import ./review-card-long-text.html--></div>
             <div class="swiper-slide"><!--@import ./review-card.html--></div>
             <div class="swiper-slide"><!--@import ./review-card.html--></div>
             <div class="swiper-slide"><!--@import ./review-card.html--></div>
@@ -28,12 +28,17 @@
         </div>
       </div>
     </div>
-    <div class="hero-section__image">
+    <picture class="hero-section__image">
+      <source
+        type="image/webp"
+        srcset="/assets/images/banners/smiling_woman_with_orchideas.webp"
+      />
       <img
+        loading="lazy"
         class="hero-section__image-item"
         src="/assets/images/banners/smiling_woman_with_orchideas.jpg"
-        alt="Жінка з орхидеями і сяючою посмішкою"
+        alt="img"
       />
-    </div>
+    </picture>
   </div>
 </section>

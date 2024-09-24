@@ -56,25 +56,38 @@
         border-bottom: 1px solid $gray200;
       }
 
-      &:hover {
-        background: $white;
+      @include mediaHover() {
+        &:hover {
+          background: $white;
 
-        &::after {
-          border-right: 1px solid $white;
-          border-bottom: 1px solid $white;
+          &::after {
+            border-right: 1px solid $white;
+            border-bottom: 1px solid $white;
+          }
         }
       }
     }
   }
 
-  &--lightblue {
+  &--lightBlue {
     &#{$this}--square {
       color: black;
-      background: #afdfff;
+      background: $accent300;
 
       &::after {
-        border-right: 1px solid #afdfff;
-        border-bottom: 1px solid #afdfff;
+        border-right: 1px solid $accent300;
+        border-bottom: 1px solid $accent300;
+      }
+
+      @include mediaHover() {
+        &:hover {
+          background: $accent400;
+
+          &::after {
+            border-right: 1px solid $accent400;
+            border-bottom: 1px solid $accent400;
+          }
+        }
       }
     }
   }
@@ -106,12 +119,14 @@
       }
     }
 
-    &:hover {
-      background: $black;
+    @include mediaHover() {
+      &:hover {
+        background: $black;
 
-      &::after {
-        border-right: 1px solid $black;
-        border-bottom: 1px solid $black;
+        &::after {
+          border-right: 1px solid $black;
+          border-bottom: 1px solid $black;
+        }
       }
     }
   }

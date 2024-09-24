@@ -1,0 +1,32 @@
+.footer-simple {
+  background-color: $black;
+  color: $white;
+  padding: 1.6rem 0;
+
+  &__holder {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 3rem;
+    @include fs("body2");
+  }
+
+  &__studio {
+    flex: 0 0 7.2rem;
+  }
+
+  &__copy {
+    grid-area: copy;
+    color: $gray700;
+
+    @include media(">=lg") {
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

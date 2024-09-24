@@ -6,6 +6,7 @@
   <title>Ξ Стоматологія в Києві • Стоматологічна клініка DentaDerm</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="/assets/images/favicon.png" />
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=block"
     rel="stylesheet"
@@ -60,7 +61,10 @@
         <a href="tel:+3800987503030" class="contact-list__phone">(098) 750-30-30</a>
       </li>
     </ul>
-    <button class="btn btn--default btn--white header__appointment">
+    <button
+      class="btn btn--default btn--white header__appointment"
+      data-modal-id="modal-appointment"
+    >
       Записатися на прийом
     </button>
   </div>
@@ -244,67 +248,66 @@
       </ul>
     </nav>
     <div class="menu__location-tabs">
-      <div class="tabs location-tabs">
-        <div class="tabs-head location-tabs__head">
-          <button
-            class="tabs-btn active location-tabs__btn location-tabs__btn--lg"
-            data-tab-target="kiyv"
-          >
-            Клініки в Києві
-          </button>
-          <button
-            class="tabs-btn location-tabs__btn location-tabs__btn--lg"
-            data-tab-target="irpin"
-          >
-            Клініки в Ірпіні
-          </button>
-        </div>
-        <div class="tabs-content location-tabs__content">
-          <div
-            class="tabs-content-item location-tabs__content-item active"
-            data-tab-content="kiyv"
-          >
-            <div class="location-tabs__address location-tabs__address--sm">
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                вул. Вишгородська, 56/2
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                Пн-Сб: 9.00 - 20.00
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                <a href="tel:+380676250862">(067) 625-08-62</a>
-              </p>
-            </div>
-            <div class="location-tabs__address location-tabs__address--sm">
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                вул. Кловський узвіз, 7а
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                Пн-Сб: 9.00 - 20.00
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                <a href="tel:+380987503030">(098) 750-30-30</a>
-              </p>
-            </div>
-          </div>
-          <div
-            class="tabs-content-item location-tabs__content-item"
-            data-tab-content="irpin"
-          >
-            <div class="location-tabs__address">
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                вул. Соборна, 107
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                Пн-Сб: 9.00 - 20.00
-              </p>
-              <p class="location-tabs__address-row location-tabs__address-row--sm">
-                <a href="tel:+380631414491">(063) 141-44-91</a>
-              </p>
-            </div>
-          </div>
-        </div>
+<!-- #region location-tabs -->
+<div class="tabs location-tabs">
+  <div class="tabs-head location-tabs__head">
+    <button
+      class="tabs-btn active location-tabs__btn location-tabs__btn--lg"
+      data-tab-target="kiyv"
+    >
+      Київ
+    </button>
+    <button
+      class="tabs-btn location-tabs__btn location-tabs__btn--lg"
+      data-tab-target="irpin"
+    >
+      Ірпінь
+    </button>
+  </div>
+  <div class="tabs-content location-tabs__content">
+    <div
+      class="tabs-content-item location-tabs__content-item active"
+      data-tab-content="kiyv"
+    >
+      <div class="location-tabs__address location-tabs__address--sm">
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="#" target="_blank">вул. Вишгородська, 56/2</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          Пн-Сб: 9.00 - 20.00
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="tel:+380676250862">(067) 625-08-62</a>
+        </p>
       </div>
+      <div class="location-tabs__address location-tabs__address--sm">
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="#" target="_blank">вул. Кловський узвіз, 7а</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          Пн-Сб: 9.00 - 20.00
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="tel:+380987503030">(098) 750-30-30</a>
+        </p>
+      </div>
+    </div>
+    <div class="tabs-content-item location-tabs__content-item" data-tab-content="irpin">
+      <div class="location-tabs__address">
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="#" target="_blank">вул. Соборна, 107</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          Пн-Сб: 9.00 - 20.00
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="tel:+380631414491">(063) 141-44-91</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- #endregion location-tabs -->
     </div>
   </div>
 </section>
@@ -313,7 +316,7 @@
       <!-- #region content -->
       <main class="content page__content">
         <!-- #region crumbs -->
-        <div class="page__crumbs">
+        <div class="content__crumbs">
           <div class="container container--screen-xl">
             <ul class="crumbs">
               <li class="crumbs__item">
@@ -342,13 +345,19 @@
               <header class="article__header">
                 <button class="btn btn--backward article__backward">Всі послуги</button>
                 <div class="article__title h1">Видалення зубів мудрості</div>
-                <div class="article__img">
+                <picture class="article__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      /assets/images/single-service/wisdom_tooth_extraction_procedure.webp
+                    "
+                  />
                   <img
                     src="/assets/images/single-service/wisdom_tooth_extraction_procedure.jpg"
                     class="article__img-item"
                     alt="Процедура видалення зуба мудрості"
                   />
-                </div>
+                </picture>
                 <div class="article__nav sticky-header">
                   <ul class="article__nav-list">
                     <li class="article__nav-item">
@@ -535,224 +544,547 @@
               <a href="#" class="btn btn--default block__header-btn">Всі фахівці</a>
             </header>
 <div class="card-carousel card-carousel--doctors">
-	<div class="card-carousel__swiper swiper">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide"><article class="doctor-card">
-  <a href="#" class="doctor-card__img">
-    <img
-      class="doctor-card__img-item"
-      src="/assets/images/doctors/storozhenko.jpg"
-      alt="Стороженко Олександр Володимирович"
-    />
-    <svg
-      class="doctor-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+  <div class="card-carousel__swiper swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><article class="doctor-card">
+  <a class="doctor-card__img-link" href="#">
+    <picture class="doctor-card__img">
+      <source type="image/webp" srcset="/assets/images/doctors/storozhenko.webp" />
+      <img
+        loading="lazy"
+        class="doctor-card__img-item"
+        src="/assets/images/doctors/storozhenko.jpg"
+        alt="Стороженко Олександр Володимирович"
       />
-    </svg>
+      <svg
+        class="doctor-card__decor"
+        width="138"
+        height="100"
+        viewBox="0 0 138 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+        />
+      </svg>
+    </picture>
   </a>
   <h3 class="doctor-card__title">Стороженко Олександр Володимирович</h3>
   <p class="doctor-card__position">Хірург-імплантолог, лікар вищої категорії</p>
   <a href="#" class="btn btn--default doctor-card__btn">Детальніше</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="doctor-card">
-  <a href="#" class="doctor-card__img">
-    <img
-      class="doctor-card__img-item"
-      src="/assets/images/doctors/storozhenko.jpg"
-      alt="Стороженко Олександр Володимирович"
-    />
-    <svg
-      class="doctor-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+      <div class="swiper-slide"><article class="doctor-card">
+  <a class="doctor-card__img-link" href="#">
+    <picture class="doctor-card__img">
+      <source type="image/webp" srcset="/assets/images/doctors/storozhenko.webp" />
+      <img
+        loading="lazy"
+        class="doctor-card__img-item"
+        src="/assets/images/doctors/storozhenko.jpg"
+        alt="Стороженко Олександр Володимирович"
       />
-    </svg>
+      <svg
+        class="doctor-card__decor"
+        width="138"
+        height="100"
+        viewBox="0 0 138 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+        />
+      </svg>
+    </picture>
   </a>
   <h3 class="doctor-card__title">Стороженко Олександр Володимирович</h3>
   <p class="doctor-card__position">Хірург-імплантолог, лікар вищої категорії</p>
   <a href="#" class="btn btn--default doctor-card__btn">Детальніше</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="doctor-card">
-  <a href="#" class="doctor-card__img">
-    <img
-      class="doctor-card__img-item"
-      src="/assets/images/doctors/storozhenko.jpg"
-      alt="Стороженко Олександр Володимирович"
-    />
-    <svg
-      class="doctor-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+      <div class="swiper-slide"><article class="doctor-card">
+  <a class="doctor-card__img-link" href="#">
+    <picture class="doctor-card__img">
+      <source type="image/webp" srcset="/assets/images/doctors/storozhenko.webp" />
+      <img
+        loading="lazy"
+        class="doctor-card__img-item"
+        src="/assets/images/doctors/storozhenko.jpg"
+        alt="Стороженко Олександр Володимирович"
       />
-    </svg>
+      <svg
+        class="doctor-card__decor"
+        width="138"
+        height="100"
+        viewBox="0 0 138 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+        />
+      </svg>
+    </picture>
   </a>
   <h3 class="doctor-card__title">Стороженко Олександр Володимирович</h3>
   <p class="doctor-card__position">Хірург-імплантолог, лікар вищої категорії</p>
   <a href="#" class="btn btn--default doctor-card__btn">Детальніше</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="doctor-card">
-  <a href="#" class="doctor-card__img">
-    <img
-      class="doctor-card__img-item"
-      src="/assets/images/doctors/storozhenko.jpg"
-      alt="Стороженко Олександр Володимирович"
-    />
-    <svg
-      class="doctor-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+      <div class="swiper-slide"><article class="doctor-card">
+  <a class="doctor-card__img-link" href="#">
+    <picture class="doctor-card__img">
+      <source type="image/webp" srcset="/assets/images/doctors/storozhenko.webp" />
+      <img
+        loading="lazy"
+        class="doctor-card__img-item"
+        src="/assets/images/doctors/storozhenko.jpg"
+        alt="Стороженко Олександр Володимирович"
       />
-    </svg>
+      <svg
+        class="doctor-card__decor"
+        width="138"
+        height="100"
+        viewBox="0 0 138 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+        />
+      </svg>
+    </picture>
   </a>
   <h3 class="doctor-card__title">Стороженко Олександр Володимирович</h3>
   <p class="doctor-card__position">Хірург-імплантолог, лікар вищої категорії</p>
   <a href="#" class="btn btn--default doctor-card__btn">Детальніше</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="doctor-card">
-  <a href="#" class="doctor-card__img">
-    <img
-      class="doctor-card__img-item"
-      src="/assets/images/doctors/storozhenko.jpg"
-      alt="Стороженко Олександр Володимирович"
-    />
-    <svg
-      class="doctor-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+      <div class="swiper-slide"><article class="doctor-card">
+  <a class="doctor-card__img-link" href="#">
+    <picture class="doctor-card__img">
+      <source type="image/webp" srcset="/assets/images/doctors/storozhenko.webp" />
+      <img
+        loading="lazy"
+        class="doctor-card__img-item"
+        src="/assets/images/doctors/storozhenko.jpg"
+        alt="Стороженко Олександр Володимирович"
       />
-    </svg>
+      <svg
+        class="doctor-card__decor"
+        width="138"
+        height="100"
+        viewBox="0 0 138 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+        />
+      </svg>
+    </picture>
   </a>
   <h3 class="doctor-card__title">Стороженко Олександр Володимирович</h3>
   <p class="doctor-card__position">Хірург-імплантолог, лікар вищої категорії</p>
   <a href="#" class="btn btn--default doctor-card__btn">Детальніше</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="doctor-card">
-  <a href="#" class="doctor-card__img">
-    <img
-      class="doctor-card__img-item"
-      src="/assets/images/doctors/storozhenko.jpg"
-      alt="Стороженко Олександр Володимирович"
-    />
-    <svg
-      class="doctor-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+      <div class="swiper-slide"><article class="doctor-card">
+  <a class="doctor-card__img-link" href="#">
+    <picture class="doctor-card__img">
+      <source type="image/webp" srcset="/assets/images/doctors/storozhenko.webp" />
+      <img
+        loading="lazy"
+        class="doctor-card__img-item"
+        src="/assets/images/doctors/storozhenko.jpg"
+        alt="Стороженко Олександр Володимирович"
       />
-    </svg>
+      <svg
+        class="doctor-card__decor"
+        width="138"
+        height="100"
+        viewBox="0 0 138 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+        />
+      </svg>
+    </picture>
   </a>
   <h3 class="doctor-card__title">Стороженко Олександр Володимирович</h3>
   <p class="doctor-card__position">Хірург-імплантолог, лікар вищої категорії</p>
   <a href="#" class="btn btn--default doctor-card__btn">Детальніше</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="doctor-card">
-  <a href="#" class="doctor-card__img">
-    <img
-      class="doctor-card__img-item"
-      src="/assets/images/doctors/storozhenko.jpg"
-      alt="Стороженко Олександр Володимирович"
-    />
-    <svg
-      class="doctor-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+      <div class="swiper-slide"><article class="doctor-card">
+  <a class="doctor-card__img-link" href="#">
+    <picture class="doctor-card__img">
+      <source type="image/webp" srcset="/assets/images/doctors/storozhenko.webp" />
+      <img
+        loading="lazy"
+        class="doctor-card__img-item"
+        src="/assets/images/doctors/storozhenko.jpg"
+        alt="Стороженко Олександр Володимирович"
       />
-    </svg>
+      <svg
+        class="doctor-card__decor"
+        width="138"
+        height="100"
+        viewBox="0 0 138 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+        />
+      </svg>
+    </picture>
   </a>
   <h3 class="doctor-card__title">Стороженко Олександр Володимирович</h3>
   <p class="doctor-card__position">Хірург-імплантолог, лікар вищої категорії</p>
   <a href="#" class="btn btn--default doctor-card__btn">Детальніше</a>
 </article>
 </div>
-			<div class="swiper-slide"><article class="doctor-card">
-  <a href="#" class="doctor-card__img">
-    <img
-      class="doctor-card__img-item"
-      src="/assets/images/doctors/storozhenko.jpg"
-      alt="Стороженко Олександр Володимирович"
-    />
-    <svg
-      class="doctor-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+      <div class="swiper-slide"><article class="doctor-card">
+  <a class="doctor-card__img-link" href="#">
+    <picture class="doctor-card__img">
+      <source type="image/webp" srcset="/assets/images/doctors/storozhenko.webp" />
+      <img
+        loading="lazy"
+        class="doctor-card__img-item"
+        src="/assets/images/doctors/storozhenko.jpg"
+        alt="Стороженко Олександр Володимирович"
       />
-    </svg>
+      <svg
+        class="doctor-card__decor"
+        width="138"
+        height="100"
+        viewBox="0 0 138 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
+        />
+      </svg>
+    </picture>
   </a>
   <h3 class="doctor-card__title">Стороженко Олександр Володимирович</h3>
   <p class="doctor-card__position">Хірург-імплантолог, лікар вищої категорії</p>
   <a href="#" class="btn btn--default doctor-card__btn">Детальніше</a>
 </article>
 </div>
-		</div>
-	</div>
-	<button class="card-carousel__nav card-carousel__nav--next">
-		<svg class="icon card-carousel__nav-icon">
-			<use href="/assets/icons.svg#arrow-right">
-		</svg>
-	</button>
-	<button class="card-carousel__nav card-carousel__nav--prev">
-		<svg class="icon card-carousel__nav-icon">
-			<use href="/assets/icons.svg#arrow-left">
-		</svg>
-	</button>
+    </div>
+  </div>
+  <button class="card-carousel__nav card-carousel__nav--next">
+    <svg class="icon card-carousel__nav-icon">
+      <use href="/assets/icons.svg#arrow-right" />
+    </svg>
+  </button>
+  <button class="card-carousel__nav card-carousel__nav--prev">
+    <svg class="icon card-carousel__nav-icon">
+      <use href="/assets/icons.svg#arrow-left" />
+    </svg>
+  </button>
 </div>
           </div>
         </section>
         <!-- #endregion doctors -->
+
+        <!-- #region reviews -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Відгуки</h2>
+              <a href="#" class="btn btn--default block__header-btn">Всі відгуки</a>
+            </header>
+<div class="card-carousel card-carousel--reviews">
+  <div class="card-carousel__swiper swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Дента Дерм найкраща стоматологія, яку відвідувала моя Родина, багато де ми були,
+        але тут поєднано увага, турбота, професіоналізм, залишок. Дякуємо Діні
+        Володимирівні та адміністратору Оксані за Вашу турботу та професійний підхід до
+        кожного клієнта ❤️
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Прийшла в клініку Дента Дерм після невдалого лікування. Стан був - не вірю, не
+        довіряю і боюсь. Прийшла на консультацію до головного лікаря Ткачук Діни
+        Володимирівни. Почали лікування з дослідження суглобів ( гнатолог). Тепер я знаю,
+        що коли у вас болить шия, голова, спина і плечі, ви погано спите, це не
+        обовʼязково зразу лікувати спину масажами. У вас просто може бути поганий прикус,
+        який вирівнюється капою. Ця капа розслаблює мʼязи і навіть ваше обличчя сильно
+        змінюється!!! Через місяць ви себе не впізнаєте! Вам покажуть фото ДО і ПІСЛЯ…
+        Будете в шоці, в хорошому сенсі!) Лікування я тільки почала, але страху лікарів і
+        лікування у мене вже немає!!! Я вірю, що в мене буде гарна посмішка і здорові зуби
+        🙏 Лікування у мене не швидке, але!!! я краще по трохи і з надійними лікарями, чим
+        швидко і потім наберуся проблем на все життя!!! Дуже гарний персонал, молоді і
+        амбітні. Завжди усміхнені. А лікар гнатолог ( не памʼятаю імені, вибачте) взагалі
+        смішить всіх і лікування приходить дуже комфортно. Не запускайте зуби і слухайтесь
+        порад тільки від хороших друзів!!! Рекомендую
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Дента Дерм найкраща стоматологія, яку відвідувала моя Родина, багато де ми були,
+        але тут поєднано увага, турбота, професіоналізм, залишок. Дякуємо Діні
+        Володимирівні та адміністратору Оксані за Вашу турботу та професійний підхід до
+        кожного клієнта ❤️
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Дента Дерм найкраща стоматологія, яку відвідувала моя Родина, багато де ми були,
+        але тут поєднано увага, турбота, професіоналізм, залишок. Дякуємо Діні
+        Володимирівні та адміністратору Оксані за Вашу турботу та професійний підхід до
+        кожного клієнта ❤️
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Дента Дерм найкраща стоматологія, яку відвідувала моя Родина, багато де ми були,
+        але тут поєднано увага, турбота, професіоналізм, залишок. Дякуємо Діні
+        Володимирівні та адміністратору Оксані за Вашу турботу та професійний підхід до
+        кожного клієнта ❤️
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+    </div>
+  </div>
+  <button class="card-carousel__nav card-carousel__nav--next">
+    <svg class="icon card-carousel__nav-icon">
+      <use href="/assets/icons.svg#arrow-right" />
+    </svg>
+  </button>
+  <button class="card-carousel__nav card-carousel__nav--prev">
+    <svg class="icon card-carousel__nav-icon">
+      <use href="/assets/icons.svg#arrow-left" />
+    </svg>
+  </button>
+</div>
+          </div>
+        </section>
+        <!-- #endregion reviews -->
+
+        <!-- #region recomendations -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">
+                Як поводитися після видалення зуба мудрості: рекомендації
+              </h2>
+            </header>
+<div class="recommendations">
+  <div class="row">
+    <div class="col-12 col-lg-5 col-2xl-4">
+      <picture class="recommendations__img">
+        <source
+          type="image/webp"
+          srcset="/assets/images/service/doctor_with_notebook.webp"
+        />
+        <img
+          loading="lazy"
+          class="recommendations__img-item"
+          src="/assets/images/service/doctor_with_notebook.jpg"
+          alt="img"
+        />
+      </picture>
+    </div>
+    <div class="col-12 col-lg-7 col-2xl-8">
+      <div class="recommendations__content">
+        <p>
+          Після видалення зуба лікар-стоматолог надасть вам письмові поради щодо способу
+          життя в перші дні та особливостей догляду за ротовою порожниною. За
+          необхідністю, фахівець може призначити медикаменти: протизапальні,
+          знеболювальні. Рідше застосовується антибіотикотерапія (якщо мала місце
+          інфекція).
+        </p>
+        <p>Наведемо загальні поради після видалення зуба мудрості:</p>
+        <ul>
+          <li>
+            У перші 2–3 години після операції потрібно відмовитися від їжі та напоїв,
+            особливе табу — гарячі напої та їжа.
+          </li>
+          <li>
+            Намагайтеся жувати на здорову сторону, не лягайте на щоку, де був видалений
+            зуб.
+          </li>
+          <li>Не полощіть рот, не грійте щоку.</li>
+          <li>Не приймайте гарячу ванну.</li>
+          <li>
+            До моменту затягування швів бажано не палити, не пити алкоголь, не відкривати
+            широко рот.
+          </li>
+          <li>Чистьте зуби через добу після процедури.</li>
+        </ul>
+        <p>
+          Якщо мало місце складне видалення зуба мудрості, то після того, як анестезія
+          проходить, починається сильний біль. Не терпіть його: прийміть знеболювальні
+          ліки.
+        </p>
+        <p>
+          Після видалення зуба мудрості важливо залишатися на зв’язку з лікарем, та
+          звертатися до нього за наявності наступних симптомів:
+        </p>
+        <ul>
+          <li>
+            У лунці ви помітили сторонні речовини. Не намагайтеся видалити їх самостійно,
+            це може призвести до ускладнень.
+          </li>
+          <li>Кровотеча з лунки після утворення згустку.</li>
+          <li>
+            Постійне збільшення набряку. Набряк не зникає протягом декількох днів після
+            видалення, присутнє оніміння обличчя.
+          </li>
+          <li>
+            Процес відкривання рота та ковтання викликає дискомфорт та сильний біль.
+          </li>
+          <li>Температура тіла не знижується протягом декількох днів.</li>
+          <li>
+            Біль не зменшується навіть у випадку, коли ви приймаєте сильні знеболювальні
+            засоби.
+          </li>
+          <li>
+            Почервоніння, біль та набряк ясен з’явилися у місці видаленні зуба вже після
+            загоєння.
+          </li>
+        </ul>
+        <p>
+          Наявність навіть 1 симптому зі списку — привід негайно зателефонувати
+          лікарю-стоматологу. Спеціаліст вислухає скарги, надасть термінові рекомендації
+          та назначить вам найближчий час прийому. Проте не хвилюйтеся: ускладнення після
+          видалення зуба — це виняток із правил. Якщо процедуру виконував кваліфікований
+          лікар-стоматолог, а пацієнт дотримувався усіх рекомендацій, ймовірність таких
+          проблем зменшена до мінімуму.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </section>
+        <!-- #endregion recomendations -->
 
         <!-- #region faq -->
         <section class="block block--separated-b content__block">
@@ -1101,11 +1433,15 @@
         <section class="block content__block content__block--mb-0">
 <div class="banner banner--dark">
   <div class="container banner__container">
-    <img
-      class="banner__img"
-      src="/assets/images/banners/cabinet.jpg"
-      alt="Сучасний кабінет з медичним устаткування"
-    />
+    <picture class="banner__img">
+      <source type="image/webp" srcset="/assets/images/banners/cabinet.webp" />
+      <img
+        loading="lazy"
+        class="banner__img-item"
+        src="/assets/images/banners/cabinet.jpg"
+        alt="img"
+      />
+    </picture>
     <div class="banner__text banner__text--bottom">
       <!-- <img
         class="banner__logo"
@@ -1191,11 +1527,12 @@
       <!-- #endregion content -->
 
       <!-- #region footer -->
-<footer class="footer wrapper__footer">
+<footer class="footer page__footer">
   <div class="footer__holder">
     <div class="footer__logo">
       <a class="footer__logo-link" href="/">
         <img
+          loading="lazy"
           class="logo footer__logo-item"
           src="/assets/images/dentyaderm_logo_white.svg"
           alt="Dentaderm logo"
@@ -1346,6 +1683,7 @@
       <div class="footer__studio branding-studio">
         <a class="branding-studio__link" href="#" target="_blank">
           <img
+            loading="lazy"
             class="branding-studio__logo"
             src="/assets/images/fancy-design-logo.svg"
             alt="fancy design logo"
@@ -1359,7 +1697,123 @@
   </div>
 </footer>
       <!-- #endregion footer -->
+    </div>
 
+<!-- #region modal appointment -->
+<div class="modal" id="modal-appointment">
+  <!-- #region modal title -->
+  <div class="modal__heading">
+    <h3 class="modal__title">Записатися на прийом</h3>
+    <button class="modal-close modal__close-btn">
+      <svg class="icon modal__close-icon">
+        <use href="/assets/icons.svg#cancel" />
+      </svg>
+    </button>
+  </div>
+  <!-- #endregion modal title -->
+
+  <!-- #region modal main -->
+  <div class="modal__main">
+    <!-- #region modal body -->
+    <div class="modal__body">
+      <!-- #region appointment form -->
+      <form class="form appointment-form">
+        <div class="form__body">
+          <div class="form__row">
+            <div class="fluid-label">
+              <span class="fluid-label__title">Клініка</span>
+              <select
+                class="select nice-select wide fluid-label__control"
+                name="clinic"
+                data-validation="select"
+              >
+                <option value="" selected disabled>Оберіть клініку</option>
+                <option value="klovsky">Київ, Кловський узвіз, 7а</option>
+                <option value="vishhorodska">Київ, Вишгородська, 56/2</option>
+                <option value="soborna">Ірпінь, Соборна, 107</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="fluid-label">
+              <span class="fluid-label__title">Ім'я</span>
+              <input
+                type="text"
+                name="name"
+                data-validation="required"
+                class="input-text fluid-label__control"
+              />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="fluid-label">
+              <span class="fluid-label__title">Телефон</span>
+              <input
+                type="tel"
+                name="tel"
+                class="input-text fluid-label__control"
+                data-validation="required"
+              />
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="input-checkbox">
+              <input
+                class="input-checkbox__input"
+                type="checkbox"
+                name="agreement"
+                data-validation="checked"
+              />
+              <span class="input-checkbox__toggle">
+                <svg class="icon input-checkbox__icon">
+                  <use href="/assets/icons.svg#check-sm" />
+                </svg>
+              </span>
+              <span class="input-checkbox__title">
+                Я погоджуюся на обробку моїх персональних даних на підставі
+                <a href="#">політики конфідентційності</a>
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="form__footer form__footer--center">
+          <button class="btn btn--square">Записатися на прийом</button>
+        </div>
+      </form>
+      <!-- #endregion appointment form -->
+    </div>
+    <!-- #endregion modal body -->
+  </div>
+  <!-- #endregion modal main -->
+</div>
+<!-- #endregion modal appointment -->
+<!-- #region modal success -->
+<div class="modal" id="modal-success">
+  <!-- #region modal title -->
+  <div class="modal__heading">
+    <h3 class="modal__title">Запит відправлено</h3>
+    <button class="modal-close modal__close-btn">
+      <svg class="icon modal__close-icon">
+        <use href="/assets/icons.svg#cancel" />
+      </svg>
+    </button>
+  </div>
+  <!-- #endregion modal title -->
+
+  <!-- #region modal main -->
+  <div class="modal__main">
+    <!-- #region modal body -->
+    <div class="modal__body">
+      <p>Наш співробітник зв'яжеться з вами, щоб уточнити деталі візиту</p>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn--square modal-close">Закрити</button>
+    </div>
+    <!-- #endregion modal body -->
+  </div>
+  <!-- #endregion modal main -->
+</div>
+<!-- #endregion modal success -->
 <script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.umd.min.js"></script>
 <link
   href="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.css"
@@ -1367,6 +1821,5 @@
 />
 <script src="/js/plugins.js"></script>
 <script src="/js/main.js"></script>
-    </div>
   </body>
 </html>

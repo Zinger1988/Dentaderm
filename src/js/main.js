@@ -1,7 +1,11 @@
 const initMap = () => {
+  const mapContainer = document.getElementById("map");
+
+  if (!mapContainer) return;
+
   maptilersdk.config.apiKey = "bZSD1sQDv0eSO7OJuHXT";
   const map = new maptilersdk.Map({
-    container: "map",
+    container: mapContainer.id,
     style:
       "https://api.maptiler.com/maps/4d844cf8-762e-4501-bf23-f367565743c9/style.json?key=bZSD1sQDv0eSO7OJuHXT",
     center: [30.3878189, 50.4959581], // starting position [lng, lat]
@@ -104,6 +108,7 @@ const initCardCarousel = () => {
   }
 
   const baseOptions = {
+    lazy: true,
     grabCursor: true,
     spaceBetween: 50,
     freeMode: true,
@@ -190,23 +195,67 @@ const initCardCarousel = () => {
     },
   };
 
-  new Swiper(".card-carousel--demo .card-carousel__swiper", {
+  const reviewsCarouselOptions = {
+    slidesPerView: 3,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 28,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 28,
+      },
+      1400: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+    },
+  };
+
+  const discountCarouselOptions = {
+    slidesPerView: 1,
+  };
+
+  const reviewsCarousel = new Swiper(".card-carousel--reviews .card-carousel__swiper", {
+    ...baseOptions,
+    ...reviewsCarouselOptions,
+  });
+
+  const demoCarousel = new Swiper(".card-carousel--demo .card-carousel__swiper", {
     ...baseOptions,
     ...demoCarouselOptions,
   });
 
-  new Swiper(".card-carousel--awards .card-carousel__swiper", {
+  const awardsCarousel = new Swiper(".card-carousel--awards .card-carousel__swiper", {
     ...baseOptions,
     ...awardsCarouselOptions,
   });
 
-  new Swiper(
+  const blogCarousel = new Swiper(
     ".card-carousel--doctors .card-carousel__swiper, .card-carousel--blog .card-carousel__swiper",
     {
       ...baseOptions,
       ...doctorsCarouselOptions,
     }
   );
+
+  const discountCarousel = new Swiper(".card-carousel--discount .card-carousel__swiper", {
+    ...baseOptions,
+    ...discountCarouselOptions,
+  });
+
+  reviewsCarousel.on("beforeTransitionStart", (swiperProps) => {
+    const { previousIndex, slides } = swiperProps;
+    const slide = slides[previousIndex];
+
+    const expandPanel = slide.querySelector(".expand-container__panel--expanded");
+
+    if (!expandPanel) return;
+
+    const expandBtn = slide.querySelector(".expand-container__btn");
+    expandBtn.click();
+  });
 };
 
 const updatePagination = (paginationContainer, swiper) => {
@@ -238,9 +287,9 @@ const initReviewSlider = () => {
   }
 
   const swiper = new Swiper(".review-slider", {
+    lazy: true,
     grabCursor: true,
     slidesPerView: 1,
-    autoHeight: true,
   });
 
   const wrapper = swiper.el.closest(".hero-section");
@@ -250,6 +299,17 @@ const initReviewSlider = () => {
 
   cardCarouselNextBtn.addEventListener("click", () => swiper.slideNext());
   cardCarouselPrevBtn.addEventListener("click", () => swiper.slidePrev());
+  swiper.on("beforeTransitionStart", (swiperProps) => {
+    const { previousIndex, slides } = swiperProps;
+    const slide = slides[previousIndex];
+
+    const expandPanel = slide.querySelector(".expand-container__panel--expanded");
+
+    if (!expandPanel) return;
+
+    const expandBtn = slide.querySelector(".expand-container__btn");
+    expandBtn.click();
+  });
   swiper.on("slideChange", () => updatePagination(customPagination, swiper));
 
   updatePagination(customPagination, swiper);
@@ -347,22 +407,30 @@ const toggleExpand = (btnDefaultText, btnActiveText) => {
   }
 
   containers.forEach((container) => {
-    const btn = container.querySelector(".expand-container__btn");
     const panel = container.querySelector(".expand-container__panel");
 
-    if (!panel || !btn) {
+    if (!panel || panel.scrollHeight - panel.offsetHeight <= 3) {
+      panel.classList.add("expand-container__panel--inactive");
       return;
     }
 
+    panel.classList.remove("expand-container__panel--inactive");
+
+    const btn = document.createElement("button");
+    const btnText = btnDefaultText ? btnDefaultText : "Розгорнути";
+    btn.textContent = btnText;
+    btn.classList.add("expand-container__btn", "btn", "btn--default");
+
+    container.append(btn);
+
     btn.addEventListener("click", (e) => {
       if (panel.style.maxHeight) {
-        panel.classList.remove("panel-expanded");
+        panel.classList.remove("expand-container__panel--expanded");
         panel.style.maxHeight = null;
-        btn.textContent = btnDefaultText ? btnDefaultText : "Розгорнути";
+        btn.textContent = btnText;
       } else {
-        panel.classList.add("panel-expanded");
+        panel.classList.add("expand-container__panel--expanded");
         panel.style.maxHeight = panel.scrollHeight + "px";
-        console.log(btnActiveText);
         btn.textContent = btnActiveText ? btnActiveText : "Згорнути";
       }
     });
@@ -402,6 +470,8 @@ const initFormValidator = () => {
         const formData = new FormData(e.target);
         const serialized = Object.fromEntries(formData);
         console.log(serialized);
+
+        // TODO: HANDLE FORM
       },
     });
   });
@@ -422,6 +492,7 @@ const initConnectedCarousel = () => {
   }
 
   const textSwiper = new Swiper(".connected-carousel__text-carousel .swiper", {
+    lazy: true,
     slidesPerView: 1,
     grabCursor: true,
     breakpoints: {
@@ -435,6 +506,7 @@ const initConnectedCarousel = () => {
   });
 
   const imageSwiper = new Swiper(".connected-carousel__image-carousel .swiper", {
+    lazy: true,
     grabCursor: false,
     effect: "flip",
     slidesPerView: 1,
@@ -471,6 +543,7 @@ const initHeroSlider = () => {
   }
 
   const swiper = new Swiper(sliderSelector, {
+    lazy: true,
     grabCursor: true,
     slidesPerView: 1,
   });
@@ -485,6 +558,18 @@ const initHeroSlider = () => {
 
   nextNavBtns.forEach((btn) => btn.addEventListener("click", () => swiper.slideNext()));
   prevNavBtns.forEach((btn) => btn.addEventListener("click", () => swiper.slidePrev()));
+
+  swiper.on("beforeTransitionStart", (swiperProps) => {
+    const { previousIndex, slides } = swiperProps;
+    const slide = slides[previousIndex];
+
+    const expandPanel = slide.querySelector(".expand-container__panel--expanded");
+
+    if (!expandPanel) return;
+
+    const expandBtn = slide.querySelector(".expand-container__btn");
+    expandBtn.click();
+  });
 };
 
 const initYouTubeVideo = () => {
@@ -556,7 +641,7 @@ const stickyHeader = () => {
   });
 };
 
-const initSmoothScroll = () => {
+const initSmoothScrollToAnchor = () => {
   const anchors = document.querySelectorAll('a[href^="#"]');
 
   if (!anchors.length === 0) return;
@@ -596,5 +681,6 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleExpand();
   initYouTubeVideo();
   stickyHeader();
-  initSmoothScroll();
+  initSmoothScrollToAnchor();
+  new Modal(".modal");
 });

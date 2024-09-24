@@ -1,0 +1,50 @@
+.recommendations-list {
+  @extend %listReset;
+
+  $this: &;
+
+  &__item {
+    @extend %listReset;
+    border-bottom: 1px solid $gray200;
+  }
+
+  &__link {
+    @extend %linkReset;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    padding: 1rem;
+
+    @include media(">=md") {
+      font-size: 1.6rem;
+      padding: 1.2rem;
+    }
+
+    @include media(">=xl") {
+      font-size: 1.8rem;
+      padding: 1.4rem;
+    }
+
+    @include media(">=3xl") {
+      font-size: 2rem;
+      padding: 1.6rem;
+      font-weight: 300;
+    }
+
+    @include mediaHover() {
+      &:hover {
+        #{$this}__icon {
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+    @include animate(transform);
+  }
+}

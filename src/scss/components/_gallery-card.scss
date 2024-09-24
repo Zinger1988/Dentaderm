@@ -46,9 +46,11 @@
     opacity: 0.3;
   }
 
-  &:hover {
-    #{$this}__thumb {
-      opacity: 0;
+  @include mediaHover() {
+    &:hover {
+      #{$this}__thumb {
+        opacity: 0;
+      }
     }
   }
 }

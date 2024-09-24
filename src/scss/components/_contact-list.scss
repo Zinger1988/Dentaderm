@@ -43,8 +43,10 @@
     @include decorationHidden($white);
     @include animate(color text-decoration);
 
-    &:hover {
-      color: $white;
+    @include mediaHover() {
+      &:hover {
+        color: $white;
+      }
     }
   }
 

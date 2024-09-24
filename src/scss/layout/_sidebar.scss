@@ -10,8 +10,10 @@
   position: relative;
   @include animate(background-color);
 
-  &:hover {
-    background: $gray100;
+  @include mediaHover() {
+    &:hover {
+      background: $gray100;
+    }
   }
 
   @include media(">=3xl") {

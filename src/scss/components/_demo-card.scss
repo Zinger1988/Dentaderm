@@ -6,14 +6,17 @@
     position: relative;
     z-index: 5;
 
-    &:hover {
-      #{$this}__decor {
-        fill-opacity: 0.5;
+    @include mediaHover() {
+      &:hover {
+        #{$this}__decor {
+          fill-opacity: 0.5;
+        }
       }
     }
   }
 
   &__img {
+    display: block;
     position: relative;
     padding: 50% 0;
     margin: 0 0 2rem;

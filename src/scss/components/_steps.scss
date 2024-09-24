@@ -48,13 +48,13 @@
 
         #{$this}__marker {
           left: auto;
-          @include positionTopRight();
+          @include positionRightTop();
           transform: translate(50%, 0);
           z-index: 10;
         }
 
         &::before {
-          @include positionTopRight();
+          @include positionRightTop();
           top: 1rem;
           left: auto;
         }
@@ -136,6 +136,7 @@
   }
 
   &__media {
+    display: block;
     margin: 0 0 2rem;
     max-width: 54rem;
 

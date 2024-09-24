@@ -18,7 +18,7 @@
       <!-- #region content -->
       <main class="content page__content">
         <!-- #region crumbs -->
-        <div class="page__crumbs">
+        <div class="content__crumbs">
           <div class="container container--screen-xl">
             <ul class="crumbs">
               <li class="crumbs__item">
@@ -47,13 +47,19 @@
               <header class="article__header">
                 <button class="btn btn--backward article__backward">Всі послуги</button>
                 <div class="article__title h1">Видалення зубів мудрості</div>
-                <div class="article__img">
+                <picture class="article__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      /assets/images/single-service/wisdom_tooth_extraction_procedure.webp
+                    "
+                  />
                   <img
                     src="/assets/images/single-service/wisdom_tooth_extraction_procedure.jpg"
                     class="article__img-item"
                     alt="Процедура видалення зуба мудрості"
                   />
-                </div>
+                </picture>
                 <div class="article__nav sticky-header">
                   <ul class="article__nav-list">
                     <li class="article__nav-item">
@@ -236,6 +242,31 @@
         </section>
         <!-- #endregion doctors -->
 
+        <!-- #region reviews -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Відгуки</h2>
+              <a href="#" class="btn btn--default block__header-btn">Всі відгуки</a>
+            </header>
+            <!--@import partials/components/reviews-carousel.html-->
+          </div>
+        </section>
+        <!-- #endregion reviews -->
+
+        <!-- #region recomendations -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">
+                Як поводитися після видалення зуба мудрості: рекомендації
+              </h2>
+            </header>
+            <!--@import partials/components/recommendations.html-->
+          </div>
+        </section>
+        <!-- #endregion recomendations -->
+
         <!-- #region faq -->
         <section class="block block--separated-b content__block">
           <div class="container container--screen-xl">
@@ -266,8 +297,10 @@
       <!-- #region footer -->
       <!--@import partials/layout/footer.html-->
       <!-- #endregion footer -->
-
-      <!--@import partials/layout/scripts.html-->
     </div>
+
+    <!--@import partials/components/modal-appointment.html-->
+    <!--@import partials/components/modal-success.html-->
+    <!--@import partials/layout/scripts.html-->
   </body>
 </html>

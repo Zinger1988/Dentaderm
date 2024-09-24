@@ -35,11 +35,13 @@
         </section>
         <!-- #endregion services -->
 
-        <!-- #region reviews -->
-        <div class="block content__block">
-          <!--@import partials/components/reviews-section.html-->
-        </div>
-        <!-- #endregion reviews -->
+        <!-- #region ad banner -->
+        <section class="block content__block">
+          <div class="container">
+            <!--@import partials/components/ad-banner.html-->
+          </div>
+        </section>
+        <!-- #endregion ad banner -->
 
         <!-- #region doctors -->
         <section class="block block--separated-b content__block">
@@ -52,6 +54,24 @@
           </div>
         </section>
         <!-- #endregion doctors -->
+
+        <!-- #region doctors -->
+        <section class="block content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Акції</h2>
+              <a href="#" class="btn btn--default block__header-btn">Всі акції</a>
+            </header>
+            <!--@import partials/components/discount-carousel.html-->
+          </div>
+        </section>
+        <!-- #endregion doctors -->
+
+        <!-- #region reviews -->
+        <div class="block content__block">
+          <!--@import partials/components/reviews-section.html-->
+        </div>
+        <!-- #endregion reviews -->
 
         <!-- #region blog -->
         <section class="block block--separated-b content__block">
@@ -86,8 +106,10 @@
       <!-- #region footer -->
       <!--@import partials/layout/footer.html-->
       <!-- #endregion footer -->
-
-      <!--@import partials/layout/scripts.html-->
     </div>
+
+    <!--@import partials/components/modal-appointment.html-->
+    <!--@import partials/components/modal-success.html-->
+    <!--@import partials/layout/scripts.html-->
   </body>
 </html>

@@ -11,4 +11,13 @@
       margin-bottom: 1.6rem;
     }
   }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--center {
+      justify-content: center;
+    }
+  }
 }

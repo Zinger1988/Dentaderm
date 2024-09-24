@@ -14,7 +14,7 @@
     border-bottom: 1px solid $gray200;
     font-size: 1.6rem;
     font-weight: 400;
-    @include animate(border-color);
+    @include animate(border-color font-size);
 
     @include media(">=3xl") {
       padding: 1.8rem 4rem 1.8rem 0;
@@ -22,7 +22,13 @@
     }
 
     &.label-active {
+      font-size: 1.8rem;
       border-bottom: 1px solid $gray800;
+      font-weight: 500;
+
+      @include media(">=3xl") {
+        font-size: 2.2rem;
+      }
 
       #{$this}__icon::before {
         transform: translate(-50%, -50%) rotate(90deg);
@@ -58,6 +64,5 @@
   &__body {
     @include clearMarginY("&");
     padding: 2rem 0 3rem;
-    font-style: italic;
   }
 }
