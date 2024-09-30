@@ -331,7 +331,7 @@
           </div>
         </div>
 
-        <!-- #region doctors -->
+        <!-- #region prices -->
         <section class="block content__block">
           <div class="container container--screen-xl">
             <header class="block__header">
@@ -534,6 +534,101 @@
           </div>
         </section>
         <!-- #endregion doctors -->
+
+        <!-- #region banner -->
+        <section class="block content__block content__block--mb-0">
+<div class="banner banner--dark">
+  <div class="container banner__container">
+    <picture class="banner__img">
+      <source type="image/webp" srcset="assets/images/banners/smiling_client_2.webp" />
+      <img
+        loading="lazy"
+        class="banner__img-item"
+        src="assets/images/banners/smiling_client_2.jpg"
+        alt="img"
+      />
+    </picture>
+    <div class="banner__text banner__text--bottom">
+      <!-- <img
+        class="banner__logo"
+        src="assets/images/dentaderm_logo_text_only_white.svg"
+        alt="dentaderm текстовий логотип"
+      />
+      <h1 class="banner__tagline">
+        Усміхаючись,<br />
+        ви змінюєте світ!
+      </h1> -->
+    </div>
+    <div class="banner__content">
+      <h3>Отримайте консультацію</h3>
+<form class="form appointment-form">
+  <div class="form__body">
+    <div class="form__row">
+      <div class="fluid-label fluid-label--white">
+        <span class="fluid-label__title">Клініка</span>
+        <select
+          class="select select--white nice-select wide fluid-label__control"
+          name="clinic"
+          data-validation="select"
+        >
+          <option value="" selected disabled>Оберіть клініку</option>
+          <option value="klovsky">Київ, Кловський узвіз, 7а</option>
+          <option value="vishhorodska">Київ, Вишгородська, 56/2</option>
+          <option value="soborna">Ірпінь, Соборна, 107</option>
+        </select>
+      </div>
+    </div>
+    <div class="form__row">
+      <div class="fluid-label fluid-label--white">
+        <span class="fluid-label__title">Ім'я</span>
+        <input
+          type="text"
+          name="name"
+          data-validation="required"
+          class="input-text input-text--white fluid-label__control"
+        />
+      </div>
+    </div>
+    <div class="form__row">
+      <div class="fluid-label fluid-label--white">
+        <span class="fluid-label__title">Телефон</span>
+        <input
+          type="tel"
+          name="tel"
+          class="input-text input-text--white fluid-label__control"
+          data-validation="required"
+        />
+      </div>
+    </div>
+    <div class="form__row">
+      <label class="input-checkbox input-checkbox--white">
+        <input
+          class="input-checkbox__input"
+          type="checkbox"
+          name="agreement"
+          data-validation="checked"
+        />
+        <span class="input-checkbox__toggle">
+          <svg class="icon input-checkbox__icon">
+            <use href="assets/icons.svg#check-sm" />
+          </svg>
+        </span>
+        <span class="input-checkbox__title">
+          Я погоджуюся на обробку моїх персональних даних на підставі
+          <a href="#">політики конфідентційності</a>
+        </span>
+      </label>
+    </div>
+  </div>
+  <div class="form__footer">
+    <button class="btn btn--square btn--white btn--fluid">Записатися на прийом</button>
+  </div>
+</form>
+    </div>
+  </div>
+</div>
+        </section>
+        <!-- #endregion banner -->
       </main>
       <!-- #endregion content -->
 
