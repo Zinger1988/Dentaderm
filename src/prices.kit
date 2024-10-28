@@ -37,7 +37,42 @@
               <h1 class="block__title h2">Ціни</h1>
             </header>
 
-            <!--@import partials/components/price-accordion.html-->
+            <!-- #region tabs -->
+            <div class="tabs base-tabs">
+              <!-- #region tabs head -->
+              <div class="tabs-head base-tabs__head">
+                <button class="tabs-btn base-tabs__btn active" data-tab-target="kiyv">
+                  Клініка в Києві
+                </button>
+                <button class="tabs-btn base-tabs__btn" data-tab-target="irpin">
+                  Клініка в Ірпіні
+                </button>
+              </div>
+              <!-- #endregion tabs head -->
+
+              <!-- #region tabs content -->
+              <div class="tabs-content base-tabs__content">
+                <!-- #region tabs content item -->
+                <div
+                  class="tabs-content-item base-tabs__content-item"
+                  data-tab-content="kiyv"
+                >
+                  <!--@import partials/components/price-accordion.html-->
+                </div>
+                <!-- #endregion tabs content item -->
+
+                <!-- #region tabs content item -->
+                <div
+                  class="tabs-content-item base-tabs__content-item"
+                  data-tab-content="irpin"
+                >
+                  <!--@import partials/components/price-accordion.html-->
+                </div>
+                <!-- #endregion tabs content item -->
+              </div>
+              <!-- #endregion tabs content -->
+            </div>
+            <!-- #endregion tabs -->
           </div>
         </section>
         <!-- #endregion doctors -->

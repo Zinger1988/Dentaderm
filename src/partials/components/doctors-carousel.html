@@ -1,24 +1,76 @@
-<div class="card-carousel card-carousel--doctors">
-  <div class="card-carousel__swiper swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
-      <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
-      <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
-      <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
-      <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
-      <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
-      <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
-      <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
-    </div>
+<!-- #region tabs -->
+<div class="tabs base-tabs">
+  <!-- #region tabs head -->
+  <div class="tabs-head base-tabs__head">
+    <button class="tabs-btn base-tabs__btn active" data-tab-target="kiyv">
+      Клініка в Києві
+    </button>
+    <button class="tabs-btn base-tabs__btn" data-tab-target="irpin">
+      Клініка в Ірпіні
+    </button>
   </div>
-  <button class="card-carousel__nav card-carousel__nav--next">
-    <svg class="icon card-carousel__nav-icon">
-      <use href="assets/icons.svg#arrow-right" />
-    </svg>
-  </button>
-  <button class="card-carousel__nav card-carousel__nav--prev">
-    <svg class="icon card-carousel__nav-icon">
-      <use href="assets/icons.svg#arrow-left" />
-    </svg>
-  </button>
+  <!-- #endregion tabs head -->
+
+  <!-- #region tabs content -->
+  <div class="tabs-content base-tabs__content">
+    <!-- #region tabs content item -->
+    <div class="tabs-content-item base-tabs__content-item" data-tab-content="kiyv">
+      <div class="card-carousel card-carousel--doctors">
+        <div class="card-carousel__swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+          </div>
+        </div>
+        <button class="card-carousel__nav card-carousel__nav--next">
+          <svg class="icon card-carousel__nav-icon">
+            <use href="assets/icons.svg#arrow-right" />
+          </svg>
+        </button>
+        <button class="card-carousel__nav card-carousel__nav--prev">
+          <svg class="icon card-carousel__nav-icon">
+            <use href="assets/icons.svg#arrow-left" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- #endregion tabs content item -->
+
+    <!-- #region tabs content item -->
+    <div class="tabs-content-item base-tabs__content-item" data-tab-content="irpin">
+      <div class="card-carousel card-carousel--doctors">
+        <div class="card-carousel__swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+            <div class="swiper-slide"><!--@import ./doctor-card.html--></div>
+          </div>
+        </div>
+        <button class="card-carousel__nav card-carousel__nav--next">
+          <svg class="icon card-carousel__nav-icon">
+            <use href="assets/icons.svg#arrow-right" />
+          </svg>
+        </button>
+        <button class="card-carousel__nav card-carousel__nav--prev">
+          <svg class="icon card-carousel__nav-icon">
+            <use href="assets/icons.svg#arrow-left" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- #endregion tabs content item -->
+  </div>
+  <!-- #endregion tabs content -->
 </div>
+<!-- #endregion tabs -->
