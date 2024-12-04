@@ -2,6 +2,10 @@ class Modal {
   static modalElements = null;
   static activeModal = null;
   static modalOverlay = document.createElement("div");
+  static callbacks = {
+    onShowModal: (activeModal) => {},
+    onHideModal: (activeModal) => {},
+  };
 
   static preventScroll(e) {
     if (
@@ -12,10 +16,11 @@ class Modal {
     }
   }
 
-  constructor(modalSelector) {
+  constructor(modalSelector, onShowModal, onHideModal) {
     Modal.modalElements = Array.from(document.querySelectorAll(modalSelector));
     Modal.modalOverlay.id = "modal-overlay";
     Modal.setHandlers();
+    Modal.callbacks = { onShowModal, onHideModal };
   }
 
   static bindButton(buttonEl) {
@@ -37,7 +42,7 @@ class Modal {
     });
 
     Modal.modalOverlay.addEventListener("click", (e) => {
-      Modal.callbacks?.onHide(Modal.activeModal);
+      Modal.callbacks.onHideModal?.(Modal.activeModal);
       Modal.hide();
       Modal.hideOverlay();
     });
@@ -117,6 +122,7 @@ class Modal {
     const targetModal = Modal.modalElements.find((element) => element.id === modalId);
     Modal.activeModal = targetModal;
     targetModal.classList.add("visible");
+    Modal.callbacks.onShowModal?.(Modal.activeModal);
   }
 
   static hide() {
@@ -130,6 +136,7 @@ class Modal {
       });
     }
 
+    Modal.callbacks.onHideModal?.(Modal.activeModal);
     Modal.activeModal.classList.remove("visible");
     Modal.activeModal = null;
   }

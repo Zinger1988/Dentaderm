@@ -11,6 +11,10 @@
 
   &__icon {
     @include sizeRatio(2.4rem);
+
+    &--white {
+      fill: $white;
+    }
   }
 
   &__list {

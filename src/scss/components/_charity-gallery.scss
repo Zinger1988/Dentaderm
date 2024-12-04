@@ -1,0 +1,65 @@
+.charity-gallery {
+  height: 100%;
+  display: grid;
+
+  $this: &;
+
+  &__link {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 11;
+      box-shadow: inset 0 0 0 1px $white;
+    }
+  }
+
+  &__label {
+    @include fs("body2", 0.875);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 0.4rem 1rem;
+    background-color: rgba($black, 0.7);
+    color: $gray300;
+
+    @include media(">=xl") {
+      @include fs("body2", 1);
+    }
+  }
+
+  &__thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &--layout-1 {
+    #{$this}__link {
+      padding: 25% 0;
+    }
+  }
+
+  &--layout-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &--layout-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    #{$this}__link:first-child {
+      grid-column: 1/-1;
+    }
+  }
+}

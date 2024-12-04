@@ -1,0 +1,73 @@
+.base-tabs {
+  &__content-item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 0 2rem;
+
+    @include media(">=3xl") {
+      margin: 0 0 4rem;
+      gap: 3rem;
+    }
+  }
+
+  &__btn {
+    @extend %buttonReset;
+    @include fs("tab");
+    @include animate(color);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $gray600;
+    padding: 0 0 1.2rem;
+    position: relative;
+
+    @include mediaHover() {
+      &:hover {
+        color: $black;
+      }
+    }
+
+    @include media(">=3xl") {
+      padding: 0 0 1.4rem;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0;
+      border-top: 1px solid $black;
+      @include animate(width);
+    }
+
+    &::before {
+      bottom: 0.3rem;
+
+      @include media(">=3xl") {
+        bottom: 0.4rem;
+      }
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &.active {
+      color: $black;
+
+      &::before,
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

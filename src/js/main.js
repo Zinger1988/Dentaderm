@@ -1,5 +1,6 @@
 const initMap = () => {
   const mapContainer = document.getElementById("map");
+  mapContainer.style = "position: relative";
 
   if (!mapContainer) return;
 
@@ -13,15 +14,123 @@ const initMap = () => {
     navigationControl: false,
   });
 
+  map.touchPitch.disable();
+  map.keyboard.enable();
+  map.keyboard.disableRotation();
+
+  const createMessageContainer = ({ text, imageUrl }) => {
+    const containerEl = document.createElement("div");
+    const imageEl = document.createElement("img");
+    const textEl = document.createElement("p");
+
+    containerEl.style.cssText = `
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background-color: rgba(0,0,0,.6);
+      color: white;
+      gap: 20px;
+      pointer-events: none;
+    `;
+
+    textEl.style.cssText = `font-size: 16px; font-weight: bold`;
+
+    imageEl.style.cssText = `
+      display: block;
+      height: 56px;
+    `;
+
+    imageEl.src = imageUrl;
+
+    imageUrl && containerEl.append(imageEl);
+    textEl.textContent = text;
+    containerEl.append(textEl);
+
+    return containerEl;
+  };
+
+  const dragTipMessage = createMessageContainer({
+    text: "Touch with two fingers to drag the map",
+    imageUrl: "/assets/images/2-fingers-touch.svg",
+  });
+
+  const zoomMessageContainer = createMessageContainer({
+    text: "Use CTRL + Mousewheel to zoom the map",
+    imageUrl: "/assets/images/ctrl-wheel.svg",
+  });
+
+  let activeTouches = 0;
+  let fadeoutTimeout = null;
+  let hasDoubleTouch = null;
+  const popups = [];
+
+  const closeAllPopups = () => {
+    popups.forEach((popup) => popup.remove());
+    popups.length = 0;
+  };
+
+  map.on("wheel", (e) => {
+    map.scrollZoom.disable();
+    if (e.originalEvent.ctrlKey) {
+      map.scrollZoom.enable();
+    }
+  });
+
+  mapContainer.addEventListener("wheel", (e) => {
+    if (fadeoutTimeout) clearTimeout(fadeoutTimeout);
+
+    if (e.ctrlKey) {
+      e.preventDefault();
+      zoomMessageContainer.remove();
+    } else {
+      mapContainer.prepend(zoomMessageContainer);
+      fadeoutTimeout = setTimeout(() => {
+        zoomMessageContainer.remove();
+      }, 2000);
+    }
+  });
+
+  map.on("click", (e) => closeAllPopups());
+
+  map.on("touchmove", (e) => {
+    activeTouches = e.originalEvent.touches.length;
+    if (fadeoutTimeout) clearTimeout(fadeoutTimeout);
+
+    if (activeTouches < 2 && activeTouches != 0 && !hasDoubleTouch) {
+      map.dragPan.disable();
+      mapContainer.prepend(dragTipMessage);
+      fadeoutTimeout = setTimeout(() => {
+        activeTouches = 0;
+        dragTipMessage.remove();
+        map.dragPan.enable();
+        hasDoubleTouch = null;
+      }, 2000);
+    } else {
+      dragTipMessage.remove();
+      map.dragPan.enable();
+    }
+  });
+
+  map.on("touchend", (e) => {
+    if (e.originalEvent.touches.length >= 1) {
+      hasDoubleTouch = true;
+    } else {
+      hasDoubleTouch = null;
+    }
+  });
+
   const el = document.createElement("div");
   el.className = "marker";
   el.style.backgroundImage = "url(./assets/images/marker.svg)";
   el.style.width = "36px";
   el.style.height = "36px";
-
-  el.addEventListener("click", function () {
-    window.alert(marker.properties.message);
-  });
 
   const coords = [
     [30.4511244, 50.5203333],
@@ -31,15 +140,15 @@ const initMap = () => {
 
   const clinics = [
     {
-      label: "вул. Вишгородська, 56/2",
+      label: "Київ, вул. Вишгородська, 56/2",
       coords: [30.4511244, 50.5203333],
     },
     {
-      label: "вул. Кловський узвіз, 7а",
+      label: "Київ, вул. Кловський узвіз, 7а",
       coords: [30.5386361, 50.4385711],
     },
     {
-      label: "вул. Соборна, 107",
+      label: "Ірпінь, вул. Соборна, 107",
       coords: [30.2384241, 50.5206251],
     },
   ];
@@ -47,10 +156,19 @@ const initMap = () => {
   clinics.forEach((coord) => {
     const { label, coords } = coord;
     const element = el.cloneNode(true);
-    // element.addEventListener("click", function () {
-    //   window.alert(coord.label);
-    // });
-    new maptilersdk.Marker({ element }).setLngLat(coords).addTo(map);
+    const marker = new maptilersdk.Marker({ element }).setLngLat(coords).addTo(map);
+
+    marker.getElement().addEventListener("click", (e) => {
+      closeAllPopups();
+      e.stopPropagation();
+
+      const popup = new maptilersdk.Popup({ offset: 25 }).setHTML(
+        `<span style='color: black'>${label}</span>`
+      );
+      popups.push(popup);
+
+      popup.setLngLat(coords).addTo(map);
+    });
   });
 };
 
@@ -334,6 +452,10 @@ const fluidLabel = () => {
       container.classList.add("fluid-label--active");
     });
 
+    title.addEventListener("click", () => {
+      control.focus();
+    });
+
     control.addEventListener("blur", () => {
       if (!control.value.trim()) {
         container.classList.remove("fluid-label--active");
@@ -354,16 +476,6 @@ const initMenu = () => {
       menu.classList.toggle("menu--active");
 
       menuBtn.forEach((btn) => btn.classList.toggle("burger-btn--active"));
-    });
-  });
-};
-
-const initNiceSelect = () => {
-  const selects = document.querySelectorAll(".nice-select");
-
-  selects.forEach((select) => {
-    NiceSelect.bind(select, {
-      placeholder: false,
     });
   });
 };
@@ -399,8 +511,8 @@ const initAccordion = () => {
   });
 };
 
-const toggleExpand = (btnDefaultText, btnActiveText) => {
-  const containers = document.querySelectorAll(".expand-container");
+const toggleExpand = (containerSelector, btnDefaultText, btnActiveText) => {
+  const containers = document.querySelectorAll(containerSelector);
 
   if (!containers.length) {
     return;
@@ -441,6 +553,11 @@ const initFormValidator = () => {
   const appointmentForms = document.querySelectorAll(".appointment-form");
 
   appointmentForms.forEach((formElement) => {
+    const select = formElement.querySelector(".nice-select");
+    const selectInstance = NiceSelect.bind(select, {
+      placeholder: false,
+    });
+
     // prettier-ignore
     new FormVaildator({
       formElement,
@@ -473,6 +590,9 @@ const initFormValidator = () => {
 
         // TODO: HANDLE FORM
       },
+      onReset: (e) => {
+        selectInstance.update();
+      }
     });
   });
 };
@@ -572,6 +692,33 @@ const initHeroSlider = () => {
   });
 };
 
+const initCharitySlider = () => {
+  const sliderSelector = ".charity-slider";
+  const sliderContainers = document.querySelectorAll(sliderSelector);
+
+  if (!sliderContainers.length) {
+    return;
+  }
+
+  const swiper = new Swiper(sliderSelector, {
+    grabCursor: true,
+    slidesPerView: "auto",
+    loop: true,
+    lazy: true,
+    // freeMode: true,
+  });
+
+  sliderContainers.forEach((container, i) => {
+    const parentSection = container.closest(".hero-section__container");
+
+    const nextNavBtn = parentSection.querySelector(".pagination__btn--next");
+    const prevNavBtn = parentSection.querySelector(".pagination__btn--prev");
+
+    nextNavBtn.addEventListener("click", () => swiper[i].slideNext());
+    prevNavBtn.addEventListener("click", () => swiper[i].slidePrev());
+  });
+};
+
 const initYouTubeVideo = () => {
   let YouTubeContainers = document.querySelectorAll(".video");
 
@@ -666,7 +813,6 @@ const initSmoothScrollToAnchor = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  initNiceSelect();
   initMap();
   tabs();
   initCardCarousel();
@@ -678,9 +824,14 @@ document.addEventListener("DOMContentLoaded", () => {
   initFormValidator();
   initConnectedCarousel();
   initHeroSlider();
-  toggleExpand();
+  toggleExpand(".expand-container");
+  toggleExpand(".ceo-container", "Читати повністю", "згорнути");
   initYouTubeVideo();
   stickyHeader();
+  initCharitySlider();
   initSmoothScrollToAnchor();
-  new Modal(".modal");
+  new Modal(".modal", null, (activeModal) => {
+    const appointmentForm = activeModal.querySelector(".appointment-form");
+    appointmentForm?.reset();
+  });
 });

@@ -9,3 +9,14 @@
   opacity: 0;
   position: absolute;
 }
+
+.bg--pixel-camouflage::before {
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(/assets/images/charity/army/bg.jpg) center / cover;
+  opacity: 0.5;
+}

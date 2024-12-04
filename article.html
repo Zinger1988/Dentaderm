@@ -1,341 +1,322 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ξ Стоматологія в Києві • Стоматологічна клініка DentaDerm</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="assets/images/favicon.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=block"
-      rel="stylesheet"
-    />
-    <link rel="preload" as="image" href="assets/icons.svg" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"
+  />
+  <title>Ξ Стоматологія в Києві • Стоматологічна клініка DentaDerm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=block"
+    rel="stylesheet"
+  />
+  <link rel="preload" as="image" href="assets/icons.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
   <body>
     <div class="page">
       <!-- #region header -->
-      <header class="header page__header">
-        <div class="container header__container">
-          <div class="header__logo">
-            <a href="#" class="header__logo-link">
-              <img
-                class="header__logo-img"
-                src="assets/images/dentyaderm_logo_white.svg"
-                alt="dentaderm логотип"
-              />
-            </a>
-          </div>
+<header class="header page__header">
+  <div class="container header__container">
+    <div class="header__logo">
+      <a href="#" class="header__logo-link">
+        <img
+          class="header__logo-img"
+          src="assets/images/dentyaderm_logo_white.svg"
+          alt="dentaderm логотип"
+        />
+      </a>
+    </div>
 
-          <div class="burger-btn burger-btn--white burger-btn--sm header__menu-btn">
-            <span class="burger-btn__top"></span>
-            <span class="burger-btn__middle"></span>
-            <span class="burger-btn__bottom"></span>
-          </div>
+    <div class="burger-btn burger-btn--white burger-btn--sm header__menu-btn">
+      <span class="burger-btn__top"></span>
+      <span class="burger-btn__middle"></span>
+      <span class="burger-btn__bottom"></span>
+    </div>
 
-          <ul class="contact-list header__contact-list">
-            <li class="contact-list__item">
-              <a href="#" target="_blank" class="contact-list__address">
-                Ірпінь, вул. Соборна, 107
-              </a>
-              <a href="tel:+380631414575" class="contact-list__phone">(063) 141-45-75</a>
-            </li>
-            <li class="contact-list__item">
-              <a href="#" target="_blank" class="contact-list__address">
-                Київ, вул. Вишгородська, 56/2
-              </a>
-              <a href="tel:+380671842131" class="contact-list__phone">(067) 184-21-31</a>
-            </li>
-            <li class="contact-list__item">
-              <a href="#" target="_blank" class="contact-list__address">
-                Київ, вул. Кловський узвіз, 7а
-              </a>
-              <a href="tel:+3800987503030" class="contact-list__phone">(098) 750-30-30</a>
-            </li>
-          </ul>
-          <button
-            class="btn btn--default btn--white header__appointment"
-            data-modal-id="modal-appointment"
-          >
-            Записатися на прийом
-          </button>
-        </div>
-      </header>
+    <ul class="contact-list header__contact-list">
+      <li class="contact-list__item">
+        <a href="#" target="_blank" class="contact-list__address">
+          Ірпінь, вул. Соборна, 107
+        </a>
+        <a href="tel:+380631414575" class="contact-list__phone">(063) 141-45-75</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="#" target="_blank" class="contact-list__address">
+          Київ, вул. Вишгородська, 56/2
+        </a>
+        <a href="tel:+380671842131" class="contact-list__phone">(067) 184-21-31</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="#" target="_blank" class="contact-list__address">
+          Київ, вул. Кловський узвіз, 7а
+        </a>
+        <a href="tel:+3800987503030" class="contact-list__phone">(098) 750-30-30</a>
+      </li>
+    </ul>
+    <button
+      class="btn btn--default btn--white header__appointment"
+      data-modal-id="modal-appointment"
+    >
+      Записатися на консультацію
+    </button>
+  </div>
+</header>
       <!-- #endregion header -->
 
       <!-- #region sidebar -->
-      <aside
-        class="page__sidebar sidebar"
-        aria-label="Меню"
-        aria-role="button"
-        tabindex="0"
-      >
-        <ul class="lang-selector sidebar__lang-selector">
-          <li class="lang-selector__item lang-selector__item--active">
-            <a class="lang-selector__link lang-selector__link" href="#">Ua</a>
-          </li>
-          <li class="lang-selector__item">
-            <a class="lang-selector__link" href="#">Ru</a>
-          </li>
-        </ul>
+<aside class="page__sidebar sidebar" aria-label="Меню" aria-role="button" tabindex="0">
+  <ul class="lang-selector sidebar__lang-selector">
+    <li class="lang-selector__item lang-selector__item--active">
+      <a class="lang-selector__link lang-selector__link" href="#">Ua</a>
+    </li>
+    <li class="lang-selector__item">
+      <a class="lang-selector__link" href="#">Ru</a>
+    </li>
+  </ul>
 
-        <div class="sidebar__menu-btn">
-          <div class="burger-btn">
-            <span class="burger-btn__top"></span>
-            <span class="burger-btn__middle"></span>
-            <span class="burger-btn__bottom"></span>
-          </div>
-        </div>
+  <div class="sidebar__menu-btn">
+    <div class="burger-btn">
+      <span class="burger-btn__top"></span>
+      <span class="burger-btn__middle"></span>
+      <span class="burger-btn__bottom"></span>
+    </div>
+  </div>
 
-        <div class="socials socials--vertical sidebar__socials">
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a
-                class="socials__link"
-                target="_blank"
-                href="https://www.instagram.com/denta_derm/"
-              >
-                <svg class="icon socials__icon">
-                  <use href="assets/icons.svg#instagram" />
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                class="socials__link"
-                target="_blank"
-                href="https://www.facebook.com/dentaderm"
-              >
-                <svg class="icon socials__icon">
-                  <use href="assets/icons.svg#facebook" />
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                class="socials__link"
-                target="_blank"
-                href="https://tinyurl.com/27phvmbk"
-              >
-                <svg class="icon socials__icon">
-                  <use href="assets/icons.svg#viber" />
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
-                <svg class="icon socials__icon">
-                  <use href="assets/icons.svg#telegram" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
+  <div class="socials socials--vertical sidebar__socials">
+    <ul class="socials__list">
+      <li class="socials__item">
+        <a
+          class="socials__link"
+          target="_blank"
+          href="https://www.instagram.com/denta_derm/"
+        >
+          <svg class="icon socials__icon">
+            <use href="assets/icons.svg#instagram" />
+          </svg>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a
+          class="socials__link"
+          target="_blank"
+          href="https://www.facebook.com/dentaderm"
+        >
+          <svg class="icon socials__icon">
+            <use href="assets/icons.svg#facebook" />
+          </svg>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
+          <svg class="icon socials__icon">
+            <use href="assets/icons.svg#viber" />
+          </svg>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
+          <svg class="icon socials__icon">
+            <use href="assets/icons.svg#telegram" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
       <!-- #endregion sidebar -->
 
       <!-- #region menu -->
-      <section class="menu">
-        <div class="menu__holder">
-          <!-- #reigon menu header -->
-          <div class="menu__header">
-            <!-- #reigon socials -->
-            <div class="socials menu__socials">
-              <ul class="socials__list socials__list--narrow">
-                <li class="socials__item">
-                  <a
-                    class="socials__link"
-                    target="_blank"
-                    href="https://www.instagram.com/denta_derm/"
-                  >
-                    <svg class="icon socials__icon">
-                      <use href="assets/icons.svg#instagram" />
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a
-                    class="socials__link"
-                    target="_blank"
-                    href="https://www.facebook.com/dentaderm"
-                  >
-                    <svg class="icon socials__icon">
-                      <use href="assets/icons.svg#facebook" />
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a
-                    class="socials__link"
-                    target="_blank"
-                    href="https://tinyurl.com/27phvmbk"
-                  >
-                    <svg class="icon socials__icon">
-                      <use href="assets/icons.svg#viber" />
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a
-                    class="socials__link"
-                    target="_blank"
-                    href="https://t.me/DentaDerm_Kyiv"
-                  >
-                    <svg class="icon socials__icon">
-                      <use href="assets/icons.svg#telegram" />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- #endreigon socials -->
+<section class="menu">
+  <div class="menu__holder">
+    <!-- #reigon menu header -->
+    <div class="menu__header">
+      <!-- #reigon socials -->
+      <div class="socials menu__socials">
+        <ul class="socials__list socials__list--narrow">
+          <li class="socials__item">
+            <a
+              class="socials__link"
+              target="_blank"
+              href="https://www.instagram.com/denta_derm/"
+            >
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#instagram" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a
+              class="socials__link"
+              target="_blank"
+              href="https://www.facebook.com/dentaderm"
+            >
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#facebook" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#viber" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#telegram" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- #endreigon socials -->
 
-            <!-- #reigon lang selector -->
-            <ul class="lang-selector lang-selector--hor menu__lang-selector">
-              <li class="lang-selector__item lang-selector__item--active">
-                <a class="lang-selector__link lang-selector__link" href="#">Ua</a>
-              </li>
-              <li class="lang-selector__item">
-                <a class="lang-selector__link" href="#">Ru</a>
-              </li>
-            </ul>
-            <!-- #endreigon lang selector -->
-          </div>
-          <!-- #endreigon menu header -->
+      <!-- #reigon lang selector -->
+      <ul class="lang-selector lang-selector--hor menu__lang-selector">
+        <li class="lang-selector__item lang-selector__item--active">
+          <a class="lang-selector__link lang-selector__link" href="#">Ua</a>
+        </li>
+        <li class="lang-selector__item">
+          <a class="lang-selector__link" href="#">Ru</a>
+        </li>
+      </ul>
+      <!-- #endreigon lang selector -->
+    </div>
+    <!-- #endreigon menu header -->
 
-          <nav class="menu__nav">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="#">Діагностика і консультація</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Лікування зубів та ясен</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Хірургічна стоматологія</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Ортодонтичне лікування</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Ортопедичне лікування</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Плазмоліфтинг</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Ціни</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Наші фахівці</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Про клініку</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Контакти</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Благодійність</a>
-              </li>
-            </ul>
-            <ul class="menu__list menu__list--secondary">
-              <li class="menu__item menu__item--secondary">
-                <a class="menu__link menu__link--secondary" href="#">
-                  Рекомендації пацієнтам
-                </a>
-              </li>
-              <li class="menu__item menu__item--secondary">
-                <a class="menu__link menu__link--secondary" href="#">Акції</a>
-              </li>
-              <li class="menu__item menu__item--secondary">
-                <a class="menu__link menu__link--secondary" href="#">
-                  Ліцензії та дозволи
-                </a>
-              </li>
-              <li class="menu__item menu__item--secondary">
-                <a class="menu__link menu__link--secondary" href="#">Статті</a>
-              </li>
-              <li class="menu__item menu__item--secondary">
-                <a class="menu__link menu__link--secondary" href="#">Відгуки</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="menu__location-tabs">
-            <!-- #region location-tabs -->
-            <div class="tabs location-tabs">
-              <div class="tabs-head location-tabs__head">
-                <button
-                  class="tabs-btn active location-tabs__btn location-tabs__btn--lg"
-                  data-tab-target="kiyv"
-                >
-                  Київ
-                </button>
-                <button
-                  class="tabs-btn location-tabs__btn location-tabs__btn--lg"
-                  data-tab-target="irpin"
-                >
-                  Ірпінь
-                </button>
-              </div>
-              <div class="tabs-content location-tabs__content">
-                <div
-                  class="tabs-content-item location-tabs__content-item active"
-                  data-tab-content="kiyv"
-                >
-                  <div class="location-tabs__address location-tabs__address--sm">
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      <a href="#" target="_blank">вул. Вишгородська, 56/2</a>
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      Пн-Сб: 9.00 - 20.00
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      <a href="tel:+380676250862">(067) 625-08-62</a>
-                    </p>
-                  </div>
-                  <div class="location-tabs__address location-tabs__address--sm">
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      <a href="#" target="_blank">вул. Кловський узвіз, 7а</a>
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      Пн-Сб: 9.00 - 20.00
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      <a href="tel:+380987503030">(098) 750-30-30</a>
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="tabs-content-item location-tabs__content-item"
-                  data-tab-content="irpin"
-                >
-                  <div class="location-tabs__address">
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      <a href="#" target="_blank">вул. Соборна, 107</a>
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      Пн-Сб: 9.00 - 20.00
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      <a href="tel:+380631414491">(063) 141-44-91</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- #endregion location-tabs -->
-          </div>
-        </div>
-      </section>
+    <nav class="menu__nav">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Діагностика і консультація</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Лікування зубів та ясен</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Хірургічна стоматологія</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Ортодонтичне лікування</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Ортопедичне лікування</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Плазмоліфтинг</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Ціни</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Наші фахівці</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Про клініку</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Контакти</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Благодійність</a>
+        </li>
+      </ul>
+      <ul class="menu__list menu__list--secondary">
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">
+            Рекомендації пацієнтам
+          </a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Акції</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#"> Ліцензії та дозволи </a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Статті</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Відгуки</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu__location-tabs">
+<!-- #region location-tabs -->
+<div class="tabs location-tabs">
+  <div class="tabs-head location-tabs__head">
+    <button
+      class="tabs-btn active location-tabs__btn location-tabs__btn--lg"
+      data-tab-target="kiyv"
+    >
+      Київ
+    </button>
+    <button
+      class="tabs-btn location-tabs__btn location-tabs__btn--lg"
+      data-tab-target="irpin"
+    >
+      Ірпінь
+    </button>
+  </div>
+  <div class="tabs-content location-tabs__content">
+    <div
+      class="tabs-content-item location-tabs__content-item active"
+      data-tab-content="kiyv"
+    >
+      <div class="location-tabs__address location-tabs__address--sm">
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="#" target="_blank">вул. Вишгородська, 56/2</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          Пн-Сб: 9.00 - 20.00
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="tel:+380676250862">(067) 625-08-62</a>
+        </p>
+      </div>
+      <div class="location-tabs__address location-tabs__address--sm">
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="#" target="_blank">вул. Кловський узвіз, 7а</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          Пн-Сб: 9.00 - 20.00
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="tel:+380987503030">(098) 750-30-30</a>
+        </p>
+      </div>
+    </div>
+    <div class="tabs-content-item location-tabs__content-item" data-tab-content="irpin">
+      <div class="location-tabs__address">
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="#" target="_blank">вул. Соборна, 107</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          Пн-Сб: 9.00 - 20.00
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="tel:+380631414491">(063) 141-44-91</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- #endregion location-tabs -->
+    </div>
+  </div>
+</section>
       <!-- #endregion menu -->
 
       <!-- #region content -->
@@ -396,116 +377,221 @@
               </header>
 
               <div class="article__body">
+                <p>
+                  Установка брекет-системи допомагає отримати красиву посмішку навіть у
+                  дорослому віці. А щоб носіння брекетів приносило мінімум дискомфорту, і
+                  зуби були надійно захищені від нальоту, важливо дотримуватись нескладних
+                  правил догляду. Про те, як чистити зуби з брекетами, розкажуть
+                  стоматологи центру DentaDerm.
+                </p>
                 <section class="article__section">
+                  <h2>Чому догляд за брекетами – це важливо?</h2>
                   <p>
-                    Багато пацієнтів вважають, що видаляти “вісімки” перед встановленням
-                    брекетів — обов’язково, і дуже бояться цієї процедури. Насправді ж,
-                    тут все індивідуально та залежить від цілої низки факторів.
-                    Розібратися з тим, коли потрібне видалення зубів мудрості перед
-                    ортодонтичним лікуванням, допоможуть ортодонти клініки DentaDerm.
+                    Лікування брекетами — зазвичай, тривале. Для
+                    <a href="https://dentaderm.ua/services/vyrivnyuvannya-prykusu/"
+                      >виправлення прикусу в Києві</a
+                    >
+                    незнімна конструкція фіксується на період від 1,5 до 2 років. Частинки
+                    їжі накопичуються в проміжках між зубами та брекетами, а також на
+                    шорстких елементах системи. Це загрожує появою нальоту, каменю,
+                    розвитком карієсу. А ще — формуванням таких неприємних наслідків, як
+                    пародонтит та пародонтоз.
                   </p>
-                  <h2>Навіщо видаляти зуби мудрості перед установкою брекетів?</h2>
                   <p>
-                    Якщо “вісімка” ще не прорізалась та знаходиться в кістці, під час
-                    росту вона може змістити зуби та зіпсувати результат лікування. Таким
-                    чином коригувати прикус доведеться повторно.
+                    Уникнути перерахованих проблем допоможе правильний догляд за ротовою
+                    порожниною. Регулярне чищення зубів, використання флосу та йоржиків,
+                    ополіскувача для порожнини рота.
                   </p>
                   <p>
-                    Навіть якщо зараз зуб мудрості не росте, немає гарантії, що цього не
-                    станеться через рік або пів року. Нікому не хочеться втратити
-                    напрацьований результат.
+                    Пам’ятайте: брекет системи не можуть стати причиною карієсу чи інших
+                    захворювань зубів. Їх псує недотримання правил догляду. Тому дуже
+                    важливо дотримуватися рекомендацій лікаря-стоматолога: гігієна ротової
+                    порожнини під час лікування повинна бути особливо ретельною.
                   </p>
                 </section>
                 <section class="article__section">
-                  <h2>
-                    У яких випадках необхідне видалення зубів мудрості перед брекетами?
-                  </h2>
-                  <p>Наша клініка рекомендує цю процедуру пацієнтам, у яких:</p>
+                  <h2>Догляд за брекетами: що потрібно?</h2>
+                  <h3>Ортодонтична зубна щітка</h3>
+                  <p>
+                    Зі щетинками V-подібної форми. Коротка частина щетинок допоможе
+                    ефективно очистити брекети, а довга – зуби та ясна. Щоб ви могли
+                    дістатися важкодоступних ділянок ротової порожнини, шийка щітки
+                    повинна бути довгою і вузькою. Оптимальна жорсткість – м’яка чи
+                    середня.
+                  </p>
+                </section>
+                <section class="article__section">
+                  <h3>Флосс</h3>
+                  <p>
+                    Зубна нитка – незамінний помічник після встановлення брекетів. Вона
+                    допомагає очистити міжзубні проміжки, а також простір між зубами та
+                    ортодонтичною конструкцією. Використовувати можна як звичайний флос,
+                    так і зубну нитку, розроблену спеціально для догляду за брекетами.
+                  </p>
+                </section>
+                <section class="article__section">
+                  <h3>Йоршики для зубів</h3>
+                  <p>
+                    Гарантують якісне очищення міжзубних проміжків та простору поруч із
+                    брекетами. У наборі краще мати два типи йоржиків: циліндричний та
+                    конічний.
+                  </p>
+                </section>
+                <section class="article__section">
+                  <h3>Зубна паста та ополіскувач</h3>
+                  <p>
+                    Ті, які підходять саме вам. Ці засоби повинні бути адаптовані до
+                    потреб зубів з брекетами. Вибрати пасту та ополіскувач допоможе
+                    лікар-стоматолог.
+                  </p>
+                </section>
+                <section class="article__section">
+                  <h2>Щоденний догляд за брекетами: 5 правил</h2>
+                  <p>Якщо ви носите систему брекет, необхідно:</p>
                   <ul>
-                    <li>маленька щелепа та недостатньо місця для всіх 32 зубів;</li>
-                    <li>великі зуби, які створюють дефіцит простору;</li>
-                    <li>невідповідність розмірів нижньої та верхньої щелеп;</li>
-                    <li>захворювання зубів мудрості — карієс, кісти, пошкодження.</li>
+                    <li>
+                      Після кожного прийому їжі ретельно вичищати брекет систему та зуби з
+                      усіх боків. Уникайте при цьому різких рухів.
+                    </li>
+                    <li>
+                      Полоскати рот водою або ополіскувачем кілька разів на день для
+                      видалення залишків їжі та запобігання нальоту.
+                    </li>
+                    <li>
+                      Контролювати положення брекетів під час чищення. Навіть незначне
+                      зрушення системи може порушити прикус.
+                    </li>
+                    <li>
+                      Використовувати флос, зубні йоржики та, по можливості, іригатор
+                      щодня. Ці пристрої допоможуть видалити наліт, залишки їжі в
+                      важкодоступних ділянках ротової порожнини.
+                    </li>
                   </ul>
                   <p>
-                    А також якщо за знімком томографії видно, що зуби мудрості ось-ось
-                    проріжуться та будуть проблемними, створюватимуть дискомфорт для
-                    сусідніх зубів.
+                    І дуже важливе правило — не ставтеся до брекетів, як до пристрою, що
+                    псує життя, ускладнює догляд за зубами. Адже саме така система є вашим
+                    союзником у досягненні мрії — гарної, рівної голлівудської посмішки. З
+                    часом догляд за системою буде доведений до автоматизму, і ви
+                    витрачатимете на це мінімум часу.
                   </p>
                   <p>
-                    Лікар-ортодонт проведе ретельну діагностику та допоможе з’ясувати, чи
-                    варто видаляти зуби мудрості конкретно у вашому випадку, орієнтуючись
-                    на об’єктивні дані.
+                    Один раз на місяць, або згідно з індивідуальним графіком, вам
+                    необхідно відвідувати стоматолога. Прийом стоматолога важливий для
+                    регулювання брекетів та виконання професійної гігієни.
                   </p>
                 </section>
                 <section class="article__section">
-                  <h2>Як видаляють зуби мудрості до встановлення брекетів?</h2>
+                  <h2>Як чистити зуби з брекетами</h2>
                   <p>
-                    Особливості видалення третіх молярів перед ортодонтичним лікуванням
-                    нічим не відрізняється від звичайного видалення. Найчастіше процедура
-                    проводиться під місцевим знеболенням та займає мінімум часу. Після вам
-                    призначаються протизапальні та знеболювальні засоби.
+                    Чистити зуби з брекетами необхідно особливо ретельно після кожного
+                    прийому їжі. Використовуйте для цього V-подібну зубну щітку, особливу
+                    увагу приділяйте важкодоступним ділянкам порожнини рота. Чистити зуби
+                    тепер потрібно довше, ніж звичайно: до 10 хвилин.
                   </p>
                   <p>
-                    У випадку, якщо видалення буде складним та тривалим, пацієнту може
-                    бути запропонована загальна анестезія. А після — додаткова
-                    антибіотикотерапія.
-                  </p>
-                </section>
-                <section class="article__section">
-                  <h2>Встановлення брекетів без видалення зубів мудрості</h2>
-                  <p>
-                    Якщо зуби прорізались нормально, не заважають сусіднім зубам, не
-                    травмують м’які тканини ротової порожнини,
-                    <a href="#">встановлення брекетів</a> можливе без їхнього видалення.
-                    Ми завжди прагнемо зберегти всі зуби пацієнта та уникнути складних та
-                    травматичних процедур. Тож якщо у вашому випадку можна буде не
-                    видаляти вісімки, ми обов’язково про це скажемо.
+                    Якщо сталося так, що після їди немає можливості почистити зуби, то
+                    хоча б скористайтеся ополіскувачем. Ретельно прополощіть ротову
+                    порожнину протягом 1-2 хвилин.
                   </p>
                 </section>
                 <section class="article__section">
-                  <h2>
-                    Чи можна відмовитися від видалення зубів мудрості перед установкою
-                    брекетів?
-                  </h2>
+                  <h2>Чи можна чистити зуби з брекетами звичайною щіткою?</h2>
                   <p>
-                    Якщо показання до видалення “вісімок” є, але пацієнт не хоче проходити
-                    через цю процедуру, він може відмовитися. У такому випадку треба
-                    підписати письмову згоду про те, що необхідність видалення зубів
-                    мудрості може виникнути в процесі ортодонтичного лікування або після
-                    нього.
+                    Можна, але краще використовувати щітку з V-подібними щетинками
+                    (механічну або електричну).
                   </p>
                   <p>
-                    Проте ми рекомендуємо дослухатися до професійної думки лікаря. Якщо
-                    ваш ортодонт рекомендує видалити вісімки — це краще зробити. Щоб
-                    отримати максимальний результат від ортодонтичного лікування.
+                    Ми рекомендуємо відмовитися від жорстких зубних щіток. Найкращий вибір
+                    — м’яка або середня зубна щітка. Вона допомагає:
+                  </p>
+                  <ul>
+                    <li>
+                      не пошкодити брекет систему та м’які тканини — чищення зубів буде
+                      делікатним;
+                    </li>
+                    <li>ефективніше очищати міжзубні проміжки.</li>
+                  </ul>
+                </section>
+                <section class="article__section">
+                  <h2>Харчування та носіння брекетів: поради стоматолога</h2>
+                  <p>
+                    Якщо ви носите брекети, необхідно скоригувати свій раціон.
+                    Рекомендуємо обмежити:
+                  </p>
+                  <ul>
+                    <li>
+                      Сухарі, чіпси, горіхи — вони можуть зірвати замочки або зламати
+                      дугу.
+                    </li>
+                    <li>
+                      Печиво, вафлі, солодкі бісквіти — ці продукти прилипають до
+                      брекетів, і їх дуже складно відчистити. Те саме стосується карамелі,
+                      ірисок, льодяників. Такі смаколики важко відчищаються, а також
+                      створюють сприятливі умови для розвитку бактерій під брекетами.
+                    </li>
+                    <li>
+                      Жувальні гумки – вони налипають на брекетах і важко видаляються з їх
+                      поверхні.
+                    </li>
+                  </ul>
+                  <p>
+                    Металеві брекети піддаються впливу харчових барвників, тому під час
+                    лікування слід обмежити в раціоні продукти, що пігментують. Це червоне
+                    вино, кава, чорний чай, червоні ягоди, буряк. Відмовлятися від цих
+                    продуктів та напоїв повністю не обов’язково, достатньо знизити їх
+                    кількість, а також полоскати порожнину рота після кожного вживання.
+                    Сапфірові та керамічні брекети, своєю чергою, практично не схильні до
+                    впливу харчових барвників.
+                  </p>
+                  <p>
+                    Носіння брекетів — саме той період, коли варто відмовитися від
+                    шкідливої &ZeroWidthSpace;&ZeroWidthSpace;звички гризти олівці,
+                    ковпачки від ручок та інші жорсткі предмети. Це може призвести до
+                    появи таких неприємних наслідків, як відколи брекетів або пошкодження
+                    емалі зуба.
+                  </p>
+                  <p>
+                    Тверді овочі та фрукти, типу яблук, груш, моркви, огірків перед
+                    вживанням потрібно різати на дрібні шматочки. Слідкуйте за
+                    температурою страв, які ви їсте. Різкі перепади – від гарячого до
+                    холодного, і навпаки – негативно впливають на брекети. Вони можуть
+                    зіпсувати проволоку або призвести до пошкодження замків.
                   </p>
                 </section>
                 <section class="article__section">
-                  <h2>Видалення зубів мудрості після брекетів</h2>
+                  <h2>Догляд за зубами після зняття брекетів</h2>
                   <p>
-                    Якщо вісімки не видалили до встановлення брекетів та в процесі
-                    носіння, на ними варто продовжувати спостерігати. Найменший рух інших
-                    зубів через треті моляри — пряме показання до їхнього видалення.
+                    І насамкінець — про те, як потрібно доглядати ротову порожнину після
+                    носіння брекетів. Якщо після ортодонтичного лікування вам призначили
+                    ретейнер, необхідно:
+                  </p>
+                  <ul>
+                    <li>
+                      Дотримуватися стандартних рекомендацій по догляду за ротовою
+                      порожниною – чистити зуби двічі на день, користуватися іригатором,
+                      зубною ниткою, ополіскувачем.
+                    </li>
+                    <li>
+                      Правильно доглядати за ретейнером — чистити щодня за допомогою щітки
+                      та пасти, використовувати спеціальні міжзубні йоржики, щоб
+                      ретельніше очистити простір навколо ретейнера.
+                    </li>
+                    <li>
+                      Відвідувати стоматолога профілактично — 1 раз на 6 місяців або
+                      згідно з графіком, який пропонує ваш лікар.
+                    </li>
+                  </ul>
+                  <p>
+                    Ось і все, що потрібно знати про догляд за брекетами та ротовою
+                    порожниною на період лікування. Стоматологи клініки DentaDerm
+                    обов’язково нададуть вам повні рекомендації та дадуть відповіді на всі
+                    ваші запитання. Запис на консультацію — телефоном або через форму для
+                    зворотного зв’язку. Почніть свій шлях до усмішки мрії вже сьогодні!
                   </p>
                   <p>
-                    Зазвичай вісімки з обох боків видаляють симетрично. Адже зуб мудрості
-                    без опори з іншого боку може негативно впливати на прикус. Зокрема,
-                    створювати напругу в м’язах, провокувати болі в суглобах. А у
-                    найгіршому випадку — провокувати рух щелепи назад.
+                    З турботою,
+                    <a href="https://dentaderm.ua/">Стоматологічна клініка DentaDerm</a>.
                   </p>
-                  <p>
-                    Якщо ж зуби мудрості не викликають проблем, ви почуваєтесь комфортно,
-                    то видаляти їх не потрібно.
-                  </p>
-                  <p>
-                    Турбують зуби мудрості? Чекаємо на консультації у нашій клініці.
-                    Стоматологи клініки DentaDerm із задоволенням проконсультують вас,
-                    проведуть діагностику та підкажуть, чи варто видаляти зуби мудрості
-                    перед брекетами конкретно у вашому випадку. Запис на прийом можна
-                    зробити телефоном або через форму для зворотного зв’язку.
-                  </p>
-                  <p>З турботою, <a href="#">Стоматологія DentaDerm</a>.</p>
                 </section>
               </div>
             </article>
@@ -520,241 +606,193 @@
               <h2 class="block__title">Останні статті</h2>
               <a href="#" class="btn btn--default block__header-btn">Всі статті</a>
             </header>
-            <div class="card-carousel card-carousel--blog">
-              <div class="card-carousel__swiper swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <article class="blog-card">
-                      <a href="#" class="blog-card__img-link">
-                        <picture class="blog-card__img">
-                          <source
-                            type="image/webp"
-                            srcset="assets/images/blog/article_img_thumb.webp"
-                          />
-                          <img
-                            loading="lazy"
-                            class="blog-card__img-item"
-                            src="assets/images/blog/article_img_thumb.jpg"
-                            alt="img"
-                          />
-                        </picture>
-                      </a>
-                      <time class="blog-card__date" datetime="2024-09-14"
-                        >14.09.2024</time
-                      >
-                      <h3 class="blog-card__title">
-                        Мезіальний прикус — причини розвитку, ознаки та лікування
-                      </h3>
-                      <a href="#" class="btn btn--default blog-card__btn">Читати</a>
-                    </article>
-                  </div>
-                  <div class="swiper-slide">
-                    <article class="blog-card">
-                      <a href="#" class="blog-card__img-link">
-                        <picture class="blog-card__img">
-                          <source
-                            type="image/webp"
-                            srcset="assets/images/blog/article_img_thumb.webp"
-                          />
-                          <img
-                            loading="lazy"
-                            class="blog-card__img-item"
-                            src="assets/images/blog/article_img_thumb.jpg"
-                            alt="img"
-                          />
-                        </picture>
-                      </a>
-                      <time class="blog-card__date" datetime="2024-09-14"
-                        >14.09.2024</time
-                      >
-                      <h3 class="blog-card__title">
-                        Мезіальний прикус — причини розвитку, ознаки та лікування
-                      </h3>
-                      <a href="#" class="btn btn--default blog-card__btn">Читати</a>
-                    </article>
-                  </div>
-                  <div class="swiper-slide">
-                    <article class="blog-card">
-                      <a href="#" class="blog-card__img-link">
-                        <picture class="blog-card__img">
-                          <source
-                            type="image/webp"
-                            srcset="assets/images/blog/article_img_thumb.webp"
-                          />
-                          <img
-                            loading="lazy"
-                            class="blog-card__img-item"
-                            src="assets/images/blog/article_img_thumb.jpg"
-                            alt="img"
-                          />
-                        </picture>
-                      </a>
-                      <time class="blog-card__date" datetime="2024-09-14"
-                        >14.09.2024</time
-                      >
-                      <h3 class="blog-card__title">
-                        Мезіальний прикус — причини розвитку, ознаки та лікування
-                      </h3>
-                      <a href="#" class="btn btn--default blog-card__btn">Читати</a>
-                    </article>
-                  </div>
-                  <div class="swiper-slide">
-                    <article class="blog-card">
-                      <a href="#" class="blog-card__img-link">
-                        <picture class="blog-card__img">
-                          <source
-                            type="image/webp"
-                            srcset="assets/images/blog/article_img_thumb.webp"
-                          />
-                          <img
-                            loading="lazy"
-                            class="blog-card__img-item"
-                            src="assets/images/blog/article_img_thumb.jpg"
-                            alt="img"
-                          />
-                        </picture>
-                      </a>
-                      <time class="blog-card__date" datetime="2024-09-14"
-                        >14.09.2024</time
-                      >
-                      <h3 class="blog-card__title">
-                        Мезіальний прикус — причини розвитку, ознаки та лікування
-                      </h3>
-                      <a href="#" class="btn btn--default blog-card__btn">Читати</a>
-                    </article>
-                  </div>
-                  <div class="swiper-slide">
-                    <article class="blog-card">
-                      <a href="#" class="blog-card__img-link">
-                        <picture class="blog-card__img">
-                          <source
-                            type="image/webp"
-                            srcset="assets/images/blog/article_img_thumb.webp"
-                          />
-                          <img
-                            loading="lazy"
-                            class="blog-card__img-item"
-                            src="assets/images/blog/article_img_thumb.jpg"
-                            alt="img"
-                          />
-                        </picture>
-                      </a>
-                      <time class="blog-card__date" datetime="2024-09-14"
-                        >14.09.2024</time
-                      >
-                      <h3 class="blog-card__title">
-                        Мезіальний прикус — причини розвитку, ознаки та лікування
-                      </h3>
-                      <a href="#" class="btn btn--default blog-card__btn">Читати</a>
-                    </article>
-                  </div>
-                  <div class="swiper-slide">
-                    <article class="blog-card">
-                      <a href="#" class="blog-card__img-link">
-                        <picture class="blog-card__img">
-                          <source
-                            type="image/webp"
-                            srcset="assets/images/blog/article_img_thumb.webp"
-                          />
-                          <img
-                            loading="lazy"
-                            class="blog-card__img-item"
-                            src="assets/images/blog/article_img_thumb.jpg"
-                            alt="img"
-                          />
-                        </picture>
-                      </a>
-                      <time class="blog-card__date" datetime="2024-09-14"
-                        >14.09.2024</time
-                      >
-                      <h3 class="blog-card__title">
-                        Мезіальний прикус — причини розвитку, ознаки та лікування
-                      </h3>
-                      <a href="#" class="btn btn--default blog-card__btn">Читати</a>
-                    </article>
-                  </div>
-                  <div class="swiper-slide">
-                    <article class="blog-card">
-                      <a href="#" class="blog-card__img-link">
-                        <picture class="blog-card__img">
-                          <source
-                            type="image/webp"
-                            srcset="assets/images/blog/article_img_thumb.webp"
-                          />
-                          <img
-                            loading="lazy"
-                            class="blog-card__img-item"
-                            src="assets/images/blog/article_img_thumb.jpg"
-                            alt="img"
-                          />
-                        </picture>
-                      </a>
-                      <time class="blog-card__date" datetime="2024-09-14"
-                        >14.09.2024</time
-                      >
-                      <h3 class="blog-card__title">
-                        Мезіальний прикус — причини розвитку, ознаки та лікування
-                      </h3>
-                      <a href="#" class="btn btn--default blog-card__btn">Читати</a>
-                    </article>
-                  </div>
-                  <div class="swiper-slide">
-                    <article class="blog-card">
-                      <a href="#" class="blog-card__img-link">
-                        <picture class="blog-card__img">
-                          <source
-                            type="image/webp"
-                            srcset="assets/images/blog/article_img_thumb.webp"
-                          />
-                          <img
-                            loading="lazy"
-                            class="blog-card__img-item"
-                            src="assets/images/blog/article_img_thumb.jpg"
-                            alt="img"
-                          />
-                        </picture>
-                      </a>
-                      <time class="blog-card__date" datetime="2024-09-14"
-                        >14.09.2024</time
-                      >
-                      <h3 class="blog-card__title">
-                        Мезіальний прикус — причини розвитку, ознаки та лікування
-                      </h3>
-                      <a href="#" class="btn btn--default blog-card__btn">Читати</a>
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <button class="card-carousel__nav card-carousel__nav--next">
-                <svg class="icon card-carousel__nav-icon">
-                  <use href="assets/icons.svg#arrow-right" />
-                </svg>
-              </button>
-              <button class="card-carousel__nav card-carousel__nav--prev">
-                <svg class="icon card-carousel__nav-icon">
-                  <use href="assets/icons.svg#arrow-left" />
-                </svg>
-              </button>
-            </div>
+<div class="card-carousel card-carousel--blog">
+  <div class="card-carousel__swiper swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
+  </a>
+  <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
+  <h3 class="blog-card__title">
+    Мезіальний прикус — причини розвитку, ознаки та лікування
+  </h3>
+  <a href="#" class="btn btn--default blog-card__btn">Читати</a>
+</article>
+</div>
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
+  </a>
+  <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
+  <h3 class="blog-card__title">
+    Мезіальний прикус — причини розвитку, ознаки та лікування
+  </h3>
+  <a href="#" class="btn btn--default blog-card__btn">Читати</a>
+</article>
+</div>
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
+  </a>
+  <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
+  <h3 class="blog-card__title">
+    Мезіальний прикус — причини розвитку, ознаки та лікування
+  </h3>
+  <a href="#" class="btn btn--default blog-card__btn">Читати</a>
+</article>
+</div>
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
+  </a>
+  <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
+  <h3 class="blog-card__title">
+    Мезіальний прикус — причини розвитку, ознаки та лікування
+  </h3>
+  <a href="#" class="btn btn--default blog-card__btn">Читати</a>
+</article>
+</div>
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
+  </a>
+  <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
+  <h3 class="blog-card__title">
+    Мезіальний прикус — причини розвитку, ознаки та лікування
+  </h3>
+  <a href="#" class="btn btn--default blog-card__btn">Читати</a>
+</article>
+</div>
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
+  </a>
+  <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
+  <h3 class="blog-card__title">
+    Мезіальний прикус — причини розвитку, ознаки та лікування
+  </h3>
+  <a href="#" class="btn btn--default blog-card__btn">Читати</a>
+</article>
+</div>
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
+  </a>
+  <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
+  <h3 class="blog-card__title">
+    Мезіальний прикус — причини розвитку, ознаки та лікування
+  </h3>
+  <a href="#" class="btn btn--default blog-card__btn">Читати</a>
+</article>
+</div>
+      <div class="swiper-slide"><article class="blog-card">
+  <a href="#" class="blog-card__img-link">
+    <picture class="blog-card__img">
+      <source type="image/webp" srcset="assets/images/blog/article_img_thumb.webp" />
+      <img
+        loading="lazy"
+        class="blog-card__img-item"
+        src="assets/images/blog/article_img_thumb.jpg"
+        alt="img"
+      />
+    </picture>
+  </a>
+  <time class="blog-card__date" datetime="2024-09-14">14.09.2024</time>
+  <h3 class="blog-card__title">
+    Мезіальний прикус — причини розвитку, ознаки та лікування
+  </h3>
+  <a href="#" class="btn btn--default blog-card__btn">Читати</a>
+</article>
+</div>
+    </div>
+  </div>
+  <button class="card-carousel__nav card-carousel__nav--next">
+    <svg class="icon card-carousel__nav-icon">
+      <use href="assets/icons.svg#arrow-right" />
+    </svg>
+  </button>
+  <button class="card-carousel__nav card-carousel__nav--prev">
+    <svg class="icon card-carousel__nav-icon">
+      <use href="assets/icons.svg#arrow-left" />
+    </svg>
+  </button>
+</div>
           </div>
         </section>
         <!-- #endregion blog -->
 
         <!-- #region banner -->
         <section class="block content__block content__block--mb-0">
-          <div class="banner banner--dark">
-            <div class="container banner__container">
-              <picture class="banner__img">
-                <source type="image/webp" srcset="assets/images/banners/cabinet.webp" />
-                <img
-                  loading="lazy"
-                  class="banner__img-item"
-                  src="assets/images/banners/cabinet.jpg"
-                  alt="img"
-                />
-              </picture>
-              <div class="banner__text banner__text--bottom">
-                <!-- <img
+<div class="banner banner--dark">
+  <div class="container banner__container">
+    <picture class="banner__img">
+      <source type="image/webp" srcset="assets/images/banners/cabinet.webp" />
+      <img
+        loading="lazy"
+        class="banner__img-item"
+        src="assets/images/banners/cabinet.jpg"
+        alt="img"
+      />
+    </picture>
+    <div class="banner__text banner__text--bottom">
+      <!-- <img
         class="banner__logo"
         src="assets/images/dentaderm_logo_text_only_white.svg"
         alt="dentaderm текстовий логотип"
@@ -763,384 +801,374 @@
         Усміхаючись,<br />
         ви змінюєте світ!
       </h1> -->
-              </div>
-              <div class="banner__content">
-                <h3>Отримайте консультацію</h3>
-                <form class="form appointment-form">
-                  <div class="form__body">
-                    <div class="form__row">
-                      <div class="fluid-label fluid-label--white">
-                        <span class="fluid-label__title">Клініка</span>
-                        <select
-                          class="select select--white nice-select wide fluid-label__control"
-                          name="clinic"
-                          data-validation="select"
-                        >
-                          <option value="" selected disabled>Оберіть клініку</option>
-                          <option value="klovsky">Київ, Кловський узвіз, 7а</option>
-                          <option value="vishhorodska">Київ, Вишгородська, 56/2</option>
-                          <option value="soborna">Ірпінь, Соборна, 107</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form__row">
-                      <div class="fluid-label fluid-label--white">
-                        <span class="fluid-label__title">Ім'я</span>
-                        <input
-                          type="text"
-                          name="name"
-                          data-validation="required"
-                          class="input-text input-text--white fluid-label__control"
-                        />
-                      </div>
-                    </div>
-                    <div class="form__row">
-                      <div class="fluid-label fluid-label--white">
-                        <span class="fluid-label__title">Телефон</span>
-                        <input
-                          type="tel"
-                          name="tel"
-                          class="input-text input-text--white fluid-label__control"
-                          data-validation="required"
-                        />
-                      </div>
-                    </div>
-                    <div class="form__row">
-                      <label class="input-checkbox input-checkbox--white">
-                        <input
-                          class="input-checkbox__input"
-                          type="checkbox"
-                          name="agreement"
-                          data-validation="checked"
-                        />
-                        <span class="input-checkbox__toggle">
-                          <svg class="icon input-checkbox__icon">
-                            <use href="assets/icons.svg#check-sm" />
-                          </svg>
-                        </span>
-                        <span class="input-checkbox__title">
-                          Я погоджуюся на обробку моїх персональних даних на підставі
-                          <a href="#">політики конфідентційності</a>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form__footer">
-                    <button class="btn btn--square btn--white btn--fluid">
-                      Записатися на прийом
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+    </div>
+    <div class="banner__content">
+      <h3>Отримайте консультацію</h3>
+<form class="form appointment-form">
+  <div class="form__body">
+    <div class="form__row">
+      <div class="fluid-label fluid-label--white">
+        <span class="fluid-label__title">Клініка</span>
+        <select
+          class="select select--white nice-select wide fluid-label__control"
+          name="clinic"
+          data-validation="select"
+        >
+          <option value="" selected disabled>Оберіть клініку</option>
+          <option value="klovsky">Київ, Кловський узвіз, 7а</option>
+          <option value="vishhorodska">Київ, Вишгородська, 56/2</option>
+          <option value="soborna">Ірпінь, Соборна, 107</option>
+        </select>
+      </div>
+    </div>
+    <div class="form__row">
+      <div class="fluid-label fluid-label--white">
+        <span class="fluid-label__title">Ім'я</span>
+        <input
+          type="text"
+          name="name"
+          data-validation="required"
+          class="input-text input-text--white fluid-label__control"
+        />
+      </div>
+    </div>
+    <div class="form__row">
+      <div class="fluid-label fluid-label--white">
+        <span class="fluid-label__title">Телефон</span>
+        <input
+          type="tel"
+          name="tel"
+          class="input-text input-text--white fluid-label__control"
+          data-validation="required"
+        />
+      </div>
+    </div>
+    <div class="form__row">
+      <label class="input-checkbox input-checkbox--white">
+        <input
+          class="input-checkbox__input"
+          type="checkbox"
+          name="agreement"
+          data-validation="checked"
+        />
+        <span class="input-checkbox__toggle">
+          <svg class="icon input-checkbox__icon">
+            <use href="assets/icons.svg#check-sm" />
+          </svg>
+        </span>
+        <span class="input-checkbox__title">
+          Я погоджуюся на обробку моїх персональних даних на підставі
+          <a href="#">політики конфідентційності</a>
+        </span>
+      </label>
+    </div>
+  </div>
+  <div class="form__footer">
+    <button class="btn btn--square btn--white btn--fluid">Відправити</button>
+  </div>
+</form>
+    </div>
+  </div>
+</div>
         </section>
         <!-- #endregion banner -->
       </main>
       <!-- #endregion content -->
 
       <!-- #region footer -->
-      <footer class="footer page__footer">
-        <div class="footer__holder">
-          <div class="footer__logo">
-            <a class="footer__logo-link" href="/">
-              <img
-                loading="lazy"
-                class="logo footer__logo-item"
-                src="assets/images/dentyaderm_logo_white.svg"
-                alt="Dentaderm logo"
-              />
-            </a>
-          </div>
-          <div class="footer__map">
-            <div id="map" class="footer__map-item"></div>
-          </div>
-          <div class="footer__locations">
-            <div class="tabs location-tabs location-tabs--white">
-              <div class="tabs-head location-tabs__head">
-                <button class="tabs-btn active location-tabs__btn" data-tab-target="kiyv">
-                  Київ
-                </button>
-                <button class="tabs-btn location-tabs__btn" data-tab-target="irpin">
-                  Ірпінь
-                </button>
-              </div>
-              <div class="tabs-content location-tabs__content">
-                <div
-                  class="tabs-content-item location-tabs__content-item"
-                  data-tab-content="kiyv"
-                >
-                  <div class="location-tabs__address">
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      вул. Вишгородська, 56/2
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      Пн-Сб: 9.00 - 20.00
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      <a href="tel:+380676250862">(067) 625-08-62</a>
-                    </p>
-                  </div>
-                  <div class="location-tabs__address">
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      вул. Кловський узвіз, 7а
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      Пн-Сб: 9.00 - 20.00
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      <a href="tel:+380987503030">(098) 750-30-30</a>
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="tabs-content-item location-tabs__content-item"
-                  data-tab-content="irpin"
-                >
-                  <div class="location-tabs__address">
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      вул. Соборна, 107
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      Пн-Сб: 9.00 - 20.00
-                    </p>
-                    <p class="location-tabs__address-row location-tabs__address-row--sm">
-                      <a href="tel:+380631414491">(063) 141-44-91</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+<footer class="footer page__footer">
+  <div class="footer__holder">
+    <div class="footer__logo">
+      <a class="footer__logo-link" href="/">
+        <img
+          loading="lazy"
+          class="logo footer__logo-item"
+          src="assets/images/dentyaderm_logo_white.svg"
+          alt="Dentaderm logo"
+        />
+      </a>
+    </div>
+    <div class="footer__map">
+      <div id="map" class="footer__map-item"></div>
+    </div>
+    <div class="footer__locations">
+      <div class="tabs location-tabs location-tabs--white">
+        <div class="tabs-head location-tabs__head">
+          <button class="tabs-btn active location-tabs__btn" data-tab-target="kiyv">
+            Київ
+          </button>
+          <button class="tabs-btn location-tabs__btn" data-tab-target="irpin">
+            Ірпінь
+          </button>
+        </div>
+        <div class="tabs-content location-tabs__content">
+          <div
+            class="tabs-content-item location-tabs__content-item"
+            data-tab-content="kiyv"
+          >
+            <div class="location-tabs__address">
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                вул. Вишгородська, 56/2
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                Пн-Сб: 9.00 - 20.00
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="tel:+380676250862">(067) 625-08-62</a>
+              </p>
+            </div>
+            <div class="location-tabs__address">
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                вул. Кловський узвіз, 7а
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                Пн-Сб: 9.00 - 20.00
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="tel:+380987503030">(098) 750-30-30</a>
+              </p>
             </div>
           </div>
-          <div class="footer__nav">
-            <nav class="primary-nav footer__primary-nav">
-              <ul class="primary-nav__list">
-                <li class="primary-nav__item">
-                  <a class="primary-nav__link" href="#">Послуги</a>
-                </li>
-                <li class="primary-nav__item">
-                  <a class="primary-nav__link" href="#">Про клініку</a>
-                </li>
-                <li class="primary-nav__item">
-                  <a class="primary-nav__link" href="#">Наші фахвці</a>
-                </li>
-                <li class="primary-nav__item">
-                  <a class="primary-nav__link" href="#">Ціни</a>
-                </li>
-              </ul>
-            </nav>
-            <nav class="secondary-nav footer__secondary-nav">
-              <ul class="secondary-nav__list">
-                <li class="secondary-nav__item">
-                  <a class="secondary-nav__link" href="#">Статті</a>
-                </li>
-                <li class="secondary-nav__item">
-                  <a class="secondary-nav__link" href="#">Відгуки</a>
-                </li>
-                <li class="secondary-nav__item">
-                  <a class="secondary-nav__link" href="#">Рекомендації пацієнтам</a>
-                </li>
-                <li class="secondary-nav__item">
-                  <a class="secondary-nav__link" href="#">Ліцензії та дозволи</a>
-                </li>
-                <li class="secondary-nav__item">
-                  <a class="secondary-nav__link" href="#">Акції</a>
-                </li>
-                <li class="secondary-nav__item">
-                  <a class="secondary-nav__link" href="#">Політика конфіденційності</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="footer__bottom">
-            <div class="socials socials--white footer__socials">
-              <ul class="socials__list">
-                <li class="socials__item">
-                  <a
-                    class="socials__link"
-                    target="_blank"
-                    href="https://www.instagram.com/denta_derm/"
-                  >
-                    <svg class="icon socials__icon">
-                      <use href="assets/icons.svg#instagram" />
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a
-                    class="socials__link"
-                    target="_blank"
-                    href="https://www.facebook.com/dentaderm"
-                  >
-                    <svg class="icon socials__icon">
-                      <use href="assets/icons.svg#facebook" />
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a
-                    class="socials__link"
-                    target="_blank"
-                    href="https://tinyurl.com/27phvmbk"
-                  >
-                    <svg class="icon socials__icon">
-                      <use href="assets/icons.svg#viber" />
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a
-                    class="socials__link"
-                    target="_blank"
-                    href="https://t.me/DentaDerm_Kyiv"
-                  >
-                    <svg class="icon socials__icon">
-                      <use href="assets/icons.svg#telegram" />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__studio branding-studio">
-              <a class="branding-studio__link" href="#" target="_blank">
-                <img
-                  loading="lazy"
-                  class="branding-studio__logo"
-                  src="assets/images/fancy-design-logo.svg"
-                  alt="fancy design logo"
-                />
-              </a>
-            </div>
-            <div class="footer__copy">
-              <p>© DentaDerm 2020. Всі права захищені</p>
+          <div
+            class="tabs-content-item location-tabs__content-item"
+            data-tab-content="irpin"
+          >
+            <div class="location-tabs__address">
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                вул. Соборна, 107
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                Пн-Сб: 9.00 - 20.00
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="tel:+380631414491">(063) 141-44-91</a>
+              </p>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </div>
+    <div class="footer__nav">
+      <nav class="primary-nav footer__primary-nav">
+        <ul class="primary-nav__list">
+          <li class="primary-nav__item">
+            <a class="primary-nav__link" href="#">Послуги</a>
+          </li>
+          <li class="primary-nav__item">
+            <a class="primary-nav__link" href="#">Про клініку</a>
+          </li>
+          <li class="primary-nav__item">
+            <a class="primary-nav__link" href="#">Наші фахвці</a>
+          </li>
+          <li class="primary-nav__item">
+            <a class="primary-nav__link" href="#">Ціни</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="secondary-nav footer__secondary-nav">
+        <ul class="secondary-nav__list">
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Статті</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Відгуки</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Рекомендації пацієнтам</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Ліцензії та дозволи</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Акції</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Політика конфіденційності</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <div class="socials socials--white footer__socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a
+              class="socials__link"
+              target="_blank"
+              href="https://www.instagram.com/denta_derm/"
+            >
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#instagram" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a
+              class="socials__link"
+              target="_blank"
+              href="https://www.facebook.com/dentaderm"
+            >
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#facebook" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#viber" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#telegram" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__studio branding-studio">
+        <a class="branding-studio__link" href="#" target="_blank">
+          <img
+            loading="lazy"
+            class="branding-studio__logo"
+            src="assets/images/fancy-design-logo.svg"
+            alt="fancy design logo"
+          />
+        </a>
+      </div>
+      <div class="footer__copy">
+        <p>© DentaDerm 2020. Всі права захищені</p>
+      </div>
+    </div>
+  </div>
+</footer>
       <!-- #endregion footer -->
     </div>
 
-    <!-- #region modal appointment -->
-    <div class="modal" id="modal-appointment">
-      <!-- #region modal title -->
-      <div class="modal__heading">
-        <h3 class="modal__title">Записатися на прийом</h3>
-        <button class="modal-close modal__close-btn">
-          <svg class="icon modal__close-icon">
-            <use href="assets/icons.svg#cancel" />
-          </svg>
-        </button>
-      </div>
-      <!-- #endregion modal title -->
+<!-- #region modal appointment -->
+<div class="modal" id="modal-appointment">
+  <!-- #region modal title -->
+  <div class="modal__heading">
+    <h3 class="modal__title">Записатися на прийом</h3>
+    <button class="modal-close modal__close-btn">
+      <svg class="icon modal__close-icon">
+        <use href="assets/icons.svg#cancel" />
+      </svg>
+    </button>
+  </div>
+  <!-- #endregion modal title -->
 
-      <!-- #region modal main -->
-      <div class="modal__main">
-        <!-- #region modal body -->
-        <div class="modal__body">
-          <!-- #region appointment form -->
-          <form class="form appointment-form">
-            <div class="form__body">
-              <div class="form__row">
-                <div class="fluid-label">
-                  <span class="fluid-label__title">Клініка</span>
-                  <select
-                    class="select nice-select wide fluid-label__control"
-                    name="clinic"
-                    data-validation="select"
-                  >
-                    <option value="" selected disabled>Оберіть клініку</option>
-                    <option value="klovsky">Київ, Кловський узвіз, 7а</option>
-                    <option value="vishhorodska">Київ, Вишгородська, 56/2</option>
-                    <option value="soborna">Ірпінь, Соборна, 107</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form__row">
-                <div class="fluid-label">
-                  <span class="fluid-label__title">Ім'я</span>
-                  <input
-                    type="text"
-                    name="name"
-                    data-validation="required"
-                    class="input-text fluid-label__control"
-                  />
-                </div>
-              </div>
-              <div class="form__row">
-                <div class="fluid-label">
-                  <span class="fluid-label__title">Телефон</span>
-                  <input
-                    type="tel"
-                    name="tel"
-                    class="input-text fluid-label__control"
-                    data-validation="required"
-                  />
-                </div>
-              </div>
-              <div class="form__row">
-                <label class="input-checkbox">
-                  <input
-                    class="input-checkbox__input"
-                    type="checkbox"
-                    name="agreement"
-                    data-validation="checked"
-                  />
-                  <span class="input-checkbox__toggle">
-                    <svg class="icon input-checkbox__icon">
-                      <use href="assets/icons.svg#check-sm" />
-                    </svg>
-                  </span>
-                  <span class="input-checkbox__title">
-                    Я погоджуюся на обробку моїх персональних даних на підставі
-                    <a href="#">політики конфідентційності</a>
-                  </span>
-                </label>
-              </div>
+  <!-- #region modal main -->
+  <div class="modal__main">
+    <!-- #region modal body -->
+    <div class="modal__body">
+      <!-- #region appointment form -->
+      <form class="form appointment-form">
+        <div class="form__body">
+          <div class="form__row">
+            <div class="fluid-label">
+              <span class="fluid-label__title">Клініка</span>
+              <select
+                class="select nice-select wide fluid-label__control"
+                name="clinic"
+                data-validation="select"
+              >
+                <option value="" selected disabled>Оберіть клініку</option>
+                <option value="klovsky">Київ, Кловський узвіз, 7а</option>
+                <option value="vishhorodska">Київ, Вишгородська, 56/2</option>
+                <option value="soborna">Ірпінь, Соборна, 107</option>
+              </select>
             </div>
-            <div class="form__footer form__footer--center">
-              <button class="btn btn--square">Записатися на прийом</button>
+          </div>
+          <div class="form__row">
+            <div class="fluid-label">
+              <span class="fluid-label__title">Ім'я</span>
+              <input
+                type="text"
+                name="name"
+                data-validation="required"
+                class="input-text fluid-label__control"
+              />
             </div>
-          </form>
-          <!-- #endregion appointment form -->
+          </div>
+          <div class="form__row">
+            <div class="fluid-label">
+              <span class="fluid-label__title">Телефон</span>
+              <input
+                type="tel"
+                name="tel"
+                class="input-text fluid-label__control"
+                data-validation="required"
+              />
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="input-checkbox">
+              <input
+                class="input-checkbox__input"
+                type="checkbox"
+                name="agreement"
+                data-validation="checked"
+              />
+              <span class="input-checkbox__toggle">
+                <svg class="icon input-checkbox__icon">
+                  <use href="assets/icons.svg#check-sm" />
+                </svg>
+              </span>
+              <span class="input-checkbox__title">
+                Я погоджуюся на обробку моїх персональних даних на підставі
+                <a href="#">політики конфідентційності</a>
+              </span>
+            </label>
+          </div>
         </div>
-        <!-- #endregion modal body -->
-      </div>
-      <!-- #endregion modal main -->
+        <div class="form__footer form__footer--center">
+          <button class="btn btn--square">Записатися на прийом</button>
+        </div>
+      </form>
+      <!-- #endregion appointment form -->
     </div>
-    <!-- #endregion modal appointment -->
-    <!-- #region modal success -->
-    <div class="modal" id="modal-success">
-      <!-- #region modal title -->
-      <div class="modal__heading">
-        <h3 class="modal__title">Запит відправлено</h3>
-        <button class="modal-close modal__close-btn">
-          <svg class="icon modal__close-icon">
-            <use href="assets/icons.svg#cancel" />
-          </svg>
-        </button>
-      </div>
-      <!-- #endregion modal title -->
+    <!-- #endregion modal body -->
+  </div>
+  <!-- #endregion modal main -->
+</div>
+<!-- #endregion modal appointment -->
+<!-- #region modal success -->
+<div class="modal" id="modal-success">
+  <!-- #region modal title -->
+  <div class="modal__heading">
+    <h3 class="modal__title">Запит відправлено</h3>
+    <button class="modal-close modal__close-btn">
+      <svg class="icon modal__close-icon">
+        <use href="assets/icons.svg#cancel" />
+      </svg>
+    </button>
+  </div>
+  <!-- #endregion modal title -->
 
-      <!-- #region modal main -->
-      <div class="modal__main">
-        <!-- #region modal body -->
-        <div class="modal__body">
-          <p>Наш співробітник зв'яжеться з вами, щоб уточнити деталі візиту</p>
-        </div>
-        <div class="modal__footer">
-          <button class="btn btn--square modal-close">Закрити</button>
-        </div>
-        <!-- #endregion modal body -->
-      </div>
-      <!-- #endregion modal main -->
+  <!-- #region modal main -->
+  <div class="modal__main">
+    <!-- #region modal body -->
+    <div class="modal__body">
+      <p>Наш співробітник зв'яжеться з вами, щоб уточнити деталі візиту</p>
     </div>
-    <!-- #endregion modal success -->
-    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.umd.min.js"></script>
-    <link
-      href="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.css"
-      rel="stylesheet"
-    />
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <div class="modal__footer">
+      <button class="btn btn--square modal-close">Закрити</button>
+    </div>
+    <!-- #endregion modal body -->
+  </div>
+  <!-- #endregion modal main -->
+</div>
+<!-- #endregion modal success -->
+<script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.umd.min.js"></script>
+<link
+  href="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.css"
+  rel="stylesheet"
+/>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
   </body>
 </html>

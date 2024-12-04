@@ -8,7 +8,7 @@ class FormVaildator {
     input: false,
   };
 
-  constructor({ formElement, controls = [], onSubmit, validateOn = {} }) {
+  constructor({ formElement, controls = [], onSubmit, onReset, validateOn = {} }) {
     this.formElement = null;
     this.controls = {};
     this.errors = {};
@@ -16,7 +16,7 @@ class FormVaildator {
     this.validities = {};
 
     this.#validateOn = { ...this.#validateOn, ...validateOn };
-    this.#init(formElement, controls, onSubmit);
+    this.#init(formElement, controls, onSubmit, onReset);
   }
 
   #handleValidateOn() {
@@ -37,8 +37,8 @@ class FormVaildator {
     });
   }
 
-  #init(formElement, controls, onSubmit) {
-    this.#initForm(formElement, onSubmit);
+  #init(formElement, controls, onSubmit, onReset) {
+    this.#initForm(formElement, onSubmit, onReset);
     this.#initControls(controls);
     this.#handleValidateOn();
     this.#renderTooltips();
@@ -46,8 +46,17 @@ class FormVaildator {
     Object.keys(this.controls).forEach((name) => this.checkControlValidity(name));
   }
 
-  #initForm(formElement, onSubmit) {
+  #initForm(formElement, onSubmit, onReset) {
     formElement.noValidate = true;
+
+    formElement.addEventListener("reset", (e) => {
+      const controlsKeys = Object.keys(this.controls);
+      controlsKeys.forEach((name) => {
+        this.clearError(name);
+      });
+
+      onReset?.();
+    });
 
     formElement.addEventListener("submit", (e) => {
       e.preventDefault();

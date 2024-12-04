@@ -28,14 +28,17 @@
   }
 
   &__content {
-    @include media(">=lg") {
-      column-count: 2;
-      column-gap: 4rem;
-      break-inside: avoid;
-    }
+    max-height: 30rem;
+    margin-bottom: 2rem;
 
-    @include media(">=2xl") {
-      column-gap: 8rem;
-    }
+    // @include media(">=lg") {
+    //   column-count: 2;
+    //   column-gap: 4rem;
+    //   break-inside: avoid;
+    // }
+
+    // @include media(">=2xl") {
+    //   column-gap: 8rem;
+    // }
   }
 }
