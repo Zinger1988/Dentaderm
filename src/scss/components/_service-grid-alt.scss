@@ -1,0 +1,14 @@
+.service-grid-alt {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid $gray200;
+
+  @include media(">=lg") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    border: none;
+    box-shadow: 1px 1px 0 0 $gray200;
+  }
+}

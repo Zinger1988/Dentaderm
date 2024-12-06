@@ -35,6 +35,11 @@
     min-width: 0;
   }
 
+  &--screen-2xl {
+    max-width: 1400px;
+    min-width: 0;
+  }
+
   &--fluid {
     width: 100%;
     max-width: none;

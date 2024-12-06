@@ -1,0 +1,73 @@
+.service-tile-alt {
+  @extend %linkReset;
+  border: 1px solid $gray200;
+
+  $this: &;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem;
+    border-radius: 0 0 3rem 0;
+    @include animate(background-color transform box-shadow);
+
+    @include media(">=md") {
+      padding: 3rem;
+      border-radius: 0 0 4rem 0;
+    }
+
+    @include media(">=3xl") {
+      padding: 4.4rem;
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: $gray900;
+    margin: 0 0 2rem;
+    @include animate(fill);
+
+    @include media(">=md") {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-align: center;
+    @include animate(color);
+
+    @include media(">=md") {
+      font-size: 1.6rem;
+    }
+
+    @include media(">=xl") {
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+
+    @include media(">=3xl") {
+      font-size: 2rem;
+    }
+  }
+
+  @include mediaHover() {
+    &:hover {
+      #{$this}__inner {
+        background-color: $black;
+        color: $white;
+        transform: translate(1rem, -1rem);
+        box-shadow: 2rem 2rem 3rem rgba($black, 0.3);
+      }
+
+      #{$this}__icon {
+        fill: $white;
+      }
+    }
+  }
+}

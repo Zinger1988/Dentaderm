@@ -1,0 +1,69 @@
+.location-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem 2rem;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    grid-template-areas:
+      "icon title"
+      "icon locations";
+    gap: 1rem 1.5rem;
+
+    @include media(">=2xl") {
+      grid-template-columns: 7rem 1fr;
+      gap: 1rem 2rem;
+    }
+
+    @include media(">=3xl") {
+      grid-template-columns: 7rem 1fr;
+      gap: 1.4rem 2.5rem;
+    }
+  }
+
+  &__icon {
+    grid-area: icon;
+    fill: $white;
+    @include sizeRatio(6rem);
+
+    @include media(">=2xl") {
+      @include sizeRatio(7rem);
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    @include fs("body2");
+    font-weight: 700;
+
+    &::after {
+      content: "";
+      flex: 1 1 auto;
+      border-top: 1px solid $gray800;
+    }
+  }
+
+  &__locations {
+    grid-area: locations;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
+    @include fs("body2");
+  }
+
+  &__locations-inner {
+    display: grid;
+    gap: 0.5rem;
+    flex: 1 0 auto;
+
+    a {
+      color: inherit;
+      @include decorationHidden();
+    }
+  }
+}

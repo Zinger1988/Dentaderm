@@ -1,0 +1,114 @@
+.logoBadge-list {
+  @extend %listReset;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @include media(">=md") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media(">=xl") {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 4rem;
+      width: 100%;
+      border-top: 1px dotted $gray200;
+
+      @include media(">=sm") {
+        top: 4.8rem;
+      }
+
+      @include media(">=3xl") {
+        top: 6rem;
+      }
+    }
+
+    &:nth-child(even)::after {
+      display: none;
+    }
+
+    @include media(">=md") {
+      &:nth-child(even)::after {
+        display: block;
+      }
+
+      &:nth-child(3n)::after {
+        display: none;
+      }
+    }
+
+    @include media(">=xl") {
+      &:nth-child(3n)::after {
+        display: block;
+      }
+
+      &:nth-child(5n)::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.logoBadge {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+
+  @include media(">=3xl") {
+    gap: 2rem;
+  }
+
+  &__top {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__bg-icon {
+    @include sizeRatio(10rem, 0.7625);
+    fill: $gray100;
+    display: block;
+
+    @include media(">=sm") {
+      @include sizeRatio(13rem, 0.7625);
+    }
+
+    @include media(">=2xl") {
+      @include sizeRatio(14.5rem, 0.7625);
+    }
+
+    @include media(">=3xl") {
+      @include sizeRatio(16rem, 0.7625);
+    }
+  }
+
+  &__icon {
+    @include positionCenter();
+    @include sizeRatio(4rem);
+    fill: $gray900;
+
+    @include media(">=sm") {
+      @include sizeRatio(5rem);
+    }
+
+    @include media(">=3xl") {
+      @include sizeRatio(6.6rem);
+    }
+  }
+
+  &__label {
+    @include fs("body2");
+    font-weight: 600;
+    margin: 0;
+  }
+}

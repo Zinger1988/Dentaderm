@@ -1,0 +1,40 @@
+.approaches {
+  &__header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    @include media(">=2xl") {
+      margin-bottom: 5rem;
+    }
+
+    @include media(">=3xl") {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__list {
+    margin: 0 0 4rem;
+
+    @include media(">=2xl") {
+      margin-bottom: 5rem;
+    }
+
+    @include media(">=3xl") {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__description {
+    @include fs("body2");
+
+    @include media(">=md") {
+      column-count: 2;
+      column-gap: 4rem;
+      break-inside: avoid;
+    }
+
+    @include media(">=xl") {
+      column-gap: 6rem;
+    }
+  }
+}
