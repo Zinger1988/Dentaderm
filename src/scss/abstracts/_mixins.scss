@@ -109,6 +109,7 @@
 }
 
 $animation-speed: 0.3s !default;
+
 @mixin animate(
   $properties,
   $duration: $animation-speed,

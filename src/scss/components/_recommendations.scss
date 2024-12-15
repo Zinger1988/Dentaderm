@@ -1,4 +1,6 @@
 .recommendations {
+  overflow: hidden;
+
   &__img {
     display: block;
     position: relative;
@@ -19,7 +21,7 @@
   }
 
   &__content {
-    @include clearMarginY("&");
+    @include fs("body2");
 
     @include media(">=lg") {
       padding-left: 2rem;
@@ -27,6 +29,16 @@
 
     @include media(">=2xl") {
       padding-left: 3rem;
+    }
+  }
+
+  &__panel {
+    @include clearMarginY("&");
+    max-height: 44rem;
+    margin-bottom: 1rem;
+
+    @include media(">=3xl") {
+      max-height: 42rem;
     }
   }
 }

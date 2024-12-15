@@ -1,11 +1,16 @@
 .card-carousel {
   position: relative;
-  padding: 0 0 5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
 
   $this: &;
 
   @include media(">=md") {
-    padding: 0 6rem;
+    overflow: visible;
+  }
+
+  @include media(">=xl") {
+    padding-bottom: 0;
   }
 
   .swiper-slide {
@@ -37,17 +42,24 @@
     @include media(">=md") {
       display: block;
       padding: 1rem;
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba($black, 0.6);
+      z-index: 10;
 
       &--next {
         @include positionRightCenter();
         left: auto;
-        right: -1rem;
+        right: 0;
       }
 
       &--prev {
         @include positionLeftCenter();
         right: auto;
-        left: -1rem;
+        left: 0;
       }
     }
   }
@@ -55,11 +67,133 @@
   &__nav-icon {
     @include sizeRatio(2.4rem, 1);
     @include animate(transform, 0.15s);
+
+    @include media(">=md") {
+      fill: $white;
+    }
   }
 
-  &--dark {
-    #{$this}__nav-icon {
-      fill: $white;
+  &--doctors,
+  &--service-doctors {
+    margin-right: -1rem;
+    padding-bottom: 0;
+
+    @include media(">=md") {
+      margin-right: 0;
+    }
+
+    #{$this}__nav {
+      display: none;
+
+      @include media(">=md") {
+        display: block;
+      }
+    }
+
+    #{$this}__swiper {
+      padding-right: 14rem;
+      overflow: visible;
+
+      @include media(">=md") {
+        padding-right: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &--doctors {
+    #{$this}__nav {
+      &--next,
+      &--prev {
+        @include media(">=md") {
+          top: 21rem;
+        }
+
+        @include media(">=lg") {
+          top: 17.4rem;
+        }
+
+        @include media(">=xl") {
+          top: 18.6rem;
+        }
+
+        @include media(">=2xl") {
+          top: 15.7rem;
+        }
+
+        @include media(">=3xl") {
+          top: 18.9rem;
+        }
+      }
+    }
+  }
+
+  &--service-doctors {
+    #{$this}__nav {
+      &--next,
+      &--prev {
+        @include media(">=md") {
+          top: 21rem;
+        }
+
+        @include media(">=lg") {
+          top: 17.4rem;
+        }
+
+        @include media(">=xl") {
+          top: 16.8rem;
+        }
+      }
+    }
+  }
+
+  &--blog {
+    margin-right: -1rem;
+    padding-bottom: 0;
+
+    @include media(">=md") {
+      margin-right: 0;
+    }
+
+    #{$this}__nav {
+      display: none;
+
+      @include media(">=md") {
+        display: block;
+      }
+
+      &--next,
+      &--prev {
+        @include media(">=md") {
+          top: 14rem;
+        }
+
+        @include media(">=lg") {
+          top: 11.6rem;
+        }
+
+        @include media(">=xl") {
+          top: 12.4rem;
+        }
+
+        @include media(">=2xl") {
+          top: 10.5rem;
+        }
+
+        @include media(">=3xl") {
+          top: 12.6rem;
+        }
+      }
+    }
+
+    #{$this}__swiper {
+      padding-right: 14rem;
+      overflow: visible;
+
+      @include media(">=md") {
+        padding-right: 0;
+        overflow: hidden;
+      }
     }
   }
 }

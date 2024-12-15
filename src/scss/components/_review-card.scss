@@ -1,8 +1,8 @@
 .review-card {
-  padding: 0 0 1rem;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr auto;
+  align-content: start;
   gap: 2rem;
   grid-template-areas:
     "name rating"
@@ -24,11 +24,12 @@
   }
 
   &__text-panel {
-    max-height: 14.2rem;
+    max-height: 10.5rem;
     @include clearMarginY("&");
+    @include fs("body2");
 
     @include media(">=3xl") {
-      max-height: 16.3rem;
+      max-height: 14.4rem;
     }
 
     &:not(:last-child) {

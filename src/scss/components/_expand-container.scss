@@ -21,6 +21,11 @@
       );
     }
 
+    &--gray::before {
+      background: $gray100;
+      background: linear-gradient(0deg, rgba($gray100, 1) 5%, rgba($gray100, 0) 100%);
+    }
+
     &--expanded,
     &--inactive {
       &::before {

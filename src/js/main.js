@@ -216,9 +216,59 @@ const tabs = () => {
   });
 };
 
+const initReviewCarousel = () => {
+  const sliderContainer = document.querySelector(
+    ".reviews-carousel .reviews-carousel__swiper"
+  );
+
+  if (!sliderContainer) return;
+
+  const reviewsCarousel = new Swiper(".reviews-carousel .reviews-carousel__swiper", {
+    grabCursor: true,
+    keyboardControl: true,
+    lazy: true,
+    loop: true,
+    mousewheelControl: true,
+    slidesPerView: 3,
+    speed: 10000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1400: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  reviewsCarousel.on("beforeTransitionStart", (swiperProps) => {
+    const { previousIndex, slides } = swiperProps;
+    const slide = slides[previousIndex];
+
+    const expandPanel = slide.querySelector(".expand-container__panel--expanded");
+
+    if (!expandPanel) return;
+
+    const expandBtn = slide.querySelector(".expand-container__btn");
+    expandBtn.click();
+  });
+};
+
 const initCardCarousel = () => {
-  const sliderSelector =
-    ".card-carousel--doctors .card-carousel__swiper, .card-carousel--blog .card-carousel__swiper, .card-carousel--awards .card-carousel__swiper";
+  const sliderSelector = `
+  .card-carousel--doctors .card-carousel__swiper,
+  .card-carousel--service-doctors .card-carousel__swiper,
+  .card-carousel--blog .card-carousel__swiper,
+  .card-carousel--awards .card-carousel__swiper,
+  .card-carousel--reviews .card-carousel__swiper`;
+
   const sliderContainer = document.querySelectorAll(sliderSelector);
 
   if (sliderContainer.length === 0) {
@@ -261,6 +311,24 @@ const initCardCarousel = () => {
       1400: {
         slidesPerView: 4,
         spaceBetween: 40,
+      },
+    },
+  };
+
+  const servicedoctorsCarouselOptions = {
+    slidesPerView: 3,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 28,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 28,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 28,
       },
     },
   };
@@ -313,32 +381,9 @@ const initCardCarousel = () => {
     },
   };
 
-  const reviewsCarouselOptions = {
-    slidesPerView: 3,
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 28,
-      },
-      992: {
-        slidesPerView: 2,
-        spaceBetween: 28,
-      },
-      1400: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-    },
-  };
-
   const discountCarouselOptions = {
     slidesPerView: 1,
   };
-
-  const reviewsCarousel = new Swiper(".card-carousel--reviews .card-carousel__swiper", {
-    ...baseOptions,
-    ...reviewsCarouselOptions,
-  });
 
   const demoCarousel = new Swiper(".card-carousel--demo .card-carousel__swiper", {
     ...baseOptions,
@@ -358,21 +403,17 @@ const initCardCarousel = () => {
     }
   );
 
+  const serviceDoctorsCarousel = new Swiper(
+    ".card-carousel--service-doctors .card-carousel__swiper",
+    {
+      ...baseOptions,
+      ...servicedoctorsCarouselOptions,
+    }
+  );
+
   const discountCarousel = new Swiper(".card-carousel--discount .card-carousel__swiper", {
     ...baseOptions,
     ...discountCarouselOptions,
-  });
-
-  reviewsCarousel.on("beforeTransitionStart", (swiperProps) => {
-    const { previousIndex, slides } = swiperProps;
-    const slide = slides[previousIndex];
-
-    const expandPanel = slide.querySelector(".expand-container__panel--expanded");
-
-    if (!expandPanel) return;
-
-    const expandBtn = slide.querySelector(".expand-container__btn");
-    expandBtn.click();
   });
 };
 
@@ -812,6 +853,133 @@ const initSmoothScrollToAnchor = () => {
   });
 };
 
+const debounce = (fn, timeout) => {
+  let isDebounce = false;
+
+  return () => {
+    if (!isDebounce) {
+      isDebounce = true;
+      setTimeout(() => {
+        isDebounce = false;
+        fn();
+      }, timeout);
+    }
+  };
+};
+
+const initBeforeAfterSlider = () => {
+  const container = document.querySelector(".before-after");
+
+  if (!container) return;
+
+  const slider = container.querySelector(".before-after__slider");
+  const beforeContainerEl = container.querySelector(".before-after__before-container");
+  const buttonEl = container.querySelector(".before-after__slider-button");
+
+  const handleSlide = (val) => {
+    beforeContainerEl.style.width = `${val}%`;
+    buttonEl.style.left = `${val}%`;
+  };
+
+  slider.addEventListener("input", (e) => {
+    handleSlide(e.target.value);
+  });
+
+  handleSlide(50);
+};
+
+const pageNavigation = () => {
+  const page = document.querySelector(".page");
+  const containers = document.querySelectorAll("[data-nav-id]");
+  const navList = document.querySelector(".nav-content__list");
+
+  if (containers.length === 0 || !navList) return;
+
+  const navItems = [];
+  let lastScrollPos = 0;
+
+  const setActive = (entryNavId) => {
+    navItems.forEach((navItem) => {
+      const { navId: itemNavId } = navItem.dataset;
+
+      entryNavId === itemNavId
+        ? navItem.classList.add("nav-content__nav-item--active")
+        : navItem.classList.remove("nav-content__nav-item--active");
+    });
+  };
+
+  const calcContainerPos = () => {
+    let scollTopPos = page.scrollTop;
+
+    containers.forEach((c) => {
+      const windowCenterY = window.innerHeight / 3;
+      const { top, bottom } = c.getBoundingClientRect();
+      const isScrollingUp = scollTopPos < lastScrollPos;
+
+      if ((isScrollingUp && bottom < windowCenterY) || top < windowCenterY) {
+        setActive(c.dataset.navId);
+      }
+    });
+
+    lastScrollPos = scollTopPos;
+  };
+
+  const debouncedNavHandler = debounce(calcContainerPos, 500);
+  page.addEventListener("scroll", debouncedNavHandler);
+
+  containers.forEach((container, i) => {
+    const { navId } = container.dataset;
+
+    const listEl = document.createElement("li");
+    listEl.classList.add("nav-content__nav-item", "wow", "fadeInDown");
+    listEl.dataset.wowDelay = `${i / 20}s`;
+    listEl.dataset.navId = navId;
+
+    const navEl = document.createElement("span");
+    navEl.classList.add("nav-content__nav-btn");
+    navEl.textContent = navId;
+
+    navEl.addEventListener("click", () => {
+      page.scrollTo({
+        top: container.offsetTop - window.innerHeight / 3 + 10,
+        behavior: "smooth",
+      });
+    });
+
+    listEl.append(navEl);
+
+    navItems.push(listEl);
+  });
+
+  navList.append(...navItems);
+
+  calcContainerPos();
+};
+
+const calcNavContentMargin = () => {
+  const navContentEl = document.querySelector(".nav-content");
+  const bannerEl = document.querySelector(".banner--service");
+
+  if (!navContentEl || !bannerEl) return;
+
+  navContentEl.style.marginTop = `${bannerEl.clientHeight}px`;
+
+  window.addEventListener(
+    "resize",
+    debounce(() => {
+      navContentEl.style.marginTop = `${bannerEl.clientHeight}px`;
+    }, 500)
+  );
+
+  window.addEventListener("scroll", () => console.log("scroll"), true);
+
+  bannerEl.addEventListener("scroll", () => console.log("scroll"), true);
+};
+
+new WOW({
+  scrollContainer: ".page",
+}).init();
+
 document.addEventListener("DOMContentLoaded", () => {
   initMap();
   tabs();
@@ -830,6 +998,10 @@ document.addEventListener("DOMContentLoaded", () => {
   stickyHeader();
   initCharitySlider();
   initSmoothScrollToAnchor();
+  initBeforeAfterSlider();
+  initReviewCarousel();
+  pageNavigation();
+  // calcNavContentMargin();
   new Modal(".modal", null, (activeModal) => {
     const appointmentForm = activeModal.querySelector(".appointment-form");
     appointmentForm?.reset();

@@ -3,3 +3,4 @@
 //@prepros-append fancybox.js
 //@prepros-append formValidator.js
 //@prepros-append modal.js
+//@prepros-append wow.js

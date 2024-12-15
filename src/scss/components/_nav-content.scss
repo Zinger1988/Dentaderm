@@ -1,0 +1,231 @@
+.nav-content {
+  background-color: $white;
+  position: relative;
+  z-index: 10;
+
+  @include media(">=xl") {
+    display: flex;
+    align-items: start;
+  }
+
+  &__block {
+    @extend .content__block;
+
+    &--p-0 {
+      @extend .block--p-0;
+    }
+
+    &--pt-0 {
+      @extend .block--pt-0;
+    }
+
+    &--pb-0 {
+      @extend .block--pb-0;
+    }
+
+    &--mb-0 {
+      @extend .content__block--mb-0;
+    }
+
+    &--mt-0 {
+      @extend .content__block--mt-0;
+    }
+  }
+
+  &__content {
+    @include media(">=xl") {
+      flex: 1 1 auto;
+      min-width: 0;
+      border-right: 1px solid $gray200;
+    }
+  }
+
+  &__container {
+    min-width: 36rem;
+    max-width: 102rem;
+    width: 100%;
+  }
+
+  &__nav {
+    position: sticky;
+    top: 0;
+    overflow: auto;
+    border-top: 1px solid $gray800;
+    background: rgba($black, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    color: $gray500;
+
+    @include media(">=xl") {
+      background-color: $white;
+      backdrop-filter: none;
+      border-top: none;
+      flex: 0 0 35rem;
+      order: 1;
+      color: inherit;
+      overflow: visible;
+      padding: 6rem 3.5rem 0;
+    }
+
+    @include media(">=2xl") {
+      padding: 7rem 3.5rem 0;
+    }
+
+    @include media(">=3xl") {
+      flex: 0 0 40rem;
+      padding: 8rem 5rem 4rem;
+    }
+  }
+
+  &__nav-label {
+    display: none;
+
+    @include media(">=xl") {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 0 0 2.8rem;
+    }
+
+    @include media(">=3xl") {
+      font-size: 1.8rem;
+      margin: 0 0 3.2rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+    @extend %listReset;
+    padding: 0 0.5rem;
+
+    @include media(">=xl") {
+      padding: 0;
+      margin: 0 0 4rem;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @include media(">=3xl") {
+      gap: 3rem;
+      margin: 0 0 5rem;
+    }
+  }
+
+  &__nav-item {
+    @include fs("body2");
+    @extend %listReset;
+    padding: 1.4rem 1rem;
+    flex: 0 0 auto;
+
+    @include media(">=xl") {
+      margin-left: -0.2rem;
+      padding: 0;
+    }
+
+    &--active {
+      color: $white;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      position: relative;
+
+      @include media(">=xl") {
+        color: $black;
+        display: block;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+      }
+
+      &::before {
+        width: 0.4rem;
+        height: 0.4rem;
+        background: $white;
+        transform: rotate(45deg);
+
+        @include media(">=xl") {
+          width: 0.5rem;
+          height: 0.5rem;
+          background: $black;
+          position: absolute;
+          left: -3.6rem;
+          top: 50%;
+          width: 0.5rem;
+          height: 0.5rem;
+          transform: translateY(-50%) rotate(45deg);
+        }
+
+        @include media(">=3xl") {
+          left: -5.1rem;
+        }
+      }
+
+      &::after {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        left: 0.7rem;
+        border: 1px solid $white;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        transform-origin: center;
+        animation: blink 2s ease-out infinite;
+
+        @include media(">=xl") {
+          border: 1px solid $black;
+          left: -3.9rem;
+          width: 1.1rem;
+          height: 1.1rem;
+        }
+
+        @include media(">=3xl") {
+          left: -5.4rem;
+        }
+      }
+    }
+  }
+
+  &__nav-btn {
+    @include animate(color);
+    cursor: pointer;
+
+    @include mediaHover() {
+      &:hover {
+        color: $white;
+
+        @include media(">=xl") {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &__nav-appointment-btn {
+    display: none;
+
+    @include media(">=xl") {
+      display: block;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: translateY(-50%) rotate(45deg) scale(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-50%) rotate(45deg) scale(1.4);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-50%) rotate(45deg) scale(1.4);
+    opacity: 0;
+  }
+}

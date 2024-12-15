@@ -19,13 +19,28 @@
 
   &__play {
     @include positionCenter();
-    width: 8rem;
-    height: 8rem;
+    width: 5.4rem;
+    height: 5.4rem;
     z-index: 10;
     border-radius: 50%;
     cursor: pointer;
-    background: rgba($white, 0.7) url(../assets/images/play.svg) center / 2.4rem auto
-      no-repeat;
+    background-color: $black;
+    background-image: url(../assets/images/play.svg);
+    background-size: 1.6rem auto;
+    background-position: calc(50% + 0.2rem) 50%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 0.6rem rgba($white, 0.5);
+    @include animate(box-shadow width height, 0.2s);
+
+    @include media(">=3xl") {
+      background-size: 2rem auto;
+      width: 7rem;
+      height: 7rem;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 1rem rgba($white, 0.75);
+    }
   }
 
   &--4x3 {

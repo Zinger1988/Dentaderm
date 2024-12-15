@@ -12,13 +12,13 @@
     position: relative;
     padding: 1.4rem 4rem 1.4rem 0;
     border-bottom: 1px solid $gray200;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     @include animate(border-color font-size);
 
     @include media(">=3xl") {
       padding: 1.8rem 4rem 1.8rem 0;
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     &.label-active {
@@ -38,10 +38,15 @@
 
   &__icon {
     font-size: 0;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.3rem;
+    height: 1.3rem;
     position: absolute;
     @include positionRightCenter();
+
+    @include media(">=3xl") {
+      width: 1.7rem;
+      height: 1.7rem;
+    }
 
     &::before {
       content: "";

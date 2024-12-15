@@ -1,0 +1,22 @@
+.reviews-carousel {
+  &__swiper {
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+
+    .swiper-slide {
+      height: auto;
+    }
+
+    .review-card {
+      height: 100%;
+      padding: 2rem;
+      border: 1px solid $gray200;
+      border-right: none;
+
+      @include media(">=3xl") {
+        padding: 3rem 4rem;
+      }
+    }
+  }
+}
