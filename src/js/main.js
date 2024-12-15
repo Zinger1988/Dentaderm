@@ -888,6 +888,13 @@ const initBeforeAfterSlider = () => {
   handleSlide(50);
 };
 
+const getOffsetTop = (element) => {
+  const rect = element.getBoundingClientRect();
+  const pageEl = document.querySelector(".page");
+  const scrollTop = pageEl.scrollTop;
+  return rect.top + scrollTop;
+};
+
 const pageNavigation = () => {
   const page = document.querySelector(".page");
   const containers = document.querySelectorAll("[data-nav-id]");
@@ -941,7 +948,7 @@ const pageNavigation = () => {
 
     navEl.addEventListener("click", () => {
       page.scrollTo({
-        top: container.offsetTop - window.innerHeight / 3 + 10,
+        top: getOffsetTop(container) - window.innerHeight / 3 + 10,
         behavior: "smooth",
       });
     });
