@@ -13,6 +13,7 @@ body {
   color: $textColor;
   overflow-x: hidden;
   min-width: 36rem;
+  width: 100%;
 
   @include media(">=3xl") {
     font-size: 1.6rem;
