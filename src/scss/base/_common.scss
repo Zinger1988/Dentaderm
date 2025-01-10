@@ -2,10 +2,6 @@ html {
   font-size: $remBase;
   overflow-x: hidden;
   width: 100%;
-
-  // @include media(">=3xl") {
-  //   font-size: 59%;
-  // }
 }
 
 body {

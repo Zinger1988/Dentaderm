@@ -1,4 +1,6 @@
 .reviews-carousel {
+  $this: &;
+
   &__swiper {
     .swiper-wrapper {
       transition-timing-function: linear;
@@ -16,6 +18,27 @@
 
       @include media(">=3xl") {
         padding: 3rem 4rem;
+      }
+    }
+  }
+
+  &--alt {
+    #{$this}__swiper {
+      padding-right: 6rem;
+      overflow: visible;
+
+      @include media(">=md") {
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .swiper-wrapper {
+        transition-timing-function: unset;
+      }
+
+      .review-card {
+        padding: 0;
+        border: none;
       }
     }
   }

@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding-bottom: 1.5rem;
   height: 100%;
+  position: relative;
 
   $this: &;
 
@@ -15,19 +15,6 @@
     }
   }
 
-  &__decor {
-    position: absolute;
-    z-index: 30;
-    bottom: 0;
-    right: 1rem;
-    transform: translateY(50%);
-    stroke-width: 1px;
-    stroke: #e3ded0;
-    fill: #e3ded0;
-    fill-opacity: 0;
-    @include animate(fill-opacity);
-  }
-
   &__img-link {
     display: block;
     width: 100%;
@@ -37,7 +24,7 @@
     display: block;
     position: relative;
     width: 100%;
-    padding: 40% 0;
+    padding: 36% 0;
     margin-bottom: 2rem;
     z-index: 5;
     overflow: hidden;
@@ -58,35 +45,32 @@
   }
 
   &__date {
-    display: block;
-    width: 100%;
-    padding: 2rem 0 0 0;
-    border-top: 1px solid $gray600;
-    margin: 0 0 1rem;
-    color: $gray500;
-    position: relative;
-    @include fs("body2");
+    @include positionLeftTop();
+    z-index: 10;
+    background-color: black;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0.4rem 1.2rem;
+    transform: translateY(-50%);
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.4rem;
-      width: 100%;
-      border-top: 1px solid $gray600;
+    @include media(">=2xl") {
+      font-size: 1.1rem;
     }
   }
 
   &__title {
-    color: inherit;
+    @extend %linkReset;
+    @include textEllipsisMultiline(3);
     font-size: 1.6rem;
     line-height: 1.5;
     text-decoration: none;
-    margin: 0 0 2rem;
+    margin: 0;
     position: relative;
     z-index: 10;
-    font-weight: 400;
-    @include textEllipsisMultiline(3);
+    font-weight: 600;
   }
 
   &__btn {

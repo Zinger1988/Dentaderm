@@ -1,42 +1,68 @@
-<section class="hero-section hero-section--bt-0 hero-section--bb-0">
-  <div class="hero-section__container hero-section__container--no-min-height">
-    <div class="hero-section__content">
-      <div class="hero-section__inner">
-        <h2>Що про нас кажуть ті, хто тепер щасливо посміхається:</h2>
-        <div class="review-slider hero-section__slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><!--@import ./review-card.html--></div>
-            <div class="swiper-slide"><!--@import ./review-card-long-text.html--></div>
-            <div class="swiper-slide"><!--@import ./review-card.html--></div>
-            <div class="swiper-slide"><!--@import ./review-card.html--></div>
-            <div class="swiper-slide"><!--@import ./review-card.html--></div>
+<!--#region reviews section -->
+<section class="reviews-section">
+  <div class="container reviews-section__container">
+    <h2 class="reviews-section__title">
+      Що про нас кажуть ті, хто тепер щасливо посміхається:
+    </h2>
+
+    <!-- #region carousel-->
+    <div class="reviews-carousel--alt reviews-section__carousel">
+      <div class="reviews-carousel__swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><!--@import ./review-card-long-text.html--></div>
+          <div class="swiper-slide"><!--@import ./review-card.html--></div>
+          <div class="swiper-slide"><!--@import ./review-card.html--></div>
+          <div class="swiper-slide"><!--@import ./review-card.html--></div>
+          <div class="swiper-slide"><!--@import ./review-card.html--></div>
+        </div>
+      </div>
+    </div>
+    <!-- #endregion carousel-->
+
+    <!-- #region carousel nav-->
+    <div class="reviews-section__nav">
+      <button class="reviews-section__nav-btn reviews-section__nav-btn--prev">
+        <svg class="icon reviews-section__nav-btn-icon">
+          <use href="assets/icons.svg#arrow-left" />
+        </svg>
+      </button>
+      <div class="reviews-section__pagination"></div>
+      <button class="reviews-section__nav-btn reviews-section__nav-btn--next">
+        <svg class="icon reviews-section__nav-btn-icon">
+          <use href="assets/icons.svg#arrow-right" />
+        </svg>
+      </button>
+    </div>
+    <!-- #endregion carousel nav-->
+
+    <!-- #region staff banner -->
+    <div class="staff-banner-ver reviews-section__banner">
+      <div class="staff-banner-ver__inner">
+        <picture class="staff-banner-ver__img">
+          <source type="image/webp" srcset="assets/images/staff-banner/nifontova.webp" />
+          <img
+            class="staff-banner-ver__img-item"
+            src="assets/images/staff-banner/nifontova.png"
+            alt="Dentaderm clinic doctor"
+            loading="lazy"
+          />
+        </picture>
+        <div class="staff-banner-ver__text">
+          <div class="staff-banner-ver__text-inner text-center">
+            <p>Отримайте особисту консультацію від наших спеціалістів!</p>
           </div>
         </div>
-
-        <div class="hero-section__nav pagination">
-          <button class="pagination__btn pagination__btn--prev">
-            <svg class="icon pagination__icon">
-              <use href="assets/icons.svg#arrow-left" />
-            </svg>
-          </button>
-          <div class="pagination__list"></div>
-          <button class="pagination__btn pagination__btn--next">
-            <svg class="icon pagination__icon">
-              <use href="assets/icons.svg#arrow-right" />
-            </svg>
+        <div class="staff-banner-ver__footer">
+          <button
+            class="btn btn--white btn--square btn--fluid"
+            data-modal-id="modal-appointment"
+          >
+            Отримати консультацію
           </button>
         </div>
       </div>
     </div>
-    <picture class="hero-section__image hero-section__image--no-bg">
-      <!-- type="image/webp" -->
-      <source srcset="assets/images/banners/initial/smiling_woman_with_orchideas.jpg" />
-      <img
-        loading="lazy"
-        class="hero-section__image-item"
-        src="assets/images/banners/initial/smiling_woman_with_orchideas.jpg"
-        alt="img"
-      />
-    </picture>
+    <!-- #endregion staff banner -->
   </div>
 </section>
+<!--#endregion reviews section -->

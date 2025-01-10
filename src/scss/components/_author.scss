@@ -1,15 +1,20 @@
 .author {
-  color: inherit;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0 1.4rem;
-  @include decorationHidden($gray600);
-  grid-template-areas:
-    "img name"
-    "img position";
+  $this: &;
+  display: flex;
 
-  @include media(">=lg") {
-    gap: 0 1.8rem;
+  &__link {
+    color: inherit;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 1.4rem;
+    @include decorationHidden($gray600);
+    grid-template-areas:
+      "img name"
+      "img position";
+
+    @include media(">=lg") {
+      gap: 0 1.8rem;
+    }
   }
 
   &__img {
@@ -20,8 +25,8 @@
   &__img-item {
     display: block;
     border-radius: 50%;
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 4rem;
+    height: 4rem;
 
     @include media(">=lg") {
       width: 5.4rem;
@@ -32,23 +37,52 @@
   &__name {
     grid-area: name;
     font-size: 1.2rem;
+    line-height: 1.4;
     align-self: end;
     font-weight: 500;
     color: $black;
 
     @include media(">=lg") {
       font-size: 1.5rem;
+      line-height: inherit;
     }
   }
 
   &__position {
     grid-area: position;
     font-size: 1rem;
+    line-height: 1.4;
     align-self: start;
     color: $gray600;
 
     @include media(">=lg") {
       font-size: 1.3rem;
+      line-height: inherit;
+    }
+  }
+
+  &--white {
+    #{$this}__name {
+      color: $white;
+    }
+
+    #{$this}__position {
+      color: $gray400;
+    }
+
+    #{$this}__img-item {
+      box-shadow: 0 0 0 2px rgba($white, 0.7);
+      @include animate(box-shadow);
+
+      @include media(">=lg") {
+        box-shadow: 0 0 0 3px rgba($white, 0.7);
+      }
+    }
+
+    &:hover {
+      #{$this}__img-item {
+        box-shadow: 0 0 0 3px rgba($white, 1);
+      }
     }
   }
 }

@@ -1,8 +1,15 @@
 .care-center {
   &__heading {
-    color: $black;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    padding: 2rem 2rem 3rem;
     background: #e1eff7 url(../assets/images/logo_puls_bg.svg) center / cover;
+
+    @include media(">=sm") {
+      padding: 3rem 3rem 4rem;
+    }
 
     @include media(">=md") {
       padding: 5rem;
@@ -11,17 +18,19 @@
 
   &__title {
     text-align: center;
-    margin-top: 0;
-    @include v-rythm("h3");
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin: 0 0 0.5em;
 
     @include media(">=sm") {
       @include v-rythm("h2");
+      margin-top: 0;
     }
   }
 
   &__desc {
     text-align: center;
-    margin-bottom: 0;
+    margin: 0 0 2em;
     text-transform: uppercase;
     font-size: 0.9rem;
     font-weight: 500;

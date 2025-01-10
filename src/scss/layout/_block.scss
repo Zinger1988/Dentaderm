@@ -29,14 +29,6 @@
     flex: 0 0 auto;
   }
 
-  &__downloads-list {
-    min-height: 20rem;
-
-    @include media(">=lg") {
-      min-height: 30rem;
-    }
-  }
-
   &__cards-grid {
     margin: 0 0 5rem;
   }
@@ -113,5 +105,13 @@
 
   &--p-0 {
     padding: 0;
+  }
+
+  &__sub:not(:last-child) {
+    margin: 0 0 3rem;
+
+    @include media(">=3xl") {
+      margin: 0 0 4rem;
+    }
   }
 }

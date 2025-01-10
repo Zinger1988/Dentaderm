@@ -58,14 +58,17 @@
     max-width: 54rem;
     padding: 3rem 1rem 5rem;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @include media(">=lg") {
       padding: 8rem 3.2rem 8rem;
       max-width: 58rem;
       height: 100%;
       margin: 0;
-      display: flex;
-      flex-direction: column;
+      align-items: stretch;
       justify-content: center;
     }
 
@@ -103,6 +106,22 @@
 
     @include media(">=lg") {
       text-align: left;
+    }
+  }
+
+  &__location-badges {
+    margin: 0 0 3rem;
+
+    @include media(">=3xl") {
+      margin: 0 0 4rem;
+    }
+  }
+
+  &__btn {
+    align-self: center;
+
+    @include media(">=lg") {
+      align-self: start;
     }
   }
 }

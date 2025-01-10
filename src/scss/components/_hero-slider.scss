@@ -21,26 +21,26 @@
   }
 
   .swiper-slide:not(.swiper-slide-active) {
-    opacity: 0.8;
-    filter: grayscale(100%);
-    padding: 0 0 0 2rem;
+    // opacity: 0.8;
+    // filter: grayscale(100%);
+    // padding: 0 0 0 2rem;
 
-    @include media(">=md") {
-      padding: 0 0 0 4rem;
-    }
+    // @include media(">=md") {
+    //   padding: 0 0 0 4rem;
+    // }
 
-    &.swiper-slide-prev {
-      padding: 0 2rem 0 0;
+    // &.swiper-slide-prev {
+    //   padding: 0 2rem 0 0;
 
-      @include media(">=md") {
-        padding: 0 4rem 0 0;
-      }
-    }
+    //   @include media(">=md") {
+    //     padding: 0 4rem 0 0;
+    //   }
+    // }
 
-    .hero-card__header,
-    .hero-card__description {
-      opacity: 0;
-      padding: 0;
-    }
+    // .hero-card__header,
+    // .hero-card__description {
+    //   opacity: 0;
+    //   padding: 0;
+    // }
   }
 }

@@ -1,0 +1,83 @@
+.search-panel {
+  position: relative;
+
+  &__search-icon {
+    @include positionLeftCenter();
+    left: 0.9rem;
+
+    @include media(">=3xl") {
+      left: 1.5rem;
+    }
+  }
+
+  &__reset {
+    @extend %buttonReset;
+    @include positionRightCenter();
+    display: none;
+    right: 0.9rem;
+
+    @include media(">=3xl") {
+      right: 1.5rem;
+    }
+  }
+
+  &__icon {
+    @include sizeRatio(1.8rem);
+
+    @include media(">=3xl") {
+      left: 1.5rem;
+    }
+  }
+
+  &__control {
+    @include fs("body2");
+    @include animate(box-shadow background-color border-color);
+    padding: 1.4rem 1.2rem 1rem 4rem;
+
+    @include media(">=3xl") {
+      padding: 1.6rem 1.4rem 1.2rem 5.6rem;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $gray100;
+    }
+
+    &:focus {
+      box-shadow: inset 0 -1px 0 0 $black;
+    }
+  }
+
+  &__dropdown {
+    @include positionBottomLeft();
+    display: none;
+    flex-direction: column;
+    background-color: $white;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0 0.4rem 2rem rgba($black, 0.1);
+    padding: 0.8rem 0;
+    max-height: 20rem;
+    overflow-y: auto;
+  }
+
+  &__dropdown-link {
+    @include fs("body2");
+    display: block;
+    padding: 0.8rem 1.6rem;
+    border-bottom: 1px solid $gray200;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @include mediaHover() {
+      @include animate(background-color);
+
+      &:hover {
+        background-color: $gray100;
+      }
+    }
+  }
+}

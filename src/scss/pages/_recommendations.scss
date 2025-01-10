@@ -1,0 +1,27 @@
+.recommendations-page {
+  @include media(">=lg") {
+    position: relative;
+  }
+
+  &__table {
+    margin: 0 0 4rem;
+
+    @include media(">=lg") {
+      margin: 0;
+    }
+
+    @include media(">=2xl") {
+      margin: 0 5rem 0 0;
+    }
+  }
+
+  &__banner {
+    max-width: 46rem;
+    margin: 0 auto;
+
+    @include media(">=lg") {
+      position: sticky;
+      top: 2rem;
+    }
+  }
+}

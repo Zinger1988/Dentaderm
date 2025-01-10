@@ -121,6 +121,47 @@
               </div>
               <!--@import partials/components/reviews-carousel.html-->
             </div>
+            <!-- #region block -->
+            <div class="block nav-content__block">
+              <div class="container nav-content__container">
+                <!-- #region staff banner -->
+                <div class="staff-banner-hor mx-auto wow fadeInUp">
+                  <div class="staff-banner-hor__inner">
+                    <picture class="staff-banner-hor__img">
+                      <source
+                        type="image/webp"
+                        srcset="assets/images/staff-banner/malova.webp"
+                      />
+                      <img
+                        class="staff-banner-hor__img-item"
+                        src="assets/images/staff-banner/malova.png"
+                        alt="Dentaderm clinic doctor"
+                        loading="lazy"
+                      />
+                    </picture>
+                    <div class="staff-banner-hor__text">
+                      <div class="staff-banner-hor__text-inner">
+                        <div class="h2">Виникли питання?</div>
+                        <p>
+                          Наші співробітники із задоволенням вам допоможуть. Просто,
+                          заповніть коротку форму, та отримайте вичерпну, особисту і
+                          безкоштовну консультацію!
+                        </p>
+
+                        <button
+                          class="btn btn--white-alt btn--square"
+                          data-modal-id="modal-appointment"
+                        >
+                          Отримати консультацію
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion staff banner -->
+              </div>
+            </div>
+            <!-- #endregion block -->
             <div
               class="block block--gray block--separated-b nav-content__block"
               data-nav-id="Рекомендації пацієнтам"
@@ -129,15 +170,26 @@
                 <header class="block__header">
                   <h2 class="block__title wow fadeInRight">Рекомендації пацієнтам</h2>
                 </header>
-                <!--@import partials/components/recommendations.html-->
+                <!--@import partials/components/article-recommendations.html-->
               </div>
             </div>
-            <div class="block nav-content__block" data-nav-id="Питання та відповіді">
+            <div
+              class="block block--separated-b nav-content__block"
+              data-nav-id="Питання та відповіді"
+            >
               <div class="container nav-content__container">
                 <header class="block__header">
                   <h2 class="block__title wow fadeInRight">Питання та відповіді</h2>
                 </header>
                 <!--@import partials/components/faq-accordion.html-->
+              </div>
+            </div>
+            <div class="block nav-content__block" data-nav-id="Інші послуги">
+              <div class="container nav-content__container">
+                <header class="block__header">
+                  <h2 class="block__title wow fadeInRight">Інші послуги</h2>
+                </header>
+                <!--@import partials/components/related-grid.html-->
               </div>
             </div>
           </div>

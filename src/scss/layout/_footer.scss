@@ -2,6 +2,8 @@
   background-color: $black;
   color: $white;
 
+  $this: &;
+
   &__holder {
     padding: 0;
     max-width: 1920px;
@@ -186,6 +188,42 @@
 
     p {
       margin: 0;
+    }
+  }
+
+  &--no-map {
+    #{$this}__holder {
+      @include media(">=md") {
+        display: grid;
+        grid-template-columns: 16rem 1fr;
+        grid-template-areas:
+          "logo locations"
+          "logo nav"
+          "logo bottom";
+      }
+
+      @include media(">=xl") {
+        display: grid;
+        grid-template-columns: 24rem 2.5fr 3.5fr;
+        grid-template-areas:
+          "logo locations nav"
+          "bottom bottom bottom";
+      }
+
+      @include media(">=3xl") {
+        grid-template-columns: 33.4rem 2fr 3fr;
+      }
+    }
+
+    #{$this}__locations {
+      @include media(">=xl") {
+        border-bottom: 1px solid $gray900;
+      }
+    }
+    #{$this}__bottom {
+      @include media(">=xl") {
+        padding: 3rem 5rem;
+      }
     }
   }
 }

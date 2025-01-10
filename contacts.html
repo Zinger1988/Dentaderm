@@ -68,7 +68,7 @@
       class="btn btn--default btn--white header__appointment"
       data-modal-id="modal-appointment"
     >
-      Запис на консультацію
+      Отримати консультацію
     </button>
   </div>
 </header>
@@ -203,19 +203,28 @@
           <a class="menu__link" href="#">Діагностика і консультація</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Лікування зубів та ясен</a>
+          <a class="menu__link" href="#">Профілактика та гігієна</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Хірургічна стоматологія</a>
+          <a class="menu__link" href="#">Лікування зубів та каналів</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Ортодонтичне лікування</a>
+          <a class="menu__link" href="#">Гнатологія</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Естетична стоматологія</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Вирівнювання прикусу (Ортодонтія)</a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="#">Ортопедичне лікування</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Плазмоліфтинг</a>
+          <a class="menu__link" href="#">Хірургічна стоматологія</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Пародонтологічне лікування</a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="#">Ціни</a>
@@ -235,21 +244,29 @@
       </ul>
       <ul class="menu__list menu__list--secondary">
         <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#">
-            Рекомендації пацієнтам
-          </a>
-        </li>
-        <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#">Акції</a>
-        </li>
-        <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#"> Ліцензії та дозволи </a>
-        </li>
-        <li class="menu__item menu__item--secondary">
           <a class="menu__link menu__link--secondary" href="#">Статті</a>
         </li>
         <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#">Відгуки</a>
+          <a class="menu__link menu__link--secondary" href="#">Рекомендації пацієнтам</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Ліцензії та дозволи</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Спеціальні пропозиції</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">
+            Політика конфіденційності
+          </a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Договір оферти</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">
+            Умови прийому, оплати, гарантії
+          </a>
         </li>
       </ul>
     </nav>
@@ -285,6 +302,9 @@
         <p class="location-tabs__address-row location-tabs__address-row--sm">
           <a href="tel:+380676250862">(067) 625-08-62</a>
         </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="mailto:denta.d.kyiv@gmail.com">denta.d.kyiv@gmail.com</a>
+        </p>
       </div>
       <div class="location-tabs__address location-tabs__address--sm">
         <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -295,6 +315,9 @@
         </p>
         <p class="location-tabs__address-row location-tabs__address-row--sm">
           <a href="tel:+380987503030">(098) 750-30-30</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="mailto:pechersk@dentaderm.ua">pechersk@dentaderm.ua</a>
         </p>
       </div>
     </div>
@@ -308,6 +331,9 @@
         </p>
         <p class="location-tabs__address-row location-tabs__address-row--sm">
           <a href="tel:+380631414491">(063) 141-44-91</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="mailto:dentad.irpin@gmail.com">dentad.irpin@gmail.com</a>
         </p>
       </div>
     </div>
@@ -321,97 +347,300 @@
 
       <!-- #region content -->
       <main class="content content--pt-0 page__content">
-<!--#region about section-->
-<section class="hero-section hero-section--h-full hero-section--bt-0 hero-section--bb-0">
-  <div class="hero-section__container">
-    <div class="hero-section__content">
-      <div class="hero-section__inner hero-section__inner--content-center">
-        <ul class="crumbs hero-section__crumbs">
-          <li class="crumbs__item">
-            <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
-          </li>
-          <li class="crumbs__item">
-            <span class="crumbs__endpoint">Контакти</span>
-          </li>
-        </ul>
-        <h1>Контакти</h1>
+<!--#region contacts section-->
+<section class="contacts-section">
+  <div class="hero-section hero-section--h-full hero-section--bt-0 hero-section--bb-0">
+    <div class="hero-section__container">
+      <div class="hero-section__content">
+        <div
+          class="hero-section__inner hero-section__inner--contacts hero-section__inner--content-center"
+        >
+          <ul class="crumbs hero-section__crumbs">
+            <li class="crumbs__item">
+              <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
+            </li>
+            <li class="crumbs__item">
+              <span class="crumbs__endpoint">Контакти</span>
+            </li>
+          </ul>
+          <h1>Контакти</h1>
 
-<!-- #region location-tabs -->
-<div class="tabs location-tabs">
-  <div class="tabs-head location-tabs__head">
-    <button
-      class="tabs-btn active location-tabs__btn location-tabs__btn--lg"
-      data-tab-target="kiyv"
-    >
-      Київ
-    </button>
-    <button
-      class="tabs-btn location-tabs__btn location-tabs__btn--lg"
-      data-tab-target="irpin"
-    >
-      Ірпінь
-    </button>
-  </div>
-  <div class="tabs-content location-tabs__content">
-    <div
-      class="tabs-content-item location-tabs__content-item active"
-      data-tab-content="kiyv"
-    >
-      <div class="location-tabs__address location-tabs__address--sm">
-        <p class="location-tabs__address-row location-tabs__address-row--sm">
-          <a href="#" target="_blank">вул. Вишгородська, 56/2</a>
-        </p>
-        <p class="location-tabs__address-row location-tabs__address-row--sm">
-          Пн-Сб: 9.00 - 20.00
-        </p>
-        <p class="location-tabs__address-row location-tabs__address-row--sm">
-          <a href="tel:+380676250862">(067) 625-08-62</a>
-        </p>
+          <div class="location-badges contacts-section__location-badges">
+            <div class="location-badges__item">
+              <svg class="location-badges__icon">
+                <use href="/assets/icons.svg#kiyv-location" />
+              </svg>
+              <h3 class="location-badges__title location-badges__title--light">
+                <span>DENTADERM Київ</span>
+              </h3>
+              <div class="location-badges__locations">
+                <div class="location-badges__locations-inner">
+                  <a href="#">Київ, вул. Вишгородська, 56/2</a>
+                  <span>Пн-Сб: 9.00 - 20.00</span>
+                  <a href="tel:+380676250862">(067) 625-08-62</a>
+                  <a class="location-badges__phone" href="mailto:denta.d.kyiv@gmail.com">
+                    denta.d.kyiv@gmail.com
+                  </a>
+                </div>
+                <div class="location-badges__locations-inner">
+                  <a href="#"> Київ, вул. Кловський узвіз, 7а </a>
+                  <span>Пн-Сб: 9.00 - 20.00</span>
+                  <a href="tel:+380987503030">(098) 750-30-30</a>
+                  <a class="location-badges__phone" href="mailto:denta.d.kyiv@gmail.com">
+                    pechersk@dentaderm.ua
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="location-badges__item">
+              <svg class="location-badges__icon">
+                <use href="/assets/icons.svg#irpin-location" />
+              </svg>
+              <h3 class="location-badges__title location-badges__title--light">
+                <span>DENTADERM Ірпінь</span>
+              </h3>
+              <div class="location-badges__locations">
+                <div class="location-badges__locations-inner">
+                  <a href="#">Ірпінь, вул. Соборна, 107</a>
+                  <span>Пн-Сб: 9.00 - 20.00</span>
+                  <a href="tel:+380631414491">(063) 141-44-91</a>
+                  <a class="location-badges__phone" href="mailto:dentad.irpin@gmail.com">
+                    dentad.irpin@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contacts-section__controls">
+            <button class="btn btn--square" data-modal-id="modal-appointment">
+              Отримати консультацію
+            </button>
+            <div class="socials socials--lg contacts-section__socials">
+              <ul class="socials__list">
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    target="_blank"
+                    href="https://www.instagram.com/denta_derm/"
+                  >
+                    <svg class="icon socials__icon">
+                      <use href="assets/icons.svg#instagram" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    target="_blank"
+                    href="https://www.facebook.com/dentaderm"
+                  >
+                    <svg class="icon socials__icon">
+                      <use href="assets/icons.svg#facebook" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    target="_blank"
+                    href="https://tinyurl.com/27phvmbk"
+                  >
+                    <svg class="icon socials__icon">
+                      <use href="assets/icons.svg#viber" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    target="_blank"
+                    href="https://t.me/DentaDerm_Kyiv"
+                  >
+                    <svg class="icon socials__icon">
+                      <use href="assets/icons.svg#telegram" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="location-tabs__address location-tabs__address--sm">
-        <p class="location-tabs__address-row location-tabs__address-row--sm">
-          <a href="#" target="_blank">вул. Кловський узвіз, 7а</a>
-        </p>
-        <p class="location-tabs__address-row location-tabs__address-row--sm">
-          Пн-Сб: 9.00 - 20.00
-        </p>
-        <p class="location-tabs__address-row location-tabs__address-row--sm">
-          <a href="tel:+380987503030">(098) 750-30-30</a>
-        </p>
+      <div class="hero-section__image">
+        <div class="hero-section__map" id="map"></div>
       </div>
-    </div>
-    <div class="tabs-content-item location-tabs__content-item" data-tab-content="irpin">
-      <div class="location-tabs__address">
-        <p class="location-tabs__address-row location-tabs__address-row--sm">
-          <a href="#" target="_blank">вул. Соборна, 107</a>
-        </p>
-        <p class="location-tabs__address-row location-tabs__address-row--sm">
-          Пн-Сб: 9.00 - 20.00
-        </p>
-        <p class="location-tabs__address-row location-tabs__address-row--sm">
-          <a href="tel:+380631414491">(063) 141-44-91</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- #endregion location-tabs -->
-      </div>
-    </div>
-    <div class="hero-section__image">
-      <div class="hero-section__map" id="map"></div>
     </div>
   </div>
 </section>
-<!--#endregion about section-->
+<!--#endregion contacts section-->
       </main>
       <!-- #endregion content -->
 
       <!-- #region footer -->
-<footer class="footer-simple page__footer-simple">
-  <div class="container container--fluid">
-    <div class="footer-simple__holder">
-      <div class="footer-simple__studio branding-studio">
+<footer class="footer footer--no-map page__footer">
+  <div class="footer__holder">
+    <div class="footer__logo">
+      <a class="footer__logo-link" href="/">
+        <img
+          loading="lazy"
+          class="logo footer__logo-item"
+          src="assets/images/dentyaderm_logo_white.svg"
+          alt="Dentaderm logo"
+        />
+      </a>
+    </div>
+    <div class="footer__locations">
+      <div class="tabs location-tabs location-tabs--white">
+        <div class="tabs-head location-tabs__head">
+          <button class="tabs-btn active location-tabs__btn" data-tab-target="kiyv">
+            Київ
+          </button>
+          <button class="tabs-btn location-tabs__btn" data-tab-target="irpin">
+            Ірпінь
+          </button>
+        </div>
+        <div class="tabs-content location-tabs__content">
+          <div
+            class="tabs-content-item location-tabs__content-item"
+            data-tab-content="kiyv"
+          >
+            <div class="location-tabs__address">
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                вул. Вишгородська, 56/2
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                Пн-Сб: 9.00 - 20.00
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="tel:+380676250862">(067) 625-08-62</a>
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="mailto:denta.d.kyiv@gmail.com">denta.d.kyiv@gmail.com</a>
+              </p>
+            </div>
+            <div class="location-tabs__address">
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                вул. Кловський узвіз, 7а
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                Пн-Сб: 9.00 - 20.00
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="tel:+380987503030">(098) 750-30-30</a>
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="mailto:pechersk@dentaderm.ua">pechersk@dentaderm.ua</a>
+              </p>
+            </div>
+          </div>
+          <div
+            class="tabs-content-item location-tabs__content-item"
+            data-tab-content="irpin"
+          >
+            <div class="location-tabs__address">
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                вул. Соборна, 107
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                Пн-Сб: 9.00 - 20.00
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="tel:+380631414491">(063) 141-44-91</a>
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="mailto:dentad.irpin@gmail.com">dentad.irpin@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__nav">
+      <nav class="primary-nav footer__primary-nav">
+        <ul class="primary-nav__list">
+          <li class="primary-nav__item">
+            <a class="primary-nav__link" href="#">Послуги</a>
+          </li>
+          <li class="primary-nav__item">
+            <a class="primary-nav__link" href="#">Про клініку</a>
+          </li>
+          <li class="primary-nav__item">
+            <a class="primary-nav__link" href="#">Наші фахвці</a>
+          </li>
+          <li class="primary-nav__item">
+            <a class="primary-nav__link" href="#">Ціни</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="secondary-nav footer__secondary-nav">
+        <ul class="secondary-nav__list">
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Статті</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Рекомендації пацієнтам</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Ліцензії та дозволи</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Спеціальні пропозиції</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Політика конфіденційності</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Договір оферти</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Умови прийому, оплати, гарантії</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <div class="socials socials--white footer__socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a
+              class="socials__link"
+              target="_blank"
+              href="https://www.instagram.com/denta_derm/"
+            >
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#instagram" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a
+              class="socials__link"
+              target="_blank"
+              href="https://www.facebook.com/dentaderm"
+            >
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#facebook" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#viber" />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
+              <svg class="icon socials__icon">
+                <use href="assets/icons.svg#telegram" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__studio branding-studio">
         <a class="branding-studio__link" href="#" target="_blank">
           <img
             loading="lazy"
@@ -421,7 +650,7 @@
           />
         </a>
       </div>
-      <div class="footer-simple__copy">
+      <div class="footer__copy">
         <p>© DentaDerm 2020. Всі права захищені</p>
       </div>
     </div>
@@ -434,7 +663,7 @@
 <div class="modal" id="modal-appointment">
   <!-- #region modal title -->
   <div class="modal__heading">
-    <h3 class="modal__title">Записатися на прийом</h3>
+    <h3 class="modal__title">Отримати консультацію</h3>
     <button class="modal-close modal__close-btn">
       <svg class="icon modal__close-icon">
         <use href="assets/icons.svg#cancel" />
@@ -508,7 +737,7 @@
           </div>
         </div>
         <div class="form__footer form__footer--center">
-          <button class="btn btn--square">Записатися на прийом</button>
+          <button class="btn btn--square">Відправити</button>
         </div>
       </form>
       <!-- #endregion appointment form -->

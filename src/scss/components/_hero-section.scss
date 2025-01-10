@@ -91,6 +91,10 @@
       width: 49.6rem;
       min-width: 540px;
       max-width: 640px;
+
+      &--contacts {
+        width: 59.6rem;
+      }
     }
 
     @include media(">=2xl") {
@@ -99,8 +103,17 @@
       max-width: 750px;
     }
 
-    @include media(">=2xl") {
+    @include media(">=3xl") {
       padding: 0 10rem 0 6rem;
+    }
+  }
+
+  &__text {
+    @include clearMarginY("&");
+    margin: 0 0 2rem;
+
+    @include media(">=3xl") {
+      margin: 0 0 4rem;
     }
   }
 

@@ -14,30 +14,27 @@
     @include animate(background-color transform box-shadow);
 
     @include media(">=md") {
-      padding: 3rem;
+      padding: 4rem;
       border-radius: 0 0 4rem 0;
-    }
-
-    @include media(">=3xl") {
-      padding: 4.4rem;
     }
   }
 
   &__icon {
-    width: 4rem;
-    height: 4rem;
+    width: 3.2rem;
+    height: 3.2rem;
     fill: $gray900;
     margin: 0 0 2rem;
     @include animate(fill);
 
     @include media(">=md") {
-      width: 5rem;
-      height: 5rem;
+      width: 4rem;
+      height: 4rem;
+      margin: 0 0 3.2rem;
     }
   }
 
   &__title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.4;
     text-align: center;
     @include animate(color);
@@ -49,10 +46,6 @@
     @include media(">=xl") {
       font-size: 1.8rem;
       font-weight: 300;
-    }
-
-    @include media(">=3xl") {
-      font-size: 2rem;
     }
   }
 

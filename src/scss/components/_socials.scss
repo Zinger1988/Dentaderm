@@ -44,4 +44,14 @@
       }
     }
   }
+
+  &--lg {
+    #{$this}__icon {
+      @include sizeRatio(2.2rem);
+
+      @include media(">=3xl") {
+        @include sizeRatio(2.4rem);
+      }
+    }
+  }
 }

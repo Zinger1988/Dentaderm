@@ -1,0 +1,91 @@
+.reviews-section {
+  &__container {
+    @include media(">=lg") {
+      display: grid;
+      gap: 2rem 6rem;
+      grid:
+        "title banner" auto
+        "carousel banner" 1fr
+        "nav banner" auto /
+        1fr 34rem;
+    }
+
+    @include media(">=2xl") {
+      gap: 2rem 8rem;
+    }
+
+    @include media(">=3xl") {
+      gap: 2rem 11rem;
+      grid-template-columns: 1fr 36rem;
+    }
+  }
+  &__title {
+    margin: 0 0 3rem;
+
+    @include media(">=lg") {
+      margin: 3.4rem 0 3rem;
+      grid-area: title;
+      max-width: 55rem;
+    }
+
+    @include media(">=3xl") {
+      margin: 4.4rem 0 3rem;
+      max-width: 55rem;
+    }
+  }
+
+  &__carousel {
+    margin: 0 0 2rem;
+
+    @include media(">=lg") {
+      grid-area: carousel;
+      min-width: 0;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include media(">=md") {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      align-items: center;
+      margin: 0 0 2rem;
+    }
+
+    @include media(">=lg") {
+      grid-area: nav;
+      margin: 0;
+    }
+  }
+
+  &__nav-btn {
+    @extend %buttonReset;
+    @include animate(transform);
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__nav-btn-icon {
+    @include sizeRatio(2.5rem);
+  }
+
+  &__pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__banner {
+    max-width: 46rem;
+    margin: 0 auto;
+
+    @include media(">=lg") {
+      grid-area: banner;
+      margin: 0;
+    }
+  }
+}

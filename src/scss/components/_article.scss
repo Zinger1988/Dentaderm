@@ -11,9 +11,7 @@
 
     grid-template-areas:
       "backward"
-      "author"
       "title"
-      "date"
       "img";
 
     @include media(">=sm") {
@@ -24,28 +22,50 @@
       gap: 1.8rem 8rem;
       grid-template-columns: 1fr auto;
       grid-template-areas:
-        "author ."
         "title backward"
-        "date ."
         "img img";
     }
 
     @include media(">=3xl") {
       margin-bottom: 5rem;
+      gap: 3.5rem 8rem;
     }
   }
 
   &__author {
-    grid-area: author;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 4rem 1.6rem 1.6rem;
+    color: $white;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8519782913165266) 0%,
+      rgba(0, 0, 0, 0.6026785714285714) 40%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+    @include media(">=lg") {
+      padding: 6rem 2.4rem 2.4rem;
+    }
   }
 
   &__date {
-    font-size: 1.2rem;
-    line-height: 1;
-    grid-area: date;
+    @include positionLeftTop();
+    z-index: 10;
+    background-color: black;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0.4rem 1.2rem;
 
-    @include media(">=xl") {
-      font-size: 1.4rem;
+    @include media(">=2xl") {
+      font-size: 1.1rem;
     }
   }
 
@@ -69,12 +89,16 @@
     }
 
     @include media(">=3xl") {
-      margin: 0 0 1rem;
+      margin: 0;
     }
   }
 
   &__img {
     grid-area: img;
+    position: relative;
+  }
+
+  &__img-wrapper {
     display: block;
   }
 

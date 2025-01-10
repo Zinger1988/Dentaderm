@@ -1,13 +1,5 @@
 .discount-list {
-  &__card {
-    margin-bottom: 4rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px dotted $gray500;
-
-    &:last-child {
-      margin: 0;
-      padding: 0;
-      border: none;
-    }
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 4rem;
 }

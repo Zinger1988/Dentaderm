@@ -37,7 +37,7 @@
     display: block;
     position: relative;
     width: 100%;
-    padding: 60% 0;
+    padding: 54% 0;
     margin-bottom: 2rem;
     z-index: 5;
   }
@@ -62,10 +62,6 @@
 
     @include media(">=md") {
       font-size: 1.7rem;
-    }
-
-    @include media(">=3xl") {
-      font-size: 1.9rem;
     }
   }
 

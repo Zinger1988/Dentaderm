@@ -109,10 +109,19 @@
         <!-- #endregion adv icons -->
 
         <!-- #region hero -->
-        <div class="block content__block">
+        <div class="block content__block content__block--mb-0">
           <!--@import partials/components/functional-diagnosis-hero-section.html-->
         </div>
         <!-- #endregion hero -->
+
+        <div class="block content__block block--gray">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title wow fadeInRight">Ціни</h2>
+            </header>
+            <!--@import partials/components/price-list.html-->
+          </div>
+        </div>
 
         <!-- #region doctors -->
         <section class="block block--separated-b content__block">
@@ -132,7 +141,17 @@
             <header class="block__header">
               <h2 class="block__title text-center">Шлях функціональної діагностики</h2>
             </header>
-            <!--@import partials/components/functional-diagnosis-path.html-->
+            <div class="block__sub">
+              <!--@import partials/components/functional-diagnosis-path.html-->
+            </div>
+            <div class="text-center">
+              <button
+                class="btn btn--square btn--lightBlue"
+                data-modal-id="modal-appointment"
+              >
+                Отримати консультацію
+              </button>
+            </div>
           </div>
         </section>
         <!-- #endregion path -->
@@ -151,7 +170,17 @@
                 Що ми додатково використовуємо для діагностики?
               </h2>
             </header>
-            <!--@import partials/components/functional-diagnosis-slider.html-->
+            <div class="block__sub">
+              <!--@import partials/components/functional-diagnosis-slider.html-->
+            </div>
+            <div class="text-center">
+              <button
+                class="btn btn--square btn--lightBlue"
+                data-modal-id="modal-appointment"
+              >
+                Отримати консультацію
+              </button>
+            </div>
           </div>
         </section>
         <!-- #endregion diagnosis slider -->

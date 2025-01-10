@@ -19,11 +19,6 @@
     padding: 1rem;
 
     @include media(">=md") {
-      font-size: 1.6rem;
-      padding: 1.2rem;
-    }
-
-    @include media(">=xl") {
       font-size: 1.8rem;
       padding: 1.4rem;
     }

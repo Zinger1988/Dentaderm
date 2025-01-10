@@ -6,26 +6,30 @@
   &__item {
     @extend %listReset;
 
-    &--sub {
-      margin-bottom: 0.4rem;
+    &:last-child {
+      #{$this}__label {
+        border-bottom: none;
+      }
     }
   }
 
   &__label {
     cursor: pointer;
     position: relative;
-    padding: 1.4rem 4rem 1.4rem 0;
     border-bottom: 1px solid $gray200;
-    font-size: 1.5rem;
-    @include animate(border-color);
+    font-size: 1.4rem;
+    line-height: 1.666;
+    padding: 1.6rem 0 1.6rem 4rem;
+    @include animate(border-color font-weight);
 
     @include media(">=3xl") {
-      padding: 1.8rem 4rem 1.8rem 0;
       font-size: 1.8rem;
+      padding: 1.6rem 0 1.6rem 5.6rem;
     }
 
     &.label-active {
-      border-bottom: 1px solid $gray800;
+      border-bottom: 2px solid $gray800;
+      font-weight: 500;
 
       #{$this}__arrow {
         transform: translate(0, -50%) rotate(180deg);
@@ -33,29 +37,83 @@
     }
 
     &--sub {
-      padding: 1rem 0;
-      border-bottom: 1px dotted $gray800;
+      border-bottom: 1px solid $gray200;
+      padding: 0;
     }
   }
 
   &__arrow {
-    @include positionRightCenter();
+    @include positionLeftCenter();
     @include animate(transform);
+    @include sizeRatio(1.6rem);
+    left: 1rem;
+
+    @include media(">=3xl") {
+      left: 1.7rem;
+    }
   }
 
   &__link {
     @include fs("body2");
     @include decorationHidden(inherit);
+    @extend %linkReset;
+    @include animate(padding background-color);
     color: inherit;
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-    align-items: baseline;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.6rem;
+    align-items: center;
+    padding: 1.4rem 1.4rem 1.4rem 4rem;
+    position: relative;
+
+    @include media(">=3xl") {
+      padding: 2rem 2rem 2rem 5.6rem;
+    }
+
+    @include mediaHover() {
+      &:hover {
+        // background-color: $gray100;
+        padding: 1.4rem 1.4rem 1.4rem 7.2rem;
+
+        #{$this}__icon {
+          transform: scale(1);
+        }
+
+        @include media(">=3xl") {
+          padding: 2rem 2rem 2rem 8.8rem;
+        }
+      }
+    }
+  }
+
+  .service-search-target {
+    background-color: rgba($warning, 0.3);
+    background: rgb(250, 100, 230);
+    background: linear-gradient(
+      to right bottom,
+      rgba(250, 100, 230, 0.1) 0%,
+      rgba(72, 190, 210, 0.1) 100%
+    );
+  }
+
+  &__icon {
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: $gray800;
+    transform: scale(0);
+    transform-origin: center;
+    top: calc(50% - 0.8rem);
+    left: 4rem;
+    @include animate(transform);
+
+    @include media(">=3xl") {
+      left: 5.6rem;
+    }
   }
 
   &--sub {
-    margin: 0.4rem 0 3rem;
-    padding: 0.5rem 0 0;
-    border-top: 1px solid $gray800;
+    margin: 0 0 3rem;
+    background: rgba($gray100, 0.5);
   }
 }

@@ -99,55 +99,13 @@
         overflow: hidden;
       }
     }
-  }
 
-  &--doctors {
-    #{$this}__nav {
-      &--next,
-      &--prev {
-        @include media(">=md") {
-          top: 21rem;
-        }
-
-        @include media(">=lg") {
-          top: 17.4rem;
-        }
-
-        @include media(">=xl") {
-          top: 18.6rem;
-        }
-
-        @include media(">=2xl") {
-          top: 15.7rem;
-        }
-
-        @include media(">=3xl") {
-          top: 18.9rem;
-        }
-      }
+    .swiper-slide {
+      height: auto;
     }
   }
 
-  &--service-doctors {
-    #{$this}__nav {
-      &--next,
-      &--prev {
-        @include media(">=md") {
-          top: 21rem;
-        }
-
-        @include media(">=lg") {
-          top: 17.4rem;
-        }
-
-        @include media(">=xl") {
-          top: 16.8rem;
-        }
-      }
-    }
-  }
-
-  &--blog {
+  &--discount {
     margin-right: -1rem;
     padding-bottom: 0;
 
@@ -165,19 +123,142 @@
       &--next,
       &--prev {
         @include media(">=md") {
-          top: 14rem;
-        }
-
-        @include media(">=lg") {
-          top: 11.6rem;
-        }
-
-        @include media(">=xl") {
           top: 12.4rem;
         }
 
+        @include media(">=lg") {
+          top: 15.5rem;
+        }
+
         @include media(">=2xl") {
-          top: 10.5rem;
+          top: 15rem;
+        }
+      }
+    }
+
+    #{$this}__swiper {
+      padding-right: 5rem;
+      overflow: visible;
+
+      @include media(">=md") {
+        padding-right: 0;
+        overflow: hidden;
+      }
+    }
+
+    .swiper-wrapper {
+      padding-top: 1.3rem;
+    }
+
+    .swiper-slide {
+      height: auto;
+    }
+  }
+
+  &--doctors {
+    #{$this}__nav {
+      &--next,
+      &--prev {
+        @include media(">=md") {
+          top: 18.9rem;
+        }
+
+        @include media(">=lg") {
+          top: 16.6rem;
+        }
+
+        @include media(">=xl") {
+          top: 17.8rem;
+        }
+
+        @include media(">=2xl") {
+          top: 14.2rem;
+        }
+
+        @include media(">=3xl") {
+          top: 17rem;
+        }
+      }
+    }
+  }
+
+  &--demo {
+    #{$this}__nav {
+      &--next,
+      &--prev {
+        @include media(">=md") {
+          top: 17.5rem;
+        }
+
+        @include media(">=lg") {
+          top: 22.5rem;
+        }
+
+        @include media(">=xl") {
+          top: 15.5rem;
+        }
+
+        @include media(">=2xl") {
+          top: 21.7rem;
+        }
+      }
+    }
+  }
+
+  &--service-doctors {
+    #{$this}__nav {
+      &--next,
+      &--prev {
+        @include media(">=md") {
+          top: 18.4rem;
+        }
+
+        @include media(">=lg") {
+          top: 15.4rem;
+        }
+
+        @include media(">=xl") {
+          top: 15.2rem;
+        }
+      }
+    }
+  }
+
+  &--blog {
+    margin-right: -1rem;
+    padding-bottom: 0;
+
+    .swiper-wrapper {
+      padding-top: 1.3rem;
+    }
+
+    @include media(">=md") {
+      margin-right: 0;
+    }
+
+    #{$this}__nav {
+      display: none;
+
+      @include media(">=md") {
+        display: block;
+      }
+
+      &--next,
+      &--prev {
+        @include media(">=md") {
+          top: 13.9rem;
+        }
+
+        @include media(">=lg") {
+          top: 11.8rem;
+        }
+
+        @include media(">=xl") {
+          top: 12.5rem;
+        }
+
+        @include media(">=2xl") {
+          top: 11.8rem;
         }
 
         @include media(">=3xl") {

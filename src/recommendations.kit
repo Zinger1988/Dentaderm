@@ -18,7 +18,7 @@
       <!-- #region content -->
       <main class="content page__content">
         <div class="content__crumbs">
-          <div class="container">
+          <div class="container container--screen-xl">
             <ul class="crumbs">
               <li class="crumbs__item">
                 <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
@@ -30,17 +30,60 @@
           </div>
         </div>
 
-        <!-- #region recommendations -->
+        <!-- #region block -->
         <section class="block content__block">
-          <div class="container">
+          <div class="container container--screen-xl">
             <header class="block__header">
               <h1 class="block__title h2">Рекомендації пацієнтам</h1>
             </header>
 
-            <!--@import partials/components/recommendations-level-1.html-->
+            <!-- #region recommendations -->
+            <div class="recommendations-page">
+              <div class="row">
+                <div class="col-12 col-lg-7 col-2xl-8">
+                  <div class="recommendations-page__table">
+                    <!--@import partials/components/recommendations-table.html-->
+                  </div>
+                </div>
+                <div class="col-12 col-lg-5 col-2xl-4">
+                  <!-- #region staff banner -->
+                  <div class="staff-banner-ver recommendations-page__banner">
+                    <div class="staff-banner-ver__inner">
+                      <picture class="staff-banner-ver__img">
+                        <source
+                          type="image/webp"
+                          srcset="assets/images/staff-banner/sopina.webp"
+                        />
+                        <img
+                          class="staff-banner-ver__img-item"
+                          src="assets/images/staff-banner/sopina.png"
+                          alt="Dentaderm clinic doctor"
+                          loading="lazy"
+                        />
+                      </picture>
+                      <div class="staff-banner-ver__text">
+                        <div class="staff-banner-ver__text-inner text-center">
+                          <p>Отримайте особисту консультацію від наших спеціалістів!</p>
+                        </div>
+                      </div>
+                      <div class="staff-banner-ver__footer">
+                        <button
+                          class="btn btn--white btn--square btn--fluid"
+                          data-modal-id="modal-appointment"
+                        >
+                          Отримати консультацію
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- #endregion staff banner -->
+                </div>
+              </div>
+            </div>
+            <!-- #endregion recommendations -->
           </div>
         </section>
-        <!-- #endregion recommendations -->
+        <!-- #endregion block -->
       </main>
       <!-- #endregion content -->
 

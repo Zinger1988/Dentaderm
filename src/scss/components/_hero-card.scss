@@ -34,6 +34,10 @@
     gap: 3rem;
     margin: 0 0 1.6rem;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @include media(">=3xl") {
       margin: 0 0 2.4rem;
     }

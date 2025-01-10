@@ -1,0 +1,20 @@
+.contacts-section {
+  &__location-badges {
+    margin: 0 0 3rem;
+
+    @include media(">=3xl") {
+      margin: 0 0 5rem;
+    }
+  }
+
+  &__controls {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-left: 7.5rem;
+  }
+
+  &__socials .socials__list {
+    justify-content: space-between;
+  }
+}

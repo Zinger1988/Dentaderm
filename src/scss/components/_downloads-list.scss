@@ -1,10 +1,14 @@
 .downloads-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
   gap: 1rem;
   @extend %listReset;
 
   $this: &;
+
+  @include media(">=lg") {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  }
 
   &__item {
     @extend %listReset;
@@ -12,6 +16,7 @@
 
   &__link {
     @extend %linkReset;
+    height: 100%;
     font-weight: 300;
     display: flex;
     gap: 2rem;
@@ -31,10 +36,8 @@
       }
     }
 
-    @include media(">=3xl") {
-      padding: 1.6rem 1.4rem 1.6rem 2.4rem;
-      font-size: 1.8rem;
-      gap: 4rem;
+    @include media(">=md") {
+      padding: 1.6rem 2.4rem;
     }
   }
 
@@ -46,13 +49,5 @@
     @include sizeRatio(2.4rem);
     @include animate(fill);
     flex-shrink: 0;
-
-    @include media(">=md") {
-      @include sizeRatio(2.8rem);
-    }
-
-    @include media(">=xl") {
-      @include sizeRatio(3.2rem);
-    }
   }
 }

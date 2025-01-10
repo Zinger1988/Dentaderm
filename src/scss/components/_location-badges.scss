@@ -12,24 +12,19 @@
     gap: 1rem 1.5rem;
 
     @include media(">=2xl") {
-      grid-template-columns: 7rem 1fr;
+      grid-template-columns: 5.2rem 1fr;
       gap: 1rem 2rem;
     }
 
     @include media(">=3xl") {
-      grid-template-columns: 7rem 1fr;
       gap: 1.4rem 2.5rem;
     }
   }
 
   &__icon {
     grid-area: icon;
-    fill: $white;
-    @include sizeRatio(6rem);
-
-    @include media(">=2xl") {
-      @include sizeRatio(7rem);
-    }
+    fill: $gray400;
+    @include sizeRatio(5.2rem);
   }
 
   &__title {
@@ -45,6 +40,12 @@
       content: "";
       flex: 1 1 auto;
       border-top: 1px solid $gray800;
+    }
+
+    &--light {
+      &::after {
+        border-top: 1px solid $gray300;
+      }
     }
   }
 

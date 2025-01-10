@@ -68,7 +68,7 @@
       class="btn btn--default btn--white header__appointment"
       data-modal-id="modal-appointment"
     >
-      Запис на консультацію
+      Отримати консультацію
     </button>
   </div>
 </header>
@@ -203,19 +203,28 @@
           <a class="menu__link" href="#">Діагностика і консультація</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Лікування зубів та ясен</a>
+          <a class="menu__link" href="#">Профілактика та гігієна</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Хірургічна стоматологія</a>
+          <a class="menu__link" href="#">Лікування зубів та каналів</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Ортодонтичне лікування</a>
+          <a class="menu__link" href="#">Гнатологія</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Естетична стоматологія</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Вирівнювання прикусу (Ортодонтія)</a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="#">Ортопедичне лікування</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Плазмоліфтинг</a>
+          <a class="menu__link" href="#">Хірургічна стоматологія</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Пародонтологічне лікування</a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="#">Ціни</a>
@@ -235,21 +244,29 @@
       </ul>
       <ul class="menu__list menu__list--secondary">
         <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#">
-            Рекомендації пацієнтам
-          </a>
-        </li>
-        <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#">Акції</a>
-        </li>
-        <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#"> Ліцензії та дозволи </a>
-        </li>
-        <li class="menu__item menu__item--secondary">
           <a class="menu__link menu__link--secondary" href="#">Статті</a>
         </li>
         <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#">Відгуки</a>
+          <a class="menu__link menu__link--secondary" href="#">Рекомендації пацієнтам</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Ліцензії та дозволи</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Спеціальні пропозиції</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">
+            Політика конфіденційності
+          </a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Договір оферти</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">
+            Умови прийому, оплати, гарантії
+          </a>
         </li>
       </ul>
     </nav>
@@ -285,6 +302,9 @@
         <p class="location-tabs__address-row location-tabs__address-row--sm">
           <a href="tel:+380676250862">(067) 625-08-62</a>
         </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="mailto:denta.d.kyiv@gmail.com">denta.d.kyiv@gmail.com</a>
+        </p>
       </div>
       <div class="location-tabs__address location-tabs__address--sm">
         <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -295,6 +315,9 @@
         </p>
         <p class="location-tabs__address-row location-tabs__address-row--sm">
           <a href="tel:+380987503030">(098) 750-30-30</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="mailto:pechersk@dentaderm.ua">pechersk@dentaderm.ua</a>
         </p>
       </div>
     </div>
@@ -309,6 +332,9 @@
         <p class="location-tabs__address-row location-tabs__address-row--sm">
           <a href="tel:+380631414491">(063) 141-44-91</a>
         </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="mailto:dentad.irpin@gmail.com">dentad.irpin@gmail.com</a>
+        </p>
       </div>
     </div>
   </div>
@@ -322,13 +348,13 @@
       <!-- #region content -->
       <main class="content page__content">
         <div class="content__crumbs">
-          <div class="container container--screen-xl">
+          <div class="container container--screen-2xl">
             <ul class="crumbs">
               <li class="crumbs__item">
                 <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
               </li>
               <li class="crumbs__item">
-                <span class="crumbs__endpoint">Акції</span>
+                <span class="crumbs__endpoint">Спеціальні пропозиції</span>
               </li>
             </ul>
           </div>
@@ -336,83 +362,178 @@
 
         <!-- #region doctors -->
         <section class="block content__block">
-          <div class="container container--screen-xl">
+          <div class="container container--screen-2xl">
             <header class="block__header">
-              <h1 class="block__title h2">Акції</h1>
+              <h1 class="block__title h2">Спеціальні пропозиції</h1>
             </header>
 
             <!-- #region discount grid -->
             <div class="discount-list">
-<!-- #region discount card -->
-<article class="discount-card discount-list__card">
-  <a href="#" class="discount-card__img-link">
-    <picture class="discount-card__img">
-      <source type="image/webp" srcset="assets/images/discount/discount_thumb_1.webp" />
-      <img
-        class="discount-card__img-item"
-        src="assets/images/discount/discount_thumb_1.jpg"
-        alt="img"
-      />
-    </picture>
-  </a>
-  <div class="discount-card__content">
-    <h3 class="discount-card__title">Dental Check-Up за адресою Кловський узвіз, 7а</h3>
+              <!-- #region discount card -->
+              <article class="discount-card discount-list__card">
+                <a href="#" class="discount-card__img-link">
+                  <picture class="discount-card__img">
+                    <source
+                      type="image/webp"
+                      srcset="assets/images/discount/discount_thumb_1.webp"
+                    />
+                    <img
+                      class="discount-card__img-item"
+                      src="assets/images/discount/discount_thumb_1.jpg"
+                      alt="img"
+                    />
+                  </picture>
+                  <div class="discount-card__date">Безстроково</div>
+                  <div class="discount-card__info">
+                    <div class="discount-card__percentage">-25%</div>
+                    <div class="discount-card__price">
+                      <div
+                        class="discount-card__price-item discount-card__price-item--old"
+                      >
+                        4 025
+                      </div>
+                      <div class="discount-card__price-item">3 000 грн</div>
+                    </div>
+                  </div>
+                </a>
 
-    <div class="discount-info discount-card__discount-info">
-      <div class="discount-info__percentage">-25%</div>
-      <div class="discount-info__price">
-        <div class="discount-info__price-item discount-info__price-item">3 000 грн</div>
-        <div class="discount-info__price-item discount-info__price-item--old">4 025</div>
-      </div>
-    </div>
+                <div class="discount-card__desc">
+                  <h3 class="discount-card__title">
+                    <a class="discount-card__title-link" href="#">
+                      Стоматологічний ЧЕК-АП
+                    </a>
+                  </h3>
 
-    <div class="discount-card__excerpt">
-      <p>
-        Комплексна діагностика — найкращий метод профілактики. Адже дозволяє вчасно
-        виявити будь-які порушення, дізнатися про стан кожного зуба, обрати ефективні
-        методи лікування й уникнути ускладнень.
-      </p>
-    </div>
-    <a href="#" class="btn btn--square">Детальніше</a>
-  </div>
-</article>
-<!-- #endregion discount card -->
-<!-- #region discount card -->
-<article class="discount-card discount-list__card">
-  <a href="#" class="discount-card__img-link">
-    <picture class="discount-card__img">
-      <source type="image/webp" srcset="assets/images/discount/discount_thumb_2.webp" />
-      <img
-        class="discount-card__img-item"
-        src="assets/images/discount/discount_thumb_2.jpg"
-        alt="img"
-      />
-    </picture>
-  </a>
-  <div class="discount-card__content">
-    <h3 class="discount-card__title">Дорослий Check-Up на Вишгородській та в Ірпені</h3>
+                  <p class="discount-card__excerpt">
+                    Комплексна діагностика — найкращий метод профілактики. Адже дозволяє
+                    вчасно виявити будь-які порушення, дізнатися про стан кожного зуба,
+                    обрати ефективні методи лікування й уникнути ускладнень.
+                  </p>
+                </div>
+              </article>
+              <!-- #endregion discount card -->
 
-    <div class="discount-info discount-card__discount-info">
-      <div class="discount-info__percentage">-25%</div>
-      <div class="discount-info__price">
-        <div class="discount-info__price-item discount-info__price-item">
-          від 2 600 грн
-        </div>
-        <div class="discount-info__price-item discount-info__price-item--old">3 450</div>
-      </div>
-    </div>
+              <!-- #region discount card -->
+              <article class="discount-card discount-list__card">
+                <a href="#" class="discount-card__img-link">
+                  <picture class="discount-card__img">
+                    <source
+                      type="image/webp"
+                      srcset="assets/images/discount/discount_thumb_2.webp"
+                    />
+                    <img
+                      class="discount-card__img-item"
+                      src="assets/images/discount/discount_thumb_2.jpg"
+                      alt="img"
+                    />
+                  </picture>
+                  <div class="discount-card__date">Безстроково</div>
+                  <div class="discount-card__info">
+                    <div class="discount-card__percentage">-25%</div>
+                    <div class="discount-card__price">
+                      <div
+                        class="discount-card__price-item discount-card__price-item--old"
+                      >
+                        4 025
+                      </div>
+                      <div class="discount-card__price-item">3 000 грн</div>
+                    </div>
+                  </div>
+                </a>
 
-    <div class="discount-card__excerpt">
-      <p>
-        Комплексна діагностика — найкращий метод профілактики. Адже дозволяє вчасно
-        виявити будь-які порушення, дізнатися про стан кожного зуба, обрати ефективні
-        методи лікування й уникнути ускладнень.
-      </p>
-    </div>
-    <a href="#" class="btn btn--square">Детальніше</a>
-  </div>
-</article>
-<!-- #endregion discount card -->
+                <div class="discount-card__desc">
+                  <h3 class="discount-card__title">
+                    <a class="discount-card__title-link" href="#">
+                      Підписка на профгігієну 2-4 рази
+                    </a>
+                  </h3>
+
+                  <p class="discount-card__excerpt">
+                    Чистити зуби слід вранці та ввечері — це правило ми знаємо з
+                    дитинства. Догляд за ротовою порожниною передбачає використання
+                    якісних зубних щіток, паст, ірригаторів. Та варто пам’ятати про те, що
+                    навіть ретельне дотриман...
+                  </p>
+                </div>
+              </article>
+              <!-- #endregion discount card -->
+
+              <!-- #region discount card -->
+              <article class="discount-card discount-list__card">
+                <a href="#" class="discount-card__img-link">
+                  <picture class="discount-card__img">
+                    <source
+                      type="image/webp"
+                      srcset="assets/images/discount/discount_thumb_3.webp"
+                    />
+                    <img
+                      class="discount-card__img-item"
+                      src="assets/images/discount/discount_thumb_3.jpg"
+                      alt="img"
+                    />
+                  </picture>
+                  <div class="discount-card__date">Безстроково</div>
+                </a>
+
+                <div class="discount-card__desc">
+                  <h3 class="discount-card__title">
+                    <a class="discount-card__title-link" href="#">
+                      Лікування по страховці
+                    </a>
+                  </h3>
+
+                  <p class="discount-card__excerpt">
+                    Напевно немає такої людини у світі, яку б жодного разу не боліли зуби.
+                    Важливо не ігнорувати цю проблему: звертайтеся до лікаря вчасно. Адже
+                    самолікування, у кращому випадку, лише допомагає зняти біль на певний
+                    час.
+                  </p>
+                </div>
+              </article>
+              <!-- #endregion discount card -->
+
+              <!-- #region discount card -->
+              <article class="discount-card discount-list__card">
+                <a href="#" class="discount-card__img-link">
+                  <picture class="discount-card__img">
+                    <source
+                      type="image/webp"
+                      srcset="assets/images/discount/discount_thumb_4.webp"
+                    />
+                    <img
+                      class="discount-card__img-item"
+                      src="assets/images/discount/discount_thumb_4.jpg"
+                      alt="img"
+                    />
+                  </picture>
+                  <div class="discount-card__date">Безстроково</div>
+                  <div class="discount-card__info">
+                    <div class="discount-card__percentage">-25%</div>
+                    <div class="discount-card__price">
+                      <div
+                        class="discount-card__price-item discount-card__price-item--old"
+                      >
+                        4 025
+                      </div>
+                      <div class="discount-card__price-item">3 000 грн</div>
+                    </div>
+                  </div>
+                </a>
+
+                <div class="discount-card__desc">
+                  <h3 class="discount-card__title">
+                    <a class="discount-card__title-link" href="#"> Пакетні пропозиції </a>
+                  </h3>
+
+                  <p class="discount-card__excerpt">
+                    Клініка естетичної стоматології DentaDerm в Києві пропонує вам
+                    лікування зубів європейського рівня. Ми використовуємо тільки новітні
+                    методики, сертифіковані матеріали світових брендів, сучасне
+                    обладнання.
+                  </p>
+                </div>
+              </article>
+              <!-- #endregion discount card -->
             </div>
             <!-- #endregion discount grid -->
           </div>
@@ -557,6 +678,9 @@
               <p class="location-tabs__address-row location-tabs__address-row--sm">
                 <a href="tel:+380676250862">(067) 625-08-62</a>
               </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="mailto:denta.d.kyiv@gmail.com">denta.d.kyiv@gmail.com</a>
+              </p>
             </div>
             <div class="location-tabs__address">
               <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -567,6 +691,9 @@
               </p>
               <p class="location-tabs__address-row location-tabs__address-row--sm">
                 <a href="tel:+380987503030">(098) 750-30-30</a>
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="mailto:pechersk@dentaderm.ua">pechersk@dentaderm.ua</a>
               </p>
             </div>
           </div>
@@ -583,6 +710,9 @@
               </p>
               <p class="location-tabs__address-row location-tabs__address-row--sm">
                 <a href="tel:+380631414491">(063) 141-44-91</a>
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="mailto:dentad.irpin@gmail.com">dentad.irpin@gmail.com</a>
               </p>
             </div>
           </div>
@@ -612,19 +742,22 @@
             <a class="secondary-nav__link" href="#">Статті</a>
           </li>
           <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#">Відгуки</a>
-          </li>
-          <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="#">Рекомендації пацієнтам</a>
           </li>
           <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="#">Ліцензії та дозволи</a>
           </li>
           <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#">Акції</a>
+            <a class="secondary-nav__link" href="#">Спеціальні пропозиції</a>
           </li>
           <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="#">Політика конфіденційності</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Договір оферти</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Умови прийому, оплати, гарантії</a>
           </li>
         </ul>
       </nav>
@@ -693,7 +826,7 @@
 <div class="modal" id="modal-appointment">
   <!-- #region modal title -->
   <div class="modal__heading">
-    <h3 class="modal__title">Записатися на прийом</h3>
+    <h3 class="modal__title">Отримати консультацію</h3>
     <button class="modal-close modal__close-btn">
       <svg class="icon modal__close-icon">
         <use href="assets/icons.svg#cancel" />
@@ -767,7 +900,7 @@
           </div>
         </div>
         <div class="form__footer form__footer--center">
-          <button class="btn btn--square">Записатися на прийом</button>
+          <button class="btn btn--square">Відправити</button>
         </div>
       </form>
       <!-- #endregion appointment form -->

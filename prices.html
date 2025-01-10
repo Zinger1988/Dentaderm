@@ -68,7 +68,7 @@
       class="btn btn--default btn--white header__appointment"
       data-modal-id="modal-appointment"
     >
-      Запис на консультацію
+      Отримати консультацію
     </button>
   </div>
 </header>
@@ -203,19 +203,28 @@
           <a class="menu__link" href="#">Діагностика і консультація</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Лікування зубів та ясен</a>
+          <a class="menu__link" href="#">Профілактика та гігієна</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Хірургічна стоматологія</a>
+          <a class="menu__link" href="#">Лікування зубів та каналів</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Ортодонтичне лікування</a>
+          <a class="menu__link" href="#">Гнатологія</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Естетична стоматологія</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Вирівнювання прикусу (Ортодонтія)</a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="#">Ортопедичне лікування</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Плазмоліфтинг</a>
+          <a class="menu__link" href="#">Хірургічна стоматологія</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Пародонтологічне лікування</a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="#">Ціни</a>
@@ -235,21 +244,29 @@
       </ul>
       <ul class="menu__list menu__list--secondary">
         <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#">
-            Рекомендації пацієнтам
-          </a>
-        </li>
-        <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#">Акції</a>
-        </li>
-        <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#"> Ліцензії та дозволи </a>
-        </li>
-        <li class="menu__item menu__item--secondary">
           <a class="menu__link menu__link--secondary" href="#">Статті</a>
         </li>
         <li class="menu__item menu__item--secondary">
-          <a class="menu__link menu__link--secondary" href="#">Відгуки</a>
+          <a class="menu__link menu__link--secondary" href="#">Рекомендації пацієнтам</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Ліцензії та дозволи</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Спеціальні пропозиції</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">
+            Політика конфіденційності
+          </a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">Договір оферти</a>
+        </li>
+        <li class="menu__item menu__item--secondary">
+          <a class="menu__link menu__link--secondary" href="#">
+            Умови прийому, оплати, гарантії
+          </a>
         </li>
       </ul>
     </nav>
@@ -285,6 +302,9 @@
         <p class="location-tabs__address-row location-tabs__address-row--sm">
           <a href="tel:+380676250862">(067) 625-08-62</a>
         </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="mailto:denta.d.kyiv@gmail.com">denta.d.kyiv@gmail.com</a>
+        </p>
       </div>
       <div class="location-tabs__address location-tabs__address--sm">
         <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -295,6 +315,9 @@
         </p>
         <p class="location-tabs__address-row location-tabs__address-row--sm">
           <a href="tel:+380987503030">(098) 750-30-30</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="mailto:pechersk@dentaderm.ua">pechersk@dentaderm.ua</a>
         </p>
       </div>
     </div>
@@ -308,6 +331,9 @@
         </p>
         <p class="location-tabs__address-row location-tabs__address-row--sm">
           <a href="tel:+380631414491">(063) 141-44-91</a>
+        </p>
+        <p class="location-tabs__address-row location-tabs__address-row--sm">
+          <a href="mailto:dentad.irpin@gmail.com">dentad.irpin@gmail.com</a>
         </p>
       </div>
     </div>
@@ -341,53 +367,31 @@
               <h1 class="block__title h2">Ціни</h1>
             </header>
 
-            <!-- #region tabs -->
-            <div class="tabs base-tabs">
-              <!-- #region tabs head -->
-              <div class="tabs-head base-tabs__head">
-                <button class="tabs-btn base-tabs__btn active" data-tab-target="kiyv">
-                  Клініка в Києві
-                </button>
-                <button class="tabs-btn base-tabs__btn" data-tab-target="irpin">
-                  Клініка в Ірпіні
-                </button>
-              </div>
-              <!-- #endregion tabs head -->
-
-              <!-- #region tabs content -->
-              <div class="tabs-content base-tabs__content">
-                <!-- #region tabs content item -->
-                <div
-                  class="tabs-content-item base-tabs__content-item"
-                  data-tab-content="kiyv"
-                >
+            <!-- #region prices -->
+            <div class="prices-page">
+              <div class="row">
+                <div class="col-12 col-lg-7 col-2xl-8">
+                  <!-- #region search panel -->
+<div class="prices-page__search search-panel">
+  <svg class="icon search-panel__search-icon">
+    <use href="assets/icons.svg#search" />
+  </svg>
+  <input
+    class="input-text search-panel__control"
+    type="text"
+    placeholder="Знайти послугу..."
+  />
+  <button class="search-panel__reset">
+    <svg class="icon search-panel__icon">
+      <use href="assets/icons.svg#cancel" />
+    </svg>
+  </button>
+  <div class="search-panel__dropdown"></div>
+</div>
+                  <!-- #endregion search panel -->
+                  <div class="prices-page__accordion">
 <!--#region price accordion -->
 <ul class="accordion prices">
-  <!--#region price accordion item -->
-  <li class="accordion-item prices__item">
-    <div class="accordion-label prices__label">
-      <span>Діагностика і консультація</span>
-      <svg class="icon prices__arrow">
-        <use href="assets/icons.svg#shevron-bottom" />
-      </svg>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <ul class="prices prices--sub">
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-
   <!--#region price accordion item -->
   <li class="accordion-item prices__item">
     <div class="accordion-label prices__label">
@@ -402,7 +406,10 @@
         <li class="accordion-item prices__item prices__item--sub">
           <div class="accordion-label prices__label prices__label--sub">
             <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Дорослий Чек Ап">Дорослий Чек Ап</span>
               <b>від 2 600 грн</b>
             </a>
           </div>
@@ -410,8 +417,135 @@
         <li class="accordion-item prices__item prices__item--sub">
           <div class="accordion-label prices__label prices__label--sub">
             <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Відбілювання зубів">Відбілювання зубів</span>
+              <b>від 4 400 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Лікування кореневих каналів">
+                Лікування кореневих каналів
+              </span>
+              <b>від 8 800 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Пломбування зубів">Пломбування зубів</span>
+              <b>від 2 250 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Лікування карієсу">Лікування карієсу</span>
+              <b>від 2 250 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Скейлінг пародонтальних кишень">
+                Скейлінг пародонтальних кишень
+              </span>
+              <b>від 2 400 грн.</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Скейлінг пародонтальних кишень">
+                Пародонтологічна карта
+              </span>
+              <b>від 2 400 грн.</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Професійна гігієна"> Професійна гігієна </span>
+              <b>від 2 000 грн.</b>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <!--#endregion price accordion sub -->
+    </div>
+  </li>
+  <!--#endregion price accordion item -->
+
+  <!--#region price accordion item -->
+  <li class="accordion-item prices__item">
+    <div class="accordion-label prices__label">
+      <span>Діагностика та консультація</span>
+      <svg class="icon prices__arrow">
+        <use href="assets/icons.svg#shevron-bottom" />
+      </svg>
+    </div>
+    <div class="accordion__panel">
+      <!--#region price accordion sub -->
+      <ul class="prices prices--sub">
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Рентгенографія та КТ">Рентгенографія та КТ</span>
+              <b>від 2 000 грн.</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Функціональна діагностика">
+                Функціональна діагностика
+              </span>
+              <b>від 8 070 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Перший прийом">Перший прийом</span>
+              <b>від 300 грн</b>
             </a>
           </div>
         </li>
@@ -435,16 +569,79 @@
         <li class="accordion-item prices__item prices__item--sub">
           <div class="accordion-label prices__label prices__label--sub">
             <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Седація">Седація</span>
+              <b>від 4 500 грн</b>
             </a>
           </div>
         </li>
         <li class="accordion-item prices__item prices__item--sub">
           <div class="accordion-label prices__label prices__label--sub">
             <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Імплантація зубів">Імплантація зубів</span>
+              <b>від 14 500 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Пластика вуздечки">Пластика вуздечки</span>
+              <b>від 1 700 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Синус ліфтинг">Синус ліфтинг</span>
+              <b>від 13 000 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Кісткова пластика">Кісткова пластика</span>
+              <b>від 13 000 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Видалення зубів мудрості">
+                Видалення зубів мудрості
+              </span>
+              <b>від 4 070 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Видалення зубів">Видалення зубів</span>
+              <b>від 3 050 грн</b>
             </a>
           </div>
         </li>
@@ -468,16 +665,81 @@
         <li class="accordion-item prices__item prices__item--sub">
           <div class="accordion-label prices__label prices__label--sub">
             <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Мікроімпланти">Мікроімпланти</span>
+              <b>від 6 950 грн</b>
             </a>
           </div>
         </li>
         <li class="accordion-item prices__item prices__item--sub">
           <div class="accordion-label prices__label prices__label--sub">
             <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Мікроімпланти">Пластинки на зуби</span>
+              <b>від 4 000 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Елайнери (інвізілайн) США">
+                Елайнери (інвізілайн) США
+              </span>
+              <b>від 195 200 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Цифрові брекети Інсігнія (США)">
+                Цифрові брекети Інсігнія (США)
+              </span>
+              <b>від 88 200 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Самолігуючі брекети">Самолігуючі брекети</span>
+              <b>від 28 250 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Металеві брекети">Металеві брекети</span>
+              <b>від 28 250 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Керамічні брекети">Керамічні брекети</span>
+              <b>від 38 300 грн</b>
             </a>
           </div>
         </li>
@@ -501,16 +763,44 @@
         <li class="accordion-item prices__item prices__item--sub">
           <div class="accordion-label prices__label prices__label--sub">
             <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Вініри">Вініри</span>
+              <b>від 15 500 грн</b>
             </a>
           </div>
         </li>
         <li class="accordion-item prices__item prices__item--sub">
           <div class="accordion-label prices__label prices__label--sub">
             <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Зубні протези">Зубні протези</span>
+              <b>від 15 500 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Коронки на зуби">Коронки на зуби</span>
+              <b>від 9 300 грн</b>
+            </a>
+          </div>
+        </li>
+        <li class="accordion-item prices__item prices__item--sub">
+          <div class="accordion-label prices__label prices__label--sub">
+            <a href="#" class="prices__link">
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Керамічна вкладка">Керамічна вкладка</span>
+              <b>від 9 300 грн</b>
             </a>
           </div>
         </li>
@@ -534,16 +824,11 @@
         <li class="accordion-item prices__item prices__item--sub">
           <div class="accordion-label prices__label prices__label--sub">
             <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
+              <svg class="icon prices__icon">
+                <use href="assets/icons.svg#external-source" />
+              </svg>
+              <span data-service-name="Плазмоліфтинг">Плазмоліфтинг</span>
+              <b>від 5 000 грн</b>
             </a>
           </div>
         </li>
@@ -554,213 +839,44 @@
   <!--#endregion price accordion item -->
 </ul>
 <!--#endregion price accordion -->
+                  </div>
                 </div>
-                <!-- #endregion tabs content item -->
-
-                <!-- #region tabs content item -->
-                <div
-                  class="tabs-content-item base-tabs__content-item"
-                  data-tab-content="irpin"
-                >
-<!--#region price accordion -->
-<ul class="accordion prices">
-  <!--#region price accordion item -->
-  <li class="accordion-item prices__item">
-    <div class="accordion-label prices__label">
-      <span>Діагностика і консультація</span>
-      <svg class="icon prices__arrow">
-        <use href="assets/icons.svg#shevron-bottom" />
-      </svg>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <ul class="prices prices--sub">
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-
-  <!--#region price accordion item -->
-  <li class="accordion-item prices__item">
-    <div class="accordion-label prices__label">
-      <span>Лікування зубів та ясен</span>
-      <svg class="icon prices__arrow">
-        <use href="assets/icons.svg#shevron-bottom" />
-      </svg>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <ul class="prices prices--sub">
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-
-  <!--#region price accordion item -->
-  <li class="accordion-item prices__item">
-    <div class="accordion-label prices__label">
-      <span>Хірургічна стоматологія</span>
-      <svg class="icon prices__arrow">
-        <use href="assets/icons.svg#shevron-bottom" />
-      </svg>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <ul class="prices prices--sub">
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-
-  <!--#region price accordion item -->
-  <li class="accordion-item prices__item">
-    <div class="accordion-label prices__label">
-      <span>Ортодонтичне лікування</span>
-      <svg class="icon prices__arrow">
-        <use href="assets/icons.svg#shevron-bottom" />
-      </svg>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <ul class="prices prices--sub">
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-
-  <!--#region price accordion item -->
-  <li class="accordion-item prices__item">
-    <div class="accordion-label prices__label">
-      <span>Ортопедичне лікування</span>
-      <svg class="icon prices__arrow">
-        <use href="assets/icons.svg#shevron-bottom" />
-      </svg>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <ul class="prices prices--sub">
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-
-  <!--#region price accordion item -->
-  <li class="accordion-item prices__item">
-    <div class="accordion-label prices__label">
-      <span>Плазмоліфтинг</span>
-      <svg class="icon prices__arrow">
-        <use href="assets/icons.svg#shevron-bottom" />
-      </svg>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <ul class="prices prices--sub">
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-        <li class="accordion-item prices__item prices__item--sub">
-          <div class="accordion-label prices__label prices__label--sub">
-            <a href="#" class="prices__link">
-              <span>Дорослий Чек Ап</span>
-              <b>від 2 600 грн</b>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-</ul>
-<!--#endregion price accordion -->
+                <div class="col-12 col-lg-5 col-2xl-4">
+                  <!-- #region staff banner -->
+                  <div class="staff-banner-ver prices-page__banner">
+                    <div class="staff-banner-ver__inner">
+                      <picture class="staff-banner-ver__img">
+                        <source
+                          type="image/webp"
+                          srcset="assets/images/staff-banner/storozhenko.webp"
+                        />
+                        <img
+                          class="staff-banner-ver__img-item"
+                          src="assets/images/staff-banner/storozhenko.png"
+                          alt="Dentaderm clinic doctor"
+                          loading="lazy"
+                        />
+                      </picture>
+                      <div class="staff-banner-ver__text">
+                        <div class="staff-banner-ver__text-inner text-center">
+                          <p>Отримайте особисту консультацію від наших спеціалістів!</p>
+                        </div>
+                      </div>
+                      <div class="staff-banner-ver__footer">
+                        <button
+                          class="btn btn--white btn--square btn--fluid"
+                          data-modal-id="modal-appointment"
+                        >
+                          Отримати консультацію
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- #endregion staff banner -->
                 </div>
-                <!-- #endregion tabs content item -->
               </div>
-              <!-- #endregion tabs content -->
             </div>
-            <!-- #endregion tabs -->
+            <!-- #endregion prices -->
           </div>
         </section>
         <!-- #endregion doctors -->
@@ -903,6 +1019,9 @@
               <p class="location-tabs__address-row location-tabs__address-row--sm">
                 <a href="tel:+380676250862">(067) 625-08-62</a>
               </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="mailto:denta.d.kyiv@gmail.com">denta.d.kyiv@gmail.com</a>
+              </p>
             </div>
             <div class="location-tabs__address">
               <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -913,6 +1032,9 @@
               </p>
               <p class="location-tabs__address-row location-tabs__address-row--sm">
                 <a href="tel:+380987503030">(098) 750-30-30</a>
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="mailto:pechersk@dentaderm.ua">pechersk@dentaderm.ua</a>
               </p>
             </div>
           </div>
@@ -929,6 +1051,9 @@
               </p>
               <p class="location-tabs__address-row location-tabs__address-row--sm">
                 <a href="tel:+380631414491">(063) 141-44-91</a>
+              </p>
+              <p class="location-tabs__address-row location-tabs__address-row--sm">
+                <a href="mailto:dentad.irpin@gmail.com">dentad.irpin@gmail.com</a>
               </p>
             </div>
           </div>
@@ -958,19 +1083,22 @@
             <a class="secondary-nav__link" href="#">Статті</a>
           </li>
           <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#">Відгуки</a>
-          </li>
-          <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="#">Рекомендації пацієнтам</a>
           </li>
           <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="#">Ліцензії та дозволи</a>
           </li>
           <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#">Акції</a>
+            <a class="secondary-nav__link" href="#">Спеціальні пропозиції</a>
           </li>
           <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="#">Політика конфіденційності</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Договір оферти</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Умови прийому, оплати, гарантії</a>
           </li>
         </ul>
       </nav>
@@ -1039,7 +1167,7 @@
 <div class="modal" id="modal-appointment">
   <!-- #region modal title -->
   <div class="modal__heading">
-    <h3 class="modal__title">Записатися на прийом</h3>
+    <h3 class="modal__title">Отримати консультацію</h3>
     <button class="modal-close modal__close-btn">
       <svg class="icon modal__close-icon">
         <use href="assets/icons.svg#cancel" />
@@ -1113,7 +1241,7 @@
           </div>
         </div>
         <div class="form__footer form__footer--center">
-          <button class="btn btn--square">Записатися на прийом</button>
+          <button class="btn btn--square">Відправити</button>
         </div>
       </form>
       <!-- #endregion appointment form -->

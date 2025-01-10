@@ -1,0 +1,102 @@
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+  gap: 1rem;
+
+  $this: &;
+
+  @include media(">=lg") {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  }
+
+  &__item {
+    height: 100%;
+  }
+
+  .related-tile__inner {
+    height: 100%;
+    width: 100%;
+  }
+
+  &--lg {
+    gap: 0;
+    border: 1px solid $gray200;
+
+    #{$this}__item {
+      border: none;
+      box-shadow: 1px 1px 0 $gray200;
+
+      .related-tile__inner {
+        padding: 2.8rem 7.8rem 2.8rem 4rem;
+
+        @include media(">=3xl") {
+          font-size: 1.8rem;
+          font-weight: 300;
+          min-height: 12rem;
+        }
+      }
+    }
+  }
+}
+
+.related-tile {
+  @extend %linkReset;
+  display: inline-flex;
+  border: 1px solid $gray200;
+  @include animate(border);
+
+  $this: &;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    padding: 1.8rem 7.8rem 1.8rem 3rem;
+    @include animate(background-color color transform box-shadow);
+    border-radius: 0 0 2rem 0;
+
+    &::after {
+      @include positionRightCenter();
+      @include animate(right width border height, 0.2s);
+      content: "";
+      right: 2.5rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 100%;
+      border: 1px solid $black;
+    }
+
+    &::before {
+      @include positionRightCenter();
+      @include animate(background-image);
+      content: "";
+      right: 3.1rem;
+      width: 1.8rem;
+      height: 0.9rem;
+      background: url(../assets/images/arrow_black_right.svg) center / contain no-repeat;
+    }
+  }
+
+  @include mediaHover() {
+    &:hover {
+      #{$this}__inner {
+        background-color: $gray950;
+        color: $white;
+        transform: translate(-0.8rem, -0.8rem);
+        box-shadow: 0 0.4rem 1.8rem rgba($black, 0.2);
+
+        &::after {
+          border: 1px solid $white;
+          right: 3.8rem;
+          width: 2rem;
+          height: 2rem;
+        }
+
+        &::before {
+          background-image: url(../assets/images/arrow_white_right.svg);
+        }
+      }
+    }
+  }
+}

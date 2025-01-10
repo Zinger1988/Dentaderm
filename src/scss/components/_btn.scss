@@ -69,6 +69,29 @@
     }
   }
 
+  &--white-alt {
+    &#{$this}--square {
+      color: black;
+      background: $white;
+
+      &::after {
+        border-right: 1px solid $white;
+        border-bottom: 1px solid $white;
+      }
+
+      @include mediaHover() {
+        &:hover {
+          background: $gray200;
+
+          &::after {
+            border-right: 1px solid $gray200;
+            border-bottom: 1px solid $gray200;
+          }
+        }
+      }
+    }
+  }
+
   &--lightBlue {
     &#{$this}--square {
       color: black;

@@ -248,17 +248,85 @@ const initReviewCarousel = () => {
     },
   });
 
-  reviewsCarousel.on("beforeTransitionStart", (swiperProps) => {
-    const { previousIndex, slides } = swiperProps;
-    const slide = slides[previousIndex];
-
-    const expandPanel = slide.querySelector(".expand-container__panel--expanded");
-
-    if (!expandPanel) return;
-
-    const expandBtn = slide.querySelector(".expand-container__btn");
-    expandBtn.click();
+  reviewsCarousel.on("touchEnd", (swiper) => {
+    updateExpand(swiper);
   });
+
+  reviewsCarousel.on("beforeTransitionStart", (swiper) => {
+    updateExpand(swiper);
+  });
+};
+
+const initReviewCarouselAlt = () => {
+  const sliderContainer = document.querySelector(
+    ".reviews-carousel--alt .reviews-carousel__swiper"
+  );
+
+  if (!sliderContainer) return;
+
+  const wrapper = sliderContainer.closest(".reviews-section__container");
+  const customPagination = wrapper.querySelector(".reviews-section__pagination");
+  const reviewsCarousel = new Swiper(".reviews-carousel--alt .reviews-carousel__swiper", {
+    grabCursor: true,
+    keyboardControl: true,
+    freeMode: false,
+    loop: true,
+    mousewheelControl: true,
+    spaceBetween: 40,
+    slidesPerView: 3,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        freeMode: true,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 1,
+      },
+      1400: {
+        slidesPerView: 2,
+      },
+    },
+    on: {
+      init: function (swiper) {
+        const carouselNextBtn = wrapper.querySelector(".reviews-section__nav-btn--next");
+        const carouselPrevBtn = wrapper.querySelector(".reviews-section__nav-btn--prev");
+
+        carouselNextBtn.addEventListener("click", () => swiper.slideNext());
+        carouselPrevBtn.addEventListener("click", () => swiper.slidePrev());
+      },
+    },
+  });
+
+  reviewsCarousel.on("slideChange", (swiper) => {
+    updatePagination(customPagination, swiper);
+  });
+
+  reviewsCarousel.on("touchEnd", (swiper) => {
+    updateExpand(swiper);
+  });
+
+  reviewsCarousel.on("beforeTransitionStart", (swiper) => {
+    updateExpand(swiper);
+  });
+
+  updatePagination(customPagination, reviewsCarousel);
+};
+
+const updateExpand = (swiper) => {
+  const { previousIndex, slides } = swiper;
+  const slide = slides[previousIndex];
+
+  if (!slide) return;
+
+  const expandPanel = slide.querySelector(".expand-container__panel--expanded");
+
+  if (!expandPanel) return;
+
+  const expandBtn = slide.querySelector(".expand-container__btn");
+  expandBtn.click();
 };
 
 const initCardCarousel = () => {
@@ -382,7 +450,21 @@ const initCardCarousel = () => {
   };
 
   const discountCarouselOptions = {
-    slidesPerView: 1,
+    slidesPerView: 4,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 28,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 28,
+      },
+      1400: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
   };
 
   const demoCarousel = new Swiper(".card-carousel--demo .card-carousel__swiper", {
@@ -458,18 +540,18 @@ const initReviewSlider = () => {
 
   cardCarouselNextBtn.addEventListener("click", () => swiper.slideNext());
   cardCarouselPrevBtn.addEventListener("click", () => swiper.slidePrev());
-  swiper.on("beforeTransitionStart", (swiperProps) => {
-    const { previousIndex, slides } = swiperProps;
-    const slide = slides[previousIndex];
 
-    const expandPanel = slide.querySelector(".expand-container__panel--expanded");
-
-    if (!expandPanel) return;
-
-    const expandBtn = slide.querySelector(".expand-container__btn");
-    expandBtn.click();
+  swiper.on("slideChange", (swiper) => {
+    updatePagination(customPagination, swiper);
   });
-  swiper.on("slideChange", () => updatePagination(customPagination, swiper));
+
+  swiper.on("touchEnd", (swiper) => {
+    updateExpand(swiper);
+  });
+
+  swiper.on("beforeTransitionStart", (swiper) => {
+    updateExpand(swiper);
+  });
 
   updatePagination(customPagination, swiper);
 };
@@ -707,6 +789,7 @@ const initHeroSlider = () => {
     lazy: true,
     grabCursor: true,
     slidesPerView: 1,
+    spaceBetween: 40,
   });
 
   const navButtons = swiper.el.querySelectorAll(".hero-card__nav-btn");
@@ -720,16 +803,12 @@ const initHeroSlider = () => {
   nextNavBtns.forEach((btn) => btn.addEventListener("click", () => swiper.slideNext()));
   prevNavBtns.forEach((btn) => btn.addEventListener("click", () => swiper.slidePrev()));
 
-  swiper.on("beforeTransitionStart", (swiperProps) => {
-    const { previousIndex, slides } = swiperProps;
-    const slide = slides[previousIndex];
+  swiper.on("touchEnd", (swiper) => {
+    updateExpand(swiper);
+  });
 
-    const expandPanel = slide.querySelector(".expand-container__panel--expanded");
-
-    if (!expandPanel) return;
-
-    const expandBtn = slide.querySelector(".expand-container__btn");
-    expandBtn.click();
+  swiper.on("beforeTransitionStart", (swiper) => {
+    updateExpand(swiper);
   });
 };
 
@@ -931,7 +1010,7 @@ const pageNavigation = () => {
     lastScrollPos = scollTopPos;
   };
 
-  const debouncedNavHandler = debounce(calcContainerPos, 500);
+  const debouncedNavHandler = debounce(calcContainerPos, 50);
   page.addEventListener("scroll", debouncedNavHandler);
 
   containers.forEach((container, i) => {
@@ -975,7 +1054,7 @@ const calcNavContentMargin = () => {
     "resize",
     debounce(() => {
       navContentEl.style.marginTop = `${bannerEl.clientHeight}px`;
-    }, 500)
+    }, 250)
   );
 
   window.addEventListener("scroll", () => console.log("scroll"), true);
@@ -983,11 +1062,234 @@ const calcNavContentMargin = () => {
   bannerEl.addEventListener("scroll", () => console.log("scroll"), true);
 };
 
+const serviceSearch = function () {
+  const searchBar = document.querySelector(".prices-page__search");
+
+  if (!searchBar) return;
+
+  const searchControl = searchBar.querySelector(".search-panel__control");
+  const searchReset = searchBar.querySelector(".search-panel__reset");
+  const dropdownList = searchBar.querySelector(".search-panel__dropdown");
+  const services = Array.from(document.querySelectorAll("[data-service-name]"));
+
+  function searchServices(brandsCollection) {
+    if (searchControl.value.trim()) {
+      const regex = new RegExp(searchControl.value.trim(), "ig");
+
+      return brandsCollection.reduce((acc, cur) => {
+        const match = Array.from(cur.dataset.serviceName.matchAll(regex));
+        if (match.length > 0) {
+          acc.push({
+            ref: cur,
+            marked: markString(match),
+          });
+        }
+        return acc;
+      }, []);
+    }
+  }
+
+  function markString(matcher) {
+    if (matcher.length) {
+      return matcher.reduce((acc, cur, i, arr) => {
+        if (i === 0) {
+          acc += cur.input.slice(0, cur.index);
+        }
+
+        acc += `<b style="font-weight: 700;">${cur.input.slice(
+          cur.index,
+          cur.index + cur[0].length
+        )}</b>`;
+
+        if (arr[i + 1]) {
+          acc += cur.input.slice(cur.index + cur[0].length, arr[i + 1].index);
+        } else {
+          acc += cur.input.slice(cur.index + cur[0].length, cur.input.length + 1);
+        }
+
+        return acc;
+      }, "");
+    }
+  }
+
+  function scrollToService(serviceEl) {
+    const page = document.querySelector(".page");
+    page.scrollTo({
+      top: getOffsetTop(serviceEl) - 250,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+
+  searchControl.addEventListener("input", () => {
+    dropdownList.innerHTML = "";
+
+    if (searchControl.value.trim()) {
+      const foundedBrands = searchServices(services);
+
+      if (foundedBrands.length) {
+        dropdownList.style = "display: flex;";
+        searchReset.style = "display: block;";
+
+        const fragment = new DocumentFragment();
+
+        foundedBrands.forEach((item) => {
+          const ddBrand = document.createElement("div");
+          ddBrand.classList.add("search-panel__dropdown-link");
+          ddBrand.innerHTML = item.marked;
+          ddBrand.scrollToRef = item.ref;
+
+          fragment.append(ddBrand);
+        });
+
+        dropdownList.append(fragment);
+      } else {
+        searchReset.style = "";
+        dropdownList.style = "";
+      }
+
+      searchReset.style = "display: block;";
+    }
+  });
+
+  searchControl.addEventListener("input", (e) => {
+    if (!e.target.value.trim()) {
+      searchReset.click();
+    }
+
+    if (!e.key.match(/[\wа-яії'\s-]/i)) {
+      return false;
+    }
+  });
+
+  dropdownList.addEventListener("click", (e) => {
+    const target = e.target.classList.contains("search-panel__dropdown-link")
+      ? e.target
+      : e.target.closest(".search-panel__dropdown-link");
+
+    if (target) {
+      const accordionLabel = target.scrollToRef.closest(
+        ".prices__item:not(.prices__item--sub)"
+      ).firstElementChild;
+      const accordionPanel = target.scrollToRef.closest(".accordion__panel");
+
+      if (!accordionLabel.classList.contains("label-active")) {
+        accordionLabel.classList.add("label-active");
+        accordionPanel.classList.add("panel-active");
+        accordionPanel.style.maxHeight = accordionPanel.scrollHeight + "px";
+      }
+
+      scrollToService(target.scrollToRef);
+      target.scrollToRef.closest(".prices__link").classList.add("service-search-target");
+      searchControl.value = target.textContent;
+      dropdownList.innerHTML = "";
+      dropdownList.style = "";
+    }
+  });
+
+  searchReset.addEventListener("click", () => {
+    searchControl.value = "";
+    searchReset.style = "";
+    dropdownList.innerHTML = "";
+    dropdownList.style = "";
+  });
+
+  document.addEventListener("click", (e) => {
+    const activeSearchElem = document.querySelector(".service-search-target");
+
+    if (e.target !== dropdownList && !e.target.closest(".search-panel__dropdown")) {
+      dropdownList.style = "";
+    }
+
+    if (
+      activeSearchElem &&
+      e.target !== dropdownList &&
+      !e.target.classList.contains("search-panel__dropdown-link") &&
+      !e.target.closest(".search-panel__dropdown-link") &&
+      e.target !== activeSearchElem
+    ) {
+      activeSearchElem.closest(".prices__link").classList.remove("service-search-target");
+    }
+  });
+};
+
+const articleRating = () => {
+  const wrapper = document.querySelector(".article-rating");
+
+  if (!wrapper) return;
+
+  const ratingEls = [];
+
+  const manipulatePrevSibling = (el, cb) => {
+    cb(el);
+
+    if (el.previousElementSibling) {
+      return manipulatePrevSibling(el.previousElementSibling, cb);
+    }
+
+    return;
+  };
+
+  const manipulateNextSibling = (el, cb) => {
+    if (el.nextElementSibling) {
+      cb(el.nextElementSibling);
+      return manipulateNextSibling(el.nextElementSibling, cb);
+    }
+
+    return;
+  };
+
+  Array(10)
+    .fill(null)
+    .forEach((_, i) => {
+      const elWrapper = document.createElement("div");
+      elWrapper.classList.add("article-rating__star");
+      elWrapper.innerHTML = `<svg class="article-rating__star-icon icon">
+        <use href="assets/icons.svg#star-solid" />
+      </svg>`;
+
+      const elRatingMark = document.createElement("div");
+      elRatingMark.classList.add("article-rating__star-mark");
+      elRatingMark.textContent = i + 1;
+
+      elWrapper.prepend(elRatingMark);
+      ratingEls.push(elWrapper);
+
+      elWrapper.addEventListener("mouseenter", (e) => {
+        manipulatePrevSibling(e.target, (el) => {
+          el.classList.add("active");
+        });
+        manipulateNextSibling(e.target, (el) => {
+          el.classList.remove("active");
+        });
+      });
+
+      elWrapper.addEventListener("click", (e) => {
+        wrapper.setAttribute("data-mark", i + 1);
+      });
+    });
+
+  wrapper.append(...ratingEls);
+
+  wrapper.addEventListener("mouseleave", () => {
+    const mark = parseInt(wrapper.getAttribute("data-mark")) || 0;
+
+    ratingEls.forEach((el, i) => {
+      if (i >= mark) {
+        el.classList.remove("active");
+      } else {
+        el.classList.add("active");
+      }
+    });
+  });
+};
+
 new WOW({
   scrollContainer: ".page",
 }).init();
 
 document.addEventListener("DOMContentLoaded", () => {
+  articleRating();
   initMap();
   tabs();
   initCardCarousel();
@@ -1007,7 +1309,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScrollToAnchor();
   initBeforeAfterSlider();
   initReviewCarousel();
+  initReviewCarouselAlt();
   pageNavigation();
+  serviceSearch();
   // calcNavContentMargin();
   new Modal(".modal", null, (activeModal) => {
     const appointmentForm = activeModal.querySelector(".appointment-form");

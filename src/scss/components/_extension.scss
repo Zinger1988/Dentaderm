@@ -1,0 +1,20 @@
+.extension {
+  display: inline-block;
+  font-size: 0.7rem;
+  line-height: 1;
+  padding: 0.3rem 0.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: $gray200;
+  border-radius: 0.2rem;
+
+  @include media(">=md") {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
+  }
+
+  @include media(">=2xl") {
+    font-size: 0.9rem;
+  }
+}
