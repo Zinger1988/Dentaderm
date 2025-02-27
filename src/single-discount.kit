@@ -24,7 +24,9 @@
                 <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
               </li>
               <li class="crumbs__item">
-                <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Спеціальні пропозиції</a>
+                <a class="crumbs__endpoint crumbs__endpoint--link" href="#"
+                  >Спеціальні пропозиції</a
+                >
               </li>
               <li class="crumbs__item">
                 <span class="crumbs__endpoint">
@@ -40,32 +42,37 @@
           <div class="container container--screen-lg">
             <article class="article article--discount content__article">
               <header class="article__header">
-                <div class="discount-info article__discount-info">
-                  <div class="discount-info__percentage">-25%</div>
-                  <div class="discount-info__price">
-                    <div class="discount-info__price-item discount-info__price-item">
-                      3 000 грн
-                    </div>
-                    <div class="discount-info__price-item discount-info__price-item--old">
-                      4 025
-                    </div>
-                  </div>
-                </div>
-                <button class="btn btn--backward article__backward">Всі пропозиції</button>
+                <button class="btn btn--backward article__backward">
+                  Всі пропозиції
+                </button>
                 <h1 class="article__title">
                   Dental Check-Up за адресою Кловський узвіз, 7а
                 </h1>
-                <picture class="article__img">
-                  <source
-                    type="image/webp"
-                    srcset="assets/images/discount/discount_1.webp"
-                  />
-                  <img
-                    src="assets/images/discount/discount_1.jpg"
-                    class="article__img-item"
-                    alt="Лікар що заповнює медичну картку пацієнта"
-                  />
-                </picture>
+                <div class="discount-info discount-info--single article__discount-info">
+                  <picture class="discount-info__img">
+                    <source
+                      type="image/webp"
+                      srcset="assets/images/discount/discount_1.webp"
+                    />
+                    <img
+                      class="discount-info__img-item"
+                      src="assets/images/discount/discount_1.jpg"
+                      alt="img"
+                    />
+                  </picture>
+                  <div class="discount-info__date">Безстроково</div>
+                  <div class="discount-info__info">
+                    <div class="discount-info__percentage">-25%</div>
+                    <div class="discount-info__price">
+                      <div
+                        class="discount-info__price-item discount-info__price-item--old"
+                      >
+                        4 025
+                      </div>
+                      <div class="discount-info__price-item">3 000 грн</div>
+                    </div>
+                  </div>
+                </div>
               </header>
 
               <div class="article__body">

@@ -224,6 +224,32 @@
     }
   }
 
+  &--photo {
+    margin-right: -1rem;
+    padding-bottom: 0;
+
+    @include media(">=md") {
+      margin-right: 0;
+    }
+
+    #{$this}__swiper {
+      padding-right: 5rem;
+      overflow: visible;
+
+      @include media(">=md") {
+        padding-right: 0;
+      }
+    }
+
+    .swiper-slide {
+      height: 36rem;
+
+      @include media(">=md") {
+        height: 44rem;
+      }
+    }
+  }
+
   &--blog {
     margin-right: -1rem;
     padding-bottom: 0;

@@ -211,17 +211,10 @@
     display: flex;
     align-items: center;
     padding: 4rem 2rem;
-    // position: fixed;
-    // overflow-y: auto;
 
     @include media("portrait") {
       min-height: calc(100dvh - 7.6rem);
-      // min-height: min(100vw * 1.777, 100dvh - 7.6rem);
     }
-
-    // @include media("landscape") {
-    //   min-height: 100dvh - 7.6rem;
-    // }
 
     @include media(">=sm", "portrait") {
       min-height: min(177.7vw, calc(100dvh - 7.6rem));
@@ -250,14 +243,6 @@
     @include media(">=3xl") {
       min-height: min(calc(100dvh - 12.4rem), 90.8rem);
     }
-
-    // @include media(">=2xl") {
-    //   min-height: min(80rem, calc(100dvh - 9.8rem));
-    // }
-
-    // @include media(">=3xl") {
-    //   min-height: min(98rem, calc(100dvh - 12.4rem));
-    // }
 
     #{$this}__container {
       @include media("<xl") {
@@ -301,6 +286,12 @@
         rgba(21, 21, 21, 0.75) 65%,
         rgba(0, 0, 0, 0.6) 100%
       );
+    }
+
+    &--no-blur {
+      &::before {
+        backdrop-filter: none;
+      }
     }
   }
 

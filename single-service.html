@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=block"
     rel="stylesheet"
   />
-  <link rel="preload" as="image" href="assets/icons.svg" />
+  <link rel="preload" as="image" href="/assets/icons.svg" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -102,7 +102,7 @@
           href="https://www.instagram.com/denta_derm/"
         >
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#instagram" />
+            <use href="/assets/icons.svg#instagram" />
           </svg>
         </a>
       </li>
@@ -113,21 +113,21 @@
           href="https://www.facebook.com/dentaderm"
         >
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#facebook" />
+            <use href="/assets/icons.svg#facebook" />
           </svg>
         </a>
       </li>
       <li class="socials__item">
         <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#viber" />
+            <use href="/assets/icons.svg#viber" />
           </svg>
         </a>
       </li>
       <li class="socials__item">
         <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#telegram" />
+            <use href="/assets/icons.svg#telegram" />
           </svg>
         </a>
       </li>
@@ -151,7 +151,7 @@
               href="https://www.instagram.com/denta_derm/"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#instagram" />
+                <use href="/assets/icons.svg#instagram" />
               </svg>
             </a>
           </li>
@@ -162,21 +162,21 @@
               href="https://www.facebook.com/dentaderm"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#facebook" />
+                <use href="/assets/icons.svg#facebook" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#viber" />
+                <use href="/assets/icons.svg#viber" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#telegram" />
+                <use href="/assets/icons.svg#telegram" />
               </svg>
             </a>
           </li>
@@ -276,7 +276,7 @@
   <div class="tabs-head location-tabs__head">
     <button
       class="tabs-btn active location-tabs__btn location-tabs__btn--lg"
-      data-tab-target="kiyv"
+      data-tab-target="kyiv"
     >
       Київ
     </button>
@@ -290,7 +290,7 @@
   <div class="tabs-content location-tabs__content">
     <div
       class="tabs-content-item location-tabs__content-item active"
-      data-tab-content="kiyv"
+      data-tab-content="kyiv"
     >
       <div class="location-tabs__address location-tabs__address--sm">
         <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -396,20 +396,19 @@
         data-modal-id="modal-appointment"
         class="btn btn--square btn--lightBlue banner__appointment-btn"
       >
-        Запис на консультацію
+        Отримати консультацію
       </button>
     </div>
     <div class="banner__content">
-      <h3>Отримайте консультацію</h3>
+      <h3>Отримати консультацію</h3>
 <form class="form appointment-form">
   <div class="form__body">
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Клініка</span>
         <select
           class="select select--white nice-select wide fluid-label__control"
           name="clinic"
-          data-validation="select"
         >
           <option value="" selected disabled>Оберіть клініку</option>
           <option value="klovsky">Київ, Кловський узвіз, 7а</option>
@@ -418,39 +417,32 @@
         </select>
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Ім'я</span>
         <input
           type="text"
           name="name"
-          data-validation="required"
           class="input-text input-text--white fluid-label__control"
         />
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Телефон</span>
         <input
           type="tel"
           name="tel"
           class="input-text input-text--white fluid-label__control"
-          data-validation="required"
         />
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <label class="input-checkbox input-checkbox--white">
-        <input
-          class="input-checkbox__input"
-          type="checkbox"
-          name="agreement"
-          data-validation="checked"
-        />
+        <input class="input-checkbox__input" type="checkbox" name="agreement" />
         <span class="input-checkbox__toggle">
           <svg class="icon input-checkbox__icon">
-            <use href="assets/icons.svg#check-sm" />
+            <use href="/assets/icons.svg#check-sm" />
           </svg>
         </span>
         <span class="input-checkbox__title">
@@ -483,13 +475,14 @@
               data-modal-id="modal-appointment"
               class="btn btn--fluid btn--square btn--lightBlue nav-content__nav-appointment-btn"
             >
-              Запис на консультацію
+              Отримати консультацію
             </button>
           </div>
           <!-- #endregion nav -->
 
           <!-- #region content -->
           <div class="nav-content__content">
+            <!-- #region block -->
             <div
               class="block block--separated-t nav-content__block"
               data-nav-id="Про послугу"
@@ -533,6 +526,8 @@
                 </div>
               </div>
             </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
             <div
               class="block block--gray nav-content__block nav-content__block--mb-0"
               data-nav-id="Ціни"
@@ -551,12 +546,19 @@
     <span class="price-list__price">від 2 600 грн</span>
   </li>
   <li class="price-list__item">
-    <span class="price-list__name">Розширена функціональна діагностика</span>
-    <span class="price-list__price">від 2 600 грн</span>
+    <a href="#" class="price-list__link">
+      <svg class="icon price-list__icon">
+        <use href="/assets/icons.svg#external-source" />
+      </svg>
+      <span class="price-list__name">Розширена функціональна діагностика</span>
+      <span class="price-list__price">від 2 600 грн</span>
+    </a>
   </li>
 </ul>
               </div>
             </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
             <div
               class="block block--separated-b block--p-0 nav-content__block"
               data-nav-id="Етапи лікування"
@@ -665,7 +667,7 @@
   />
   <div class="before-after__slider-button" aria-hidden="true">
     <svg class="before-after__slider-button-icon">
-      <use href="assets/icons.svg#drag-x" />
+      <use href="/assets/icons.svg#drag-x" />
       />
     </svg>
   </div>
@@ -676,6 +678,8 @@
 </section>
               </div>
             </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
             <div class="block block--separated-b nav-content__block" data-nav-id="Лікарі">
               <div class="container nav-content__container">
                 <header class="block__header">
@@ -808,17 +812,19 @@
   </div>
   <button class="card-carousel__nav card-carousel__nav--next">
     <svg class="icon card-carousel__nav-icon">
-      <use href="assets/icons.svg#arrow-right" />
+      <use href="/assets/icons.svg#arrow-right" />
     </svg>
   </button>
   <button class="card-carousel__nav card-carousel__nav--prev">
     <svg class="icon card-carousel__nav-icon">
-      <use href="assets/icons.svg#arrow-left" />
+      <use href="/assets/icons.svg#arrow-left" />
     </svg>
   </button>
 </div>
               </div>
             </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
             <div
               class="block block--pb-0 nav-content__block nav-content__block--pb-0"
               data-nav-id="Відгуки"
@@ -835,19 +841,19 @@
   <h3 class="review-card__title">Марина Павлівна</h3>
   <div class="review-card__rating rating">
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
   </div>
   <div class="review-card__text expand-container">
@@ -876,50 +882,19 @@
   <h3 class="review-card__title">Марина Павлівна</h3>
   <div class="review-card__rating rating">
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
-    </svg>
-  </div>
-  <div class="review-card__text expand-container">
-    <div class="review-card__text-panel expand-container__panel">
-      <p>
-        Дента Дерм найкраща стоматологія, яку відвідувала моя Родина, багато де ми були,
-        але тут поєднано увага, турбота, професіоналізм, залишок. Дякуємо Діні
-        Володимирівні та адміністратору Оксані за Вашу турботу та професійний підхід до
-        кожного клієнта ❤️
-      </p>
-    </div>
-  </div>
-</article>
-</div>
-      <div class="swiper-slide"><article class="review-card">
-  <h3 class="review-card__title">Марина Павлівна</h3>
-  <div class="review-card__rating rating">
-    <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
-    </svg>
-    <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
-    </svg>
-    <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
-    </svg>
-    <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
-    </svg>
-    <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
   </div>
   <div class="review-card__text expand-container">
@@ -938,19 +913,19 @@
   <h3 class="review-card__title">Марина Павлівна</h3>
   <div class="review-card__rating rating">
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
   </div>
   <div class="review-card__text expand-container">
@@ -969,19 +944,50 @@
   <h3 class="review-card__title">Марина Павлівна</h3>
   <div class="review-card__rating rating">
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
     <svg class="icon rating__star">
-      <use href="assets/icons.svg#star-filled" />
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Дента Дерм найкраща стоматологія, яку відвідувала моя Родина, багато де ми були,
+        але тут поєднано увага, турбота, професіоналізм, залишок. Дякуємо Діні
+        Володимирівні та адміністратору Оксані за Вашу турботу та професійний підхід до
+        кожного клієнта ❤️
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+      <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
     </svg>
   </div>
   <div class="review-card__text expand-container">
@@ -1000,6 +1006,7 @@
   </div>
 </div>
             </div>
+            <!-- #endregion block -->
             <!-- #region block -->
             <div class="block nav-content__block">
               <div class="container nav-content__container">
@@ -1142,6 +1149,8 @@
 </div>
               </div>
             </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
             <div
               class="block block--separated-b nav-content__block"
               data-nav-id="Питання та відповіді"
@@ -1376,6 +1385,8 @@
 <!--#endregion price accordion -->
               </div>
             </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
             <div class="block nav-content__block" data-nav-id="Інші послуги">
               <div class="container nav-content__container">
                 <header class="block__header">
@@ -1410,6 +1421,7 @@
 </div>
               </div>
             </div>
+            <!-- #endregion block -->
           </div>
           <!-- #region content -->
         </div>
@@ -1552,16 +1564,15 @@
       </h1> -->
     </div>
     <div class="banner__content">
-      <h3>Отримайте консультацію</h3>
+      <h3>Отримати консультацію</h3>
 <form class="form appointment-form">
   <div class="form__body">
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Клініка</span>
         <select
           class="select select--white nice-select wide fluid-label__control"
           name="clinic"
-          data-validation="select"
         >
           <option value="" selected disabled>Оберіть клініку</option>
           <option value="klovsky">Київ, Кловський узвіз, 7а</option>
@@ -1570,39 +1581,32 @@
         </select>
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Ім'я</span>
         <input
           type="text"
           name="name"
-          data-validation="required"
           class="input-text input-text--white fluid-label__control"
         />
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Телефон</span>
         <input
           type="tel"
           name="tel"
           class="input-text input-text--white fluid-label__control"
-          data-validation="required"
         />
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <label class="input-checkbox input-checkbox--white">
-        <input
-          class="input-checkbox__input"
-          type="checkbox"
-          name="agreement"
-          data-validation="checked"
-        />
+        <input class="input-checkbox__input" type="checkbox" name="agreement" />
         <span class="input-checkbox__toggle">
           <svg class="icon input-checkbox__icon">
-            <use href="assets/icons.svg#check-sm" />
+            <use href="/assets/icons.svg#check-sm" />
           </svg>
         </span>
         <span class="input-checkbox__title">
@@ -1643,7 +1647,7 @@
     <div class="footer__locations">
       <div class="tabs location-tabs location-tabs--white">
         <div class="tabs-head location-tabs__head">
-          <button class="tabs-btn active location-tabs__btn" data-tab-target="kiyv">
+          <button class="tabs-btn active location-tabs__btn" data-tab-target="kyiv">
             Київ
           </button>
           <button class="tabs-btn location-tabs__btn" data-tab-target="irpin">
@@ -1653,7 +1657,7 @@
         <div class="tabs-content location-tabs__content">
           <div
             class="tabs-content-item location-tabs__content-item"
-            data-tab-content="kiyv"
+            data-tab-content="kyiv"
           >
             <div class="location-tabs__address">
               <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -1759,7 +1763,7 @@
               href="https://www.instagram.com/denta_derm/"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#instagram" />
+                <use href="/assets/icons.svg#instagram" />
               </svg>
             </a>
           </li>
@@ -1770,21 +1774,21 @@
               href="https://www.facebook.com/dentaderm"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#facebook" />
+                <use href="/assets/icons.svg#facebook" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#viber" />
+                <use href="/assets/icons.svg#viber" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#telegram" />
+                <use href="/assets/icons.svg#telegram" />
               </svg>
             </a>
           </li>
@@ -1816,7 +1820,7 @@
     <h3 class="modal__title">Отримати консультацію</h3>
     <button class="modal-close modal__close-btn">
       <svg class="icon modal__close-icon">
-        <use href="assets/icons.svg#cancel" />
+        <use href="/assets/icons.svg#cancel" />
       </svg>
     </button>
   </div>
@@ -1829,7 +1833,7 @@
       <!-- #region appointment form -->
       <form class="form appointment-form">
         <div class="form__body">
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <div class="fluid-label">
               <span class="fluid-label__title">Клініка</span>
               <select
@@ -1844,7 +1848,7 @@
               </select>
             </div>
           </div>
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <div class="fluid-label">
               <span class="fluid-label__title">Ім'я</span>
               <input
@@ -1855,7 +1859,7 @@
               />
             </div>
           </div>
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <div class="fluid-label">
               <span class="fluid-label__title">Телефон</span>
               <input
@@ -1866,7 +1870,7 @@
               />
             </div>
           </div>
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <label class="input-checkbox">
               <input
                 class="input-checkbox__input"
@@ -1876,7 +1880,7 @@
               />
               <span class="input-checkbox__toggle">
                 <svg class="icon input-checkbox__icon">
-                  <use href="assets/icons.svg#check-sm" />
+                  <use href="/assets/icons.svg#check-sm" />
                 </svg>
               </span>
               <span class="input-checkbox__title">
@@ -1904,7 +1908,7 @@
     <h3 class="modal__title">Запит відправлено</h3>
     <button class="modal-close modal__close-btn">
       <svg class="icon modal__close-icon">
-        <use href="assets/icons.svg#cancel" />
+        <use href="/assets/icons.svg#cancel" />
       </svg>
     </button>
   </div>
@@ -1929,6 +1933,8 @@
   href="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.css"
   rel="stylesheet"
 />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/vfs_fonts.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
   </body>

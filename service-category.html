@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=block"
     rel="stylesheet"
   />
-  <link rel="preload" as="image" href="assets/icons.svg" />
+  <link rel="preload" as="image" href="/assets/icons.svg" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -102,7 +102,7 @@
           href="https://www.instagram.com/denta_derm/"
         >
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#instagram" />
+            <use href="/assets/icons.svg#instagram" />
           </svg>
         </a>
       </li>
@@ -113,21 +113,21 @@
           href="https://www.facebook.com/dentaderm"
         >
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#facebook" />
+            <use href="/assets/icons.svg#facebook" />
           </svg>
         </a>
       </li>
       <li class="socials__item">
         <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#viber" />
+            <use href="/assets/icons.svg#viber" />
           </svg>
         </a>
       </li>
       <li class="socials__item">
         <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#telegram" />
+            <use href="/assets/icons.svg#telegram" />
           </svg>
         </a>
       </li>
@@ -151,7 +151,7 @@
               href="https://www.instagram.com/denta_derm/"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#instagram" />
+                <use href="/assets/icons.svg#instagram" />
               </svg>
             </a>
           </li>
@@ -162,21 +162,21 @@
               href="https://www.facebook.com/dentaderm"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#facebook" />
+                <use href="/assets/icons.svg#facebook" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#viber" />
+                <use href="/assets/icons.svg#viber" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#telegram" />
+                <use href="/assets/icons.svg#telegram" />
               </svg>
             </a>
           </li>
@@ -276,7 +276,7 @@
   <div class="tabs-head location-tabs__head">
     <button
       class="tabs-btn active location-tabs__btn location-tabs__btn--lg"
-      data-tab-target="kiyv"
+      data-tab-target="kyiv"
     >
       Київ
     </button>
@@ -290,7 +290,7 @@
   <div class="tabs-content location-tabs__content">
     <div
       class="tabs-content-item location-tabs__content-item active"
-      data-tab-content="kiyv"
+      data-tab-content="kyiv"
     >
       <div class="location-tabs__address location-tabs__address--sm">
         <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -348,284 +348,265 @@
       <!-- #region content -->
       <main class="content content--pt-0 page__content">
         <!-- #region banner -->
-        <section class="block content__block">
-<div class="banner banner--dark">
-  <div class="container banner__container">
-    <picture class="banner__img">
-      <source
-        type="image/webp"
-        srcset="assets/images/service/functional_diagnosis.webp"
-      />
+        <section class="block content__block content__block--mb-0">
+<div class="category-banner">
+  <div class="container category-banner__container">
+    <div class="category-banner__inner">
       <img
-        loading="lazy"
-        class="banner__img-item"
-        src="assets/images/service/functional_diagnosis.jpg"
-        alt="img"
-      />
-    </picture>
-    <div class="banner__text banner__text--bottom">
-      <img
-        class="banner__logo"
+        class="category-banner__logo"
         src="assets/images/dentaderm_logo_text_only_white.svg"
-        alt="dentaderm текстовий логотип"
+        alt="Dentaderm"
       />
-      <h1 class="banner__tagline banner__tagline">Функціональна діагностика</h1>
-      <ul class="crumbs crumbs--white banner__crumbs">
+      <h1 class="category-banner__tagline">Хірургічна стоматологія</h1>
+      <ul class="crumbs crumbs--white category-banner__crumbs">
         <li class="crumbs__item">
           <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
         </li>
         <li class="crumbs__item">
-          <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Послуги</a>
-        </li>
-        <li class="crumbs__item">
-          <a class="crumbs__endpoint crumbs__endpoint--link" href="#">
-            Діагностика і консультація
-          </a>
-        </li>
-        <li class="crumbs__item">
-          <span class="crumbs__endpoint">Функціональна діагностика</span>
+          <span class="crumbs__endpoint">Хірургічна стоматологія</span>
         </li>
       </ul>
-    </div>
-    <div class="banner__content">
-      <h3>Отримайте консультацію</h3>
-<form class="form appointment-form">
-  <div class="form__body">
-    <div class="form__row">
-      <div class="fluid-label fluid-label--white">
-        <span class="fluid-label__title">Клініка</span>
-        <select
-          class="select select--white nice-select wide fluid-label__control"
-          name="clinic"
-          data-validation="select"
-        >
-          <option value="" selected disabled>Оберіть клініку</option>
-          <option value="klovsky">Київ, Кловський узвіз, 7а</option>
-          <option value="vishhorodska">Київ, Вишгородська, 56/2</option>
-          <option value="soborna">Ірпінь, Соборна, 107</option>
-        </select>
+      <div class="category-banner__media">
+        <picture class="category-banner__img">
+          <source
+            type="image/webp"
+            srcset="/assets/images/service-direction/surgery.webp"
+          />
+          <img
+            class="category-banner__img-item"
+            src="/assets/images/service-direction/surgery.png"
+            alt="Хірургічна стоматологія"
+          />
+        </picture>
       </div>
+<div class="related-grid category-banner__services">
+  <a href="#" class="related-tile related-tile--dark related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Видалення зубів</div>
     </div>
-    <div class="form__row">
-      <div class="fluid-label fluid-label--white">
-        <span class="fluid-label__title">Ім'я</span>
-        <input
-          type="text"
-          name="name"
-          data-validation="required"
-          class="input-text input-text--white fluid-label__control"
-        />
-      </div>
+  </a>
+  <a href="#" class="related-tile related-tile--dark related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Видалення зубів мудрості</div>
     </div>
-    <div class="form__row">
-      <div class="fluid-label fluid-label--white">
-        <span class="fluid-label__title">Телефон</span>
-        <input
-          type="tel"
-          name="tel"
-          class="input-text input-text--white fluid-label__control"
-          data-validation="required"
-        />
-      </div>
+  </a>
+  <a href="#" class="related-tile related-tile--dark related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Синус ліфтинг</div>
     </div>
-    <div class="form__row">
-      <label class="input-checkbox input-checkbox--white">
-        <input
-          class="input-checkbox__input"
-          type="checkbox"
-          name="agreement"
-          data-validation="checked"
-        />
-        <span class="input-checkbox__toggle">
-          <svg class="icon input-checkbox__icon">
-            <use href="assets/icons.svg#check-sm" />
-          </svg>
-        </span>
-        <span class="input-checkbox__title">
-          Я погоджуюся на обробку моїх персональних даних на підставі
-          <a href="#">політики конфідентційності</a>
-        </span>
-      </label>
+  </a>
+  <a href="#" class="related-tile related-tile--dark related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Кісткова пластика</div>
     </div>
-  </div>
-  <div class="form__footer">
-    <button class="btn btn--square btn--white btn--fluid">Відправити</button>
-  </div>
-</form>
+  </a>
+  <a href="#" class="related-tile related-tile--dark related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Пластика вуздечки</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-tile--dark related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Пластика ясен</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-tile--dark related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Кюретаж</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-tile--dark related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Імплантація</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-tile--dark related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Лікування зубів під наркозом</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-tile--dark related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Плазмоліфтинг</div>
+    </div>
+  </a>
+</div>
+      <button
+        class="category-banner__appointment-btn btn btn--lightBlue btn--square"
+        data-modal-id="modal-appointment"
+      >
+        Отримати консультацію
+      </button>
     </div>
   </div>
 </div>
         </section>
         <!-- #endregion banner -->
 
-        <!-- #region adv icons -->
-        <section class="block content__block">
-          <div class="container">
-            <header class="block__header">
-              <h2 class="block__title">Коли необхідна функціональна діагностика?</h2>
-            </header>
-
-            <!-- #region adv icons list -->
-            <ul class="adv-icons-list">
-              <li class="adv-icons-list__item">
-                <div class="adv-icon">
-                  <img
-                    class="adv-icon__img"
-                    src="assets/images/single-service/sd-icon-diagnosis-4.svg"
-                    alt=""
-                  />
-                  <span class="adv-icon__title">Клацання/хрускіт в щелепі</span>
-                </div>
-              </li>
-              <li class="adv-icons-list__item">
-                <div class="adv-icon">
-                  <img
-                    class="adv-icon__img"
-                    src="assets/images/single-service/sd-icon-diagnosis-5.svg"
-                    alt=""
-                  />
-                  <span class="adv-icon__title">Біль при відкриванні рота</span>
-                </div>
-              </li>
-              <li class="adv-icons-list__item">
-                <div class="adv-icon">
-                  <img
-                    class="adv-icon__img"
-                    src="assets/images/single-service/sd-icon-diagnosis-3.svg"
-                    alt=""
-                  />
-                  <span class="adv-icon__title">Частий головний біль</span>
-                </div>
-              </li>
-              <li class="adv-icons-list__item">
-                <div class="adv-icon">
-                  <img
-                    class="adv-icon__img"
-                    src="assets/images/single-service/sd-icon-diagnosis-6.svg"
-                    alt=""
-                  />
-                  <span class="adv-icon__title">Біль у шийному відділі</span>
-                </div>
-              </li>
-              <li class="adv-icons-list__item">
-                <div class="adv-icon">
-                  <img
-                    class="adv-icon__img"
-                    src="assets/images/single-service/sd-icon-diagnosis-1.svg"
-                    alt=""
-                  />
-                  <span class="adv-icon__title">Планування лікування </span>
-                </div>
-              </li>
-              <li class="adv-icons-list__item">
-                <div class="adv-icon">
-                  <img
-                    class="adv-icon__img"
-                    src="assets/images/single-service/sd-icon-diagnosis-7.svg"
-                    alt=""
-                  />
-                  <span class="adv-icon__title">Бруксизм</span>
-                </div>
-              </li>
-              <li class="adv-icons-list__item">
-                <div class="adv-icon">
-                  <img
-                    class="adv-icon__img"
-                    src="assets/images/single-service/sd-icon-diagnosis-2.svg"
-                    alt=""
-                  />
-                  <span class="adv-icon__title">Реабілітація</span>
-                </div>
-              </li>
-            </ul>
-            <!-- #endregion adv icons list -->
+        <!-- #region nav content -->
+        <div class="nav-content content__nav-content">
+          <!-- #region nav -->
+          <div class="nav-content__nav">
+            <div class="nav-content__nav-label">Хірургічне лікування:</div>
+            <ul class="nav-content__list"></ul>
+            <button
+              data-modal-id="modal-appointment"
+              class="btn btn--fluid btn--square btn--lightBlue nav-content__nav-appointment-btn"
+            >
+              Отримати консультацію
+            </button>
           </div>
-        </section>
-        <!-- #endregion adv icons -->
+          <!-- #endregion nav -->
 
-        <!-- #region hero -->
-        <div class="block content__block content__block--mb-0">
-<section class="hero-section hero-section--bb-0">
-  <div class="hero-section__container">
-    <div class="hero-section__content">
-      <div class="hero-section__inner hero-section__inner--content-center">
-        <div class="hero-section__text">
-          <h2 class="h3">
-            Лікуємо причини дискомфорту у скронево-нижньощелепному суглобі або при
-            змиканні зубів
-          </h2>
-          <p>
-            Людина — це досконала система, в якій кожен елемент впливає на роботу іншого.
-            Так працює і зубощелепна система, де кожен зуб, бугри на зубах, навіть нахил
-            бугрів на зубах — відповідають за певну функцію: кусання, жування, підтримку
-            щелепи у правильному положенні.
-          </p>
-          <p>
-            Відповідно відсутність зубів, неправильно поставлена пломба чи коронка,
-            невірно сплановане ортодонтичне лікування створюють дисфункцію зубощелепної
-            системи, що впливає на інші системи організму. Через це можуть виникати болі в
-            голові, клацання в щелепі, сколіоз, бруксизм тощо. Ми не придумуємо велосипед:
-            ми пройшли навчання в школі VieSID® та застосовуємо на практиці знання та
-            досвід професора Рудольфа Славічека у щоденній роботі.
-          </p>
-          <p>
-            Все ортодонтичне чи ортопедичне лікування починається з функціональної
-            діагностики, яка визначає фізіологічно-правильні параметри розміщення щелепи —
-            норму та відхилення.
-          </p>
-        </div>
-        <button class="btn btn--square btn--lightBlue" data-modal-id="modal-appointment">
+          <!-- #region content -->
+          <div class="nav-content__content">
+            <!-- #region block -->
+            <div
+              class="block block--separated-b block--separated-t content__block--mb-0 nav-content__block"
+              data-nav-id="Хірургічне лікування в Києві — що це та кому потрібно?"
+            >
+              <div class="container nav-content__container">
+                <header class="block__header">
+                  <h2 class="block__title wow fadeInRight">
+                    Хірургічне лікування в Києві — що це та кому потрібно?
+                  </h2>
+                </header>
+<div class="article-recommendations wow fadeInUp">
+  <div class="row">
+    <div class="col-12 col-lg-5">
+      <picture class="article-recommendations__img">
+        <source
+          type="image/webp"
+          srcset="assets/images/service/doctor_with_notebook.webp"
+        />
+        <img
+          loading="lazy"
+          class="article-recommendations__img-item"
+          src="assets/images/service/doctor_with_notebook.jpg"
+          alt="img"
+        />
+      </picture>
+    </div>
+    <div class="col-12 col-lg-7">
+      <div class="article-recommendations__content">
+        <p>
+          Видалення зубів, лікування хвороб пародонту, імплантація, підсадка кісткової
+          тканини — всі ці та багато інших завдань виконує хірургічна стоматологія. Це
+          напрям медицини, який потребує неабиякого професіоналізму від лікаря.
+          Звертаючись у клініку DentaDerm, ви можете бути впевнені, що отримаєте
+          стоматологічні послуги високого рівня. Кваліфіковані стоматологи-хірурги нашої 
+          клініки використовують у своїй роботі принцип трьох «Б»:
+        </p>
+        <ul>
+          <li>
+            безболісно – сучасні анестетичнi засоби гарантують мінімальний рівень
+            дискомфортних відчуттів пацієнта;
+          </li>
+          <li>
+            швидко – спеціальне професійне обладнання дозволяє оптимізувати часові рамки
+            проведення стоматологічної операції;
+          </li>
+          <li>
+            без ускладнень – високий рівень підготовки лікарів, їх великий практичний
+            досвід, застосування інноваційних технологій забезпечують якість надання
+            хірургічних послуг.
+          </li>
+        </ul>
+        <br />
+        <button class="btn btn--lightBlue btn--square" data-modal-id="modal-appointment">
           Отримати консультацію
         </button>
+        <br />
+        <br />
       </div>
     </div>
-    <picture class="hero-section__image">
-      <source
-        type="image/webp"
-        srcset="assets/images/service/diagnosis_before_after.webp"
-      />
-      <img
-        loading="lazy"
-        class="hero-section__image-item"
-        src="assets/images/service/diagnosis_before_after.jpg"
-        alt="img"
-      />
-    </picture>
   </div>
+</div>
+              </div>
+            </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
+            <div
+              class="block block--separated-b block--p-0 nav-content__block"
+              data-nav-id="Етапи лікування"
+            >
+              <div class="container nav-content__container">
+<section class="stages stages--unshift-2xl">
+  <h2 class="stages__heading wow fadeInRight">Етапи лікування</h2>
+  <ul class="stages__list">
+    <li class="stages__item wow fadeInUp">
+      <h3 class="stages__title">Консультація головного лікаря і лікаря ортодонта</h3>
+      <div class="stages__text">
+        <p>
+          Первинний огляд-консультація, пальпація, проведення додаткових досліджень за
+          призначенням
+        </p>
+      </div>
+    </li>
+    <li class="stages__item wow fadeInUp">
+      <h3 class="stages__title">Терапевтичне лікування за призначенням лікаря</h3>
+      <div class="stages__text">
+        <p>
+          Санація ротової порожнини — обовʼязково. У процесі руху зубного ряду може
+          розвинутися будь-яка патологія. Вилікувати її буде складніше через особливості
+          ортодонтичної конструкції
+        </p>
+      </div>
+    </li>
+    <li class="stages__item wow fadeInUp">
+      <h3 class="stages__title">Функціональна діагностика</h3>
+      <div class="stages__text">
+        <p>
+          Дослідження роботи скронево-нижньощелепного суглоба. Визначає
+          фізіологічно-правильні параметри розміщення щелепи — норму та її відхилення
+        </p>
+      </div>
+    </li>
+    <li class="stages__item wow fadeInUp">
+      <h3 class="stages__title">Складання і погодження плану ортодонтичного лікування</h3>
+      <div class="stages__text">
+        <p>
+          На основі всіх зібраних даних складається ортодонтичний план лікування. У
+          цифровому вигляді ми бачимо точку “Б”, куди потрібно тягнути і рухати
+          зубощелепну систему
+        </p>
+      </div>
+    </li>
+    <li class="stages__item wow fadeInUp">
+      <h3 class="stages__title">Фіксація брекет-системи</h3>
+      <div class="stages__text">
+        <p>Позиціонування брекет-системи з фіксацією на світлотвердільний матеріал</p>
+      </div>
+    </li>
+    <li class="stages__item wow fadeInUp">
+      <h3 class="stages__title">Ортодонтичне лікування</h3>
+      <div class="stages__text">
+        <p>Корекції, заміна дуг, професійна гігієна кожні 3-6 місяців</p>
+      </div>
+    </li>
+    <li class="stages__item wow fadeInUp">
+      <h3 class="stages__title">Ретенційний період</h3>
+      <div class="stages__text">
+        <p>фіксація ретейнеру за призначенням</p>
+      </div>
+    </li>
+    <li class="stages__item stages__item--no-appearance wow fadeInUp">
+      <button class="btn btn--lightBlue btn--square" data-modal-id="modal-appointment">
+        Отримати консультацію
+      </button>
+    </li>
+  </ul>
 </section>
-        </div>
-        <!-- #endregion hero -->
-
-        <div class="block content__block block--gray">
-          <div class="container">
-            <header class="block__header">
-              <h2 class="block__title wow fadeInRight">Ціни</h2>
-            </header>
-<ul class="price-list wow fadeInUp">
-  <li class="price-list__item">
-    <span class="price-list__name">Мала функціональна діагностика</span>
-    <span class="price-list__price">від 2 600 грн</span>
-  </li>
-  <li class="price-list__item">
-    <span class="price-list__name">Базова функціональна діагностика</span>
-    <span class="price-list__price">від 2 600 грн</span>
-  </li>
-  <li class="price-list__item">
-    <span class="price-list__name">Розширена функціональна діагностика</span>
-    <span class="price-list__price">від 2 600 грн</span>
-  </li>
-</ul>
-          </div>
-        </div>
-
-        <!-- #region doctors -->
-        <section class="block block--separated-b content__block">
-          <div class="container">
-            <header class="block__header">
-              <h2 class="block__title">Наші фахівці</h2>
-              <a href="#" class="btn btn--default block__header-btn">Всі фахівці</a>
-            </header>
-<div class="card-carousel card-carousel--doctors">
+              </div>
+            </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
+            <div class="block block--separated-b nav-content__block" data-nav-id="Лікарі">
+              <div class="container nav-content__container">
+                <header class="block__header">
+                  <h2 class="block__title wow fadeInRight">Лікарі</h2>
+                </header>
+<div class="card-carousel card-carousel--service-doctors wow fadeInUp">
   <div class="card-carousel__swiper swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -752,321 +733,24 @@
   </div>
   <button class="card-carousel__nav card-carousel__nav--next">
     <svg class="icon card-carousel__nav-icon">
-      <use href="assets/icons.svg#arrow-right" />
+      <use href="/assets/icons.svg#arrow-right" />
     </svg>
   </button>
   <button class="card-carousel__nav card-carousel__nav--prev">
     <svg class="icon card-carousel__nav-icon">
-      <use href="assets/icons.svg#arrow-left" />
+      <use href="/assets/icons.svg#arrow-left" />
     </svg>
   </button>
 </div>
-          </div>
-        </section>
-        <!-- #endregion doctors -->
-
-        <!-- #region path -->
-        <section class="block content__block">
-          <div class="container">
-            <header class="block__header">
-              <h2 class="block__title text-center">Шлях функціональної діагностики</h2>
-            </header>
-            <div class="block__sub">
-<!-- #region steps -->
-<ul class="steps">
-  <li class="steps__item">
-    <div class="steps__marker">
-      <div class="steps__marker-value">1</div>
-    </div>
-    <div class="steps__media">
-      <div class="steps__media-inner">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="assets/images/service/ortho_diagnosis_step.webp"
-          />
-          <img
-            loading="lazy"
-            class="steps__media-item steps__media-item--image"
-            src="assets/images/service/ortho_diagnosis_step.jpg"
-            alt="img"
-          />
-        </picture>
-      </div>
-    </div>
-    <h3 class="steps__title">Мала функціональна діагностика</h3>
-    <div class="steps__description">
-      <ul>
-        <li>заповнюємо форму загального стану пацієнта</li>
-        <li>проводимо фотодіагностику (знімки зубів, посмішки, обличчя та постави)</li>
-        <li>проводимо пальпацію тонусу м’язів та больових відчуттів у суглобах</li>
-        <li>знімаємо відбитки зубів для виготовлення гіпсових моделей</li>
-      </ul>
-    </div>
-  </li>
-  <li class="steps__item">
-    <div class="steps__marker">
-      <div class="steps__marker-value">2</div>
-    </div>
-    <div class="steps__media">
-      <div class="steps__media-inner video" data-video-id="eth3C4SQH3g">
-        <div class="video__play"></div>
-      </div>
-    </div>
-    <h3 class="steps__title">Базова функціональна діагностика</h3>
-    <div class="steps__description">
-      <ul>
-        <li>
-          проводимо оклюзіограму для визначення кількості і якості контактів між зубами
-        </li>
-        <li>
-          робимо телерентгенограму (рентген бокової проєкції черепа) та її розшифровку
-        </li>
-        <li>
-          загіпсовуємо моделі зубів пацієнта в артикулятор, що відтворюватиме його рухи
-        </li>
-        <li>
-          визначаємо розміщення верхньої й нижньої щелепи відносно основи черепа та
-          вираховуємо норму й відхилення від норми
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="steps__item">
-    <div class="steps__marker">
-      <div class="steps__marker-value">3</div>
-    </div>
-    <div class="steps__media">
-      <div class="steps__media-inner video" data-video-id="cG18LsT_6Ug">
-        <div class="video__play"></div>
-      </div>
-    </div>
-    <h3 class="steps__title">Розширена функціональна діагностика</h3>
-    <div class="steps__description">
-      <p><i>*проведення кондилографії</i></p>
-      <p>
-        Отримані дані демонструють динаміку індивідуальних рухів нижньої щелепи та
-        анатомічні особливості будови жувальної системи пацієнта, на основі чого можна
-        планувати подальше ортопедичне чи ортодонтичне лікування
-      </p>
-    </div>
-  </li>
-</ul>
-<!-- #endregion steps -->
+              </div>
             </div>
-            <div class="text-center">
-              <button
-                class="btn btn--square btn--lightBlue"
-                data-modal-id="modal-appointment"
-              >
-                Отримати консультацію
-              </button>
-            </div>
-          </div>
-        </section>
-        <!-- #endregion path -->
-
-        <!-- #region hero -->
-        <div class="block content__block">
-<section class="hero-section">
-  <div class="hero-section__container">
-    <div class="hero-section__content">
-      <div class="hero-section__inner hero-section__inner--content-center">
-        <h2>Змінити систему можливо лише з надсистеми</h2>
-        <p>
-          Лікарі нашої клініки пройшли навчання у Віденській школі міждисциплінарної
-          стоматології VieSID® у співпраці з Віденським медичним університетом. VieSID®
-          впроваджує один з найкращих і найскладніших концептів лікування у світі.
-        </p>
-        <p>
-          <b>Щасливі лікувати своїх пацієнтів методиками, засвоєними у VieSID®.</b>
-        </p>
-        <p>
-          Зовсім скоро функціональна діагностика займатиме обовʼязкове місце у кожному
-          протоколі лікування. А бути одними з першовідкривачів — це завжди приємно.
-        </p>
-      </div>
-    </div>
-    <picture class="hero-section__image hero-section__image--no-bg">
-      <source
-        type="image/webp"
-        srcset="assets/images/service/diagnosis_VieSD_school.webp"
-      />
-      <img
-        loading="lazy"
-        class="hero-section__image-item"
-        src="assets/images/service/diagnosis_VieSD_school.jpg"
-        alt="img"
-      />
-    </picture>
-  </div>
-</section>
-        </div>
-        <!-- #endregion hero -->
-
-        <!-- #region diagnosis slider -->
-        <section class="block block--separated-b content__block">
-          <div class="container">
-            <header class="block__header">
-              <h2 class="block__title">
-                Що ми додатково використовуємо для діагностики?
-              </h2>
-            </header>
-            <div class="block__sub">
-<div class="hero-slider">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <article class="hero-card">
-        <div class="hero-card__media">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/images/service/diagnosis_photo_1.webp"
-            />
-            <img
-              loading="lazy"
-              class="hero-card__media-item"
-              src="assets/images/service/diagnosis_photo_1.jpg"
-              alt="img"
-            />
-          </picture>
-        </div>
-        <div class="hero-card__header">
-          <h3 class="hero-card__title">Компʼютерна томографія суглобів</h3>
-        </div>
-      </article>
-    </div>
-
-    <div class="swiper-slide">
-      <article class="hero-card">
-        <div class="hero-card__media">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/images/service/diagnosis_photo_2.webp"
-            />
-            <img
-              loading="lazy"
-              class="hero-card__media-item"
-              src="assets/images/service/diagnosis_photo_2.jpg"
-              alt="img"
-            />
-          </picture>
-        </div>
-        <div class="hero-card__header">
-          <h3 class="hero-card__title">Телерентгенограма (ТРГ знімок)</h3>
-        </div>
-      </article>
-    </div>
-
-    <div class="swiper-slide">
-      <article class="hero-card">
-        <div class="hero-card__media">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/images/service/diagnosis_photo_3.webp"
-            />
-            <img
-              loading="lazy"
-              class="hero-card__media-item"
-              src="assets/images/service/diagnosis_photo_3.jpg"
-              alt="img"
-            />
-          </picture>
-        </div>
-        <div class="hero-card__header">
-          <h3 class="hero-card__title">Артикулятор Gamma Dental</h3>
-        </div>
-      </article>
-    </div>
-
-    <div class="swiper-slide">
-      <article class="hero-card">
-        <div class="hero-card__media">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/images/service/diagnosis_photo_4.webp"
-            />
-            <img
-              loading="lazy"
-              class="hero-card__media-item"
-              src="assets/images/service/diagnosis_photo_4.jpg"
-              alt="img"
-            />
-          </picture>
-        </div>
-        <div class="hero-card__header">
-          <h3 class="hero-card__title">Кондилогаф Gamma Dental</h3>
-        </div>
-      </article>
-    </div>
-
-    <div class="swiper-slide">
-      <article class="hero-card">
-        <div class="hero-card__media">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/images/service/diagnosis_photo_5.webp"
-            />
-            <img
-              loading="lazy"
-              class="hero-card__media-item"
-              src="assets/images/service/diagnosis_photo_5.jpg"
-              alt="img"
-            />
-          </picture>
-        </div>
-        <div class="hero-card__header">
-          <h3 class="hero-card__title">Інтраоральний сканер</h3>
-        </div>
-      </article>
-    </div>
-
-    <div class="swiper-slide">
-      <article class="hero-card">
-        <div class="hero-card__media">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/images/service/diagnosis_photo_6.webp"
-            />
-            <img
-              loading="lazy"
-              class="hero-card__media-item"
-              src="assets/images/service/diagnosis_photo_6.jpg"
-              alt="img"
-            />
-          </picture>
-        </div>
-        <div class="hero-card__header">
-          <h3 class="hero-card__title">Магніто-резонасний томограф голови (МРТ)</h3>
-        </div>
-      </article>
-    </div>
-  </div>
-</div>
-            </div>
-            <div class="text-center">
-              <button
-                class="btn btn--square btn--lightBlue"
-                data-modal-id="modal-appointment"
-              >
-                Отримати консультацію
-              </button>
-            </div>
-          </div>
-        </section>
-        <!-- #endregion diagnosis slider -->
-
-        <!-- #region faq -->
-        <section class="block block--separated-b content__block">
-          <div class="container container--screen-xl">
-            <header class="block__header">
-              <h2 class="block__title">Питання та відповіді</h2>
-            </header>
+            <!-- #endregion block -->
+            <!-- #region block -->
+            <div class="block nav-content__block" data-nav-id="Питання та відповіді">
+              <div class="container nav-content__container">
+                <header class="block__header">
+                  <h2 class="block__title wow fadeInRight">Питання та відповіді</h2>
+                </header>
 <!--#region price accordion -->
 <ul class="accordion faq block__faq wow fadeInUp">
   <!--#region price accordion item -->
@@ -1291,12 +975,121 @@
   <!--#endregion price accordion item -->
 </ul>
 <!--#endregion price accordion -->
+              </div>
+            </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
+            <div class="block nav-content__block">
+              <div class="container nav-content__container">
+                <!-- #region staff banner -->
+                <div class="staff-banner-hor mx-auto wow fadeInUp">
+                  <div class="staff-banner-hor__inner">
+                    <picture class="staff-banner-hor__img">
+                      <source
+                        type="image/webp"
+                        srcset="assets/images/staff-banner/malova.webp"
+                      />
+                      <img
+                        class="staff-banner-hor__img-item"
+                        src="assets/images/staff-banner/malova.png"
+                        alt="Dentaderm clinic doctor"
+                        loading="lazy"
+                      />
+                    </picture>
+                    <div class="staff-banner-hor__text">
+                      <div class="staff-banner-hor__text-inner">
+                        <div class="h2">Виникли питання?</div>
+                        <p>
+                          Наші співробітники із задоволенням вам допоможуть. Просто,
+                          заповніть коротку форму, та отримайте вичерпну, особисту і
+                          безкоштовну консультацію!
+                        </p>
+
+                        <button
+                          class="btn btn--white-alt btn--square"
+                          data-modal-id="modal-appointment"
+                        >
+                          Отримати консультацію
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion staff banner -->
+              </div>
+            </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
+            <div
+              class="block block--separated-t nav-content__block"
+              data-nav-id="Послуги"
+            >
+              <div class="container nav-content__container">
+                <header class="block__header">
+                  <h2 class="block__title wow fadeInRight">Послуги</h2>
+                </header>
+<div class="related-grid wow fadeInUp">
+  <a href="#" class="related-tile related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Видалення зубів</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Видалення зубів мудрості</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Синус ліфтинг</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Кісткова пластика</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Пластика вуздечки</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Пластика ясен</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Кюретаж</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Імплантація</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Лікування зубів під наркозом</div>
+    </div>
+  </a>
+  <a href="#" class="related-tile related-grid__item">
+    <div class="related-tile__inner">
+      <div class="related-tile__title">Плазмоліфтинг</div>
+    </div>
+  </a>
+</div>
+              </div>
+            </div>
+            <!-- #endregion block -->
           </div>
-        </section>
-        <!-- #endregion faq -->
+          <!-- #region content -->
+        </div>
+        <!-- #endregion nav content -->
 
         <!-- #region ceo text -->
-        <section class="block content__block">
+        <section class="block content__block block--separated-t">
           <div class="container">
 <div class="ceo-text">
   <div class="ceo-text__heading">
@@ -1406,6 +1199,93 @@
           </div>
         </section>
         <!-- #endregion ceo text -->
+
+        <!-- #region banner -->
+        <section class="block content__block content__block--mb-0">
+<div class="banner banner--dark">
+  <div class="container banner__container">
+    <picture class="banner__img">
+      <source type="image/webp" srcset="assets/images/banners/cabinet.webp" />
+      <img
+        loading="lazy"
+        class="banner__img-item"
+        src="assets/images/banners/cabinet.jpg"
+        alt="img"
+      />
+    </picture>
+    <div class="banner__text banner__text--bottom">
+      <!-- <img
+        class="banner__logo"
+        src="assets/images/dentaderm_logo_text_only_white.svg"
+        alt="dentaderm текстовий логотип"
+      />
+      <h1 class="banner__tagline">
+        Усміхаючись,<br />
+        ви змінюєте світ!
+      </h1> -->
+    </div>
+    <div class="banner__content">
+      <h3>Отримати консультацію</h3>
+<form class="form appointment-form">
+  <div class="form__body">
+    <div class="form__row" data-validity-group>
+      <div class="fluid-label fluid-label--white">
+        <span class="fluid-label__title">Клініка</span>
+        <select
+          class="select select--white nice-select wide fluid-label__control"
+          name="clinic"
+        >
+          <option value="" selected disabled>Оберіть клініку</option>
+          <option value="klovsky">Київ, Кловський узвіз, 7а</option>
+          <option value="vishhorodska">Київ, Вишгородська, 56/2</option>
+          <option value="soborna">Ірпінь, Соборна, 107</option>
+        </select>
+      </div>
+    </div>
+    <div class="form__row" data-validity-group>
+      <div class="fluid-label fluid-label--white">
+        <span class="fluid-label__title">Ім'я</span>
+        <input
+          type="text"
+          name="name"
+          class="input-text input-text--white fluid-label__control"
+        />
+      </div>
+    </div>
+    <div class="form__row" data-validity-group>
+      <div class="fluid-label fluid-label--white">
+        <span class="fluid-label__title">Телефон</span>
+        <input
+          type="tel"
+          name="tel"
+          class="input-text input-text--white fluid-label__control"
+        />
+      </div>
+    </div>
+    <div class="form__row" data-validity-group>
+      <label class="input-checkbox input-checkbox--white">
+        <input class="input-checkbox__input" type="checkbox" name="agreement" />
+        <span class="input-checkbox__toggle">
+          <svg class="icon input-checkbox__icon">
+            <use href="/assets/icons.svg#check-sm" />
+          </svg>
+        </span>
+        <span class="input-checkbox__title">
+          Я погоджуюся на обробку моїх персональних даних на підставі
+          <a href="#">політики конфідентційності</a>
+        </span>
+      </label>
+    </div>
+  </div>
+  <div class="form__footer">
+    <button class="btn btn--square btn--white btn--fluid">Відправити</button>
+  </div>
+</form>
+    </div>
+  </div>
+</div>
+        </section>
+        <!-- #endregion banner -->
       </main>
       <!-- #endregion content -->
 
@@ -1428,7 +1308,7 @@
     <div class="footer__locations">
       <div class="tabs location-tabs location-tabs--white">
         <div class="tabs-head location-tabs__head">
-          <button class="tabs-btn active location-tabs__btn" data-tab-target="kiyv">
+          <button class="tabs-btn active location-tabs__btn" data-tab-target="kyiv">
             Київ
           </button>
           <button class="tabs-btn location-tabs__btn" data-tab-target="irpin">
@@ -1438,7 +1318,7 @@
         <div class="tabs-content location-tabs__content">
           <div
             class="tabs-content-item location-tabs__content-item"
-            data-tab-content="kiyv"
+            data-tab-content="kyiv"
           >
             <div class="location-tabs__address">
               <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -1544,7 +1424,7 @@
               href="https://www.instagram.com/denta_derm/"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#instagram" />
+                <use href="/assets/icons.svg#instagram" />
               </svg>
             </a>
           </li>
@@ -1555,21 +1435,21 @@
               href="https://www.facebook.com/dentaderm"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#facebook" />
+                <use href="/assets/icons.svg#facebook" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#viber" />
+                <use href="/assets/icons.svg#viber" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#telegram" />
+                <use href="/assets/icons.svg#telegram" />
               </svg>
             </a>
           </li>
@@ -1601,7 +1481,7 @@
     <h3 class="modal__title">Отримати консультацію</h3>
     <button class="modal-close modal__close-btn">
       <svg class="icon modal__close-icon">
-        <use href="assets/icons.svg#cancel" />
+        <use href="/assets/icons.svg#cancel" />
       </svg>
     </button>
   </div>
@@ -1614,7 +1494,7 @@
       <!-- #region appointment form -->
       <form class="form appointment-form">
         <div class="form__body">
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <div class="fluid-label">
               <span class="fluid-label__title">Клініка</span>
               <select
@@ -1629,7 +1509,7 @@
               </select>
             </div>
           </div>
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <div class="fluid-label">
               <span class="fluid-label__title">Ім'я</span>
               <input
@@ -1640,7 +1520,7 @@
               />
             </div>
           </div>
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <div class="fluid-label">
               <span class="fluid-label__title">Телефон</span>
               <input
@@ -1651,7 +1531,7 @@
               />
             </div>
           </div>
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <label class="input-checkbox">
               <input
                 class="input-checkbox__input"
@@ -1661,7 +1541,7 @@
               />
               <span class="input-checkbox__toggle">
                 <svg class="icon input-checkbox__icon">
-                  <use href="assets/icons.svg#check-sm" />
+                  <use href="/assets/icons.svg#check-sm" />
                 </svg>
               </span>
               <span class="input-checkbox__title">
@@ -1689,7 +1569,7 @@
     <h3 class="modal__title">Запит відправлено</h3>
     <button class="modal-close modal__close-btn">
       <svg class="icon modal__close-icon">
-        <use href="assets/icons.svg#cancel" />
+        <use href="/assets/icons.svg#cancel" />
       </svg>
     </button>
   </div>
@@ -1714,6 +1594,8 @@
   href="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.css"
   rel="stylesheet"
 />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/vfs_fonts.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
   </body>

@@ -4,11 +4,16 @@
   align-items: baseline;
   gap: 0.5rem 1.8rem;
   cursor: pointer;
+  position: relative;
 
   $this: &;
 
   &__input {
-    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
 
     &:checked {
       ~ #{$this}__toggle {
@@ -47,8 +52,6 @@
 
   &--white {
     #{$this}__input {
-      display: none;
-
       &:checked {
         ~ #{$this}__toggle {
           background-color: $white;

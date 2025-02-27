@@ -1,0 +1,115 @@
+.questionnaire-form {
+  $this: &;
+
+  &__section {
+    margin: 4rem 0;
+  }
+
+  &__question {
+    border-bottom: 1px dotted $gray900;
+    padding: 1.4rem 0;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    gap: 1rem 4rem;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--ver {
+      grid-template-columns: 1fr;
+    }
+
+    @include media(">=sm") {
+      grid-template-columns: 1fr auto;
+    }
+  }
+
+  &__question-head,
+  &__question-body {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__dropdown {
+    grid-column: 1 / -1;
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 500;
+
+    @include media(">=md") {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__variants {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: end;
+    gap: 0.4rem;
+
+    &--wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+
+      .validator__errors {
+        flex: 1 0 100%;
+      }
+    }
+
+    &--period {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include media(">=sm") {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        justify-items: end;
+      }
+    }
+
+    .validator__errors {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__question-variant {
+    position: relative;
+  }
+
+  &__radio {
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    &:checked ~ #{$this}__label {
+      background: $gray950;
+      color: $white;
+    }
+  }
+
+  &__dropdown-text {
+    min-width: 24rem;
+    max-width: 40rem;
+  }
+
+  &__label {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid $gray950;
+    cursor: pointer;
+    background: $gray100;
+    @include animate(background-color color);
+
+    &:hover {
+      background: $gray300;
+    }
+  }
+}

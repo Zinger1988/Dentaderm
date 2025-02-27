@@ -1,0 +1,3616 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content page__content">
+        <div class="content__crumbs">
+          <div class="container container--screen-lg">
+            <ul class="crumbs">
+              <li class="crumbs__item">
+                <a class="crumbs__endpoint crumbs__endpoint--link" href="#">
+                  Головна
+                </a>
+              </li>
+              <li class="crumbs__item">
+                <span class="crumbs__endpoint">Анкета про стан здоров’я</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- #region doctors -->
+        <section class="block content__block">
+          <div class="container container--screen-lg">
+            <header class="block__header">
+              <h1 class="block__title h2">Анкета про стан здоров’я</h1>
+            </header>
+            <p>
+              Деякі захворювання та стани Вашого організму можуть вплинути на
+              хід лікування.<br />
+              <b class="text-danger">
+                Зверніть увагу: всі поля обов'язкові, окрім тих позначених, що
+                не позначені явно.
+              </b>
+            </p>
+
+            <!-- #region questionnaire form -->
+            <form class="form questionnaire-form">
+              <!-- #region about respondent -->
+              <div class="row">
+                <!-- #region col item -->
+                <div class="col-12 col-md-6">
+                  <div class="form__row" data-validity-group>
+                    <div class="fluid-label">
+                      <span class="fluid-label__title">Прізвище</span>
+                      <input
+                        type="text"
+                        name="text-01"
+                        class="input-text fluid-label__control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion col item -->
+                <!-- #region col item -->
+                <div class="col-12 col-md-6">
+                  <div class="form__row" data-validity-group>
+                    <div class="fluid-label">
+                      <span class="fluid-label__title">Ім’я</span>
+                      <input
+                        type="text"
+                        name="text-02"
+                        class="input-text fluid-label__control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion col item -->
+                <!-- #region col item -->
+                <div class="col-12 col-md-6">
+                  <div class="form__row" data-validity-group>
+                    <div class="fluid-label">
+                      <span class="fluid-label__title">По батькові</span>
+                      <input
+                        type="text"
+                        name="text-03"
+                        class="input-text fluid-label__control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion col item -->
+                <!-- #region col item -->
+                <div class="col-12 col-md-6">
+                  <div class="form__row" data-validity-group>
+                    <div class="fluid-label">
+                      <span class="fluid-label__title">Стать</span>
+                      <select
+                        class="select nice-select wide fluid-label__control"
+                        name="sex"
+                        data-validation="select"
+                      >
+                        <option value="" selected disabled>Обрати</option>
+                        <option value="male">Чоловіча</option>
+                        <option value="female">Жіноча</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion col item -->
+                <!-- #region col item -->
+                <div class="col-12 col-md-6">
+                  <div class="form__row" data-validity-group>
+                    <div class="fluid-label fluid-label--active">
+                      <span class="fluid-label__title">Дата народження</span>
+                      <input
+                        type="date"
+                        name="birth-date"
+                        class="input-text fluid-label__control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion col item -->
+
+                <!-- #region col item -->
+                <div class="col-12 col-md-6" id="custodian_name">
+                  <div class="form__row" data-validity-group>
+                    <div class="fluid-label">
+                      <span class="fluid-label__title"
+                        >ПІБ законного представника</span
+                      >
+                      <input
+                        type="text"
+                        name="text-05"
+                        class="input-text fluid-label__control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion col item -->
+
+                <!-- #region col item -->
+                <div class="col-12 col-md-6">
+                  <div class="form__row" data-validity-group>
+                    <div class="fluid-label">
+                      <span class="fluid-label__title">Контактний телефон</span>
+                      <input
+                        type="text"
+                        name="text-06"
+                        class="input-text fluid-label__control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion col item -->
+                <!-- #region col item -->
+                <div class="col-12 col-md-6">
+                  <div class="form__row" data-validity-group>
+                    <div class="fluid-label">
+                      <span class="fluid-label__title">Адреса проживання</span>
+                      <input
+                        type="text"
+                        name="text-07"
+                        class="input-text fluid-label__control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion col item -->
+                <!-- #region col item -->
+                <div class="col-12 col-md-6">
+                  <div class="form__row" data-validity-group>
+                    <div class="fluid-label">
+                      <span class="fluid-label__title">E-mail</span>
+                      <input
+                        type="email"
+                        name="email"
+                        class="input-text fluid-label__control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion col item -->
+                <!-- #region col item -->
+                <div class="col-12">
+                  <div class="form__row">
+                    <div class="fluid-label">
+                      <span class="fluid-label__title">
+                        Як ви про нас дізнались (необов'язково)</span
+                      >
+                      <textarea
+                        class="input-textarea fluid-label__control"
+                        name="sources"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- #region about respondent -->
+
+              <!-- #region question section -->
+              <section class="questionnaire-form__section">
+                <h2>Оберіть клініку до якої плануєте здійснити візит:</h2>
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region variants -->
+                  <div
+                    class="questionnaire-form__variants questionnaire-form__variants--wrap"
+                    data-validity-group
+                  >
+                    <div class="questionnaire-form__variant">
+                      <input
+                        type="radio"
+                        name="radio-01"
+                        id="kiyv-vyshhorodska"
+                        value="kiyv-vyshhorodska"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="kiyv-vyshhorodska"
+                        class="questionnaire-form__label"
+                        >Київ: клініка на Вишгородській</label
+                      >
+                    </div>
+                    <div class="questionnaire-form__variant">
+                      <input
+                        type="radio"
+                        name="radio-01"
+                        id="kiyv-klovsky"
+                        value="kiyv-klovsky"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="kiyv-klovsky"
+                        class="questionnaire-form__label"
+                        >Київ: клініка на Кловському Узвозі
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__variant">
+                      <input
+                        type="radio"
+                        name="radio-01"
+                        id="irpin-soborna"
+                        value="irpin-soborna"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="irpin-soborna"
+                        class="questionnaire-form__label"
+                      >
+                        Ірпінь: клініка на Соборній
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion variants -->
+                </div>
+                <!-- #endregion question -->
+              </section>
+              <!-- #endregion question section -->
+
+              <!-- #region question section -->
+              <section class="questionnaire-form__section">
+                <h2>Серцево-судинноі захворювання</h2>
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи маєте Ви підвищений / понижений тиск? (Якщо так -
+                    зазначте який саме)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-02"
+                        id="radio-02-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-02-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-02"
+                        id="radio-02-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-02-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+
+                  <!-- #region question dropdown-->
+                  <div class="questionnaire-form__dropdown">
+                    <div
+                      class="form__row questionnaire-form__dropdown-text"
+                      data-validity-group
+                    >
+                      <div class="fluid-label">
+                        <span class="fluid-label__title">
+                          Введіть показники вашого тиску</span
+                        >
+                        <input
+                          type="text"
+                          name="text-radio-02"
+                          class="input-text fluid-label__control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- #endregion question dropdown-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи маєте Ви кардіостимулятор?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-03"
+                        id="radio-03-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-03-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-03"
+                        id="radio-03-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-03-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи маєте Ви захворювання серця, порушення серцевого ритму?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-04"
+                        id="radio-04-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-04-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-04"
+                        id="radio-04-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-04-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи маєте Ви вроджені вади серця?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-05"
+                        id="radio-05-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-05-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-05"
+                        id="radio-05-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-05-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи маєте Ви в анамнезі перенесені інфаркт / інсульт?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-06"
+                        id="radio-06-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-06-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-06"
+                        id="radio-06-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-06-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+              </section>
+              <!-- #endregion question section -->
+
+              <!-- #region question section -->
+              <section class="questionnaire-form__section">
+                <h2>Чи Ви хворієте або хворіли наступними хворобами:</h2>
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Цукровий діабет</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-07"
+                        id="radio-07-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-07-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-07"
+                        id="radio-07-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-07-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Захворювання крові (тривалі кровотечі, незгортання крові,
+                    анемія тощо)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-08"
+                        id="radio-08-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-08-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-08"
+                        id="radio-08-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-08-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Захворювання очей (глаукома, відшарування сітківки тощо)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-09"
+                        id="radio-09-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-09-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-09"
+                        id="radio-09-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-09-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    ЛОР-захворювання (гайморит, синусит тощо)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-10"
+                        id="radio-10-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-10-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-10"
+                        id="radio-10-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-10-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Онкологічні захворювання
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-11"
+                        id="radio-11-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-11-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-11"
+                        id="radio-11-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-11-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Захворювання дихальної системи
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-12"
+                        id="radio-12-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-12-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-12"
+                        id="radio-12-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-12-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Нервові захворювання
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-13"
+                        id="radio-13-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-13-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-13"
+                        id="radio-13-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-13-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Захворювання печінки
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-14"
+                        id="radio-14-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-14-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-14"
+                        id="radio-14-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-14-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Ревматизм, артрит, болі в суглобах, суглобове протезування
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-15"
+                        id="radio-15-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-15-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-15"
+                        id="radio-15-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-15-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Захворювання щитоподібної залози
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-16"
+                        id="radio-16-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-16-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-16"
+                        id="radio-16-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-16-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Захворювання нирок
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-17"
+                        id="radio-17-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-17-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-17"
+                        id="radio-17-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-17-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Захворювання шлунково-кишкового тракту
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-18"
+                        id="radio-18-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-18-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-18"
+                        id="radio-18-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-18-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Туберкульоз</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-19"
+                        id="radio-19-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-19-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-19"
+                        id="radio-19-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-19-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Гепатит (жовтяниця) А, В, С. (Зазначте який тип та рік
+                    захворювання)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-20"
+                        id="radio-20-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-20-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-20"
+                        id="radio-20-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-20-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+
+                  <!-- #region question dropdown-->
+                  <div class="questionnaire-form__dropdown">
+                    <div
+                      class="form__row questionnaire-form__dropdown-text"
+                      data-validity-group
+                    >
+                      <div class="fluid-label">
+                        <span class="fluid-label__title"
+                          >Тип гепатиту та рік захворювання</span
+                        >
+                        <input
+                          type="text"
+                          name="text-radio-20"
+                          class="input-text fluid-label__control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- #endregion question dropdown-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">СНІД (AIDS)</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-21"
+                        id="radio-21-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-21-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-21"
+                        id="radio-21-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-21-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Герпетичні ураження губ
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-22"
+                        id="radio-22-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-22-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-22"
+                        id="radio-22-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-22-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+
+                  <!-- #region question dropdown-->
+                  <div class="questionnaire-form__dropdown">
+                    <div
+                      class="form__row questionnaire-form__dropdown-text"
+                      data-validity-group
+                    >
+                      <div class="fluid-label">
+                        <span class="fluid-label__title">
+                          Скільки разів на рік?
+                        </span>
+                        <input
+                          type="text"
+                          name="text-radio-22"
+                          class="input-text fluid-label__control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- #endregion question dropdown-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Захворювання шкіри (псоріаз, екзема, невідомого походження,
+                    тощо)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-23"
+                        id="radio-23-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-23-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-23"
+                        id="radio-23-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-23-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+              </section>
+              <!-- #endregion question section -->
+
+              <!-- #region question section -->
+              <section class="questionnaire-form__section">
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи були у Вас напади епілепсії?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-24"
+                        id="radio-24-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-24-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-24"
+                        id="radio-24-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-24-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи приймаєте Ви ліки, що покращують / погіршують згортання
+                    крові?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-25"
+                        id="radio-25-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-25-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-25"
+                        id="radio-25-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-25-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи приймаєте Ви будь-які інші медикаменти?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-26"
+                        id="radio-26-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-26-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-26"
+                        id="radio-26-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-26-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи маєте Ви непереносимість до окремих ліків?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-27"
+                        id="radio-27-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-27-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-27"
+                        id="radio-27-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-27-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Чи Ви палите?</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-28"
+                        id="radio-28-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-28-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-28"
+                        id="radio-28-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-28-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи Ви вживаєте міцні алкогольні напої частіше двох разів на
+                    тиждень?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-29"
+                        id="radio-29-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-29-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-29"
+                        id="radio-29-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-29-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи вживаєте Ви наркотичні речовини?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-30"
+                        id="radio-30-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-30-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-30"
+                        id="radio-30-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-30-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи вживаєте Ви психотропні речовини, в т.ч. транквілізатори,
+                    антидепресанти?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-31"
+                        id="radio-31-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-31-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-31"
+                        id="radio-31-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-31-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи маєте наразі будь-які інші захворювання?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-32"
+                        id="radio-32-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-32-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-32"
+                        id="radio-32-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-32-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи були у Вас або маєте неприємні відчуття в суглобах
+                    нижньої щелепи? (Якщо так, то оберіть, які саме: біль /
+                    клацання / шум / інший дискомфорт)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-33"
+                        id="radio-33-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-33-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-33"
+                        id="radio-33-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-33-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи були Ви оперовані?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-34"
+                        id="radio-34-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-34-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-34"
+                        id="radio-34-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-34-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+
+                  <!-- #region dropdown -->
+                  <div class="questionnaire-form__dropdown">
+                    <!-- #region question -->
+                    <div class="questionnaire-form__question">
+                      <!-- #region question title -->
+                      <div class="questionnaire-form__title">
+                        інтубація була проведена через:
+                      </div>
+                      <!-- #endregion question title -->
+
+                      <!-- #region question variants-->
+                      <div
+                        class="questionnaire-form__variants"
+                        data-validity-group
+                      >
+                        <div class="questionnaire-form__question-variant">
+                          <input
+                            type="radio"
+                            name="radio-35"
+                            id="radio-35-yes"
+                            value="Рот"
+                            class="questionnaire-form__radio"
+                          />
+                          <label
+                            for="radio-35-yes"
+                            class="questionnaire-form__label"
+                          >
+                            Рот
+                          </label>
+                        </div>
+                        <div class="questionnaire-form__question-variant">
+                          <input
+                            type="radio"
+                            name="radio-35"
+                            id="radio-35-no"
+                            value="Ніс"
+                            class="questionnaire-form__radio"
+                          />
+                          <label
+                            for="radio-35-no"
+                            class="questionnaire-form__label"
+                          >
+                            Ніс
+                          </label>
+                        </div>
+                      </div>
+                      <!-- #endregion question variants-->
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи маєте Ви шкідливі звички, пов’язані із зубами (гризете
+                    олівці, ручки, губи, щоки, нігті, скрегіт або надмірне
+                    стискання зубів)?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-36"
+                        id="radio-36-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-36-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-36"
+                        id="radio-36-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-36-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи відчували Ви самовільні больові відчуття в зубах, які
+                    через деякий час проходили без звернення до
+                    лікаря-стоматолога?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-37"
+                        id="radio-37-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-37-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-37"
+                        id="radio-37-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-37-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+              </section>
+              <!-- #endregion question section -->
+
+              <!-- #region question section FEMALE ONLY -->
+              <section class="questionnaire-form__section" id="female-only">
+                <h2>Стосується тільки жінок:</h2>
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Ви вагітні? (Якщо так, то вкажіть термін)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-38"
+                        id="radio-38-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-38-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-38"
+                        id="radio-38-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-38-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+
+                  <!-- #region question dropdown-->
+                  <div class="questionnaire-form__dropdown">
+                    <div
+                      class="form__row questionnaire-form__dropdown-text"
+                      data-validity-group
+                    >
+                      <div class="fluid-label">
+                        <span class="fluid-label__title">Строк вагітності</span>
+                        <input
+                          type="text"
+                          name="text-radio-38"
+                          class="input-text fluid-label__control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- #endregion question dropdown-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи годуєте Ви груддю?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-39"
+                        id="radio-39-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-39-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-39"
+                        id="radio-39-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-39-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи маєте розлади меноциклу, в т.ч. клімакс, менопауза?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-40"
+                        id="radio-40-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-40-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-40"
+                        id="radio-40-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-40-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи приймаєте Ви пероральні контрацептиви?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-41"
+                        id="radio-41-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-41-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-41"
+                        id="radio-41-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-41-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+
+                  <!-- #region question dropdown-->
+                  <div class="questionnaire-form__dropdown">
+                    <div
+                      class="form__row questionnaire-form__dropdown-text"
+                      data-validity-group
+                    >
+                      <div class="fluid-label">
+                        <span class="fluid-label__title"
+                          >Протягом якого часу?
+                        </span>
+                        <input
+                          type="text"
+                          name="text-radio-41"
+                          class="input-text fluid-label__control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- #endregion question dropdown-->
+                </div>
+                <!-- #endregion question -->
+              </section>
+              <!-- #endregion question section FEMALE ONLY -->
+
+              <!-- #region question section -->
+              <section class="questionnaire-form__section">
+                <h2>
+                  Алергологічний анамнез (згідно з Наказом МОЗ України від
+                  30.12.2015 № 916). Чи скаржитеся Ви на:
+                </h2>
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Напади ядухи (задишка, спричинювана деякими захворюваннями
+                    серця або бронхів; астма)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-42"
+                        id="radio-42-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-42-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-42"
+                        id="radio-42-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-42-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Задишки чи тяжкого дихання
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-43"
+                        id="radio-43-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-43-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-43"
+                        id="radio-43-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-43-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Задушливого кашлю</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-44"
+                        id="radio-44-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-44-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-44"
+                        id="radio-44-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-44-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Періодичні хрипи (свисти), які чути на відстані
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-45"
+                        id="radio-45-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-45-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-45"
+                        id="radio-45-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-45-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Часту чи постійну закладеність носа
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-46"
+                        id="radio-46-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-46-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-46"
+                        id="radio-46-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-46-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Виділення з носа без простуди
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-47"
+                        id="radio-47-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-47-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-47"
+                        id="radio-47-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-47-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Висипи на шкірі</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-48"
+                        id="radio-48-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-48-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-48"
+                        id="radio-48-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-48-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Почервоніння шкіри
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-49"
+                        id="radio-49-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-49-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-49"
+                        id="radio-49-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-49-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Набряки шкіри</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-50"
+                        id="radio-50-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-50-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-50"
+                        id="radio-50-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-50-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Відчуття свербежу шкіри
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-51"
+                        id="radio-51-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-51-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-51"
+                        id="radio-51-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-51-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Болі у животі</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-52"
+                        id="radio-52-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-52-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-52"
+                        id="radio-52-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-52-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Нудота</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-53"
+                        id="radio-53-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-53-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-53"
+                        id="radio-53-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-53-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Алергічний дерматит
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-54"
+                        id="radio-54-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-54-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-54"
+                        id="radio-54-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-54-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Часті діареї</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-55"
+                        id="radio-55-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-55-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-55"
+                        id="radio-55-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-55-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Втрата свідомості</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-56"
+                        id="radio-56-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-56-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-56"
+                        id="radio-56-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-56-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Помітне різке зниження артеріального тиску
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-57"
+                        id="radio-57-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-57-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-57"
+                        id="radio-57-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-57-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Затруднення дихання (якщо так - в який період виникають
+                    скарги?)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-58"
+                        id="radio-58-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-58-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-58"
+                        id="radio-58-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-58-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                  <!-- #region question dropdown-->
+                  <div class="questionnaire-form__dropdown">
+                    <!-- #region question -->
+                    <div class="questionnaire-form__question">
+                      <!-- #region variants -->
+                      <div
+                        class="questionnaire-form__variants questionnaire-form__variants--wrap"
+                        data-validity-group
+                      >
+                        <div class="questionnaire-form__question-variant">
+                          <input
+                            type="radio"
+                            name="radio-59"
+                            id="radio-59-all-year"
+                            value="Цілорічно"
+                            class="questionnaire-form__radio"
+                          />
+                          <label
+                            for="radio-59-all-year"
+                            class="questionnaire-form__label"
+                          >
+                            Цілорічно
+                          </label>
+                        </div>
+                        <div class="questionnaire-form__question-variant">
+                          <input
+                            type="radio"
+                            name="radio-59"
+                            id="radio-59-spring-summer"
+                            value="Весняно-літній"
+                            class="questionnaire-form__radio"
+                          />
+                          <label
+                            for="radio-59-spring-summer"
+                            class="questionnaire-form__label"
+                          >
+                            Весняно-літній
+                          </label>
+                        </div>
+                        <div class="questionnaire-form__question-variant">
+                          <input
+                            type="radio"
+                            name="radio-59"
+                            id="radio-59-summer-autumn"
+                            value="Літньо-осінній"
+                            class="questionnaire-form__radio"
+                          />
+                          <label
+                            for="radio-59-summer-autumn"
+                            class="questionnaire-form__label"
+                          >
+                            Літньо-осінній
+                          </label>
+                        </div>
+                      </div>
+                      <!-- #endregion question variants-->
+                    </div>
+                    <!-- #endregion question -->
+                  </div>
+                  <!-- #endregion question dropdown-->
+                </div>
+                <!-- #endregion question -->
+              </section>
+              <!-- #endregion question section -->
+
+              <!-- #region question section -->
+              <section class="questionnaire-form__section">
+                <h2>Чи скаржитеся Ви на:</h2>
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Свербіння та / або почервоніння очей
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-60"
+                        id="radio-60-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-60-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-60"
+                        id="radio-60-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-60-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Свербіння та / або почервоніння повік
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-61"
+                        id="radio-61-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-61-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-61"
+                        id="radio-61-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-61-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Свербіння та / або почервоніння носа
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-62"
+                        id="radio-62-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-62-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-62"
+                        id="radio-62-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-62-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+              </section>
+              <!-- #endregion question section -->
+
+              <!-- #region question section -->
+              <section class="questionnaire-form__section">
+                <h2>Усі вищенаведені скарги виникають після:</h2>
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Застосування ЛЗ (лікарських засобів)
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-63"
+                        id="radio-63-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-63-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-63"
+                        id="radio-63-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-63-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Харчових продуктів
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-64"
+                        id="radio-64-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-64-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-64"
+                        id="radio-64-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-64-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Побутової хімії</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-65"
+                        id="radio-65-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-65-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-65"
+                        id="radio-65-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-65-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Контакту з різними речовинами на виробництві
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-66"
+                        id="radio-66-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-66-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-66"
+                        id="radio-66-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-66-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">інші речовини</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-67"
+                        id="radio-67-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-67-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-67"
+                        id="radio-67-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-67-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+              </section>
+              <!-- #endregion question section -->
+
+              <!-- #region question section -->
+              <section class="questionnaire-form__section">
+                <h2>У Вас раніше були виявлені:</h2>
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Бронхіальна астма</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-68"
+                        id="radio-68-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-68-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-68"
+                        id="radio-68-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-68-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">Алергічний риніт</div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-69"
+                        id="radio-69-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-69-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-69"
+                        id="radio-69-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-69-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Небезпечні реакції на укуси комах
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-70"
+                        id="radio-70-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-70-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-70"
+                        id="radio-70-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-70-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+              </section>
+              <!-- #endregion question section -->
+
+              <!-- #region question section -->
+              <section class="questionnaire-form__section">
+                <h2>Непереносимість харчових продуктів:</h2>
+
+                <!-- #region question -->
+                <div class="questionnaire-form__question">
+                  <!-- #region question title -->
+                  <div class="questionnaire-form__title">
+                    Чи існують харчові продукти, харчові домішки, які Ви не
+                    переносите?
+                  </div>
+                  <!-- #endregion question title -->
+
+                  <!-- #region question variants-->
+                  <div class="questionnaire-form__variants" data-validity-group>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-71"
+                        id="radio-71-yes"
+                        value="Так"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-71-yes"
+                        class="questionnaire-form__label"
+                      >
+                        Так
+                      </label>
+                    </div>
+                    <div class="questionnaire-form__question-variant">
+                      <input
+                        type="radio"
+                        name="radio-71"
+                        id="radio-71-no"
+                        value="Ні"
+                        class="questionnaire-form__radio"
+                      />
+                      <label
+                        for="radio-71-no"
+                        class="questionnaire-form__label"
+                      >
+                        Ні
+                      </label>
+                    </div>
+                  </div>
+                  <!-- #endregion question variants-->
+                </div>
+                <!-- #endregion question -->
+              </section>
+              <!-- #endregion question section -->
+
+              <!-- #region question section -->
+              <section class="questionnaire-form__section">
+                <h2>Інші скарги:</h2>
+
+                <div class="form__row">
+                  <div class="fluid-label">
+                    <span class="fluid-label__title">
+                      Опишіть скарги, якщо вони є: (необов'язково)
+                    </span>
+                    <textarea
+                      class="input-textarea fluid-label__control"
+                      name="issues"
+                    ></textarea>
+                  </div>
+                </div>
+              </section>
+              <!-- #endregion question section -->
+
+              <button class="btn btn--square">Відправити</button>
+            </form>
+            <!-- #endregion questionnaire form -->
+          </div>
+        </section>
+        <!-- #endregion doctors -->
+
+        <!-- #region banner -->
+        <section class="block content__block content__block--mb-0">
+          <!--@import partials/components/banner-bottom-1.html-->
+        </section>
+        <!-- #endregion banner -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+    </div>
+
+    <!--@import partials/components/modal-appointment.html-->
+    <!--@import partials/components/modal-success.html-->
+    <!--@import partials/layout/scripts.html-->
+  </body>
+</html>

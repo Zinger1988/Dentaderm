@@ -53,22 +53,27 @@
     }
   }
 
+  &__row,
   &__link {
+    cursor: default;
     @include fs("body2");
-    @include decorationHidden(inherit);
-    @extend %linkReset;
-    @include animate(padding background-color);
     color: inherit;
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 1.6rem;
     align-items: center;
     padding: 1.4rem 1.4rem 1.4rem 4rem;
-    position: relative;
 
     @include media(">=3xl") {
       padding: 2rem 2rem 2rem 5.6rem;
     }
+  }
+
+  &__link {
+    @include decorationHidden(inherit);
+    @extend %linkReset;
+    @include animate(padding background-color);
+    position: relative;
 
     @include mediaHover() {
       &:hover {

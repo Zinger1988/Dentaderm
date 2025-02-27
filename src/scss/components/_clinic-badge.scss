@@ -1,0 +1,28 @@
+.clinic-badges {
+  @extend %listReset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  &__item {
+    @extend %listReset;
+  }
+}
+
+.clinic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 100rem;
+  background-color: $gray100;
+
+  &__icon {
+    @include sizeRatio(1.6rem);
+  }
+
+  &__title {
+    @include fs("body", 0.9);
+    font-weight: 400;
+  }
+}

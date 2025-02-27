@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content content--pt-0 page__content">
+        <!-- #region banner -->
+        <section class="block content__block">
+          <!--@import partials/components/location-banner.html-->
+        </section>
+        <!-- #endregion banner -->
+
+        <!-- #region about -->
+        <div class="block block--separated-b content__block">
+          <!--@import partials/components/index-about-section.html-->
+        </div>
+        <!-- #endregion about -->
+
+        <!-- #region approaches -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <!--@import partials/components/index-approaches.html-->
+          </div>
+        </section>
+        <!-- #endregion approaches -->
+
+        <!-- #region services -->
+        <section class="block content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Послуги</h2>
+              <a href="#" class="btn btn--default block__header-btn">
+                Всі послуги
+              </a>
+            </header>
+            <!--@import partials/components/index-service-grid.html-->
+          </div>
+        </section>
+        <!-- #endregion services -->
+
+        <!-- #region gallery -->
+        <section
+          class="block content__block block--separated-b block--separated-t"
+        >
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Фотогалерея:</h2>
+            </header>
+            <!--@import partials/components/photo-carousel.html-->
+          </div>
+        </section>
+        <!-- #endregion gallery -->
+
+        <!-- #region doctors -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Наші фахівці</h2>
+              <a href="#" class="btn btn--default block__header-btn"
+                >Всі фахівці</a
+              >
+            </header>
+            <!--@import partials/components/doctors-carousel.html-->
+          </div>
+        </section>
+        <!-- #endregion doctors -->
+
+        <!-- #region doctors -->
+        <section class="block content__block block--separated-b">
+          <div class="container">
+            <header class="block__header">
+              <h2 class="block__title">Спеціальні пропозиції</h2>
+            </header>
+            <!--@import partials/components/discount-carousel.html-->
+          </div>
+        </section>
+        <!-- #endregion doctors -->
+
+        <!-- #region reviews -->
+        <div class="block content__block block--separated-b">
+          <!--@import partials/components/reviews-section.html-->
+        </div>
+        <!-- #endregion reviews -->
+
+        <!-- #region care center -->
+        <section class="block content__block">
+          <div class="container">
+            <!--@import partials/components/care-center.html-->
+          </div>
+        </section>
+        <!-- #endregion care center -->
+
+        <!-- #region ceo text -->
+        <section class="block content__block">
+          <div class="container">
+            <!--@import partials/components/ceo-text.html-->
+          </div>
+        </section>
+        <!-- #endregion ceo text -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+    </div>
+
+    <!--@import partials/components/modal-appointment.html-->
+    <!--@import partials/components/modal-success.html-->
+    <!--@import partials/layout/scripts.html-->
+  </body>
+</html>

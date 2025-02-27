@@ -1,0 +1,170 @@
+.category-banner {
+  background: $gray950 url("/assets/images/service-direction/banner-bg.webp") center /
+    cover no-repeat;
+  color: $white;
+
+  @include media(">=lg") {
+    min-height: calc(100dvh - 8.4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include media(">=xl") {
+    min-height: calc(100dvh - 9.8rem);
+  }
+
+  @include media(">=3xl") {
+    min-height: calc(100dvh - 12.4rem);
+  }
+
+  &__container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__inner {
+    flex: 1 0 auto;
+    padding: 4rem 0;
+
+    @include media(">=md") {
+      padding: 5rem 0;
+    }
+
+    @include media(">=lg") {
+      position: relative;
+      padding: 0;
+      height: 100%;
+      display: grid;
+      justify-items: start;
+      align-items: start;
+      align-content: center;
+      grid:
+        ". media" minmax(5rem, 1fr)
+        "logo media" auto
+        "tagline media" auto
+        "crumbs media" auto
+        "services media" auto
+        "btn media" auto
+        ". media" minmax(5rem, 1fr) /
+        2fr 1fr;
+    }
+
+    @include media(">=2xl") {
+      grid-template-rows: minmax(6rem, 1fr) repeat(5, auto) minmax(6rem, 1fr);
+    }
+
+    @include media(">=3xl") {
+      grid-template-columns: 90rem 1fr;
+      grid-template-rows: minmax(9rem, 1fr) repeat(5, auto) minmax(9rem, 1fr);
+    }
+  }
+
+  &__logo {
+    @extend .banner__logo;
+
+    @include media(">=lg") {
+      grid-area: logo;
+    }
+  }
+
+  &__tagline {
+    @extend .banner__tagline;
+
+    @include media(">=lg") {
+      grid-area: tagline;
+    }
+  }
+
+  &__crumbs {
+    @include media(">=lg") {
+      grid-area: logo;
+    }
+  }
+
+  &__crumbs {
+    @include media(">=lg") {
+      grid-area: crumbs;
+    }
+  }
+
+  &__services {
+    @include media(">=lg") {
+      width: 100%;
+      grid-area: services;
+    }
+  }
+
+  &__crumbs,
+  &__services {
+    @extend .banner__crumbs;
+  }
+
+  &__appointment-btn {
+    @include media(">=lg") {
+      grid-area: btn;
+    }
+  }
+
+  &__media {
+    margin: 0 0 3.2rem;
+
+    @include media(">=lg") {
+      grid-area: media;
+
+      width: 100%;
+      position: relative;
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  &__img {
+    display: block;
+
+    @include media(">=lg") {
+      height: calc(100dvh - 8.4rem);
+      min-height: 50rem;
+      width: 100%;
+    }
+
+    @include media(">=xl") {
+      height: calc(100dvh - 9.8rem);
+    }
+
+    @include media(">=3xl") {
+      height: calc(100dvh - 12.4rem);
+    }
+  }
+
+  &__img-item {
+    display: block;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    width: 70%;
+    max-width: 40rem;
+    margin: 0 auto;
+
+    @include media(">=lg") {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% + 20rem);
+      height: 100%;
+      position: absolute;
+      object-fit: contain;
+      object-position: center;
+      max-width: none;
+    }
+
+    @include media(">=3xl") {
+      left: 50%;
+      top: -6rem;
+      transform: translateX(-50%);
+      width: calc(100% + 30rem);
+      height: calc(100% + 12rem);
+    }
+  }
+}

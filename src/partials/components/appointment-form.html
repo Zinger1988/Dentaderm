@@ -1,12 +1,11 @@
 <form class="form appointment-form">
   <div class="form__body">
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Клініка</span>
         <select
           class="select select--white nice-select wide fluid-label__control"
           name="clinic"
-          data-validation="select"
         >
           <option value="" selected disabled>Оберіть клініку</option>
           <option value="klovsky">Київ, Кловський узвіз, 7а</option>
@@ -15,39 +14,32 @@
         </select>
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Ім'я</span>
         <input
           type="text"
           name="name"
-          data-validation="required"
           class="input-text input-text--white fluid-label__control"
         />
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Телефон</span>
         <input
           type="tel"
           name="tel"
           class="input-text input-text--white fluid-label__control"
-          data-validation="required"
         />
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <label class="input-checkbox input-checkbox--white">
-        <input
-          class="input-checkbox__input"
-          type="checkbox"
-          name="agreement"
-          data-validation="checked"
-        />
+        <input class="input-checkbox__input" type="checkbox" name="agreement" />
         <span class="input-checkbox__toggle">
           <svg class="icon input-checkbox__icon">
-            <use href="assets/icons.svg#check-sm" />
+            <use href="/assets/icons.svg#check-sm" />
           </svg>
         </span>
         <span class="input-checkbox__title">

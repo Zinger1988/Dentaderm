@@ -60,6 +60,7 @@
     gap: 1.2rem;
     padding: 0 0 4rem 8rem;
     position: relative;
+    align-items: flex-start;
 
     @include media(">=xl") {
       padding: 0 0 4rem 7rem;
@@ -90,6 +91,12 @@
 
     &:last-child {
       padding-bottom: 0;
+    }
+
+    &--no-appearance {
+      &::before {
+        display: none;
+      }
     }
   }
 

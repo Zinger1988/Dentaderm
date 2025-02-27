@@ -44,9 +44,10 @@
   }
 
   &--layout-1 {
-    #{$this}__link {
-      padding: 25% 0;
-    }
+    // #{$this}__link {
+    //   padding: 25% 0;
+    // }
+    grid-template-rows: 1fr 1fr;
   }
 
   &--layout-2 {
@@ -60,6 +61,14 @@
 
     #{$this}__link:first-child {
       grid-column: 1/-1;
+    }
+  }
+
+  &--dark {
+    #{$this}__link {
+      &::before {
+        box-shadow: inset 0 0 0 1px $black;
+      }
     }
   }
 }

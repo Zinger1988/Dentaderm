@@ -19,6 +19,7 @@
     top: 2rem;
     transform-origin: left top;
     z-index: 10;
+    white-space: nowrap;
     @include animate(top transform, 0.15s);
 
     @include media(">=3xl") {
@@ -46,5 +47,10 @@
 
   .validator__tooltips {
     display: none;
+  }
+
+  &__control {
+    display: block;
+    width: 100%;
   }
 }

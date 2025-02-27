@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=block"
     rel="stylesheet"
   />
-  <link rel="preload" as="image" href="assets/icons.svg" />
+  <link rel="preload" as="image" href="/assets/icons.svg" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -102,7 +102,7 @@
           href="https://www.instagram.com/denta_derm/"
         >
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#instagram" />
+            <use href="/assets/icons.svg#instagram" />
           </svg>
         </a>
       </li>
@@ -113,21 +113,21 @@
           href="https://www.facebook.com/dentaderm"
         >
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#facebook" />
+            <use href="/assets/icons.svg#facebook" />
           </svg>
         </a>
       </li>
       <li class="socials__item">
         <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#viber" />
+            <use href="/assets/icons.svg#viber" />
           </svg>
         </a>
       </li>
       <li class="socials__item">
         <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
           <svg class="icon socials__icon">
-            <use href="assets/icons.svg#telegram" />
+            <use href="/assets/icons.svg#telegram" />
           </svg>
         </a>
       </li>
@@ -151,7 +151,7 @@
               href="https://www.instagram.com/denta_derm/"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#instagram" />
+                <use href="/assets/icons.svg#instagram" />
               </svg>
             </a>
           </li>
@@ -162,21 +162,21 @@
               href="https://www.facebook.com/dentaderm"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#facebook" />
+                <use href="/assets/icons.svg#facebook" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#viber" />
+                <use href="/assets/icons.svg#viber" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#telegram" />
+                <use href="/assets/icons.svg#telegram" />
               </svg>
             </a>
           </li>
@@ -276,7 +276,7 @@
   <div class="tabs-head location-tabs__head">
     <button
       class="tabs-btn active location-tabs__btn location-tabs__btn--lg"
-      data-tab-target="kiyv"
+      data-tab-target="kyiv"
     >
       Київ
     </button>
@@ -290,7 +290,7 @@
   <div class="tabs-content location-tabs__content">
     <div
       class="tabs-content-item location-tabs__content-item active"
-      data-tab-content="kiyv"
+      data-tab-content="kyiv"
     >
       <div class="location-tabs__address location-tabs__address--sm">
         <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -354,12 +354,12 @@
     <picture class="banner__img">
       <source
         type="image/webp"
-        srcset="assets/images/service/smiling_woman_with_brackets.webp"
+        srcset="assets/images/banners/smiling_client_3.webp"
       />
       <img
         loading="lazy"
         class="banner__img-item"
-        src="assets/images/service/smiling_woman_with_brackets.jpg"
+        src="assets/images/banners/smiling_client_3.jpg"
         alt="img"
       />
     </picture>
@@ -369,30 +369,20 @@
         src="assets/images/dentaderm_logo_text_only_white.svg"
         alt="dentaderm текстовий логотип"
       />
-      <h1 class="banner__tagline banner__tagline">Ортодонтичне лікування</h1>
-      <ul class="crumbs crumbs--white banner__crumbs">
-        <li class="crumbs__item">
-          <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
-        </li>
-        <li class="crumbs__item">
-          <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Послуги</a>
-        </li>
-        <li class="crumbs__item">
-          <span class="crumbs__endpoint">Ортодонтичне лікування</span>
-        </li>
-      </ul>
+      <h1 class="banner__tagline banner__tagline">
+        Клініка Dentaderm на Вишгородській
+      </h1>
     </div>
     <div class="banner__content">
-      <h3>Отримайте консультацію</h3>
+      <h3>Отримати консультацію</h3>
 <form class="form appointment-form">
   <div class="form__body">
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Клініка</span>
         <select
           class="select select--white nice-select wide fluid-label__control"
           name="clinic"
-          data-validation="select"
         >
           <option value="" selected disabled>Оберіть клініку</option>
           <option value="klovsky">Київ, Кловський узвіз, 7а</option>
@@ -401,39 +391,32 @@
         </select>
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Ім'я</span>
         <input
           type="text"
           name="name"
-          data-validation="required"
           class="input-text input-text--white fluid-label__control"
         />
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <div class="fluid-label fluid-label--white">
         <span class="fluid-label__title">Телефон</span>
         <input
           type="tel"
           name="tel"
           class="input-text input-text--white fluid-label__control"
-          data-validation="required"
         />
       </div>
     </div>
-    <div class="form__row">
+    <div class="form__row" data-validity-group>
       <label class="input-checkbox input-checkbox--white">
-        <input
-          class="input-checkbox__input"
-          type="checkbox"
-          name="agreement"
-          data-validation="checked"
-        />
+        <input class="input-checkbox__input" type="checkbox" name="agreement" />
         <span class="input-checkbox__toggle">
           <svg class="icon input-checkbox__icon">
-            <use href="assets/icons.svg#check-sm" />
+            <use href="/assets/icons.svg#check-sm" />
           </svg>
         </span>
         <span class="input-checkbox__title">
@@ -453,46 +436,230 @@
         </section>
         <!-- #endregion banner -->
 
+        <!-- #region about -->
+        <div class="block block--separated-b content__block">
+<!--#region about section-->
+<section class="hero-section hero-section--reverse hero-section--bt-0 hero-section--bb-0">
+  <div class="hero-section__container hero-section__container--no-min-height">
+    <div class="hero-section__content">
+      <div class="hero-section__inner hero-section__inner--content-center">
+        <div class="hero-section__text">
+          <h2>DENTADERM — це мережа сучасних клінік в Києві та Ірпені</h2>
+          <p>
+            Стоматологічна клініка DENTADERM — це турботлива команда лікарів, сучасні
+            методики лікування та комфортна атмосфера. З 2005 року ми даруємо красиву й
+            здорову усмішку нашим пацієнтам. Виконуємо повний спектр стоматологічних
+            послуг: від професійної гігієни до імплантування зубів. Нам під силу навіть
+            найскладніші клінічні випадки!
+          </p>
+          <p>
+            DENTADERM — це унікальна діагностика та пошук причин виникнення дисфункції
+            скронево-нижньощелепного суглобу за методикою Рудольфа Славічека при допомозі
+            сучасного обладнання (КТ, ОПТГ, 3D сканер, кондилограф, артикулятор, варіатор
+            та ін).
+          </p>
+        </div>
+        <button
+          class="location-section__btn btn btn--lightBlue btn--square"
+          data-modal-id="modal-appointment"
+        >
+          Отримати консультацію
+        </button>
+      </div>
+    </div>
+    <picture class="hero-section__image hero-section__image--no-bg">
+      <source type="image/webp" srcset="assets/images/banners/about_collage.webp" />
+      <img
+        loading="lazy"
+        class="hero-section__image-item"
+        src="assets/images/banners/about_collage.jpg"
+        alt="img"
+      />
+    </picture>
+  </div>
+</section>
+<!--#endregion about section-->
+        </div>
+        <!-- #endregion about -->
+
+        <!-- #region approaches -->
+        <section class="block block--separated-b content__block">
+          <div class="container">
+<div class="approaches block__approaches">
+  <header class="approaches__header">
+    <h2 class="approaches__title">
+      DENTADERM — це комплексний підхід до здоров'я пацієнта!
+    </h2>
+    <p class="approaches__subtitle">
+      <b>Наша система лікування складається з таких обов’язкових етапів:</b>
+    </p>
+  </header>
+
+  <ul class="approaches__list logoBadge-list">
+    <li class="logoBadge-list__item">
+      <div class="logoBadge">
+        <div class="logoBadge__top">
+          <svg class="logoBadge__icon">
+            <use href="/assets/icons.svg#teeth-scan" />
+          </svg>
+          <svg class="logoBadge__bg-icon">
+            <use href="/assets/icons.svg#logo-blank" />
+          </svg>
+        </div>
+        <p class="logoBadge__label">Check-up ротової порожнини</p>
+      </div>
+    </li>
+    <li class="logoBadge-list__item">
+      <div class="logoBadge">
+        <div class="logoBadge__top">
+          <svg class="logoBadge__icon">
+            <use href="/assets/icons.svg#calculator" />
+          </svg>
+          <svg class="logoBadge__bg-icon">
+            <use href="/assets/icons.svg#logo-blank" />
+          </svg>
+        </div>
+        <p class="logoBadge__label">Cкладання плану й бюджету</p>
+      </div>
+    </li>
+    <li class="logoBadge-list__item">
+      <div class="logoBadge">
+        <div class="logoBadge__top">
+          <svg class="logoBadge__icon">
+            <use href="/assets/icons.svg#doctor-with-mask" />
+          </svg>
+          <svg class="logoBadge__bg-icon">
+            <use href="/assets/icons.svg#logo-blank" />
+          </svg>
+        </div>
+        <p class="logoBadge__label">Консультація головного лікаря</p>
+      </div>
+    </li>
+    <li class="logoBadge-list__item">
+      <div class="logoBadge">
+        <div class="logoBadge__top">
+          <svg class="logoBadge__icon">
+            <use href="/assets/icons.svg#dental-chair" />
+          </svg>
+          <svg class="logoBadge__bg-icon">
+            <use href="/assets/icons.svg#logo-blank" />
+          </svg>
+        </div>
+        <p class="logoBadge__label">Початок самого лікування</p>
+      </div>
+    </li>
+    <li class="logoBadge-list__item">
+      <div class="logoBadge">
+        <div class="logoBadge__top">
+          <svg class="logoBadge__icon">
+            <use href="/assets/icons.svg#glowing-face" />
+          </svg>
+          <svg class="logoBadge__bg-icon">
+            <use href="/assets/icons.svg#logo-blank" />
+          </svg>
+        </div>
+        <p class="logoBadge__label">...i Ваша посмішка знову сяє!</p>
+      </div>
+    </li>
+  </ul>
+
+  <div class="approaches__description">
+    <p>
+      Протягом усього часу на зв’язку з вами —  клієнтський менеджер. Всі етапи лікування
+      контролює головний лікар — вона знає кожного пацієнта, який проходить лікування в
+      клініках. За потреби, долучаємо суміжних спеціалістів: таких, як остеопат.
+    </p>
+    <p>
+      Ми не намагаємось всім сподобатись за рахунок штучного wow-сервісу чи неіснуючих
+      storytelling. Ми просто любимо те, що робимо і поважаємо людей, які звертаються до
+      нас знову і знову.
+    </p>
+  </div>
+</div>
+          </div>
+        </section>
+        <!-- #endregion approaches -->
+
         <!-- #region services -->
         <section class="block content__block">
           <div class="container">
             <header class="block__header">
               <h2 class="block__title">Послуги</h2>
+              <a href="#" class="btn btn--default block__header-btn">
+                Всі послуги
+              </a>
             </header>
-<div class="related-grid related-grid--lg">
-  <a href="#" class="related-tile related-grid__item">
-    <div class="related-tile__inner">
-      <div class="related-tile__title">Керамічні брекети</div>
+<div class="service-grid-alt">
+  <a href="#" class="service-tile-alt service-grid-alt__item">
+    <div class="service-tile-alt__inner">
+      <svg class="icon service-tile-alt__icon">
+        <use href="/assets/icons.svg#teeth-research" />
+      </svg>
+      <span class="service-tile-alt__title">Діагностика та консультація</span>
     </div>
   </a>
-  <a href="#" class="related-tile related-grid__item">
-    <div class="related-tile__inner">
-      <div class="related-tile__title">Металеві брекети</div>
+  <a href="#" class="service-tile-alt service-grid-alt__item">
+    <div class="service-tile-alt__inner">
+      <svg class="icon service-tile-alt__icon">
+        <use href="/assets/icons.svg#hygiene" />
+      </svg>
+      <span class="service-tile-alt__title">Профілактика та гігієна</span>
     </div>
   </a>
-  <a href="#" class="related-tile related-grid__item">
-    <div class="related-tile__inner">
-      <div class="related-tile__title">Самолігуючі брекети</div>
+  <a href="#" class="service-tile-alt service-grid-alt__item">
+    <div class="service-tile-alt__inner">
+      <svg class="icon service-tile-alt__icon">
+        <use href="/assets/icons.svg#teeth-treatment" />
+      </svg>
+      <span class="service-tile-alt__title">Лікування зубів та каналів</span>
     </div>
   </a>
-  <a href="#" class="related-tile related-grid__item">
-    <div class="related-tile__inner">
-      <div class="related-tile__title">Цифрові брекети Інсігнія (США)</div>
+  <a href="#" class="service-tile-alt service-grid-alt__item">
+    <div class="service-tile-alt__inner">
+      <svg class="icon service-tile-alt__icon">
+        <use href="/assets/icons.svg#gnathology" />
+      </svg>
+      <span class="service-tile-alt__title">Гнатологія</span>
     </div>
   </a>
-  <a href="#" class="related-tile related-grid__item">
-    <div class="related-tile__inner">
-      <div class="related-tile__title">Елайнери (Інвізілайн) США</div>
+  <a href="#" class="service-tile-alt service-grid-alt__item">
+    <div class="service-tile-alt__inner">
+      <svg class="icon service-tile-alt__icon">
+        <use href="/assets/icons.svg#aesthetic-dentistry" />
+      </svg>
+      <span class="service-tile-alt__title">Естетична стоматологія</span>
     </div>
   </a>
-  <a href="#" class="related-tile related-grid__item">
-    <div class="related-tile__inner">
-      <div class="related-tile__title">Пластинки</div>
+  <a href="#" class="service-tile-alt service-grid-alt__item">
+    <div class="service-tile-alt__inner">
+      <svg class="icon service-tile-alt__icon">
+        <use href="/assets/icons.svg#teeth-brackets" />
+      </svg>
+      <span class="service-tile-alt__title">Вирівнювання прикусу (Ортодонтія)</span>
     </div>
   </a>
-  <a href="#" class="related-tile related-grid__item">
-    <div class="related-tile__inner">
-      <div class="related-tile__title">Мікроімпланти</div>
+  <a href="#" class="service-tile-alt service-grid-alt__item">
+    <div class="service-tile-alt__inner">
+      <svg class="icon service-tile-alt__icon">
+        <use href="/assets/icons.svg#teeth-prosthesis" />
+      </svg>
+      <span class="service-tile-alt__title">Ортопедичне лікування</span>
+    </div>
+  </a>
+  <a href="#" class="service-tile-alt service-grid-alt__item">
+    <div class="service-tile-alt__inner">
+      <svg class="icon service-tile-alt__icon">
+        <use href="/assets/icons.svg#teeth-surgery" />
+      </svg>
+      <span class="service-tile-alt__title">Хірургічна стоматологія</span>
+    </div>
+  </a>
+  <a href="#" class="service-tile-alt service-grid-alt__item">
+    <div class="service-tile-alt__inner">
+      <svg class="icon service-tile-alt__icon">
+        <use href="/assets/icons.svg#periodontal-treatment" />
+      </svg>
+      <span class="service-tile-alt__title">Пародонтологічне лікування</span>
     </div>
   </a>
 </div>
@@ -500,141 +667,275 @@
         </section>
         <!-- #endregion services -->
 
-        <!-- #region reviews -->
-        <div class="block content__block">
-<section class="hero-section">
-  <div class="hero-section__container">
-    <div class="hero-section__content">
-      <div class="hero-section__inner hero-section__inner--content-center">
-        <div class="hero-section__text">
-          <h2>Як ми підходимо до ортодонтичного лікування:</h2>
-          <p>
-            Вирівнювання зубів ≠ ортодонтичному лікуванню. Це головний принцип нашої
-            роботи. Ортодонтичне лікування — це серйозне втручання в зубощелепну систему,
-            яке впливає на інші частини нашого організму.
-          </p>
-          <p>
-            Це про дослідження роботи суглобів, пошук оптимального положення при змиканні
-            зубів відносно черепу, аналіз даних функціональної діагностики, за яким
-            складається ортодонтичний план лікування.
-          </p>
-        </div>
-
-        <button class="btn btn--square btn--lightBlue" data-modal-id="modal-appointment">
-          Отримати консультацію
-        </button>
-      </div>
-    </div>
-    <picture class="hero-section__image">
-      <source type="image/webp" srcset="assets/images/service/ortho_diagnosis.webp" />
-      <img
-        loading="lazy"
-        class="hero-section__image-item hero-section__image-item--cover"
-        src="assets/images/service/ortho_diagnosis.jpg"
-        alt="img"
-      />
-    </picture>
-  </div>
-</section>
-        </div>
-        <!-- #endregion reviews -->
-
-        <!-- #region path -->
-        <section class="block block--separated-b content__block">
+        <!-- #region gallery -->
+        <section
+          class="block content__block block--separated-b block--separated-t"
+        >
           <div class="container">
             <header class="block__header">
-              <h2 class="block__title text-center">Ортодонтичний шлях</h2>
+              <h2 class="block__title">Фотогалерея:</h2>
             </header>
-            <div class="block__sub">
-<!-- #region steps -->
-<ul class="steps">
-  <li class="steps__item">
-    <div class="steps__marker">
-      <div class="steps__marker-value">1</div>
+<div class="card-carousel card-carousel--photo">
+  <div class="card-carousel__swiper swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <!-- #region discount card -->
+        <div class="charity-gallery charity-gallery--layout-2">
+          <a
+            href="assets/images/gallery/vyshgorodska/1.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/1.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/1.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+          <a
+            href="assets/images/gallery/vyshgorodska/2.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/2.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/2.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+          <a
+            href="assets/images/gallery/vyshgorodska/3.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/3.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/3.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+          <a
+            href="assets/images/gallery/vyshgorodska/4.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/4.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/4.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+        </div>
+        <!-- #endregion discount card -->
+      </div>
+
+      <div class="swiper-slide">
+        <!-- #region discount card -->
+        <div class="charity-gallery charity-gallery--layout-3">
+          <a
+            href="assets/images/gallery/vyshgorodska/5.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/5.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/5.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+          <a
+            href="assets/images/gallery/vyshgorodska/6.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/6.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/6.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+          <a
+            href="assets/images/gallery/vyshgorodska/7.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/7.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/7.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+        </div>
+        <!-- #endregion discount card -->
+      </div>
+
+      <div class="swiper-slide">
+        <!-- #region discount card -->
+        <div class="charity-gallery charity-gallery--layout-1">
+          <a
+            href="assets/images/gallery/vyshgorodska/8.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/8.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/8.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+          <a
+            href="assets/images/gallery/vyshgorodska/9.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/9.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/9.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+        </div>
+        <!-- #endregion discount card -->
+      </div>
+
+      <div class="swiper-slide">
+        <!-- #region discount card -->
+        <div class="charity-gallery charity-gallery--layout-3">
+          <a
+            href="assets/images/gallery/vyshgorodska/10.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/10.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/10.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+          <a
+            href="assets/images/gallery/vyshgorodska/11.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/11.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/11.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+          <a
+            href="assets/images/gallery/vyshgorodska/12.jpg"
+            class="charity-gallery__link"
+            data-fancybox="army"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/gallery/vyshgorodska/12.webp"
+              />
+              <img
+                loading="lazy"
+                class="charity-gallery__thumb"
+                src="assets/images/gallery/vyshgorodska/12.jpg"
+                alt="Gallery item"
+              />
+            </picture>
+          </a>
+        </div>
+        <!-- #endregion discount card -->
+      </div>
     </div>
-    <h3 class="steps__title">Консультація головного лікаря і лікаря ортодонта</h3>
-    <p class="steps__description">
-      Первинний огляд-консультація, пальпація, проведення додаткових досліджень за
-      призначенням
-    </p>
-  </li>
-  <li class="steps__item">
-    <div class="steps__marker">
-      <div class="steps__marker-value">2</div>
-    </div>
-    <h3 class="steps__title">Терапевтичне лікування за призначенням лікаря</h3>
-    <p class="steps__description">
-      Санація ротової порожнини — обовʼязково. У процесі руху зубного ряду може
-      розвинутися будь-яка патологія. Вилікувати її буде складніше через особливості
-      ортодонтичної конструкції
-    </p>
-  </li>
-  <li class="steps__item">
-    <div class="steps__marker">
-      <div class="steps__marker-value">3</div>
-    </div>
-    <h3 class="steps__title">Функціональна діагностика</h3>
-    <p class="steps__description">
-      Дослідження роботи скронево-нижньощелепного суглоба. Визначає фізіологічно-правильні
-      параметри розміщення щелепи — норму та її відхилення
-    </p>
-  </li>
-  <li class="steps__item">
-    <div class="steps__marker">
-      <div class="steps__marker-value">4</div>
-    </div>
-    <h3 class="steps__title">Складання і погодження плану ортодонтичного лікування</h3>
-    <p class="steps__description">
-      На основі всіх зібраних даних складається ортодонтичний план лікування. У цифровому
-      вигляді ми бачимо точку “Б”, куди потрібно тягнути і рухати зубощелепну систему
-    </p>
-  </li>
-  <li class="steps__item">
-    <div class="steps__marker">
-      <div class="steps__marker-value">5</div>
-    </div>
-    <h3 class="steps__title">Фіксація брекет-системи</h3>
-    <p class="steps__description">
-      Позиціонування брекет-системи з фіксацією на світлотвердільний матеріал
-    </p>
-  </li>
-  <li class="steps__item">
-    <div class="steps__marker">
-      <div class="steps__marker-value">6</div>
-    </div>
-    <h3 class="steps__title">Ортодонтичне лікування</h3>
-    <p class="steps__description">
-      Корекції, заміна дуг, професійна гігієна кожні 3-6 місяців
-    </p>
-  </li>
-  <li class="steps__item">
-    <div class="steps__marker">
-      <div class="steps__marker-value">7</div>
-    </div>
-    <h3 class="steps__title">Ретенційний період</h3>
-    <p class="steps__description">фіксація ретейнеру за призначенням</p>
-  </li>
-</ul>
-<!-- #endregion steps -->
-            </div>
-            <div class="text-center">
-              <button
-                class="btn btn--square btn--lightBlue"
-                data-modal-id="modal-appointment"
-              >
-                Отримати консультацію
-              </button>
-            </div>
+  </div>
+</div>
           </div>
         </section>
-        <!-- #endregion path -->
+        <!-- #endregion gallery -->
 
         <!-- #region doctors -->
         <section class="block block--separated-b content__block">
           <div class="container">
             <header class="block__header">
               <h2 class="block__title">Наші фахівці</h2>
-              <a href="#" class="btn btn--default block__header-btn">Всі фахівці</a>
+              <a href="#" class="btn btn--default block__header-btn"
+                >Всі фахівці</a
+              >
             </header>
 <div class="card-carousel card-carousel--doctors">
   <div class="card-carousel__swiper swiper">
@@ -763,12 +1064,12 @@
   </div>
   <button class="card-carousel__nav card-carousel__nav--next">
     <svg class="icon card-carousel__nav-icon">
-      <use href="assets/icons.svg#arrow-right" />
+      <use href="/assets/icons.svg#arrow-right" />
     </svg>
   </button>
   <button class="card-carousel__nav card-carousel__nav--prev">
     <svg class="icon card-carousel__nav-icon">
-      <use href="assets/icons.svg#arrow-left" />
+      <use href="/assets/icons.svg#arrow-left" />
     </svg>
   </button>
 </div>
@@ -776,505 +1077,481 @@
         </section>
         <!-- #endregion doctors -->
 
-        <!-- #region demo -->
-        <section class="block block--separated-b content__block">
+        <!-- #region doctors -->
+        <section class="block content__block block--separated-b">
           <div class="container">
             <header class="block__header">
-              <h2 class="block__title">Результати щасливих усмішок</h2>
+              <h2 class="block__title">Спеціальні пропозиції</h2>
             </header>
-            <div class="block__sub">
-<div class="card-carousel card-carousel--demo">
+<div class="card-carousel card-carousel--discount">
   <div class="card-carousel__swiper swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><article class="demo-card">
-  <a href="#" class="demo-card__link">
-    <picture class="demo-card__img">
-      <source type="image/webp" srcset="assets/images/service/424x418_benderska.webp" />
-      <img
-        loading="lazy"
-        class="demo-card__img-item"
-        src="assets/images/service/424x418_benderska.jpg"
-        alt="img"
-      />
-    </picture>
-    <svg
-      class="demo-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
-      />
-    </svg>
-  </a>
-  <div class="demo-card__description">
-    Брекет-система: <b>самолігуючі керамічні</b><br />
-    Час лікування: <b>2 роки</b>
-  </div>
-</article>
-</div>
-      <div class="swiper-slide"><article class="demo-card">
-  <a href="#" class="demo-card__link">
-    <picture class="demo-card__img">
-      <source type="image/webp" srcset="assets/images/service/424x418_benderska.webp" />
-      <img
-        loading="lazy"
-        class="demo-card__img-item"
-        src="assets/images/service/424x418_benderska.jpg"
-        alt="img"
-      />
-    </picture>
-    <svg
-      class="demo-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
-      />
-    </svg>
-  </a>
-  <div class="demo-card__description">
-    Брекет-система: <b>самолігуючі керамічні</b><br />
-    Час лікування: <b>2 роки</b>
-  </div>
-</article>
-</div>
-      <div class="swiper-slide"><article class="demo-card">
-  <a href="#" class="demo-card__link">
-    <picture class="demo-card__img">
-      <source type="image/webp" srcset="assets/images/service/424x418_benderska.webp" />
-      <img
-        loading="lazy"
-        class="demo-card__img-item"
-        src="assets/images/service/424x418_benderska.jpg"
-        alt="img"
-      />
-    </picture>
-    <svg
-      class="demo-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
-      />
-    </svg>
-  </a>
-  <div class="demo-card__description">
-    Брекет-система: <b>самолігуючі керамічні</b><br />
-    Час лікування: <b>2 роки</b>
-  </div>
-</article>
-</div>
-      <div class="swiper-slide"><article class="demo-card">
-  <a href="#" class="demo-card__link">
-    <picture class="demo-card__img">
-      <source type="image/webp" srcset="assets/images/service/424x418_benderska.webp" />
-      <img
-        loading="lazy"
-        class="demo-card__img-item"
-        src="assets/images/service/424x418_benderska.jpg"
-        alt="img"
-      />
-    </picture>
-    <svg
-      class="demo-card__decor"
-      width="138"
-      height="100"
-      viewBox="0 0 138 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M110.499 90.3959L110.499 90.396C85.3719 105.951 52.2777 101.013 33.3587 79.8605C30.5584 76.7075 25.7417 76.034 22.0976 78.284L22.0963 78.2848L16.7412 81.6135L16.7409 81.6137C12.8535 84.034 7.54584 82.5773 5.685 78.6171L5.68324 78.6134C-6.01757 54.2275 2.51751 24.7828 27.0015 9.59237C52.1276 -5.96181 85.2211 -0.984408 104.141 20.1273C106.941 23.281 111.758 23.9548 115.402 21.7046L115.404 21.7038L120.759 18.3751L120.759 18.3749C124.644 15.9563 129.913 17.4081 131.817 21.3752L131.817 21.3755C143.518 45.7214 134.982 75.2458 110.499 90.3959Z"
-      />
-    </svg>
-  </a>
-  <div class="demo-card__description">
-    Брекет-система: <b>самолігуючі керамічні</b><br />
-    Час лікування: <b>2 роки</b>
-  </div>
-</article>
-</div>
+      <div class="swiper-slide">
+        <!-- #region discount card -->
+        <article class="discount-card discount-list__card">
+          <a href="#" class="discount-card__link">
+            <div class="discount-info discount-card__info">
+              <picture class="discount-info__img">
+                <source
+                  type="image/webp"
+                  srcset="assets/images/discount/discount_thumb_1.webp"
+                />
+                <img
+                  class="discount-info__img-item"
+                  src="assets/images/discount/discount_thumb_1.jpg"
+                  alt="img"
+                />
+              </picture>
+              <div class="discount-info__date">Безстроково</div>
+              <div class="discount-info__info">
+                <div class="discount-info__percentage">-25%</div>
+                <div class="discount-info__price">
+                  <div class="discount-info__price-item discount-info__price-item--old">
+                    4 025
+                  </div>
+                  <div class="discount-info__price-item">3 000 грн</div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <div class="discount-card__desc">
+            <h3 class="discount-card__title">
+              <a class="discount-card__title-link" href="#"> Стоматологічний ЧЕК-АП </a>
+            </h3>
+
+            <p class="discount-card__excerpt">
+              Комплексна діагностика — найкращий метод профілактики. Адже дозволяє вчасно
+              виявити будь-які порушення, дізнатися про стан кожного зуба, обрати
+              ефективні методи лікування й уникнути ускладнень.
+            </p>
+          </div>
+        </article>
+        <!-- #endregion discount card -->
+      </div>
+      <div class="swiper-slide">
+        <!-- #region discount card -->
+        <article class="discount-card discount-list__card">
+          <a href="#" class="discount-card__link">
+            <div class="discount-info discount-card__info">
+              <picture class="discount-info__img">
+                <source
+                  type="image/webp"
+                  srcset="assets/images/discount/discount_thumb_2.webp"
+                />
+                <img
+                  class="discount-info__img-item"
+                  src="assets/images/discount/discount_thumb_2.jpg"
+                  alt="img"
+                />
+              </picture>
+              <div class="discount-info__date">Безстроково</div>
+              <div class="discount-info__info">
+                <div class="discount-info__percentage">-25%</div>
+                <div class="discount-info__price">
+                  <div class="discount-info__price-item discount-info__price-item--old">
+                    4 025
+                  </div>
+                  <div class="discount-info__price-item">3 000 грн</div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <div class="discount-card__desc">
+            <h3 class="discount-card__title">
+              <a class="discount-card__title-link" href="#">
+                Підписка на профгігієну 2-4 рази
+              </a>
+            </h3>
+
+            <p class="discount-card__excerpt">
+              Чистити зуби слід вранці та ввечері — це правило ми знаємо з дитинства.
+              Догляд за ротовою порожниною передбачає використання якісних зубних щіток,
+              паст, ірригаторів. Та варто пам’ятати про те, що навіть ретельне дотриман...
+            </p>
+          </div>
+        </article>
+        <!-- #endregion discount card -->
+      </div>
+
+      <div class="swiper-slide">
+        <!-- #region discount card -->
+        <article class="discount-card discount-list__card">
+          <a href="#" class="discount-card__link">
+            <div class="discount-info discount-card__info">
+              <picture class="discount-info__img">
+                <source
+                  type="image/webp"
+                  srcset="assets/images/discount/discount_thumb_3.webp"
+                />
+                <img
+                  class="discount-info__img-item"
+                  src="assets/images/discount/discount_thumb_3.jpg"
+                  alt="img"
+                />
+              </picture>
+              <div class="discount-info__date">Безстроково</div>
+            </div>
+          </a>
+
+          <div class="discount-card__desc">
+            <h3 class="discount-card__title">
+              <a class="discount-card__title-link" href="#"> Лікування по страховці </a>
+            </h3>
+
+            <p class="discount-card__excerpt">
+              Напевно немає такої людини у світі, яку б жодного разу не боліли зуби.
+              Важливо не ігнорувати цю проблему: звертайтеся до лікаря вчасно. Адже
+              самолікування, у кращому випадку, лише допомагає зняти біль на певний час.
+            </p>
+          </div>
+        </article>
+        <!-- #endregion discount card -->
+      </div>
+
+      <div class="swiper-slide">
+        <!-- #region discount card -->
+        <article class="discount-card discount-list__card">
+          <a href="#" class="discount-card__link">
+            <div class="discount-info discount-card__info">
+              <picture class="discount-info__img">
+                <source
+                  type="image/webp"
+                  srcset="assets/images/discount/discount_thumb_4.webp"
+                />
+                <img
+                  class="discount-info__img-item"
+                  src="assets/images/discount/discount_thumb_4.jpg"
+                  alt="img"
+                />
+              </picture>
+              <div class="discount-info__date">Безстроково</div>
+              <div class="discount-info__info">
+                <div class="discount-info__percentage">-25%</div>
+                <div class="discount-info__price">
+                  <div class="discount-info__price-item discount-info__price-item--old">
+                    4 025
+                  </div>
+                  <div class="discount-info__price-item">3 000 грн</div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <div class="discount-card__desc">
+            <h3 class="discount-card__title">
+              <a class="discount-card__title-link" href="#"> Пакетні пропозиції </a>
+            </h3>
+
+            <p class="discount-card__excerpt">
+              Клініка естетичної стоматології DentaDerm в Києві пропонує вам лікування
+              зубів європейського рівня. Ми використовуємо тільки новітні методики,
+              сертифіковані матеріали світових брендів, сучасне обладнання.
+            </p>
+          </div>
+        </article>
+        <!-- #endregion discount card -->
+      </div>
     </div>
   </div>
   <button class="card-carousel__nav card-carousel__nav--next">
     <svg class="icon card-carousel__nav-icon">
-      <use href="assets/icons.svg#arrow-right" />
+      <use href="/assets/icons.svg#arrow-right" />
     </svg>
   </button>
   <button class="card-carousel__nav card-carousel__nav--prev">
     <svg class="icon card-carousel__nav-icon">
-      <use href="assets/icons.svg#arrow-left" />
+      <use href="/assets/icons.svg#arrow-left" />
     </svg>
   </button>
 </div>
-            </div>
-            <div class="text-center">
-              <button
-                class="btn btn--square btn--lightBlue"
-                data-modal-id="modal-appointment"
-              >
-                Отримати консультацію
-              </button>
-            </div>
           </div>
         </section>
-        <!-- #endregion demo -->
+        <!-- #endregion doctors -->
 
         <!-- #region reviews -->
-        <section class="block block--separated-b content__block">
-          <div class="container">
-            <header class="block__header">
-              <h2 class="block__title">Наші зіркові усмішки</h2>
-            </header>
-<div class="hero-slider">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <article class="hero-card">
-        <div class="hero-card__media video" data-video-id="zOfUeZu2juk">
-          <div class="video__play"></div>
-        </div>
-        <div class="hero-card__header">
-          <h3 class="hero-card__title">Лозовицька Єкатерина</h3>
-          <!-- <div class="hero-card__nav">
-            <button
-              class="hero-card__nav-btn hero-card__nav-btn--prev"
-              aria-label="Попередній слайд"
-            >
-              <svg class="icon hero-card__nav-icon">
-                <use href="assets/icons.svg#arrow-left" />
-              </svg>
-            </button>
-            <button
-              class="hero-card__nav-btn hero-card__nav-btn--next"
-              aria-label="Наступний слайд"
-            >
-              <svg class="icon hero-card__nav-icon">
-                <use href="assets/icons.svg#arrow-right" />
-              </svg>
-            </button>
-          </div> -->
-        </div>
-        <div class="hero-card__description">
-          <p>Переможниця 12 сезону шоу “Холостяк”, супермодель</p>
-          <p>
-            Брекет-система: <b>самолігуючі керамічні</b><br />
-            Час лікування: <b>в процесі лікування</b>
-          </p>
-        </div>
-      </article>
-    </div>
+        <div class="block content__block block--separated-b">
+<!--#region reviews section -->
+<section class="reviews-section">
+  <div class="container reviews-section__container">
+    <h2 class="reviews-section__title">
+      Що про нас кажуть ті, хто тепер щасливо посміхається:
+    </h2>
 
-    <div class="swiper-slide">
-      <article class="hero-card">
-        <div class="hero-card__media">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/images/service/celebrity_reply_hamaiko.webp"
-            />
-            <img
-              loading="lazy"
-              class="hero-card__media-item"
-              src="assets/images/service/celebrity_reply_hamaiko.jpg"
-              alt="img"
-            />
-          </picture>
-        </div>
-        <div class="hero-card__header">
-          <h3 class="hero-card__title">Хамайко Валентина та Оністрат Соломія</h3>
-        </div>
-        <div class="hero-card__description">
-          <p>Валентина — акторка, телеведуча проєкту «Сніданок Вихідний» на 1+1</p>
-          <p>
-            Брекет-система: <b>металева</b><br />
-            Час лікування: <b>в процесі лікування</b>
-          </p>
-        </div>
-      </article>
-    </div>
-
-    <div class="swiper-slide">
-      <article class="hero-card">
-        <div class="hero-card__media">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/images/service/celebrity_reply_slavinska.webp"
-            />
-            <img
-              loading="lazy"
-              class="hero-card__media-item"
-              src="assets/images/service/celebrity_reply_slavinska.jpg"
-              alt="img"
-            />
-          </picture>
-        </div>
-        <div class="hero-card__header">
-          <h3 class="hero-card__title">Славінська Ірина</h3>
-        </div>
-        <div class="hero-card__description">
-          <p>
-            Співзасновниця "ДонорUA", президентка ГО "Всеукраїнська асоціація донорів
-            України
-          </p>
-          <p>
-            Брекет-система: <b>елайнери Invisalign</b><br />
-            Час лікування: <b>в процесі лікування</b>
-          </p>
-        </div>
-      </article>
+    <!-- #region carousel-->
+    <div class="reviews-carousel--alt reviews-section__carousel">
+      <div class="reviews-carousel__swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Прийшла в клініку Дента Дерм після невдалого лікування. Стан був - не вірю, не
+        довіряю і боюсь. Прийшла на консультацію до головного лікаря Ткачук Діни
+        Володимирівни. Почали лікування з дослідження суглобів ( гнатолог). Тепер я знаю,
+        що коли у вас болить шия, голова, спина і плечі, ви погано спите, це не
+        обовʼязково зразу лікувати спину масажами. У вас просто може бути поганий прикус,
+        який вирівнюється капою. Ця капа розслаблює мʼязи і навіть ваше обличчя сильно
+        змінюється!!! Через місяць ви себе не впізнаєте! Вам покажуть фото ДО і ПІСЛЯ…
+        Будете в шоці, в хорошому сенсі!) Лікування я тільки почала, але страху лікарів і
+        лікування у мене вже немає!!! Я вірю, що в мене буде гарна посмішка і здорові зуби
+        🙏 Лікування у мене не швидке, але!!! я краще по трохи і з надійними лікарями, чим
+        швидко і потім наберуся проблем на все життя!!! Дуже гарний персонал, молоді і
+        амбітні. Завжди усміхнені. А лікар гнатолог ( не памʼятаю імені, вибачте) взагалі
+        смішить всіх і лікування приходить дуже комфортно. Не запускайте зуби і слухайтесь
+        порад тільки від хороших друзів!!! Рекомендую
+      </p>
     </div>
   </div>
+</article>
+</div>
+          <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Дента Дерм найкраща стоматологія, яку відвідувала моя Родина, багато де ми були,
+        але тут поєднано увага, турбота, професіоналізм, залишок. Дякуємо Діні
+        Володимирівні та адміністратору Оксані за Вашу турботу та професійний підхід до
+        кожного клієнта ❤️
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+          <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Дента Дерм найкраща стоматологія, яку відвідувала моя Родина, багато де ми були,
+        але тут поєднано увага, турбота, професіоналізм, залишок. Дякуємо Діні
+        Володимирівні та адміністратору Оксані за Вашу турботу та професійний підхід до
+        кожного клієнта ❤️
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+          <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Дента Дерм найкраща стоматологія, яку відвідувала моя Родина, багато де ми були,
+        але тут поєднано увага, турбота, професіоналізм, залишок. Дякуємо Діні
+        Володимирівні та адміністратору Оксані за Вашу турботу та професійний підхід до
+        кожного клієнта ❤️
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+          <div class="swiper-slide"><article class="review-card">
+  <h3 class="review-card__title">Марина Павлівна</h3>
+  <div class="review-card__rating rating">
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+    <svg class="icon rating__star">
+      <use href="/assets/icons.svg#star-filled" />
+    </svg>
+  </div>
+  <div class="review-card__text expand-container">
+    <div class="review-card__text-panel expand-container__panel">
+      <p>
+        Дента Дерм найкраща стоматологія, яку відвідувала моя Родина, багато де ми були,
+        але тут поєднано увага, турбота, професіоналізм, залишок. Дякуємо Діні
+        Володимирівні та адміністратору Оксані за Вашу турботу та професійний підхід до
+        кожного клієнта ❤️
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+        </div>
+      </div>
+    </div>
+    <!-- #endregion carousel-->
+
+    <!-- #region carousel nav-->
+    <div class="reviews-section__nav">
+      <button class="reviews-section__nav-btn reviews-section__nav-btn--prev">
+        <svg class="icon reviews-section__nav-btn-icon">
+          <use href="/assets/icons.svg#arrow-left" />
+        </svg>
+      </button>
+      <div class="reviews-section__pagination"></div>
+      <button class="reviews-section__nav-btn reviews-section__nav-btn--next">
+        <svg class="icon reviews-section__nav-btn-icon">
+          <use href="/assets/icons.svg#arrow-right" />
+        </svg>
+      </button>
+    </div>
+    <!-- #endregion carousel nav-->
+
+    <!-- #region staff banner -->
+    <div class="staff-banner-ver reviews-section__banner">
+      <div class="staff-banner-ver__inner">
+        <picture class="staff-banner-ver__img">
+          <source type="image/webp" srcset="assets/images/staff-banner/nifontova.webp" />
+          <img
+            class="staff-banner-ver__img-item"
+            src="assets/images/staff-banner/nifontova.png"
+            alt="Dentaderm clinic doctor"
+            loading="lazy"
+          />
+        </picture>
+        <div class="staff-banner-ver__text">
+          <div class="staff-banner-ver__text-inner text-center">
+            <p>Отримайте особисту консультацію від наших спеціалістів!</p>
+          </div>
+        </div>
+        <div class="staff-banner-ver__footer">
+          <button
+            class="btn btn--white btn--square btn--fluid"
+            data-modal-id="modal-appointment"
+          >
+            Отримати консультацію
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- #endregion staff banner -->
+  </div>
+</section>
+<!--#endregion reviews section -->
+        </div>
+        <!-- #endregion reviews -->
+
+        <!-- #region care center -->
+        <section class="block content__block">
+          <div class="container">
+<div class="care-center">
+  <div class="care-center__heading">
+    <h2 class="care-center__title">Центр турботи завжди на зв’язку</h2>
+    <p class="care-center__desc">Ми є в зручних для вас мессенджерах:</p>
+    <button class="btn btn--white-alt btn--square" data-modal-id="modal-appointment">
+      Отримати консультацію
+    </button>
+  </div>
+  <ul class="care-center__list">
+    <li class="care-center__item">
+      <a class="care-center__link" href="#" target="_blank">
+        <svg class="icon care-center__icon">
+          <use href="/assets/icons.svg#telegram-filled" />
+        </svg>
+        <span>Telegram</span>
+      </a>
+    </li>
+    <li class="care-center__item">
+      <a class="care-center__link" href="#" target="_blank">
+        <svg class="icon care-center__icon">
+          <use href="/assets/icons.svg#viber-filled" />
+        </svg>
+        <span>Viber</span>
+      </a>
+    </li>
+    <li class="care-center__item">
+      <a class="care-center__link" href="#" target="_blank">
+        <svg class="icon care-center__icon">
+          <use href="/assets/icons.svg#instagram-filled" />
+        </svg>
+        <span>Instagram</span>
+      </a>
+    </li>
+    <li class="care-center__item">
+      <a class="care-center__link" href="#" target="_blank">
+        <svg class="icon care-center__icon">
+          <use href="/assets/icons.svg#facebook-filled" />
+        </svg>
+        <span>Facebook</span>
+      </a>
+    </li>
+  </ul>
 </div>
           </div>
         </section>
-        <!-- #endregion reviews -->
-
-        <!-- #region faq -->
-        <section class="block block--separated-b content__block">
-          <div class="container container--screen-xl">
-            <header class="block__header">
-              <h2 class="block__title">Питання та відповіді</h2>
-            </header>
-<!--#region price accordion -->
-<ul class="accordion faq block__faq wow fadeInUp">
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span>Чи обовʼязкова функціональна діагностика, якщо я хочу брекети?</span>
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Так. Найголовніше — фізіологічно-здорова функція зубів. Лікування без проведення
-          функціональної діагностики — верхівка айсберга, адже зуби напряму повʼязані із
-          суглобами.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span>Чи можу я самостійно обрати брекет-систему, яку я хочу?</span>
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Ми враховуємо всі побажання пацієнтів, але фінальне рішення завжди приймає лікар
-          на основі даних.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span>Чи можу я побачити результат до початку ортодонтичного лікування?</span>
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Саме так працює цифрова брекет-система Insignia. Програмне забезпечення
-          враховуює дані проведеної діагностики, задані параметри, особливості обличчя та
-          наводить кінцевий результат до того, як лікар стоматолог-ортодонт фіксує брекет
-          систему.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span>Чи потрібно видаляти “зуби мудрості” перед фіксацією брекет-системи?</span>
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Якщо зуби лежать у кістці або прорізалися частково — вони можуть змістити зубний
-          ряд, через те носіння брекет-системи буде неефективним.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span
-        >Що робити, якщо я пройшла ортодонтичне лікування, але відчуваю дискомфорт в
-        суглобах?</span
-      >
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Швидше за все, ортодонтичний план лікування був складений не на основі чітких
-          цифрових параметрів зубощелепної системи, через що відчувається дискомфорт у
-          суглобах.
-        </p>
-        <p>
-          Функціональна діагностика допоможе віднайти те фізіологічно-правильне положення
-          щелепи і як наслідок — полегшить надмірне навантаження на
-          скронево-нижньощелепний суглоб.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span>Як довго треба носити брекети?</span>
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Брекет-системи бувають різними, тому вони відрізняються своєю ефективністю і
-          відповідно терміном носіння. У середньому 1,5-2 роки.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span>Як часто треба приходити після фіксації брекетів?</span>
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Корекції та заміни дуг раз на місяць/раз на два місяці у залежності від обраної
-          брекет-системи. Професійна гігієна обовʼязкова кожні 3-6 місяців.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span>Якщо я хочу малопомітну брекет-систему, якій надати перевагу?</span>
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Радимо розглянути самолігуючі керамічні, які практично не помітні завдяки
-          прозорій структурі.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span>Які є обмеження у харчуванні після фіксації брекет-системи?</span>
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Перший тиждень рекомендуємо вживати мʼяку їжу (йогурт, сир, каші, пюре,
-          перекручене мʼясо, рибу).
-        </p>
-        <p>
-          Надлишок вуглеводів (солодощі, газована вода, здоба, печиво) підвищують ризик
-          розвитку карієсу. Радимо знизити прийом вуглеводів у раціоні приділити особливу
-          увагу гігієні ротової порожнини.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span>Як доглядати за брекетами?</span>
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Після кожного прийому чистити зуби та ортодонтичний апарат зубною щіткою +
-          фторовмісною пастою. Перед сном вичищати важкодоступні місця йоржиком (між
-          зубами і брекетами).
-        </p>
-        <p>
-          Використовувати домашній іригатор (бажано після кожного прийому їжі). Кожні 3
-          місяці обовʼязкова професійна профілактична гігієна у лікаря-стоматолога.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-  <!--#region price accordion item -->
-  <li class="accordion-item faq__item">
-    <div class="accordion-label faq__label">
-      <span>Що робити, якщо відклеївся брекет?</span>
-      <div class="faq__icon">+</div>
-    </div>
-    <div class="accordion__panel">
-      <!--#region price accordion sub -->
-      <div class="faq__body">
-        <p>
-          Його необхідно зафіксувати у лікаря-ортодонта якомога швидше. Брекети можуть
-          відклеюватись через надмірні навантаження на ортодонтичний апарат — уникайте їх.
-        </p>
-      </div>
-      <!--#endregion price accordion sub -->
-    </div>
-  </li>
-  <!--#endregion price accordion item -->
-</ul>
-<!--#endregion price accordion -->
-          </div>
-        </section>
-        <!-- #endregion faq -->
+        <!-- #endregion care center -->
 
         <!-- #region ceo text -->
         <section class="block content__block">
@@ -1409,7 +1686,7 @@
     <div class="footer__locations">
       <div class="tabs location-tabs location-tabs--white">
         <div class="tabs-head location-tabs__head">
-          <button class="tabs-btn active location-tabs__btn" data-tab-target="kiyv">
+          <button class="tabs-btn active location-tabs__btn" data-tab-target="kyiv">
             Київ
           </button>
           <button class="tabs-btn location-tabs__btn" data-tab-target="irpin">
@@ -1419,7 +1696,7 @@
         <div class="tabs-content location-tabs__content">
           <div
             class="tabs-content-item location-tabs__content-item"
-            data-tab-content="kiyv"
+            data-tab-content="kyiv"
           >
             <div class="location-tabs__address">
               <p class="location-tabs__address-row location-tabs__address-row--sm">
@@ -1525,7 +1802,7 @@
               href="https://www.instagram.com/denta_derm/"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#instagram" />
+                <use href="/assets/icons.svg#instagram" />
               </svg>
             </a>
           </li>
@@ -1536,21 +1813,21 @@
               href="https://www.facebook.com/dentaderm"
             >
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#facebook" />
+                <use href="/assets/icons.svg#facebook" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://tinyurl.com/27phvmbk">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#viber" />
+                <use href="/assets/icons.svg#viber" />
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" target="_blank" href="https://t.me/DentaDerm_Kyiv">
               <svg class="icon socials__icon">
-                <use href="assets/icons.svg#telegram" />
+                <use href="/assets/icons.svg#telegram" />
               </svg>
             </a>
           </li>
@@ -1582,7 +1859,7 @@
     <h3 class="modal__title">Отримати консультацію</h3>
     <button class="modal-close modal__close-btn">
       <svg class="icon modal__close-icon">
-        <use href="assets/icons.svg#cancel" />
+        <use href="/assets/icons.svg#cancel" />
       </svg>
     </button>
   </div>
@@ -1595,7 +1872,7 @@
       <!-- #region appointment form -->
       <form class="form appointment-form">
         <div class="form__body">
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <div class="fluid-label">
               <span class="fluid-label__title">Клініка</span>
               <select
@@ -1610,7 +1887,7 @@
               </select>
             </div>
           </div>
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <div class="fluid-label">
               <span class="fluid-label__title">Ім'я</span>
               <input
@@ -1621,7 +1898,7 @@
               />
             </div>
           </div>
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <div class="fluid-label">
               <span class="fluid-label__title">Телефон</span>
               <input
@@ -1632,7 +1909,7 @@
               />
             </div>
           </div>
-          <div class="form__row">
+          <div class="form__row" data-validity-group>
             <label class="input-checkbox">
               <input
                 class="input-checkbox__input"
@@ -1642,7 +1919,7 @@
               />
               <span class="input-checkbox__toggle">
                 <svg class="icon input-checkbox__icon">
-                  <use href="assets/icons.svg#check-sm" />
+                  <use href="/assets/icons.svg#check-sm" />
                 </svg>
               </span>
               <span class="input-checkbox__title">
@@ -1670,7 +1947,7 @@
     <h3 class="modal__title">Запит відправлено</h3>
     <button class="modal-close modal__close-btn">
       <svg class="icon modal__close-icon">
-        <use href="assets/icons.svg#cancel" />
+        <use href="/assets/icons.svg#cancel" />
       </svg>
     </button>
   </div>
@@ -1695,6 +1972,8 @@
   href="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.css"
   rel="stylesheet"
 />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/vfs_fonts.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
   </body>

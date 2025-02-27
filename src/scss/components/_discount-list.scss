@@ -2,4 +2,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   gap: 4rem;
+
+  &__card {
+    height: 100%;
+  }
 }

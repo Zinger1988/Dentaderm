@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content content--pt-0 page__content">
+        <!-- #region banner -->
+        <section class="block content__block content__block--mb-0">
+          <!--@import partials/components/service-category-banner.html-->
+        </section>
+        <!-- #endregion banner -->
+
+        <!-- #region nav content -->
+        <div class="nav-content content__nav-content">
+          <!-- #region nav -->
+          <div class="nav-content__nav">
+            <div class="nav-content__nav-label">Хірургічне лікування:</div>
+            <ul class="nav-content__list"></ul>
+            <button
+              data-modal-id="modal-appointment"
+              class="btn btn--fluid btn--square btn--lightBlue nav-content__nav-appointment-btn"
+            >
+              Отримати консультацію
+            </button>
+          </div>
+          <!-- #endregion nav -->
+
+          <!-- #region content -->
+          <div class="nav-content__content">
+            <!-- #region block -->
+            <div
+              class="block block--separated-b block--separated-t content__block--mb-0 nav-content__block"
+              data-nav-id="Хірургічне лікування в Києві — що це та кому потрібно?"
+            >
+              <div class="container nav-content__container">
+                <header class="block__header">
+                  <h2 class="block__title wow fadeInRight">
+                    Хірургічне лікування в Києві — що це та кому потрібно?
+                  </h2>
+                </header>
+                <!--@import partials/components/direction-description.html-->
+              </div>
+            </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
+            <div
+              class="block block--separated-b block--p-0 nav-content__block"
+              data-nav-id="Етапи лікування"
+            >
+              <div class="container nav-content__container">
+                <!--@import partials/components/stages-direction.html-->
+              </div>
+            </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
+            <div class="block block--separated-b nav-content__block" data-nav-id="Лікарі">
+              <div class="container nav-content__container">
+                <header class="block__header">
+                  <h2 class="block__title wow fadeInRight">Лікарі</h2>
+                </header>
+                <!--@import partials/components/service-doctors-carousel.html-->
+              </div>
+            </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
+            <div class="block nav-content__block" data-nav-id="Питання та відповіді">
+              <div class="container nav-content__container">
+                <header class="block__header">
+                  <h2 class="block__title wow fadeInRight">Питання та відповіді</h2>
+                </header>
+                <!--@import partials/components/faq-accordion.html-->
+              </div>
+            </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
+            <div class="block nav-content__block">
+              <div class="container nav-content__container">
+                <!-- #region staff banner -->
+                <div class="staff-banner-hor mx-auto wow fadeInUp">
+                  <div class="staff-banner-hor__inner">
+                    <picture class="staff-banner-hor__img">
+                      <source
+                        type="image/webp"
+                        srcset="assets/images/staff-banner/malova.webp"
+                      />
+                      <img
+                        class="staff-banner-hor__img-item"
+                        src="assets/images/staff-banner/malova.png"
+                        alt="Dentaderm clinic doctor"
+                        loading="lazy"
+                      />
+                    </picture>
+                    <div class="staff-banner-hor__text">
+                      <div class="staff-banner-hor__text-inner">
+                        <div class="h2">Виникли питання?</div>
+                        <p>
+                          Наші співробітники із задоволенням вам допоможуть. Просто,
+                          заповніть коротку форму, та отримайте вичерпну, особисту і
+                          безкоштовну консультацію!
+                        </p>
+
+                        <button
+                          class="btn btn--white-alt btn--square"
+                          data-modal-id="modal-appointment"
+                        >
+                          Отримати консультацію
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- #endregion staff banner -->
+              </div>
+            </div>
+            <!-- #endregion block -->
+            <!-- #region block -->
+            <div
+              class="block block--separated-t nav-content__block"
+              data-nav-id="Послуги"
+            >
+              <div class="container nav-content__container">
+                <header class="block__header">
+                  <h2 class="block__title wow fadeInRight">Послуги</h2>
+                </header>
+                <!--@import partials/components/service-category-related-grid.html-->
+              </div>
+            </div>
+            <!-- #endregion block -->
+          </div>
+          <!-- #region content -->
+        </div>
+        <!-- #endregion nav content -->
+
+        <!-- #region ceo text -->
+        <section class="block content__block block--separated-t">
+          <div class="container">
+            <!--@import partials/components/ceo-text.html-->
+          </div>
+        </section>
+        <!-- #endregion ceo text -->
+
+        <!-- #region banner -->
+        <section class="block content__block content__block--mb-0">
+          <!--@import partials/components/banner-bottom-2.html-->
+        </section>
+        <!-- #endregion banner -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+    </div>
+
+    <!--@import partials/components/modal-appointment.html-->
+    <!--@import partials/components/modal-success.html-->
+    <!--@import partials/layout/scripts.html-->
+  </body>
+</html>

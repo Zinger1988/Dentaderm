@@ -225,16 +225,16 @@
     #{$this}__header {
       grid-template-areas:
         "backward"
-        "discount"
         "title"
-        "img";
+        "discount";
+      gap: 2.4rem 8rem;
 
       @include media(">=md") {
         grid-template-columns: 1fr auto;
         grid-template-areas:
-          "backward ."
-          "title discount"
-          "img img";
+          "title backward"
+          "discount discount";
+        gap: 2.8rem 8rem;
       }
     }
   }
