@@ -217,7 +217,7 @@
                         type="radio"
                         name="radio-01"
                         id="kiyv-vyshhorodska"
-                        value="kiyv-vyshhorodska"
+                        value="1"
                         class="questionnaire-form__radio"
                       />
                       <label
@@ -231,7 +231,7 @@
                         type="radio"
                         name="radio-01"
                         id="kiyv-klovsky"
-                        value="kiyv-klovsky"
+                        value="2"
                         class="questionnaire-form__radio"
                       />
                       <label
@@ -245,7 +245,7 @@
                         type="radio"
                         name="radio-01"
                         id="irpin-soborna"
-                        value="irpin-soborna"
+                        value="3"
                         class="questionnaire-form__radio"
                       />
                       <label
@@ -3589,7 +3589,11 @@
               </section>
               <!-- #endregion question section -->
 
-              <button class="btn btn--square">Відправити</button>
+              <div class="questionnaire-form__footer">
+                <button class="btn btn--square questionnaire-form__submit">
+                  Відправити
+                </button>
+              </div>
             </form>
             <!-- #endregion questionnaire form -->
           </div>
@@ -3611,6 +3615,7 @@
 
     <!--@import partials/components/modal-appointment.html-->
     <!--@import partials/components/modal-success.html-->
+    <!--@import partials/components/modal-error.html-->
     <!--@import partials/layout/scripts.html-->
   </body>
 </html>

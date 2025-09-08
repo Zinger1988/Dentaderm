@@ -134,6 +134,24 @@
       @include animate(transform, 0.1s);
     }
 
+    &:disabled,
+    &--disabled {
+      cursor: not-allowed;
+      background-color: $gray100;
+      color: $gray400;
+
+      &,
+      &:hover {
+        background-color: $gray200;
+        color: $gray400;
+
+        &::after {
+          border-right: 1px solid $gray200;
+          border-bottom: 1px solid $gray200;
+        }
+      }
+    }
+
     &:active {
       transform: translate(0.5rem, 0.5rem);
 
@@ -188,7 +206,8 @@
       left: 0.6rem;
       width: 1.8rem;
       height: 0.9rem;
-      background: url(../assets/images/arrow_black_left.svg) center / contain no-repeat;
+      background: url(../assets/images/arrow_black_left.svg) center / contain
+        no-repeat;
     }
   }
 
@@ -230,8 +249,8 @@
       right: -0.8rem;
       width: 5.2rem;
       height: 4rem;
-      background: url(../assets/images/dentaderm_logo_stroke_gray_outline.svg) center /
-        contain no-repeat;
+      background: url(../assets/images/dentaderm_logo_stroke_gray_outline.svg)
+        center / contain no-repeat;
     }
 
     @include mediaHover() {

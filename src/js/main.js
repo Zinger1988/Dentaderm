@@ -128,7 +128,7 @@ const initMap = () => {
 
   const el = document.createElement("div");
   el.className = "marker";
-  el.style.backgroundImage = "url(./assets/images/marker.svg)";
+  el.style.backgroundImage = "url(/assets/images/marker.svg)";
   el.style.width = "36px";
   el.style.height = "36px";
 
@@ -156,9 +156,7 @@ const initMap = () => {
   clinics.forEach((coord) => {
     const { label, coords } = coord;
     const element = el.cloneNode(true);
-    const marker = new maptilersdk.Marker({ element })
-      .setLngLat(coords)
-      .addTo(map);
+    const marker = new maptilersdk.Marker({ element }).setLngLat(coords).addTo(map);
 
     marker.getElement().addEventListener("click", (e) => {
       closeAllPopups();
@@ -181,8 +179,7 @@ const tabs = () => {
     const labelsWrapper = item.querySelector(".tabs-head");
     const labelItems = Array.from(labelsWrapper.querySelectorAll(".tabs-btn"));
     const activeLabel =
-      labelItems.find((item) => item.classList.contains("active")) ||
-      labelItems[0];
+      labelItems.find((item) => item.classList.contains("active")) || labelItems[0];
 
     const contentWrapper = item.querySelector(".tabs-content");
 
@@ -196,11 +193,8 @@ const tabs = () => {
       });
 
       const tabId = activeLabel.dataset.tabTarget;
-      const contentItems =
-        contentWrapper.querySelectorAll(".tabs-content-item");
-      const activeContent = contentWrapper.querySelector(
-        `[data-tab-content=${tabId}]`
-      );
+      const contentItems = contentWrapper.querySelectorAll(".tabs-content-item");
+      const activeContent = contentWrapper.querySelector(`[data-tab-content=${tabId}]`);
 
       contentItems.forEach((item) => {
         if (item !== activeContent) {
@@ -223,39 +217,34 @@ const tabs = () => {
 };
 
 const initReviewCarousel = () => {
-  const sliderContainer = document.querySelector(
-    ".reviews-carousel .reviews-carousel__swiper"
-  );
+  const sliderContainer = document.querySelector(".reviews-carousel .reviews-carousel__swiper");
 
   if (!sliderContainer) return;
 
-  const reviewsCarousel = new Swiper(
-    ".reviews-carousel .reviews-carousel__swiper",
-    {
-      grabCursor: true,
-      keyboardControl: true,
-      lazy: true,
-      loop: true,
-      mousewheelControl: true,
-      slidesPerView: 3,
-      speed: 10000,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
+  const reviewsCarousel = new Swiper(".reviews-carousel .reviews-carousel__swiper", {
+    grabCursor: true,
+    keyboardControl: true,
+    lazy: true,
+    loop: true,
+    mousewheelControl: true,
+    slidesPerView: 3,
+    speed: 10000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
       },
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1400: {
-          slidesPerView: 3,
-        },
+      768: {
+        slidesPerView: 2,
       },
-    }
-  );
+      1400: {
+        slidesPerView: 3,
+      },
+    },
+  });
 
   reviewsCarousel.on("touchEnd", (swiper) => {
     updateExpand(swiper);
@@ -274,49 +263,40 @@ const initReviewCarouselAlt = () => {
   if (!sliderContainer) return;
 
   const wrapper = sliderContainer.closest(".reviews-section__container");
-  const customPagination = wrapper.querySelector(
-    ".reviews-section__pagination"
-  );
-  const reviewsCarousel = new Swiper(
-    ".reviews-carousel--alt .reviews-carousel__swiper",
-    {
-      grabCursor: true,
-      keyboardControl: true,
-      freeMode: false,
-      loop: true,
-      mousewheelControl: true,
-      spaceBetween: 40,
-      slidesPerView: 3,
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-          freeMode: true,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 1,
-        },
-        1400: {
-          slidesPerView: 2,
-        },
+  const customPagination = wrapper.querySelector(".reviews-section__pagination");
+  const reviewsCarousel = new Swiper(".reviews-carousel--alt .reviews-carousel__swiper", {
+    grabCursor: true,
+    keyboardControl: true,
+    freeMode: false,
+    loop: true,
+    mousewheelControl: true,
+    spaceBetween: 40,
+    slidesPerView: 3,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        freeMode: true,
       },
-      on: {
-        init: function (swiper) {
-          const carouselNextBtn = wrapper.querySelector(
-            ".reviews-section__nav-btn--next"
-          );
-          const carouselPrevBtn = wrapper.querySelector(
-            ".reviews-section__nav-btn--prev"
-          );
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 1,
+      },
+      1400: {
+        slidesPerView: 2,
+      },
+    },
+    on: {
+      init: function (swiper) {
+        const carouselNextBtn = wrapper.querySelector(".reviews-section__nav-btn--next");
+        const carouselPrevBtn = wrapper.querySelector(".reviews-section__nav-btn--prev");
 
-          carouselNextBtn.addEventListener("click", () => swiper.slideNext());
-          carouselPrevBtn.addEventListener("click", () => swiper.slidePrev());
-        },
+        carouselNextBtn.addEventListener("click", () => swiper.slideNext());
+        carouselPrevBtn.addEventListener("click", () => swiper.slidePrev());
       },
-    }
-  );
+    },
+  });
 
   reviewsCarousel.on("slideChange", (swiper) => {
     updatePagination(customPagination, swiper);
@@ -370,19 +350,11 @@ const initCardCarousel = () => {
       init: function (swiper) {
         const wrapper = swiper.el.closest(".card-carousel");
 
-        const cardCarouselNextBtn = wrapper.querySelector(
-          ".card-carousel__nav--next"
-        );
-        const cardCarouselPrevBtn = wrapper.querySelector(
-          ".card-carousel__nav--prev"
-        );
+        const cardCarouselNextBtn = wrapper.querySelector(".card-carousel__nav--next");
+        const cardCarouselPrevBtn = wrapper.querySelector(".card-carousel__nav--prev");
 
-        cardCarouselNextBtn?.addEventListener("click", () =>
-          swiper.slideNext()
-        );
-        cardCarouselPrevBtn?.addEventListener("click", () =>
-          swiper.slidePrev()
-        );
+        cardCarouselNextBtn?.addEventListener("click", () => swiper.slideNext());
+        cardCarouselPrevBtn?.addEventListener("click", () => swiper.slidePrev());
       },
     },
   };
@@ -509,21 +481,15 @@ const initCardCarousel = () => {
     },
   };
 
-  const demoCarousel = new Swiper(
-    ".card-carousel--demo .card-carousel__swiper",
-    {
-      ...baseOptions,
-      ...demoCarouselOptions,
-    }
-  );
+  const demoCarousel = new Swiper(".card-carousel--demo .card-carousel__swiper", {
+    ...baseOptions,
+    ...demoCarouselOptions,
+  });
 
-  const awardsCarousel = new Swiper(
-    ".card-carousel--awards .card-carousel__swiper",
-    {
-      ...baseOptions,
-      ...awardsCarouselOptions,
-    }
-  );
+  const awardsCarousel = new Swiper(".card-carousel--awards .card-carousel__swiper", {
+    ...baseOptions,
+    ...awardsCarouselOptions,
+  });
 
   const blogCarousel = new Swiper(
     ".card-carousel--doctors .card-carousel__swiper, .card-carousel--blog .card-carousel__swiper",
@@ -541,21 +507,15 @@ const initCardCarousel = () => {
     }
   );
 
-  const discountCarousel = new Swiper(
-    ".card-carousel--discount .card-carousel__swiper",
-    {
-      ...baseOptions,
-      ...discountCarouselOptions,
-    }
-  );
+  const discountCarousel = new Swiper(".card-carousel--discount .card-carousel__swiper", {
+    ...baseOptions,
+    ...discountCarouselOptions,
+  });
 
-  const photoCarousel = new Swiper(
-    ".card-carousel--photo .card-carousel__swiper",
-    {
-      ...baseOptions,
-      ...photoCarouselOptions,
-    }
-  );
+  const photoCarousel = new Swiper(".card-carousel--photo .card-carousel__swiper", {
+    ...baseOptions,
+    ...photoCarouselOptions,
+  });
 };
 
 const updatePagination = (paginationContainer, swiper) => {
@@ -647,9 +607,7 @@ const fluidLabel = () => {
 };
 
 const initMenu = () => {
-  const menuBtnContainers = document.querySelectorAll(
-    ".sidebar__menu-btn, .header__menu-btn"
-  );
+  const menuBtnContainers = document.querySelectorAll(".sidebar__menu-btn, .header__menu-btn");
   const menuBtn = document.querySelectorAll(".burger-btn");
   const menu = document.querySelector(".menu");
 
@@ -711,7 +669,7 @@ const toggleExpand = (containerSelector, btnDefaultText, btnActiveText) => {
     panel.classList.remove("expand-container__panel--inactive");
 
     const btn = document.createElement("button");
-    const btnText = btnDefaultText ? btnDefaultText : "Розгорнути";
+    const btnText = btnDefaultText ? btnDefaultText : "Expand";
     btn.textContent = btnText;
     btn.classList.add("expand-container__btn", "btn", "btn--default");
 
@@ -725,10 +683,31 @@ const toggleExpand = (containerSelector, btnDefaultText, btnActiveText) => {
       } else {
         panel.classList.add("expand-container__panel--expanded");
         panel.style.maxHeight = panel.scrollHeight + "px";
-        btn.textContent = btnActiveText ? btnActiveText : "Згорнути";
+        btn.textContent = btnActiveText ? btnActiveText : "Collapse";
       }
     });
   });
+};
+
+const initRecaptcha = () => {
+  const questionnaireSubmitBtn = document.querySelector(".questionnaire-form__submit");
+  const appintmentSubmitBtn = document.querySelectorAll(".appointment-form .form__footer button");
+
+  if (questionnaireSubmitBtn) questionnaireSubmitBtn.disabled = true;
+  if (appintmentSubmitBtn.length) appintmentSubmitBtn.forEach((btn) => (btn.disabled = true));
+
+  setTimeout(function () {
+    let script = document.createElement("script");
+    script.src =
+      "https://www.google.com/recaptcha/api.js?render=6Lc5QOkqAAAAABEkYI8rjnox1x4y9A7SVPgJszRH";
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = function () {
+      if (questionnaireSubmitBtn) questionnaireSubmitBtn.disabled = false;
+      if (appintmentSubmitBtn.length) appintmentSubmitBtn.forEach((btn) => (btn.disabled = false));
+    };
+  }, 5000);
 };
 
 const initAppointmentForms = () => {
@@ -739,15 +718,15 @@ const initAppointmentForms = () => {
     const selectInstance = NiceSelect.bind(select, {
       placeholder: false,
     });
+    const formFooter = formElement.querySelector(".form__footer");
+    const submitBtn = formFooter.querySelector(".form__footer button");
 
     new FormVaildator({
       formElement,
       controls: [
         {
           name: "clinic",
-          validities: [
-            { name: "required", message: "Необхідно обрати клініку" },
-          ],
+          validities: [{ name: "required", message: "Необхідно обрати клініку" }],
         },
         {
           name: "name",
@@ -755,9 +734,7 @@ const initAppointmentForms = () => {
         },
         {
           name: "tel",
-          validities: [
-            { name: "required", message: "Необхідно вказати номер телефону" },
-          ],
+          validities: [{ name: "required", message: "Необхідно вказати номер телефону" }],
         },
         {
           name: "agreement",
@@ -769,11 +746,68 @@ const initAppointmentForms = () => {
         input: true,
       },
       onSubmit: (e) => {
-        const formData = new FormData(e.target);
-        const serialized = Object.fromEntries(formData);
-        console.log(serialized);
+        if (typeof grecaptcha === "undefined") {
+          e.preventDefault();
+          console.error("reCAPTCHA is not loaded");
+          return;
+        }
 
-        // TODO: HANDLE FORM
+        grecaptcha.ready(function () {
+          grecaptcha
+            .execute("6Lc5QOkqAAAAABEkYI8rjnox1x4y9A7SVPgJszRH", {
+              action: "submit",
+            })
+            .then(async function (token) {
+              const formData = new FormData(e.target);
+              const clinic_id = formData.get("clinic");
+              const name = formData.get("name");
+              const phone = formData.get("tel");
+
+              try {
+                submitBtn.disabled = true;
+
+                const res = await fetch(`/ui/ukr/helpers/claim_create.aspx?_id=${Math.random()}`, {
+                  method: "POST",
+                  body: `clinic_id=${clinic_id}&name=${name}&phone=${phone}&recaptcha_response=${token}`,
+                  headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                  },
+                });
+
+                if (!res.ok) {
+                  throw new Error("Виникла помилка. Будь ласка, спробуйте пізніше.");
+                }
+
+                const responseData = await res.text();
+
+                if (responseData === "success") {
+                  const currentDataLayerEvent = document.querySelector("#data_layer_event");
+                  dataLayer?.push({
+                    event: currentDataLayerEvent.value,
+                    phone_number: phone,
+                    "address.first_name": name,
+                  });
+                }
+
+                Modal.showOverlay();
+
+                const appointmentModal = document.querySelector("#modal-appointment");
+
+                if (appointmentModal.classList.contains("visible")) {
+                  Modal.hide("modal-appointment");
+                }
+
+                Modal.show("modal-success");
+
+                e.target.reset();
+              } catch (e) {
+                Modal.showOverlay();
+                Modal.show("modal-error");
+              } finally {
+                submitBtn.disabled = false;
+              }
+            });
+        });
       },
       onReset: (e) => {
         selectInstance.update();
@@ -811,16 +845,13 @@ const initConnectedCarousel = () => {
     },
   });
 
-  const imageSwiper = new Swiper(
-    ".connected-carousel__image-carousel .swiper",
-    {
-      lazy: true,
-      grabCursor: false,
-      effect: "flip",
-      slidesPerView: 1,
-      allowTouchMove: false,
-    }
-  );
+  const imageSwiper = new Swiper(".connected-carousel__image-carousel .swiper", {
+    lazy: true,
+    grabCursor: false,
+    effect: "flip",
+    slidesPerView: 1,
+    allowTouchMove: false,
+  });
 
   const wrapper = textSwiper.el.closest(".connected-carousel__text-carousel");
   const customPagination = wrapper.querySelector(".pagination__list");
@@ -838,9 +869,7 @@ const initConnectedCarousel = () => {
     imageSwiper.slideTo(activeIndex);
   });
 
-  textSwiper.on("slideChange", () =>
-    updatePagination(customPagination, textSwiper)
-  );
+  textSwiper.on("slideChange", () => updatePagination(customPagination, textSwiper));
 
   updatePagination(customPagination, textSwiper);
 };
@@ -868,12 +897,8 @@ const initHeroSlider = () => {
     item.classList.contains("hero-card__nav-btn--prev")
   );
 
-  nextNavBtns.forEach((btn) =>
-    btn.addEventListener("click", () => swiper.slideNext())
-  );
-  prevNavBtns.forEach((btn) =>
-    btn.addEventListener("click", () => swiper.slidePrev())
-  );
+  nextNavBtns.forEach((btn) => btn.addEventListener("click", () => swiper.slideNext()));
+  prevNavBtns.forEach((btn) => btn.addEventListener("click", () => swiper.slidePrev()));
 
   swiper.on("touchEnd", (swiper) => {
     updateExpand(swiper);
@@ -919,8 +944,7 @@ const initYouTubeVideo = () => {
   // Iterate over every YouTube container you may have
   for (let i = 0; i < YouTubeContainers.length; i++) {
     let container = YouTubeContainers[i];
-    let imageSource =
-      "https://i.ytimg.com/vi/" + container.dataset.videoId + "/hqdefault.jpg";
+    let imageSource = "https://i.ytimg.com/vi/" + container.dataset.videoId + "/hqdefault.jpg";
 
     // Load the Thumbnail Image asynchronously
     let image = new Image();
@@ -944,9 +968,7 @@ const initYouTubeVideo = () => {
       // Important: add the autoplay GET parameter, otherwise the user would need to click over the YouTube video again to play it
       iframe.setAttribute(
         "src",
-        "https://www.youtube.com/embed/" +
-          this.dataset.videoId +
-          "?rel=0&showinfo=0&autoplay=1"
+        "https://www.youtube.com/embed/" + this.dataset.videoId + "?rel=0&showinfo=0&autoplay=1"
       );
 
       // Clear Thumbnail and load the YouTube iframe
@@ -1024,9 +1046,7 @@ const initBeforeAfterSlider = () => {
   if (!container) return;
 
   const slider = container.querySelector(".before-after__slider");
-  const beforeContainerEl = container.querySelector(
-    ".before-after__before-container"
-  );
+  const beforeContainerEl = container.querySelector(".before-after__before-container");
   const buttonEl = container.querySelector(".before-after__slider-button");
 
   const handleSlide = (val) => {
@@ -1185,10 +1205,7 @@ const serviceSearch = function () {
         if (arr[i + 1]) {
           acc += cur.input.slice(cur.index + cur[0].length, arr[i + 1].index);
         } else {
-          acc += cur.input.slice(
-            cur.index + cur[0].length,
-            cur.input.length + 1
-          );
+          acc += cur.input.slice(cur.index + cur[0].length, cur.input.length + 1);
         }
 
         return acc;
@@ -1264,9 +1281,7 @@ const serviceSearch = function () {
       }
 
       scrollToService(target.scrollToRef);
-      target.scrollToRef
-        .closest(".prices__link")
-        .classList.add("service-search-target");
+      target.scrollToRef.closest(".prices__link").classList.add("service-search-target");
       searchControl.value = target.textContent;
       dropdownList.innerHTML = "";
       dropdownList.style = "";
@@ -1283,10 +1298,7 @@ const serviceSearch = function () {
   document.addEventListener("click", (e) => {
     const activeSearchElem = document.querySelector(".service-search-target");
 
-    if (
-      e.target !== dropdownList &&
-      !e.target.closest(".search-panel__dropdown")
-    ) {
+    if (e.target !== dropdownList && !e.target.closest(".search-panel__dropdown")) {
       dropdownList.style = "";
     }
 
@@ -1297,11 +1309,45 @@ const serviceSearch = function () {
       !e.target.closest(".search-panel__dropdown-link") &&
       e.target !== activeSearchElem
     ) {
-      activeSearchElem
-        .closest(".prices__link")
-        .classList.remove("service-search-target");
+      activeSearchElem.closest(".prices__link").classList.remove("service-search-target");
     }
   });
+};
+
+const tooltip = (type, message) => {
+  const container = document.createElement("div");
+
+  function create(type, message) {
+    container.innerHTML = "";
+
+    const classMap = {
+      error: "tooltip--error",
+      success: "tooltip--success",
+      pending: "tooltip--pending",
+    };
+
+    const iconMap = {
+      error: "warning-outline",
+      success: "success-outline",
+      pending: "spinner",
+    };
+
+    container.className = "";
+    container.className = `tooltip ${classMap[type]}`;
+
+    container.innerHTML = `
+      <svg class="tooltip__icon">
+        <use href="/assets/icons.svg#${iconMap[type]}"></use>
+      </svg>
+      <span class="tooltip__message">
+        ${message}
+      </span>
+    `;
+
+    return container;
+  }
+
+  return { container, create };
 };
 
 const articleRating = () => {
@@ -1311,6 +1357,10 @@ const articleRating = () => {
 
   const storedArticleId = localStorage.getItem("dentaderm_voted_article_id");
   const articleId = document.getElementById("inp_blog_id").value;
+
+  const starsContainer = document.createElement("div");
+  starsContainer.classList.add("article-rating__stars");
+  wrapper.append(starsContainer);
 
   const manipulatePrevSibling = (el, cb) => {
     cb(el);
@@ -1332,7 +1382,6 @@ const articleRating = () => {
   };
 
   function renderRatingBanner(container, id) {
-    clearContainer(container);
     const ratingEls = [];
 
     Array(5)
@@ -1365,8 +1414,7 @@ const articleRating = () => {
         });
       });
 
-    container.append(...ratingEls);
-
+    starsContainer.append(...ratingEls);
     container.addEventListener("mouseleave", () => {
       const mark = parseInt(container.getAttribute("data-mark")) || 0;
 
@@ -1390,56 +1438,18 @@ const articleRating = () => {
     });
   }
 
-  function clearContainer(container) {
-    container.innerHTML = "";
-    container.className = "article-rating";
-  }
-
-  function renderSuccess(container, articleId) {
-    clearContainer(container);
-    container.classList.add("article-rating--success");
-
-    container.innerHTML = `
-      <svg class="icon article-rating__icon">
-        <use href="/assets/icons.svg#success-outline" />
-      </svg>
-      <span class="article-rating__message">${
-        articleId ? "Ви вже оцінювали дану статтю" : "Дякуємо за Вашу оцінку!"
-      }</span>
-    `;
-  }
-
-  function renderLoader(container) {
-    clearContainer(container);
-    container.classList.add("article-rating--info");
-
-    container.innerHTML = `
-      <svg class="icon article-rating__icon">
-        <use href="/assets/icons.svg#spinner" />
-      </svg>
-      <span class="article-rating__message">Будь ласка, почекайте...</span>
-    `;
-  }
-
-  function renderError(container, message) {
-    clearContainer(container);
-    container.classList.add("article-rating--error");
-
-    container.innerHTML = `
-      <svg class="icon article-rating__icon">
-        <use href="/assets/icons.svg#warning-outline" />
-      </svg>
-      <span class="article-rating__message">${message}</span>
-    `;
-  }
+  const { container: tooltipContainer, create: createToolip } = tooltip();
+  wrapper.append(tooltipContainer);
 
   async function postRating(container, articleId, rating) {
     try {
       const formData = new FormData();
       formData.append("blog_id", articleId);
       formData.append("rating", rating);
+      starsContainer.remove();
 
-      renderLoader(container);
+      tooltipContainer.innerHTML = "";
+      createToolip("pending", "Будь ласка, почекайте...");
 
       const res = await fetch("/ui/ukr/blogs/helpers/rating_create.aspx", {
         method: "POST",
@@ -1450,19 +1460,46 @@ const articleRating = () => {
         throw new Error("Виникла помилка. Будь ласка, спробуйте пізніше.");
       }
 
-      renderSuccess(container);
+      createToolip("success", "Дякуємо за Вашу оцінку!");
       localStorage.setItem("dentaderm_voted_article_id", articleId);
     } catch (e) {
-      renderError(container, e.message);
+      wrapper.prepend(starsContainer);
+      createToolip("error", e.message);
     }
   }
 
   if (storedArticleId === articleId) {
-    renderSuccess(wrapper, articleId);
+    wrapper.append(createToolip("success", "Ви вже оцінювали дану статтю"));
   } else {
     renderRatingBanner(wrapper, articleId);
   }
 };
+
+// const betaToast = () => {
+//   const container = document.querySelector(".toast-beta");
+
+//   if (!container) return;
+
+//   const storageValue = sessionStorage.getItem("toastBeta");
+//   const warningButton = container.querySelector(".toast-beta__warning");
+//   const confirmBtn = container.querySelector(".toast-beta__btn--hide");
+//   const closeBtn = container.querySelector(".toast-beta__close");
+
+//   if (storageValue === "hidden") {
+//     container.classList.remove("toast-beta--active");
+//   } else {
+//     container.classList.add("toast-beta--active");
+//   }
+
+//   warningButton.addEventListener("click", () => container.classList.add("toast-beta--active"));
+
+//   closeBtn.addEventListener("click", () => container.classList.remove("toast-beta--active"));
+
+//   confirmBtn.addEventListener("click", () => {
+//     container.classList.remove("toast-beta--active");
+//     sessionStorage.setItem("toastBeta", "hidden");
+//   });
+// };
 
 new WOW({
   scrollContainer: ".page",
@@ -1472,6 +1509,11 @@ const initQuestionnaireForm = () => {
   const formElement = document.querySelector(".questionnaire-form");
 
   if (!formElement) return;
+
+  const formFooter = formElement.querySelector(".questionnaire-form__footer");
+  const submitBtn = formFooter.querySelector(".questionnaire-form__submit");
+  const { container: tooltipContainer, create: createToolip } = tooltip();
+  formFooter.append(tooltipContainer);
 
   const selects = formElement.querySelectorAll(".nice-select");
   const selectInstances = Array.from(selects).map((select) =>
@@ -1486,38 +1528,142 @@ const initQuestionnaireForm = () => {
     [{ name: "required", message: "Це поле необхідно заповнити" }]
   );
 
-  const radioElementsConfig = prepareFieldConfig(
-    formElement,
-    "[name^='radio-']",
-    [{ name: "checked", message: "Необхідно обрати один з варіантів" }]
-  );
+  const radioElementsConfig = prepareFieldConfig(formElement, "[name^='radio-']", [
+    { name: "checked", message: "Необхідно обрати один з варіантів" },
+  ]);
 
-  const emailElementsConfig = prepareFieldConfig(
-    formElement,
-    "[name^='email']",
-    [
-      { name: "required", message: "Необхідно вказати email" },
-      { name: "email", message: "Не вірний email" },
-    ]
-  );
+  const emailElementsConfig = prepareFieldConfig(formElement, "[name^='email']", [
+    { name: "required", message: "Необхідно вказати email" },
+    { name: "email", message: "Не вірний email" },
+  ]);
+
+  // If customer is younger than 18 show field for custodian name
+  const birthDateField = formElement.querySelector("[name='birth-date']");
+  const custorianContainer = formElement.querySelector("#custodian_name");
+
+  const today = new Date().toISOString().split("T")[0];
+  birthDateField.setAttribute("max", today);
+
+  handleCustorianField(birthDateField);
+
+  birthDateField.addEventListener("change", (e) => handleCustorianField(e.currentTarget));
+
+  function handleCustorianField(birthDateField) {
+    if (birthDateField.value.trim() && !isAdult(birthDateField.value)) {
+      custorianContainer.style.display = "block";
+    }
+
+    if (!birthDateField.value.trim() || isAdult(birthDateField.value)) {
+      custorianContainer.querySelector(".input-text").value = "";
+      custorianContainer.style.display = "none";
+    }
+  }
+
+  // Change question dropdown visibility if corresponding radio elem is checked
+  const radioItems = formElement.querySelectorAll(".questionnaire-form__radio");
+  radioItems.forEach((item) => {
+    const parentContainer = item.closest(".questionnaire-form__question");
+    const dropdownContainer = parentContainer.querySelector(".questionnaire-form__dropdown");
+
+    if (!dropdownContainer) return;
+
+    dropdownContainer.style.display = item.checked && item.value === "Так" ? "block" : "none";
+
+    item.addEventListener("change", (e) => {
+      if (e.currentTarget.checked && e.currentTarget.value === "Ні") {
+        const controls = dropdownContainer.querySelectorAll(".input-text");
+        const radios = dropdownContainer.querySelectorAll(".questionnaire-form__radio");
+
+        radios.forEach((radio) => (radio.checked = false));
+        controls.forEach((controls) => (controls.value = ""));
+      }
+
+      dropdownContainer.style.display =
+        e.currentTarget.checked && e.currentTarget.value === "Так" ? "block" : "none";
+    });
+  });
+
+  // Show female only section if corresponding select value is selected
+  const femaleOnlySection = formElement.querySelector("#female-only");
+  const sexSelect = formElement.querySelector("[name='sex']");
+
+  handleFemaleOnlySection(sexSelect);
+
+  sexSelect.addEventListener("change", (e) => handleFemaleOnlySection(e.currentTarget));
+
+  function handleFemaleOnlySection(selectEl) {
+    if (selectEl.value !== "female") {
+      const dropdowns = femaleOnlySection.querySelectorAll(".questionnaire-form__dropdown");
+      const radios = femaleOnlySection.querySelectorAll(".questionnaire-form__radio");
+      const controls = femaleOnlySection.querySelectorAll(".input-text");
+
+      radios.forEach((radio) => (radio.checked = false));
+      controls.forEach((controls) => (controls.value = ""));
+      dropdowns.forEach((dropdown) => (dropdown.style.display = "none"));
+    }
+
+    femaleOnlySection.style.display = selectEl.value === "female" ? "block" : "none";
+  }
 
   new FormVaildator({
     formElement,
-    controls: [
-      ...texElementsConfig,
-      ...radioElementsConfig,
-      ...emailElementsConfig,
-    ],
+    controls: [...texElementsConfig, ...radioElementsConfig, ...emailElementsConfig],
     validateOn: {
       change: true,
       input: true,
     },
     onSubmit: (e) => {
-      const formData = new FormData(e.target);
-      const pdfDefinition = createQuestionnairePDFConfig(formData);
-      pdfMake.createPdf(pdfDefinition).open();
+      if (typeof grecaptcha === "undefined") {
+        e.preventDefault();
+        console.error("reCAPTCHA is not loaded");
+        return;
+      }
 
-      // TODO: HANDLE FORM
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6Lc5QOkqAAAAABEkYI8rjnox1x4y9A7SVPgJszRH", {
+            action: "submit",
+          })
+          .then(function (token) {
+            const formData = new FormData(e.target);
+            const pdfDefinition = createQuestionnairePDFConfig(formData);
+
+            pdfMake.createPdf(pdfDefinition).getBlob(async (blob) => {
+              const resultingFormData = new FormData();
+              resultingFormData.append("filedata", blob, "document.pdf");
+              resultingFormData.append("clinic_id", formData.get("radio-01"));
+              resultingFormData.append("recaptcha_response", token);
+
+              try {
+                submitBtn.disabled = true;
+                tooltipContainer.innerHTML = "";
+                createToolip("pending", "Будь ласка, почекайте...");
+
+                const res = await fetch("/ui/ukr/helpers/clinic_document_create.aspx", {
+                  method: "POST",
+                  body: resultingFormData,
+                });
+
+                if (!res.ok) {
+                  throw new Error("Виникла помилка. Будь ласка, спробуйте пізніше.");
+                }
+
+                createToolip("success", "Ваша анкета була успішно відправлена!");
+                e.target.reset();
+
+                formElement
+                  .querySelectorAll(".questionnaire-form__dropdown")
+                  .forEach((container) => (container.style.display = "none"));
+                handleFemaleOnlySection(sexSelect);
+                handleCustorianField(birthDateField);
+              } catch (e) {
+                createToolip("error", e.message);
+              } finally {
+                submitBtn.disabled = false;
+              }
+            });
+          });
+      });
     },
     onSubmitError: () => {
       const page = document.querySelector(".page");
@@ -1535,85 +1681,6 @@ const initQuestionnaireForm = () => {
     },
     onErrorChange: handleFormValidityChange,
   });
-
-  // If customer is younger than 18 show field for custodian name
-  const birthDateField = formElement.querySelector("[name='birth-date']");
-  const custorianField = formElement.querySelector("#custodian_name");
-
-  custorianField.style.display = birthDateField.value
-    ? isAdult(birthDateField.value)
-      ? "none"
-      : "block"
-    : "none";
-
-  birthDateField.addEventListener("change", (e) => {
-    console.log("change");
-    custorianField.style.display = e.currentTarget.value
-      ? isAdult(e.currentTarget.value)
-        ? "none"
-        : "block"
-      : "none";
-  });
-
-  // Change question dropdown visibility if corresponding radio elem is checked
-  const radioItems = formElement.querySelectorAll(".questionnaire-form__radio");
-  radioItems.forEach((item) => {
-    const parentContainer = item.closest(".questionnaire-form__question");
-    const dropdownContainer = parentContainer.querySelector(
-      ".questionnaire-form__dropdown"
-    );
-
-    if (!dropdownContainer) return;
-
-    dropdownContainer.style.display =
-      item.checked && item.value === "Так" ? "block" : "none";
-
-    item.addEventListener("change", (e) => {
-      if (e.currentTarget.checked && e.currentTarget.value === "Ні") {
-        const controls = dropdownContainer.querySelectorAll(".input-text");
-        const radios = dropdownContainer.querySelectorAll(
-          ".questionnaire-form__radio"
-        );
-
-        radios.forEach((radio) => (radio.checked = false));
-        controls.forEach((controls) => (controls.value = ""));
-      }
-
-      dropdownContainer.style.display =
-        e.currentTarget.checked && e.currentTarget.value === "Так"
-          ? "block"
-          : "none";
-    });
-  });
-
-  // Show female only section if corresponding select value is selected
-  const femaleOnlySection = formElement.querySelector("#female-only");
-  const sexSelect = formElement.querySelector("[name='sex']");
-
-  handleFemaleOnlySection(sexSelect);
-
-  sexSelect.addEventListener("change", (e) =>
-    handleFemaleOnlySection(e.currentTarget)
-  );
-
-  function handleFemaleOnlySection(selectEl) {
-    if (selectEl.value !== "female") {
-      const dropdowns = femaleOnlySection.querySelectorAll(
-        ".questionnaire-form__dropdown"
-      );
-      const radios = femaleOnlySection.querySelectorAll(
-        ".questionnaire-form__radio"
-      );
-      const controls = femaleOnlySection.querySelectorAll(".input-text");
-
-      radios.forEach((radio) => (radio.checked = false));
-      controls.forEach((controls) => (controls.value = ""));
-      dropdowns.forEach((dropdown) => (dropdown.style.display = "none"));
-    }
-
-    femaleOnlySection.style.display =
-      selectEl.value === "female" ? "block" : "none";
-  }
 };
 
 function isAdult(birthDate) {
@@ -1635,9 +1702,7 @@ function prepareFieldConfig(formElement, selector, config) {
   const fieldElements = formElement.querySelectorAll(selector);
   const fieldElementsConfigs = Array.from(fieldElements)
     .filter((elem, index, arr) => {
-      const targetIndex = arr.findIndex(
-        (targetElem) => targetElem.name === elem.name
-      );
+      const targetIndex = arr.findIndex((targetElem) => targetElem.name === elem.name);
       return index === targetIndex;
     })
     .map((elem) => ({
@@ -1652,13 +1717,10 @@ function handleFormValidityChange({ controls, errors }) {
   Object.entries(controls).forEach(([controlName, controlEls]) => {
     const errorsList = errors[controlName];
     const hasErrors = errorsList.length !== 0;
-    const parentWrapper = controlEls[0].element.closest(
-      "[data-validity-group]"
-    );
+    const parentWrapper = controlEls[0].element.closest("[data-validity-group]");
 
     const errorContainer =
-      parentWrapper.querySelector(".validator__errors") ||
-      createErrorContainer();
+      parentWrapper.querySelector(".validator__errors") || createErrorContainer();
     parentWrapper.append(errorContainer);
 
     if (hasErrors) {
@@ -1678,7 +1740,39 @@ function handleFormValidityChange({ controls, errors }) {
   }
 }
 
+function storeDataLayerEvent() {
+  const buttons = document.querySelectorAll("[data-layer-event]");
+  const inputHidden = document.querySelector("#data_layer_event");
+
+  if (!inputHidden || buttons.length === 0) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      inputHidden.value = e.currentTarget.dataset.layerEvent;
+    });
+  });
+}
+
+function replaceModalHeading() {
+  const buttons = document.querySelectorAll("[data-modal-id][data-layer-event]");
+  const modal = document.querySelector("#modal-appointment");
+
+  if (!modal || buttons.length === 0) return;
+
+  const modalTitle = document.querySelector(".modal__title");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      modalTitle.textContent = button.textContent;
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  const isRuLocale = window.location.pathname.match(/^\/ru(?=\/|$)/g)?.length;
+  replaceModalHeading();
+  storeDataLayerEvent();
+  initRecaptcha();
   articleRating();
   initMap();
   tabs();
@@ -1691,8 +1785,16 @@ document.addEventListener("DOMContentLoaded", () => {
   initAppointmentForms();
   initConnectedCarousel();
   initHeroSlider();
-  toggleExpand(".expand-container");
-  toggleExpand(".ceo-container", "Читати повністю", "згорнути");
+  toggleExpand(
+    ".expand-container",
+    isRuLocale ? "Развернуть" : "Розгорнути",
+    isRuLocale ? "Свернуть" : "Згорнути"
+  );
+  toggleExpand(
+    ".ceo-container",
+    isRuLocale ? "Читать полностью" : "Читати повністю",
+    isRuLocale ? "Свернуть" : "Згорнути"
+  );
   initYouTubeVideo();
   stickyHeader();
   initCharitySlider();
@@ -1702,8 +1804,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initReviewCarouselAlt();
   pageNavigation();
   serviceSearch();
-  serviceSearch();
   initQuestionnaireForm();
+  // betaToast();
   new Modal(".modal", null, (activeModal) => {
     const appointmentForm = activeModal.querySelector(".appointment-form");
     appointmentForm?.reset();
@@ -1843,9 +1945,14 @@ function createQuestionnairePDFConfig(formData) {
           data["text-05"] !== "—"
             ? "Прізвище, ініціали законного представника (для пацієнтів до 18 років): "
             : "",
-          data["text-05"] !== "—"
-            ? { text: data["text-05"], style: "italic" }
-            : "",
+          data["text-05"] !== "—" ? { text: data["text-05"], style: "italic" } : "",
+        ],
+        style: "paragraph",
+      },
+      {
+        text: [
+          "Як ви про нас дізналися: ",
+          data["sources"] !== "—" ? { text: data["text-05"], style: "italic" } : "—",
         ],
         style: "paragraph",
       },
@@ -2307,7 +2414,7 @@ function createQuestionnairePDFConfig(formData) {
                 style: ["fontSmall", "cell"],
               },
               {
-                text: data["radio-35"],
+                text: data["radio-35"] || "—",
                 style: ["bold", "fontSmall", "cell"],
               },
             ],

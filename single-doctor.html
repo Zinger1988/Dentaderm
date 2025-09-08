@@ -357,14 +357,10 @@
                   <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
                 </li>
                 <li class="crumbs__item">
-                  <a class="crumbs__endpoint crumbs__endpoint--link" href="#">
-                    Наші фахівці
-                  </a>
+                  <a class="crumbs__endpoint crumbs__endpoint--link" href="#"> Наші фахівці </a>
                 </li>
                 <li class="crumbs__item">
-                  <span class="crumbs__endpoint">
-                    Стороженко Олександр Володимирович
-                  </span>
+                  <span class="crumbs__endpoint"> Стороженко Олександр Володимирович </span>
                 </li>
               </ul>
               <!-- #endregion crumbs -->
@@ -372,18 +368,22 @@
               <h1 class="doctor-info__name">Стороженко Олександр Володимирович</h1>
 
               <!-- #region doctor img -->
-              <picture class="doctor-info__img">
-                <source
-                  type="image/webp"
-                  srcset="assets/images/doctors/storozhenko.webp"
-                />
-                <img
-                  loading="lazy"
-                  class="doctor-info__img-item"
-                  src="assets/images/doctors/storozhenko.jpg"
-                  alt="Стороженко Олександр Володимирович"
-                />
-              </picture>
+              <div class="doctor-info__img">
+                <picture>
+                  <source type="image/webp" srcset="assets/images/doctors/storozhenko.webp" />
+                  <img
+                    loading="lazy"
+                    class="doctor-info__img-item"
+                    src="assets/images/doctors/storozhenko.jpg"
+                    alt="Стороженко Олександр Володимирович"
+                  />
+                </picture>
+                <div class="doctor-info__btn-group">
+                  <button class="btn btn--lightBlue btn--square" data-modal-id="modal-appointment">
+                    Записатися до лікаря
+                  </button>
+                </div>
+              </div>
               <!-- #endregion doctor img -->
 
               <!-- #region doctor content -->
@@ -416,8 +416,7 @@
                   <li>Національний медичний Університет ім. О.О.Богомольця 2004</li>
                   <li>Сертифікація за спеціальністю ортопедична стоматологія 2013</li>
                   <li>
-                    Вища кваліфікаційна категорія за спеціальністю хірургічна стоматологія
-                    2013
+                    Вища кваліфікаційна категорія за спеціальністю хірургічна стоматологія 2013
                   </li>
                 </ul>
               </div>
@@ -1250,11 +1249,44 @@
   <!-- #endregion modal main -->
 </div>
 <!-- #endregion modal success -->
+<!-- #region error success -->
+<div class="modal" id="modal-error">
+  <!-- #region modal title -->
+  <div class="modal__heading">
+    <h3 class="modal__title">Запит відправлено</h3>
+    <button class="modal-close modal__close-btn">
+      <svg class="icon modal__close-icon">
+        <use href="/assets/icons.svg#cancel" />
+      </svg>
+    </button>
+  </div>
+  <!-- #endregion modal title -->
+
+  <!-- #region modal main -->
+  <div class="modal__main">
+    <!-- #region modal body -->
+    <div class="modal__body">
+      <p>
+        Виникла неочікувана помилка. Ми вже працюємо над її усуненням. Ви завжди
+        можете зв’язатися з нами за одним із номерів телефонів або за допомогою
+        популярних месенджерів, розміщених на
+        <a href="/kontakty">сторінці контактів.</a>
+      </p>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn--square modal-close">Закрити</button>
+    </div>
+    <!-- #endregion modal body -->
+  </div>
+  <!-- #endregion modal main -->
+</div>
+<!-- #endregion error success -->
 <script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.umd.min.js"></script>
 <link
   href="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.css"
   rel="stylesheet"
 />
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/pdfmake.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/vfs_fonts.min.js"></script>
 <script src="js/plugins.js"></script>

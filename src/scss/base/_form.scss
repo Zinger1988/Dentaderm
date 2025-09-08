@@ -8,6 +8,11 @@
   border-radius: 0;
   border-bottom: 1px solid $gray500;
   background: transparent;
+  text-align: left;
+  text-align-last: left;
+  direction: ltr;
+  appearance: none;
+  min-height: 3.4rem;
   @include animate(border, 0.2s);
   @extend %textEllipsis;
 

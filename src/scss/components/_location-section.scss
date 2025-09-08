@@ -109,14 +109,6 @@
     }
   }
 
-  &__location-badges {
-    margin: 0 0 3rem;
-
-    @include media(">=3xl") {
-      margin: 0 0 4rem;
-    }
-  }
-
   &__btn {
     align-self: center;
 

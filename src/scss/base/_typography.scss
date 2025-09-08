@@ -246,7 +246,7 @@ b, strong {
 }
 
 a {
-  color: $gray500;
+  color: inherit;
   text-underline-offset: 0.2em;
   @include animate(text-decoration-color);
 

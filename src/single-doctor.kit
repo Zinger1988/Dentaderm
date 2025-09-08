@@ -27,14 +27,10 @@
                   <a class="crumbs__endpoint crumbs__endpoint--link" href="#">Головна</a>
                 </li>
                 <li class="crumbs__item">
-                  <a class="crumbs__endpoint crumbs__endpoint--link" href="#">
-                    Наші фахівці
-                  </a>
+                  <a class="crumbs__endpoint crumbs__endpoint--link" href="#"> Наші фахівці </a>
                 </li>
                 <li class="crumbs__item">
-                  <span class="crumbs__endpoint">
-                    Стороженко Олександр Володимирович
-                  </span>
+                  <span class="crumbs__endpoint"> Стороженко Олександр Володимирович </span>
                 </li>
               </ul>
               <!-- #endregion crumbs -->
@@ -42,18 +38,22 @@
               <h1 class="doctor-info__name">Стороженко Олександр Володимирович</h1>
 
               <!-- #region doctor img -->
-              <picture class="doctor-info__img">
-                <source
-                  type="image/webp"
-                  srcset="assets/images/doctors/storozhenko.webp"
-                />
-                <img
-                  loading="lazy"
-                  class="doctor-info__img-item"
-                  src="assets/images/doctors/storozhenko.jpg"
-                  alt="Стороженко Олександр Володимирович"
-                />
-              </picture>
+              <div class="doctor-info__img">
+                <picture>
+                  <source type="image/webp" srcset="assets/images/doctors/storozhenko.webp" />
+                  <img
+                    loading="lazy"
+                    class="doctor-info__img-item"
+                    src="assets/images/doctors/storozhenko.jpg"
+                    alt="Стороженко Олександр Володимирович"
+                  />
+                </picture>
+                <div class="doctor-info__btn-group">
+                  <button class="btn btn--lightBlue btn--square" data-modal-id="modal-appointment">
+                    Записатися до лікаря
+                  </button>
+                </div>
+              </div>
               <!-- #endregion doctor img -->
 
               <!-- #region doctor content -->
@@ -86,8 +86,7 @@
                   <li>Національний медичний Університет ім. О.О.Богомольця 2004</li>
                   <li>Сертифікація за спеціальністю ортопедична стоматологія 2013</li>
                   <li>
-                    Вища кваліфікаційна категорія за спеціальністю хірургічна стоматологія
-                    2013
+                    Вища кваліфікаційна категорія за спеціальністю хірургічна стоматологія 2013
                   </li>
                 </ul>
               </div>
@@ -146,6 +145,7 @@
 
     <!--@import partials/components/modal-appointment.html-->
     <!--@import partials/components/modal-success.html-->
+    <!--@import partials/components/modal-error.html-->
     <!--@import partials/layout/scripts.html-->
   </body>
 </html>

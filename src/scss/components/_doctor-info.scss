@@ -126,6 +126,18 @@
     }
   }
 
+  &__btn-group {
+    position: absolute;
+    left: 50%;
+    bottom: 2.5rem;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__img-item {
     @include positionLeftTop();
     width: 100%;

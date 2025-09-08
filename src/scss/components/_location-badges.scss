@@ -21,6 +21,18 @@
     }
   }
 
+  &__btn-group {
+    padding-left: 7.5rem;
+
+    @include media(">=2xl") {
+      padding-left: 7.2rem;
+    }
+
+    @include media(">=3xl") {
+      padding-left: 7.7rem;
+    }
+  }
+
   &__icon {
     grid-area: icon;
     fill: $gray400;

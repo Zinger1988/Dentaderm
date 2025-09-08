@@ -1,0 +1,177 @@
+.toast-beta {
+  position: fixed;
+  left: 1rem;
+  bottom: 1.4rem;
+  width: calc(100% - 2rem);
+  max-width: 55rem;
+  z-index: 12;
+
+  @include media(">=xl") {
+    left: 11rem;
+  }
+
+  @include media(">=3xl") {
+    left: 15rem;
+  }
+
+  $this: &;
+
+  &__warning {
+    position: relative;
+    padding: 1.2rem 1.6rem;
+    gap: 1rem;
+    border-radius: 10px;
+    background: $gray900;
+    display: inline-flex;
+    align-items: center;
+    color: $white;
+    box-shadow: inset 0 0 0 2px $warningAlt, 0 0.4rem 1.6rem rgba($black, 0.65);
+    cursor: pointer;
+    @include animate(box-shadow, 0.2s);
+  }
+
+  &__warning-icon {
+    fill: $warningAlt;
+    animation: scaleWarning 1.5s infinite;
+    @include sizeRatio(2rem);
+
+    @include media(">=3xl") {
+      @include sizeRatio(2.4rem);
+    }
+  }
+
+  &__warning-text {
+    @include fs("body2", 0.9);
+    font-weight: 600;
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  &__body {
+    display: none;
+    background: $gray900;
+    box-shadow: inset 0 0 0 1px $warningAlt, 0 0.4rem 1.6rem rgba($black, 0.65);
+    color: $white;
+    position: relative;
+    border-radius: 8px;
+    padding: 1.2rem 4rem 1.2rem 1.2rem;
+    @include clearMarginY("&");
+    @include fs("body2", 0.9);
+    line-height: 1.4;
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    gap: 1.2rem 0.6rem;
+
+    @include media(">=3xl") {
+      padding: 2rem 5rem 2rem 2rem;
+    }
+  }
+
+  &__message {
+    grid-column: 1/3;
+    margin: 0;
+  }
+
+  &__message-subtitle {
+    @include fs("body2");
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.2em;
+  }
+
+  &__btn {
+    @extend %buttonReset;
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    grid-column: span 1;
+    cursor: pointer;
+    @include animate(box-shadow, 0.2s);
+
+    &--old {
+      box-shadow: inset 0 0 0 1px $gray700;
+      color: $white;
+    }
+
+    &--hide {
+      background-color: $warningAlt;
+      color: $white;
+    }
+
+    @include media(">=3xl") {
+      padding: 0.8rem 1.2rem;
+    }
+
+    @include mediaHover() {
+      &--old {
+        &:hover {
+          box-shadow: inset 0 0 0 1px $gray700, 0 0 0 3px $gray800;
+        }
+      }
+      &--hide {
+        &:hover {
+          box-shadow: 0 0 0 3px rgba($warningAlt, 0.4);
+        }
+      }
+    }
+  }
+
+  &__close {
+    fill: $gray400;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    @include sizeRatio(1.6rem);
+    @include animate(fill);
+
+    @include mediaHover() {
+      &:hover {
+        fill: $white;
+      }
+    }
+
+    @include media(">=3xl") {
+      @include sizeRatio(2.4rem);
+    }
+  }
+
+  &--active {
+    #{$this}__body {
+      display: grid;
+    }
+
+    #{$this}__warning {
+      display: none;
+    }
+  }
+}
+
+@keyframes scaleWarning {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.15);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.15);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

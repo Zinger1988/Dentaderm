@@ -1,17 +1,23 @@
 .article-rating {
-  display: grid;
-  grid-template-columns: repeat(5, 4rem);
-  gap: 1rem;
-
   $this: &;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: start;
 
-  @include media(">=md") {
-    grid-template-columns: repeat(5, 4.4rem);
-    gap: 1.2rem;
-  }
+  &__stars {
+    display: grid;
+    grid-template-columns: repeat(5, 4rem);
+    gap: 1rem;
 
-  @include media(">=3xl") {
-    font-size: 1.2rem;
+    @include media(">=md") {
+      grid-template-columns: repeat(5, 4.4rem);
+      gap: 1.2rem;
+    }
+
+    @include media(">=3xl") {
+      font-size: 1.2rem;
+    }
   }
 
   &__star {
@@ -65,70 +71,5 @@
     @include media(">=md") {
       font-size: 1.3rem;
     }
-  }
-
-  &--info,
-  &--success,
-  &--error {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    line-height: 1.4;
-
-    #{$this}__icon {
-      fill: $white;
-      flex: 0 0 2.4rem;
-    }
-  }
-
-  &--error {
-    background: rgba($danger, 0.3);
-    border: 1px solid rgba($danger, 0.3);
-    padding: 0.8rem 1.6rem 0.8rem 1.2rem;
-    border-radius: 6px;
-
-    #{$this}__icon {
-      fill: $white;
-    }
-  }
-
-  &--success {
-    background: rgba($success, 0.3);
-    border: 1px solid rgba($success, 0.3);
-    padding: 0.8rem 1.6rem 0.8rem 1.2rem;
-    border-radius: 6px;
-
-    #{$this}__icon {
-      fill: $white;
-    }
-  }
-
-  &--info {
-    background: rgba($info, 0.3);
-    border: 1px solid rgba($info, 0.3);
-    padding: 0.8rem 1.6rem 0.8rem 1.2rem;
-    border-radius: 6px;
-
-    #{$this}__icon {
-      fill: $white;
-      animation: spin 0.7s linear infinite;
-    }
-  }
-
-  &__icon {
-    @include sizeRatio(2.4rem);
-  }
-
-  &__message {
-    @include fs("body2", 0.9);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

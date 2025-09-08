@@ -21,3 +21,7 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+.grecaptcha-badge {
+  z-index: 11;
+}

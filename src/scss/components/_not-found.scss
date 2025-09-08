@@ -1,0 +1,55 @@
+.not-found {
+  min-height: 50dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+  max-width: 60rem;
+  margin: 0 auto;
+
+  @include media(">=lg") {
+    flex-direction: row;
+    align-items: center;
+    max-width: 90rem;
+  }
+
+  &__l {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $gray500;
+
+    @include media(">=lg") {
+      margin: 0 4rem 0 0;
+      padding: 0 4rem 0 0;
+      border-right: 1px solid $gray500;
+      border-bottom: none;
+    }
+  }
+
+  &__l,
+  &__r {
+    text-align: center;
+    @include clearMarginY("&");
+  }
+
+  &__r {
+    @include media(">=lg") {
+      text-align: left;
+    }
+  }
+
+  &__code {
+    font-size: 7.2rem;
+    font-weight: 700;
+    line-height: 1;
+
+    @include media(">=lg") {
+      font-size: 8rem;
+    }
+  }
+
+  &__code-desc {
+    @include fs("body2", 1.1);
+    font-weight: 500;
+  }
+}

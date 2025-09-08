@@ -701,11 +701,45 @@
   <!-- #endregion modal main -->
 </div>
 <!-- #endregion modal success -->
+<!-- #region modal success -->
+<div class="modal" id="modal-error">
+  <!-- #region modal title -->
+  <div class="modal__heading">
+    <h3 class="modal__title">Запит відправлено</h3>
+    <button class="modal-close modal__close-btn">
+      <svg class="icon modal__close-icon">
+        <use href="/assets/icons.svg#cancel" />
+      </svg>
+    </button>
+  </div>
+  <!-- #endregion modal title -->
+
+  <!-- #region modal main -->
+  <div class="modal__main">
+    <!-- #region modal body -->
+    <div class="modal__body">
+      <p>
+        Виникла неочікувана помилка. Ми вже працюємо над її усуненням. Ви завжди
+        можете зв’язатися з нами за одним із номерів телефонів або за допомогою
+        популярних месенджерів, розміщених на
+        <a href="/kontakty">сторінці контактів.</a>
+      </p>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn--square modal-close">Закрити</button>
+    </div>
+    <!-- #endregion modal body -->
+  </div>
+  <!-- #endregion modal main -->
+</div>
+<!-- #endregion modal success -->
 <script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.umd.min.js"></script>
 <link
   href="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.css"
   rel="stylesheet"
 />
+
+<script src="https://www.google.com/recaptcha/api.js?render=6Lc5QOkqAAAAABEkYI8rjnox1x4y9A7SVPgJszRH"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/pdfmake.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/vfs_fonts.min.js"></script>
 <script src="js/plugins.js"></script>

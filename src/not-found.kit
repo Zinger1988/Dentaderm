@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!--@import partials/layout/head.html-->
+  <body>
+    <div class="page">
+      <!-- #region header -->
+      <!--@import partials/layout/header.html-->
+      <!-- #endregion header -->
+
+      <!-- #region sidebar -->
+      <!--@import partials/layout/sidebar.html-->
+      <!-- #endregion sidebar -->
+
+      <!-- #region menu -->
+      <!--@import partials/components/menu.html-->
+      <!-- #endregion menu -->
+
+      <!-- #region content -->
+      <main class="content page__content">
+        <div class="content__crumbs">
+          <div class="container container--screen-lg">
+            <ul class="crumbs">
+              <li class="crumbs__item">
+                <a class="crumbs__endpoint crumbs__endpoint--link" href="#"
+                  >Головна</a
+                >
+              </li>
+              <li class="crumbs__item">
+                <span class="crumbs__endpoint">Сторінку не знайдено</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- #region 404 block -->
+        <section class="block content__block">
+          <div class="container container--screen-lg">
+            <div class="not-found">
+              <div class="not-found__l">
+                <div class="not-found__code">404</div>
+                <div class="not-found__code-desc">Сторінку не знайдено</div>
+              </div>
+              <div class="not-found__r">
+                <p>Можливо, вона була видалена, переміщена або недоступна.</p>
+                <div class="not-found__controls">
+                  <a href="/" class="btn btn--square">На головну</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- #endregion 404 block -->
+      </main>
+      <!-- #endregion content -->
+
+      <!-- #region footer -->
+      <!--@import partials/layout/footer.html-->
+      <!-- #endregion footer -->
+    </div>
+
+    <!--@import partials/components/test-toast.html-->
+    <!--@import partials/components/modal-appointment.html-->
+    <!--@import partials/components/modal-success.html-->
+    <!--@import partials/components/modal-error.html-->
+    <!--@import partials/layout/scripts.html-->
+  </body>
+</html>
