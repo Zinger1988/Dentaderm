@@ -125,6 +125,10 @@
       margin-top: 0;
       font-weight: 300;
     }
+
+    &--text-small {
+      @include v-rythm("h1", 1);
+    }
   }
 
   &__content {
@@ -171,11 +175,7 @@
       animation: bannerBg 10s linear infinite;
       transform-origin: center;
       background-color: hsla(184, 0%, 9%, 1);
-      background-image: radial-gradient(
-          at 94% 83%,
-          hsla(191, 6%, 50%, 1) 0px,
-          transparent 50%
-        ),
+      background-image: radial-gradient(at 94% 83%, hsla(191, 6%, 50%, 1) 0px, transparent 50%),
         radial-gradient(at 46% 78%, hsla(191, 44%, 3%, 1) 0px, transparent 50%),
         radial-gradient(at 12% 24%, hsla(187, 4%, 41%, 1) 0px, transparent 50%);
     }

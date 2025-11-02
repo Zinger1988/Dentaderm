@@ -206,8 +206,7 @@
       left: 0.6rem;
       width: 1.8rem;
       height: 0.9rem;
-      background: url(../assets/images/arrow_black_left.svg) center / contain
-        no-repeat;
+      background: url(../assets/images/arrow_black_left.svg) center / contain no-repeat;
     }
   }
 
@@ -249,8 +248,8 @@
       right: -0.8rem;
       width: 5.2rem;
       height: 4rem;
-      background: url(../assets/images/dentaderm_logo_stroke_gray_outline.svg)
-        center / contain no-repeat;
+      background: url(../assets/images/dentaderm_logo_stroke_gray_outline.svg) center / contain
+        no-repeat;
     }
 
     @include mediaHover() {
@@ -267,5 +266,17 @@
         right: -0.2rem;
       }
     }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &--ghost {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 }

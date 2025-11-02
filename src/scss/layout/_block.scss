@@ -6,6 +6,7 @@
     align-items: center;
     gap: 2rem;
     margin-bottom: 3rem;
+    flex-wrap: wrap;
 
     @include media(">=md") {
       margin-bottom: 4rem;
@@ -31,6 +32,10 @@
 
   &__cards-grid {
     margin: 0 0 5rem;
+  }
+
+  &__subtitle {
+    flex: 0 0 100%;
   }
 
   &--separated {
